@@ -655,6 +655,113 @@ nav.main-links a.active::after{width:100%;}
 .timeline-item{transition:background 0.25s ease;}
 .timeline-item:hover{background:rgba(228,190,104,0.05);}
 
+/* ================= WHATSAPP FLUTUANTE ================= */
+.whatsapp-float{
+  position:fixed; left:24px; bottom:24px; z-index:200;
+  width:56px; height:56px; border-radius:50%;
+  background:#25D366; color:#fff;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 12px 28px -8px rgba(0,0,0,0.45);
+  transition:transform 0.2s ease, box-shadow 0.2s ease;
+}
+.whatsapp-float:hover{transform:translateY(-3px) scale(1.05); box-shadow:0 16px 32px -8px rgba(0,0,0,0.55);}
+.whatsapp-float svg{width:30px; height:30px;}
+@media (max-width:640px){
+  .whatsapp-float{width:50px; height:50px; left:16px; bottom:16px;}
+  .whatsapp-float svg{width:26px; height:26px;}
+  .back-to-top{right:16px; bottom:16px;}
+}
+
+/* ================= EXERCÍCIO RESOLVIDO EM DESTAQUE ================= */
+.exercise-section{ padding-top:10px; }
+.exercise-card{
+  background:var(--chalkboard);
+  border-radius:10px;
+  padding:40px 36px;
+  color:var(--chalk);
+  position:relative;
+  overflow:hidden;
+}
+.exercise-card::before{
+  content:"";
+  position:absolute; inset:0;
+  background-image:url(data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='4'><rect width='4' height='4' fill='none'/></svg>);
+  opacity:0.03;
+  pointer-events:none;
+}
+.exercise-head{
+  display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+  margin-bottom:22px;
+}
+.exercise-badge{
+  font-family:var(--mono);
+  font-size:0.75rem;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--chalkboard);
+  background:var(--chalk-yellow);
+  padding:5px 12px;
+  border-radius:999px;
+}
+.exercise-card h3{
+  font-family:var(--serif);
+  font-size:1.5rem;
+  font-weight:600;
+  color:var(--chalk);
+}
+.exercise-problem{
+  font-family:var(--mono);
+  font-size:1.05rem;
+  background:rgba(255,255,255,0.05);
+  border-left:3px solid var(--chalk-yellow);
+  padding:14px 18px;
+  border-radius:4px;
+  margin-bottom:26px;
+  color:var(--chalk);
+}
+.exercise-steps{
+  display:grid;
+  gap:16px;
+}
+.exercise-step{
+  display:grid;
+  grid-template-columns:36px 1fr;
+  gap:14px;
+  align-items:start;
+}
+.exercise-step-num{
+  width:36px; height:36px;
+  border-radius:50%;
+  background:rgba(228,190,104,0.12);
+  border:1px solid rgba(228,190,104,0.4);
+  color:var(--chalk-yellow);
+  font-family:var(--mono);
+  font-size:0.9rem;
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0;
+}
+.exercise-step-text p{
+  color:rgba(243,238,225,0.85);
+  font-size:0.98rem;
+  line-height:1.6;
+}
+.exercise-step-text code{
+  font-family:var(--mono);
+  color:var(--chalk-blue);
+  background:rgba(143,180,192,0.1);
+  padding:1px 6px;
+  border-radius:3px;
+}
+.exercise-result{
+  margin-top:24px;
+  padding-top:20px;
+  border-top:1px dashed rgba(243,238,225,0.2);
+  font-family:var(--mono);
+  color:var(--chalk-yellow);
+  font-size:1.05rem;
+}
+.exercise-cta{ margin-top:26px; }
+
 /* ================= PAGE HERO (subpáginas) ================= */
 .page-hero{
   padding:150px 0 70px;
