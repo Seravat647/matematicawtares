@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J1KE3X1FFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J1KE3X1FFH');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercícios Resolvidos — Curso de Cálculo II — W. T. Ares | Matemática</title>
+<meta name="description" content="15 exercícios dos capítulos de técnicas de integração, séries infinitas e equações diferenciais introdutórias, resolvidos passo a passo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;600;700&family=Space+Mono:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Exercícios Resolvidos — Curso de Cálculo II — W. T. Ares | Matemática">
+<meta property="og:description" content="15 exercícios dos capítulos de técnicas de integração, séries infinitas e equações diferenciais introdutórias, resolvidos passo a passo.">
+<meta property="og:image" content="https://www.wtaresmatematica.com/images/capa-calculo-1.jpg">
+<meta property="og:url" content="https://www.wtaresmatematica.com/exercicios-calculo2.html">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Exercícios Resolvidos — Curso de Cálculo II — W. T. Ares | Matemática">
+<meta name="twitter:description" content="15 exercícios dos capítulos de técnicas de integração, séries infinitas e equações diferenciais introdutórias, resolvidos passo a passo.">
+<meta name="twitter:image" content="https://www.wtaresmatematica.com/images/capa-calculo-1.jpg">
+<link rel="canonical" href="https://www.wtaresmatematica.com/exercicios-calculo2.html">
+<!-- MailerLite Universal -->
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2556502');
+</script>
+<!-- End MailerLite Universal -->
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute">
+  <filter id="chalkTexture" x="-20%" y="-20%" width="140%" height="140%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="noise" seed="7"/>
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.4"/>
+  </filter>
+</svg>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">W. T. Ares</span>
+      <span class="brand-sub">Matemática</span>
+    </a>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" id="navToggle"><span></span></button>
+    <nav class="main-links" id="mainLinks">
+      <a href="index.html">Início</a>
+      <a href="autor.html">Sobre o Autor</a>
+      <a href="livro.html">O Livro</a>
+      <a href="adquirir.html">Como Adquirir</a>
+      <a href="exercicios.html" class="active">Exercícios</a>
+      <a href="historia-da-matematica.html">História da Matemática</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+    <div class="nav-search">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="siteSearch" placeholder="Pesquisar..." autocomplete="off" aria-label="Pesquisar no site">
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="page-hero chalkboard-bg">
+    <div class="container">
+      <p class="breadcrumb"><a href="index.html">Início</a> / <a href="exercicios.html">Exercícios</a> / Curso de Cálculo II</p>
+      <h1>Exercícios Resolvidos — Curso de Cálculo II</h1>
+      <p class="sub">15 exercícios dos capítulos de técnicas de integração, séries infinitas e equações diferenciais introdutórias, resolvidos passo a passo.</p>
+      <p style="margin-top:22px; display:flex; gap:10px; flex-wrap:wrap;">
+        <a href="#nivel-facil" class="volume-chip">Fácil (5)</a> <a href="#nivel-medio" class="volume-chip">Médio (5)</a> <a href="#nivel-dificil" class="volume-chip">Difícil (5)</a>
+      </p>
+      <p style="margin-top:18px;"><a href="livro.html#calculo-2" class="btn btn-ghost" style="padding:9px 16px; font-size:0.82rem;">← Ver o livro</a></p>
+    </div>
+  </section>
+
+  <section class="chalkboard-bg exercise-section reveal" style="padding-bottom:80px;">
+    <div class="container">
+      <div id="nivel-facil" style="padding-top:26px; margin-bottom:8px;">
+        <p class="eyebrow"><span class="rule"></span> Nível Fácil</p>
+        <p style="color:rgba(243,238,225,0.6); font-family:var(--mono); font-size:0.85rem; margin-bottom:28px;">Aquecimento — revisão de conceitos e aplicação direta de definições.</p>
+      </div>
+      <div style="display:grid; gap:28px; margin-bottom:20px;">
+      <div class="exercise-card" id="facil-1">
+        <div class="exercise-head">
+          <span class="exercise-badge">Curso de Cálculo II · Fácil</span>
+          <h3>Integração por partes básica</h3>
+        </div>
+        <div class="exercise-problem"><p>Calcule ∫ x·cos x dx.</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Aplicamos integração por partes: ∫u dv = uv − ∫v du, escolhendo u = x e dv = cos x dx.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>Então du = dx e v = sen x.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>Substituindo: ∫x cos x dx = x sen x − ∫sen x dx.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">4</div>
+            <div class="exercise-step-text"><p>Como ∫sen x dx = −cos x + C.</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: ∫x cos x dx = x sen x + cos x + C.</div>
+      </div>
+      <div class="exercise-card" id="facil-2">
+        <div class="exercise-head">
+          <span class="exercise-badge">Curso de Cálculo II · Fácil</span>
+          <h3>Limite de sequência</h3>
+        </div>
+        <div class="exercise-problem"><p>Determine o limite da sequência aₙ = (2n³ − 1)/(n³ + 4n).</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Dividimos numerador e denominador pela maior potência de n, que é n³: aₙ = (2 − 1/n³)/(1 + 4/n²).</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>Quando n → ∞, os termos 1/n³ e 4/n² tendem a 0.</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: lim aₙ = 2/1 = 2.</div>
+      </div>
+      <div class="exercise-card" id="facil-3">
+        <div class="exercise-head">
+          <span class="exercise-badge">Curso de Cálculo II · Fácil</span>
+          <h3>Soma de série geométrica</h3>
+        </div>
+        <div class="exercise-problem"><p>Calcule Σ (n=1 a ∞) de 3/4ⁿ.</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Reescrevemos como série geométrica Σ 3·(1/4)ⁿ, com primeiro termo a₁ = 3/4 e razão r = 1/4.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>Como |r| &lt; 1, a série converge, com soma S = a₁/(1 − r).</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>Calculamos: S = (3/4)/(1 − 1/4) = (3/4)/(3/4).</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: S = 1.</div>
+      </div>
+      <div class="exercise-card" id="facil-4">
+        <div class="exercise-head">
+          <span class="exercise-badge">Curso de Cálculo II · Fácil</span>
+          <h3>Convergência de série alternada (Leibniz)</h3>
+        </div>
+        <div class="exercise-problem"><p>Verifique se Σ (n=1 a ∞) de (−1)ⁿ/n² converge.</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Aplicamos o Teste de Leibniz: precisamos que bₙ = 1/n² seja positiva, decrescente e tenda a 0.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>bₙ = 1/n² é claramente positiva e decrescente para n ≥ 1.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>lim bₙ = lim 1/n² = 0 quando n → ∞.</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: As três condições são satisfeitas, logo a série converge (na verdade, converge absolutamente).</div>
+      </div>
+      <div class="exercise-card" id="facil-5">
+        <div class="exercise-head">
+          <span class="exercise-badge">Curso de Cálculo II · Fácil</span>
+          <h3>EDO separável simples</h3>
+        </div>
+        <div class="exercise-problem"><p>Resolva y' = x/y, com y(0) = 2.</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Separamos as variáveis: y dy = x dx.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>Integramos ambos os lados: y²/2 = x²/2 + C.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>Aplicamos a condição inicial y(0) = 2: 4/2 = 0 + C → C = 2.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">4</div>
+            <div class="exercise-step-text"><p>Reorganizamos: y² = x² + 4.</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: y = √(x² + 4).</div>
+      </div>
+      </div>
+      <div id="nivel-medio" style="padding-top:26px; margin-bottom:8px;">
+        <p class="eyebrow"><span class="rule"></span> Nível Médio</p>
+        <p style="color:rgba(243,238,225,0.6); font-family:var(--mono); font-size:0.85rem; margin-bottom:28px;">Exige combinar duas ou mais ideias, ou uma manipulação algébrica mais cuidadosa.</p>
+      </div>
+      <div style="display:grid; gap:28px; margin-bottom:20px;">
+      <div class="exercise-card" id="medio-1">
+        <div class="exercise-head">
+          <span class="exercise-badge">Curso de Cálculo II · Médio</span>
+          <h3>Integração por partes repetida</h3>
+        </div>
+        <div class="exercise-problem"><p>Calcule ∫ x²·e^(2x) dx.</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Aplicamos partes com u = x², dv = e^(2x)dx: du = 2x dx, v = (1/2)e^(2x).</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>Primeira aplicação: ∫x²e^(2x)dx = (x²/2)e^(2x) − ∫x e^(2x) dx.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>Para a integral restante, aplicamos partes novamente: ∫x e^(2x)dx = (x/2)e^(2x) − (1/4)e^(2x).</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">4</div>
+            <div class="exercise-step-text"><p>Substituindo de volta: (x²/2)e^(2x) − [(x/2)e^(2x) − (1/4)e^(2x)].</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: ∫x²e^(2x)dx = (x²/2 − x/2 + 1/4)e^(2x) + C.</div>
+      </div>
+      <div class="exercise-card" id="medio-2">
+        <div class="exercise-head">
+          <span class="exercise-badge">Curso de Cálculo II · Médio</span>
+          <h3>Potência ímpar de tangente</h3>
+        </div>
+        <div class="exercise-problem"><p>Calcule ∫ tg⁴x dx.</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Usamos tg²x = sec²x − 1: tg⁴x = tg²x·sec²x − tg²x.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>A primeira parcela ∫tg²x sec²x dx se resolve com u = tg x, du = sec²x dx: ∫u² du = u³/3.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>Para a segunda parcela, usamos de novo tg²x = sec²x − 1: ∫tg²x dx = tg x − x.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">4</div>
+            <div class="exercise-step-text"><p>Juntando: ∫tg⁴x dx = tg³x/3 − (tg x − x).</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: ∫tg⁴x dx = (tg³x)/3 − tg x + x + C.</div>
+      </div>
+      <div class="exercise-card" id="medio-3">
+        <div class="exercise-head">
+          <span class="exercise-badge">Curso de Cálculo II · Médio</span>
+          <h3>Raio e intervalo de convergência</h3>
+        </div>
+        <div class="exercise-problem"><p>Encontre o raio e o intervalo de convergência de Σ (n=0 a ∞) de (−1)ⁿxⁿ/(n+1).</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Aplicamos o Teste da Razão: L = lim |aₙ₊₁/aₙ| = |x| · lim (n+1)/(n+2) = |x|.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>A série converge quando L &lt; 1, ou seja, |x| &lt; 1 — raio de convergência R = 1.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>Em x = 1, a série vira Σ(−1)ⁿ/(n+1), que converge pelo Teste de Leibniz.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">4</div>
+            <div class="exercise-step-text"><p>Em x = −1, a série vira Σ1/(n+1), a série harmônica, que diverge.</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: Raio R = 1; intervalo de convergência (−1, 1].</div>
+      </div>
+      <div class="exercise-card" id="medio-4">
+        <div class="exercise-head">
+          <span class="exercise-badge">Curso de Cálculo II · Médio</span>
+          <h3>Lei do resfriamento de Newton</h3>
+        </div>
+        <div class="exercise-problem"><p>Um café a 90°C é colocado em um ambiente de 20°C. Após 5 min está a 70°C. Quando estará a 40°C?</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Pela Lei de Newton: T(t) = 20 + 70e^(−kt).</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>Usamos T(5) = 70: 70 = 20 + 70e^(−5k) → e^(−5k) = 5/7 → k = −ln(5/7)/5 ≈ 0,0673.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>Queremos T(t) = 40: 40 = 20 + 70e^(−kt) → e^(−kt) = 2/7.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">4</div>
+            <div class="exercise-step-text"><p>Isolamos t: t = −ln(2/7)/k = ln(7/2)/k.</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: t ≈ 18,6 minutos.</div>
+      </div>
+      <div class="exercise-card" id="medio-5">
+        <div class="exercise-head">
+          <span class="exercise-badge">Curso de Cálculo II · Médio</span>
+          <h3>Equação linear de primeira ordem</h3>
+        </div>
+        <div class="exercise-problem"><p>Resolva y' − 3y = e^(2x).</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Fator integrante: μ(x) = e^(∫−3dx) = e^(−3x).</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>Multiplicamos a equação por μ(x): o lado esquerdo vira d/dx[e^(−3x)y] = e^(−x).</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>Integramos ambos os lados: e^(−3x)y = −e^(−x) + C.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">4</div>
+            <div class="exercise-step-text"><p>Isolamos y multiplicando por e^(3x).</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: y = −e^(2x) + Ce^(3x).</div>
+      </div>
+      </div>
+      <div id="nivel-dificil" style="padding-top:26px; margin-bottom:8px;">
+        <p class="eyebrow"><span class="rule"></span> Nível Difícil</p>
+        <p style="color:rgba(243,238,225,0.6); font-family:var(--mono); font-size:0.85rem; margin-bottom:28px;">Demonstrações e problemas de nível avançado, no espírito dos cursos de referência (MIT).</p>
+      </div>
+      <div style="display:grid; gap:28px; margin-bottom:20px;">
+      <div class="exercise-card" id="dificil-1">
+        <div class="exercise-head">
+          <span class="exercise-badge">Curso de Cálculo II · Difícil · Nível avançado</span>
+          <h3>Fórmula de redução por partes</h3>
+        </div>
+        <div class="exercise-problem"><p>Prove que ∫ senⁿx dx = −(senⁿ⁻¹x cos x)/n + [(n−1)/n]∫ senⁿ⁻²x dx.</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Escrevemos senⁿx = senⁿ⁻¹x · sen x e aplicamos partes com u = senⁿ⁻¹x, dv = sen x dx.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>Isso dá ∫senⁿx dx = −senⁿ⁻¹x cos x + (n−1)∫senⁿ⁻²x cos²x dx.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>Usamos cos²x = 1 − sen²x: a integral vira (n−1)[∫senⁿ⁻²x dx − ∫senⁿx dx].</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">4</div>
+            <div class="exercise-step-text"><p>Passamos o termo (n−1)∫senⁿx dx para o lado esquerdo e agrupamos: n∫senⁿx dx = −senⁿ⁻¹x cos x + (n−1)∫senⁿ⁻²x dx.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">5</div>
+            <div class="exercise-step-text"><p>Dividimos por n para isolar ∫senⁿx dx.</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: ∫senⁿx dx = −(senⁿ⁻¹x cos x)/n + [(n−1)/n]∫senⁿ⁻²x dx. ∎</div>
+      </div>
+      <div class="exercise-card" id="dificil-2">
+        <div class="exercise-head">
+          <span class="exercise-badge">Curso de Cálculo II · Difícil · MIT</span>
+          <h3>Integral trigonométrica definida com parâmetro (MIT)</h3>
+        </div>
+        <div class="exercise-problem"><p>Mostre que ∫₀^π x²cos(nx)dx = 2π(−1)ⁿ/n², para n ∈ N*.</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Aplicamos partes duas vezes: ∫x²cos(nx)dx = x²sen(nx)/n − (2/n)∫x sen(nx)dx.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>Avaliado de 0 a π, o termo x²sen(nx)/n se anula, pois sen(nπ) = 0.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>Para ∫x sen(nx)dx aplicamos partes de novo: −x cos(nx)/n + (1/n)∫cos(nx)dx.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">4</div>
+            <div class="exercise-step-text"><p>Avaliando de 0 a π: −π cos(nπ)/n = −π(−1)ⁿ/n, e ∫₀^π cos(nx)dx = 0.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">5</div>
+            <div class="exercise-step-text"><p>Juntando tudo: ∫₀^π x²cos(nx)dx = −(2/n)·[−π(−1)ⁿ/n] = 2π(−1)ⁿ/n².</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: ∫₀^π x²cos(nx)dx = 2π(−1)ⁿ/n². ∎</div>
+      </div>
+      <div class="exercise-card" id="dificil-3">
+        <div class="exercise-head">
+          <span class="exercise-badge">Curso de Cálculo II · Difícil · Nível avançado</span>
+          <h3>Soma de série via derivação</h3>
+        </div>
+        <div class="exercise-problem"><p>Calcule Σ (n=1 a ∞) de n/2ⁿ.</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Partimos da série geométrica Σxⁿ = 1/(1−x), válida para |x| &lt; 1.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>Derivamos ambos os lados em relação a x: Σ n·xⁿ⁻¹ = 1/(1−x)².</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>Multiplicamos por x: Σ n·xⁿ = x/(1−x)².</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">4</div>
+            <div class="exercise-step-text"><p>Substituímos x = 1/2: Σ n/2ⁿ = (1/2)/(1/2)².</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: Σ (n=1 a ∞) n/2ⁿ = 2.</div>
+      </div>
+      <div class="exercise-card" id="dificil-4">
+        <div class="exercise-head">
+          <span class="exercise-badge">Curso de Cálculo II · Difícil · MIT</span>
+          <h3>Queda com resistência do ar — velocidade terminal (MIT)</h3>
+        </div>
+        <div class="exercise-problem"><p>Um objeto de massa m cai com resistência do ar F=bv. Resolva mv' = mg − bv e encontre a velocidade terminal.</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Reescrevemos como v' + (b/m)v = g, uma EDO linear de 1ª ordem.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>O fator integrante é μ(t) = e^((b/m)t).</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>Integrando: e^((b/m)t)v = (mg/b)e^((b/m)t) + C.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">4</div>
+            <div class="exercise-step-text"><p>Isolando v, com v(0)=0: v(t) = (mg/b)(1 − e^(−bt/m)).</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">5</div>
+            <div class="exercise-step-text"><p>Quando t → ∞, o termo exponencial desaparece.</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: Velocidade terminal: v_∞ = mg/b.</div>
+      </div>
+      <div class="exercise-card" id="dificil-5">
+        <div class="exercise-head">
+          <span class="exercise-badge">Curso de Cálculo II · Difícil · Nível avançado</span>
+          <h3>Solução geral da EDO linear (estrutura y = yₕ + yₚ)</h3>
+        </div>
+        <div class="exercise-problem"><p>Prove que a solução geral de y' + P(x)y = Q(x) é y = yₕ + yₚ.</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Seja yₚ uma solução particular fixa: yₚ' + P(x)yₚ = Q(x).</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>Seja y qualquer outra solução da equação completa: y' + P(x)y = Q(x).</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>Subtraindo as duas equações: (y−yₚ)' + P(x)(y−yₚ) = 0, ou seja, w = y−yₚ satisfaz a homogênea.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">4</div>
+            <div class="exercise-step-text"><p>Logo w = yₕ para alguma solução da homogênea, e y = yₚ + yₕ.</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: Toda solução da equação completa se escreve como yₕ + yₚ. ∎</div>
+      </div>
+      </div>
+    </div>
+  </section>
+</main>
+<section class="newsletter-band">
+  <div class="container newsletter-inner">
+    <div class="newsletter-copy">
+      <p class="eyebrow"><span class="rule"></span> Fique por dentro</p>
+      <h3>Novidades, dicas de cálculo e conteúdos exclusivos em primeira mão</h3>
+      <p class="sub">Inscreva-se para receber novidades sobre o Curso de Cálculo I, II e III, além de conteúdos exclusivos do autor.</p>
+    </div>
+    <form class="newsletter-form" novalidate>
+      <input type="email" required placeholder="seu-email@exemplo.com" aria-label="Seu e-mail">
+      <button type="submit">Inscrever-se</button>
+      <p class="newsletter-status" role="status"></p>
+      <p class="newsletter-note">Sem spam. Cancele sua inscrição quando quiser.</p>
+    </form>
+  </div>
+</section>
+<footer id="rodape" class="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <h4>Fale com o autor</h4>
+          <a class="email" href="mailto:tavareswagner21@gmail.com">tavareswagner21@gmail.com</a>
+      </div>
+      <div>
+        <h4>Redes sociais</h4>
+        <div class="social-list">
+          <a href="https://www.facebook.com/profwtares" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M13.5 21v-7h2.3l.35-2.7h-2.65v-1.73c0-.78.22-1.32 1.34-1.32h1.43V5.8c-.25-.03-1.1-.11-2.09-.11-2.07 0-3.48 1.26-3.48 3.58v2h-2.3v2.7h2.3v7h2.8z" fill="currentColor" stroke="none"/></svg>
+            Facebook
+          </a>
+          <a href="https://www.instagram.com/tavares9046/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none"/></svg>
+            Instagram
+          </a>
+          <a href="https://www.linkedin.com/in/wagner-tavares-038772230/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="3"/><line x1="8" y1="11" x2="8" y2="17"/><circle cx="8" cy="7.5" r="0.6" fill="currentColor"/><path d="M12 17v-3.5a2.5 2.5 0 0 1 5 0V17"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://www.youtube.com/@wtaresmatematica" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="12" rx="4"/><path d="M11 10l4 2-4 2z" fill="currentColor" stroke="none"/></svg>
+            YouTube
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="fine-print">
+      <span>© 2026 W. T. Ares — Matemática</span>
+      <span>seravat647.github.io/matematicawtares</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
