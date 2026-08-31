@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J1KE3X1FFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J1KE3X1FFH');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercícios Resolvidos — Equações Diferenciais — W. T. Ares | Matemática</title>
+<meta name="description" content="15 exercícios do livro Equações Diferenciais — Uma Abordagem Analítica e Geométrica, de EDOs de primeira ordem a sistemas, séries de Fourier e EDPs fundamentais.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;600;700&family=Space+Mono:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Exercícios Resolvidos — Equações Diferenciais — W. T. Ares | Matemática">
+<meta property="og:description" content="15 exercícios do livro Equações Diferenciais — Uma Abordagem Analítica e Geométrica, de EDOs de primeira ordem a sistemas, séries de Fourier e EDPs fundamentais.">
+<meta property="og:image" content="https://www.wtaresmatematica.com/images/capa-calculo-1.jpg">
+<meta property="og:url" content="https://www.wtaresmatematica.com/exercicios-equacoes-diferenciais.html">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Exercícios Resolvidos — Equações Diferenciais — W. T. Ares | Matemática">
+<meta name="twitter:description" content="15 exercícios do livro Equações Diferenciais — Uma Abordagem Analítica e Geométrica, de EDOs de primeira ordem a sistemas, séries de Fourier e EDPs fundamentais.">
+<meta name="twitter:image" content="https://www.wtaresmatematica.com/images/capa-calculo-1.jpg">
+<link rel="canonical" href="https://www.wtaresmatematica.com/exercicios-equacoes-diferenciais.html">
+<!-- MailerLite Universal -->
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2556502');
+</script>
+<!-- End MailerLite Universal -->
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute">
+  <filter id="chalkTexture" x="-20%" y="-20%" width="140%" height="140%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="noise" seed="7"/>
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.4"/>
+  </filter>
+</svg>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">W. T. Ares</span>
+      <span class="brand-sub">Matemática</span>
+    </a>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" id="navToggle"><span></span></button>
+    <nav class="main-links" id="mainLinks">
+      <a href="index.html">Início</a>
+      <a href="autor.html">Sobre o Autor</a>
+      <a href="livro.html">O Livro</a>
+      <a href="adquirir.html">Como Adquirir</a>
+      <a href="exercicios.html" class="active">Exercícios</a>
+      <a href="historia-da-matematica.html">História da Matemática</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+    <div class="nav-search">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="siteSearch" placeholder="Pesquisar..." autocomplete="off" aria-label="Pesquisar no site">
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="page-hero chalkboard-bg">
+    <div class="container">
+      <p class="breadcrumb"><a href="index.html">Início</a> / <a href="exercicios.html">Exercícios</a> / Equações Diferenciais</p>
+      <h1>Exercícios Resolvidos — Equações Diferenciais</h1>
+      <p class="sub">15 exercícios do livro Equações Diferenciais — Uma Abordagem Analítica e Geométrica, de EDOs de primeira ordem a sistemas, séries de Fourier e EDPs fundamentais.</p>
+      <p style="margin-top:22px; display:flex; gap:10px; flex-wrap:wrap;">
+        <a href="#nivel-facil" class="volume-chip">Fácil (5)</a> <a href="#nivel-medio" class="volume-chip">Médio (5)</a> <a href="#nivel-dificil" class="volume-chip">Difícil (5)</a>
+      </p>
+      <p style="margin-top:18px;"><a href="livro.html" class="btn btn-ghost" style="padding:9px 16px; font-size:0.82rem;">← Ver o livro</a></p>
+    </div>
+  </section>
+
+  <section class="chalkboard-bg exercise-section reveal" style="padding-bottom:80px;">
+    <div class="container">
+      <div id="nivel-facil" style="padding-top:26px; margin-bottom:8px;">
+        <p class="eyebrow"><span class="rule"></span> Nível Fácil</p>
+        <p style="color:rgba(243,238,225,0.6); font-family:var(--mono); font-size:0.85rem; margin-bottom:28px;">Aquecimento — revisão de conceitos e aplicação direta de definições.</p>
+      </div>
+      <div style="display:grid; gap:28px; margin-bottom:20px;">
+      <div class="exercise-card" id="facil-1">
+        <div class="exercise-head">
+          <span class="exercise-badge">Equações Diferenciais · Fácil</span>
+          <h3>Classificação de EDOs</h3>
+        </div>
+        <div class="exercise-problem"><p>Classifique quanto à ordem e à linearidade: (a) y''+3y'−2y=x; (b) (y')³+y=sen x; (c) y'''−y=0.</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>(a) A maior derivada é y'', ordem 2. Como y, y' e y'' aparecem só na 1ª potência, é linear.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>(b) A maior derivada é y', ordem 1. Mas y' aparece elevado ao cubo — a equação é não-linear.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>(c) A maior derivada é y''', ordem 3, e y aparece só na 1ª potência: equação linear.</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: (a) linear, ordem 2; (b) não-linear, ordem 1; (c) linear, ordem 3.</div>
+      </div>
+      <div class="exercise-card" id="facil-2">
+        <div class="exercise-head">
+          <span class="exercise-badge">Equações Diferenciais · Fácil</span>
+          <h3>EDO separável com condição inicial</h3>
+        </div>
+        <div class="exercise-problem"><p>Resolva a EDO separável y'=x²/y, com y(0)=2.</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Separamos as variáveis: y dy = x² dx.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>Integramos: y²/2 = x³/3 + C.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>Aplicamos y(0)=2: 4/2 = 0+C → C=2.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">4</div>
+            <div class="exercise-step-text"><p>Isolamos y: y² = 2x³/3+4.</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: y = √(2x³/3 + 4).</div>
+      </div>
+      <div class="exercise-card" id="facil-3">
+        <div class="exercise-head">
+          <span class="exercise-badge">Equações Diferenciais · Fácil</span>
+          <h3>EDO linear de primeira ordem</h3>
+        </div>
+        <div class="exercise-problem"><p>Resolva a EDO linear y'+2y=e^(−x).</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Fator integrante: μ(x)=e^(∫2dx)=e^(2x).</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>Multiplicamos a equação por μ: o lado esquerdo vira d/dx[e^(2x)y] = e^x.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>Integramos: e^(2x)y = e^x + C.</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: y = e^(−x) + Ce^(−2x).</div>
+      </div>
+      <div class="exercise-card" id="facil-4">
+        <div class="exercise-head">
+          <span class="exercise-badge">Equações Diferenciais · Fácil</span>
+          <h3>Wronskiano e independência linear</h3>
+        </div>
+        <div class="exercise-problem"><p>Calcule o Wronskiano de {eˣ, xeˣ} e conclua se são linearmente independentes.</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>O Wronskiano é W = eˣ(eˣ+xeˣ) − xeˣ·eˣ.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>Simplificando: W = e^(2x) + xe^(2x) − xe^(2x) = e^(2x).</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: W = e^(2x) ≠ 0 para todo x, logo {eˣ, xeˣ} são linearmente independentes.</div>
+      </div>
+      <div class="exercise-card" id="facil-5">
+        <div class="exercise-head">
+          <span class="exercise-badge">Equações Diferenciais · Fácil</span>
+          <h3>EDO homogênea com raízes complexas</h3>
+        </div>
+        <div class="exercise-problem"><p>Resolva y''+9y=0.</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Equação característica: r²+9=0.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>Resolvendo: r²=−9 → r=±3i (raízes complexas puras, α=0, β=3).</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>Para raízes complexas r=α±βi, a solução geral é y=e^(αx)[C₁cos(βx)+C₂sen(βx)].</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: y = C₁cos(3x) + C₂sen(3x).</div>
+      </div>
+      </div>
+      <div id="nivel-medio" style="padding-top:26px; margin-bottom:8px;">
+        <p class="eyebrow"><span class="rule"></span> Nível Médio</p>
+        <p style="color:rgba(243,238,225,0.6); font-family:var(--mono); font-size:0.85rem; margin-bottom:28px;">Exige combinar duas ou mais ideias, ou uma manipulação algébrica mais cuidadosa.</p>
+      </div>
+      <div style="display:grid; gap:28px; margin-bottom:20px;">
+      <div class="exercise-card" id="medio-1">
+        <div class="exercise-head">
+          <span class="exercise-badge">Equações Diferenciais · Médio</span>
+          <h3>EDO homogênea (mudança de variável)</h3>
+        </div>
+        <div class="exercise-problem"><p>Resolva a EDO homogênea dy/dx = (x+y)/x.</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Reescrevemos: dy/dx = 1 + y/x. Substituímos v=y/x, y=vx, dy/dx = v + x(dv/dx).</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>Substituindo: v + x(dv/dx) = 1+v → x(dv/dx) = 1.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>Separamos e integramos: dv = dx/x → v = ln|x| + C.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">4</div>
+            <div class="exercise-step-text"><p>Voltamos à variável original: y/x = ln|x| + C.</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: y = x(ln|x| + C).</div>
+      </div>
+      <div class="exercise-card" id="medio-2">
+        <div class="exercise-head">
+          <span class="exercise-badge">Equações Diferenciais · Médio</span>
+          <h3>Equação diferencial exata</h3>
+        </div>
+        <div class="exercise-problem"><p>Verifique que (2xy+3)dx+(x²−1)dy=0 é exata e resolva-a.</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>M=2xy+3, N=x²−1. Verificamos: ∂M/∂y=2x e ∂N/∂x=2x — iguais, logo exata.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>Integramos M em relação a x: F=x²y+3x+g(y).</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>Derivamos F em y e igualamos a N: x²+g'(y)=x²−1, logo g'(y)=−1 → g(y)=−y.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">4</div>
+            <div class="exercise-step-text"><p>Assim F(x,y)=x²y+3x−y, e a solução geral é F=C.</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: x²y + 3x − y = C.</div>
+      </div>
+      <div class="exercise-card" id="medio-3">
+        <div class="exercise-head">
+          <span class="exercise-badge">Equações Diferenciais · Médio</span>
+          <h3>EDO de segunda ordem (raízes reais distintas)</h3>
+        </div>
+        <div class="exercise-problem"><p>Resolva y''−5y'+6y=0.</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Equação característica: r²−5r+6=0.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>Fatoramos: (r−2)(r−3)=0 → r=2 ou r=3.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>Para raízes reais distintas, a solução geral combina e^(r₁x) e e^(r₂x).</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: y = C₁e^(2x) + C₂e^(3x).</div>
+      </div>
+      <div class="exercise-card" id="medio-4">
+        <div class="exercise-head">
+          <span class="exercise-badge">Equações Diferenciais · Médio</span>
+          <h3>Autovalores e autovetores de um sistema linear</h3>
+        </div>
+        <div class="exercise-problem"><p>Encontre os autovalores e autovetores de A=[[3,1],[1,3]] e escreva a solução geral de x'=Ax.</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Polinômio característico: det(A−rI)=(3−r)²−1=0 → r=3±1.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>Autovalores: r₁=4 e r₂=2.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>Para r₁=4: (A−4I)v=0 dá v₁=v₂, autovetor ⟨1,1⟩.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">4</div>
+            <div class="exercise-step-text"><p>Para r₂=2: (A−2I)v=0 dá v₁=−v₂, autovetor ⟨1,−1⟩.</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: x(t) = C₁e^(4t)⟨1,1⟩ + C₂e^(2t)⟨1,−1⟩.</div>
+      </div>
+      <div class="exercise-card" id="medio-5">
+        <div class="exercise-head">
+          <span class="exercise-badge">Equações Diferenciais · Médio</span>
+          <h3>Série de Fourier de uma função ímpar</h3>
+        </div>
+        <div class="exercise-problem"><p>Calcule a série de Fourier de f(x)=x no intervalo [−π,π].</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Como f(x)=x é ímpar, a₀ e todos os aₙ são nulos; só precisamos de bₙ.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>bₙ = (2/π)∫₀^π x sen(nx) dx.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>Por partes: ∫₀^π x sen(nx)dx = −π cos(nπ)/n.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">4</div>
+            <div class="exercise-step-text"><p>Como cos(nπ)=(−1)ⁿ: bₙ = (2/π)·(−π(−1)ⁿ/n) = 2(−1)ⁿ⁺¹/n.</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: f(x) = 2[sen x − (sen 2x)/2 + (sen 3x)/3 − ···].</div>
+      </div>
+      </div>
+      <div id="nivel-dificil" style="padding-top:26px; margin-bottom:8px;">
+        <p class="eyebrow"><span class="rule"></span> Nível Difícil</p>
+        <p style="color:rgba(243,238,225,0.6); font-family:var(--mono); font-size:0.85rem; margin-bottom:28px;">Demonstrações e problemas de nível avançado, no espírito dos cursos de referência (MIT).</p>
+      </div>
+      <div style="display:grid; gap:28px; margin-bottom:20px;">
+      <div class="exercise-card" id="dificil-1">
+        <div class="exercise-head">
+          <span class="exercise-badge">Equações Diferenciais · Difícil · MIT</span>
+          <h3>Falha de unicidade — Picard-Lindelöf (MIT)</h3>
+        </div>
+        <div class="exercise-problem"><p>Use Picard-Lindelöf para justificar por que y'=√y, y(0)=0, não tem solução única.</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Picard-Lindelöf garante unicidade local se f(x,y)=√y for Lipschitz em y perto do ponto inicial.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>Calculamos ∂f/∂y = 1/(2√y).</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>Quando y→0⁺, essa derivada tende a +∞ — a hipótese de Lipschitz falha exatamente em y=0.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">4</div>
+            <div class="exercise-step-text"><p>De fato, y(x)=0 é solução, mas y(x)=x²/4 também é (verificação direta), confirmando a não-unicidade.</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: A hipótese de Lipschitz de f em y falha em y=0, o que explica a não-unicidade da solução.</div>
+      </div>
+      <div class="exercise-card" id="dificil-2">
+        <div class="exercise-head">
+          <span class="exercise-badge">Equações Diferenciais · Difícil · MIT</span>
+          <h3>Fórmula de Abel para o Wronskiano (MIT)</h3>
+        </div>
+        <div class="exercise-problem"><p>Demonstre que W'(x)=−p(x)W(x) e que W(x₀)=0 implica W≡0.</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Por definição, W=y₁y₂'−y₂y₁'. Derivando: W'=y₁y₂''−y₂y₁''.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>Como y₁''=−py₁'−qy₁ e y₂''=−py₂'−qy₂, substituímos: W'=−p(y₁y₂'−y₂y₁')−q(y₁y₂−y₂y₁).</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>O segundo termo se cancela, restando W'=−p·W.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">4</div>
+            <div class="exercise-step-text"><p>A EDO linear W'=−p(x)W tem solução W(x)=W(x₀)e^(−∫p dx), que se anula para todo x se W(x₀)=0.</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: W' = −p(x)W, e W(x₀)=0 implica W≡0. ∎</div>
+      </div>
+      <div class="exercise-card" id="dificil-3">
+        <div class="exercise-head">
+          <span class="exercise-badge">Equações Diferenciais · Difícil · MIT</span>
+          <h3>Estabilidade — foco espiral (MIT)</h3>
+        </div>
+        <div class="exercise-problem"><p>Mostre que se tr(A)²−4det(A)&lt;0 e tr(A)&lt;0, a origem é um foco espiral assintoticamente estável.</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Os autovalores de A são r = [tr(A) ± √(tr(A)²−4det(A))]/2.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>Como o discriminante é negativo, os autovalores são complexos: r=α±βi, com α=tr(A)/2.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>Autovalores complexos correspondem a soluções que espiralam em torno da origem.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">4</div>
+            <div class="exercise-step-text"><p>Como tr(A)&lt;0, α&lt;0, então o fator e^(αt)→0 quando t→∞.</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: As trajetórias espiralam em direção à origem — a origem é um foco espiral assintoticamente estável. ∎</div>
+      </div>
+      <div class="exercise-card" id="dificil-4">
+        <div class="exercise-head">
+          <span class="exercise-badge">Equações Diferenciais · Difícil · MIT</span>
+          <h3>Princípio do máximo na equação do calor (MIT)</h3>
+        </div>
+        <div class="exercise-problem"><p>Mostre que a solução da equação do calor satisfaz o princípio do máximo.</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Por separação de variáveis: u(x,t) = Σ bₙ sen(nπx/L) e^(−k(nπ/L)²t).</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>Cada termo tem fator e^(−k(nπ/L)²t), estritamente decrescente em t.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>Como todos os coeficientes decaem, a amplitude de cada modo diminui com o tempo.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">4</div>
+            <div class="exercise-step-text"><p>Fisicamente, o calor se difunde, nunca se concentra espontaneamente.</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: max_x |u(x,t)| é uma função não-crescente de t. ∎</div>
+      </div>
+      <div class="exercise-card" id="dificil-5">
+        <div class="exercise-head">
+          <span class="exercise-badge">Equações Diferenciais · Difícil · Nível avançado</span>
+          <h3>Separação de variáveis na equação do calor</h3>
+        </div>
+        <div class="exercise-problem"><p>Resolva u_t=2u_xx, 0&lt;x&lt;π, u(0,t)=u(π,t)=0, u(x,0)=3sen(2x).</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Buscamos u(x,t)=X(x)T(t): substituindo, T'/(2T) = X''/X = −λ.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>Com X(0)=X(π)=0, as soluções não triviais exigem λ=n², dando X(x)=sen(nx).</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>Para cada n, T'=−2n²T, logo T(t)=e^(−2n²t).</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">4</div>
+            <div class="exercise-step-text"><p>A condição inicial 3sen(2x) já está na forma da série, com apenas o termo n=2: b₂=3.</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: u(x,t) = 3 sen(2x) e^(−8t).</div>
+      </div>
+      </div>
+    </div>
+  </section>
+</main>
+<section class="newsletter-band">
+  <div class="container newsletter-inner">
+    <div class="newsletter-copy">
+      <p class="eyebrow"><span class="rule"></span> Fique por dentro</p>
+      <h3>Novidades, dicas de cálculo e conteúdos exclusivos em primeira mão</h3>
+      <p class="sub">Inscreva-se para receber novidades sobre o Curso de Cálculo I, II e III, além de conteúdos exclusivos do autor.</p>
+    </div>
+    <form class="newsletter-form" novalidate>
+      <input type="email" required placeholder="seu-email@exemplo.com" aria-label="Seu e-mail">
+      <button type="submit">Inscrever-se</button>
+      <p class="newsletter-status" role="status"></p>
+      <p class="newsletter-note">Sem spam. Cancele sua inscrição quando quiser.</p>
+    </form>
+  </div>
+</section>
+<footer id="rodape" class="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <h4>Fale com o autor</h4>
+          <a class="email" href="mailto:tavareswagner21@gmail.com">tavareswagner21@gmail.com</a>
+      </div>
+      <div>
+        <h4>Redes sociais</h4>
+        <div class="social-list">
+          <a href="https://www.facebook.com/profwtares" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M13.5 21v-7h2.3l.35-2.7h-2.65v-1.73c0-.78.22-1.32 1.34-1.32h1.43V5.8c-.25-.03-1.1-.11-2.09-.11-2.07 0-3.48 1.26-3.48 3.58v2h-2.3v2.7h2.3v7h2.8z" fill="currentColor" stroke="none"/></svg>
+            Facebook
+          </a>
+          <a href="https://www.instagram.com/tavares9046/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none"/></svg>
+            Instagram
+          </a>
+          <a href="https://www.linkedin.com/in/wagner-tavares-038772230/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="3"/><line x1="8" y1="11" x2="8" y2="17"/><circle cx="8" cy="7.5" r="0.6" fill="currentColor"/><path d="M12 17v-3.5a2.5 2.5 0 0 1 5 0V17"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://www.youtube.com/@wtaresmatematica" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="12" rx="4"/><path d="M11 10l4 2-4 2z" fill="currentColor" stroke="none"/></svg>
+            YouTube
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="fine-print">
+      <span>© 2026 W. T. Ares — Matemática</span>
+      <span>seravat647.github.io/matematicawtares</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
