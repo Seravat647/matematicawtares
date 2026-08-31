@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J1KE3X1FFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J1KE3X1FFH');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercícios Resolvidos — Curso de Cálculo I — W. T. Ares | Matemática</title>
+<meta name="description" content="15 exercícios selecionados diretamente dos capítulos do livro, resolvidos passo a passo e organizados por nível de dificuldade — de pré-cálculo a aplicações da derivada.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;600;700&family=Space+Mono:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Exercícios Resolvidos — Curso de Cálculo I — W. T. Ares | Matemática">
+<meta property="og:description" content="15 exercícios selecionados diretamente dos capítulos do livro, resolvidos passo a passo e organizados por nível de dificuldade — de pré-cálculo a aplicações da derivada.">
+<meta property="og:image" content="https://www.wtaresmatematica.com/images/capa-calculo-1.jpg">
+<meta property="og:url" content="https://www.wtaresmatematica.com/exercicios-calculo1.html">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Exercícios Resolvidos — Curso de Cálculo I — W. T. Ares | Matemática">
+<meta name="twitter:description" content="15 exercícios selecionados diretamente dos capítulos do livro, resolvidos passo a passo e organizados por nível de dificuldade — de pré-cálculo a aplicações da derivada.">
+<meta name="twitter:image" content="https://www.wtaresmatematica.com/images/capa-calculo-1.jpg">
+<link rel="canonical" href="https://www.wtaresmatematica.com/exercicios-calculo1.html">
+<!-- MailerLite Universal -->
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2556502');
+</script>
+<!-- End MailerLite Universal -->
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute">
+  <filter id="chalkTexture" x="-20%" y="-20%" width="140%" height="140%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="noise" seed="7"/>
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.4"/>
+  </filter>
+</svg>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">W. T. Ares</span>
+      <span class="brand-sub">Matemática</span>
+    </a>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" id="navToggle"><span></span></button>
+    <nav class="main-links" id="mainLinks">
+      <a href="index.html">Início</a>
+      <a href="autor.html">Sobre o Autor</a>
+      <a href="livro.html">O Livro</a>
+      <a href="adquirir.html">Como Adquirir</a>
+      <a href="exercicios.html" class="active">Exercícios</a>
+      <a href="historia-da-matematica.html">História da Matemática</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+    <div class="nav-search">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="siteSearch" placeholder="Pesquisar..." autocomplete="off" aria-label="Pesquisar no site">
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="page-hero chalkboard-bg">
+    <div class="container">
+      <p class="breadcrumb"><a href="index.html">Início</a> / <a href="exercicios.html">Exercícios</a> / Curso de Cálculo I</p>
+      <h1>Exercícios Resolvidos — Curso de Cálculo I</h1>
+      <p class="sub">15 exercícios selecionados diretamente dos capítulos do livro, resolvidos passo a passo e organizados por nível de dificuldade — de pré-cálculo a aplicações da derivada.</p>
+      <p style="margin-top:22px; display:flex; gap:10px; flex-wrap:wrap;">
+        <a href="#nivel-facil" class="volume-chip">Fácil (5)</a> <a href="#nivel-medio" class="volume-chip">Médio (5)</a> <a href="#nivel-dificil" class="volume-chip">Difícil (5)</a>
+      </p>
+      <p style="margin-top:18px;"><a href="livro.html#calculo-1" class="btn btn-ghost" style="padding:9px 16px; font-size:0.82rem;">← Ver o livro</a></p>
+    </div>
+  </section>
+
+  <section class="chalkboard-bg exercise-section reveal" style="padding-bottom:80px;">
+    <div class="container">
+      <div id="nivel-facil" style="padding-top:26px; margin-bottom:8px;">
+        <p class="eyebrow"><span class="rule"></span> Nível Fácil</p>
+        <p style="color:rgba(243,238,225,0.6); font-family:var(--mono); font-size:0.85rem; margin-bottom:28px;">Aquecimento — revisão de conceitos e aplicação direta de definições.</p>
+      </div>
+      <div style="display:grid; gap:28px; margin-bottom:20px;">
+      <div class="exercise-card" id="facil-1">
+        <div class="exercise-head">
+          <span class="exercise-badge">Curso de Cálculo I · Fácil</span>
+          <h3>Classificação de números reais</h3>
+        </div>
+        <div class="exercise-problem"><p>Classifique cada número como N, Z, Q ou I: 0; −7; √9; √5; π; 0,333...; ³√8.</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>0 é natural (na convenção do livro) e também inteiro e racional: N, Z, Q.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>−7 é um inteiro negativo, não é natural: Z, Q.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>√9 = 3, que é inteiro e racional: Z, Q.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">4</div>
+            <div class="exercise-step-text"><p>√5 ≈ 2,236... não é exato, pois 5 não é quadrado perfeito — é irracional: I.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">5</div>
+            <div class="exercise-step-text"><p>π é irracional (transcendente): I. Já 0,333... = 1/3 é uma dízima periódica, portanto racional: Q.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">6</div>
+            <div class="exercise-step-text"><p>³√8 = 2, que é inteiro: Z, Q.</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: 0, √9 = 3 e ³√8 = 2 são inteiros (Z); 0,333... = 1/3 é racional (Q); √5 e π são irracionais (I).</div>
+      </div>
+      <div class="exercise-card" id="facil-2">
+        <div class="exercise-head">
+          <span class="exercise-badge">Curso de Cálculo I · Fácil</span>
+          <h3>Inequação do 2º grau</h3>
+        </div>
+        <div class="exercise-problem"><p>Resolva 2x² − 7x + 3 &gt; 0 e expresse a solução em notação intervalar.</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Encontramos as raízes com a fórmula de Bhaskara: Δ = 49 − 24 = 25, x = (7 ± 5)/4 → x = 3 ou x = 1/2.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>Como o coeficiente a = 2 é positivo, a parábola abre para cima, sendo positiva fora do intervalo entre as raízes.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>Logo, 2x² − 7x + 3 &gt; 0 quando x &lt; 1/2 ou x &gt; 3.</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: S = (−∞, 1/2) ∪ (3, +∞).</div>
+      </div>
+      <div class="exercise-card" id="facil-3">
+        <div class="exercise-head">
+          <span class="exercise-badge">Curso de Cálculo I · Fácil</span>
+          <h3>Domínio de função com raiz</h3>
+        </div>
+        <div class="exercise-problem"><p>Determine o domínio de f(x) = √(4 − x²).</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Para a raiz existir em R, precisamos que 4 − x² ≥ 0.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>Isso equivale a x² ≤ 4, ou seja, −2 ≤ x ≤ 2.</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: Dom(f) = [−2, 2].</div>
+      </div>
+      <div class="exercise-card" id="facil-4">
+        <div class="exercise-head">
+          <span class="exercise-badge">Curso de Cálculo I · Fácil</span>
+          <h3>Vértice e raízes de função quadrática</h3>
+        </div>
+        <div class="exercise-problem"><p>Para f(x) = −x² + 4x + 5, determine vértice, raízes e imagem.</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Raízes: Δ = 16 + 20 = 36, x = (−4 ± 6)/(−2) → x = −1 ou x = 5.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>Vértice: x_v = −b/2a = −4/(−2) = 2; y_v = f(2) = −4 + 8 + 5 = 9.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>Como a = −1 &lt; 0, a parábola abre para baixo e o vértice é ponto de máximo.</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: Raízes x = −1 e x = 5; vértice (2, 9); imagem Im(f) = (−∞, 9].</div>
+      </div>
+      <div class="exercise-card" id="facil-5">
+        <div class="exercise-head">
+          <span class="exercise-badge">Curso de Cálculo I · Fácil</span>
+          <h3>Limite por fatoração</h3>
+        </div>
+        <div class="exercise-problem"><p>Calcule lim (x² − 9)/(x − 3) quando x → 3.</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Substituindo x = 3 diretamente obtemos 0/0 — uma indeterminação que ainda não resolve o limite.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>Fatoramos o numerador: x² − 9 = (x − 3)(x + 3).</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>Cancelamos o fator comum (x − 3), válido pois x ≠ 3 na definição de limite: a expressão vira x + 3.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">4</div>
+            <div class="exercise-step-text"><p>Substituímos x = 3 na expressão já simplificada.</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: lim = 6.</div>
+      </div>
+      </div>
+      <div id="nivel-medio" style="padding-top:26px; margin-bottom:8px;">
+        <p class="eyebrow"><span class="rule"></span> Nível Médio</p>
+        <p style="color:rgba(243,238,225,0.6); font-family:var(--mono); font-size:0.85rem; margin-bottom:28px;">Exige combinar duas ou mais ideias, ou uma manipulação algébrica mais cuidadosa.</p>
+      </div>
+      <div style="display:grid; gap:28px; margin-bottom:20px;">
+      <div class="exercise-card" id="medio-1">
+        <div class="exercise-head">
+          <span class="exercise-badge">Curso de Cálculo I · Médio</span>
+          <h3>Inequação irracional</h3>
+        </div>
+        <div class="exercise-problem"><p>Resolva √(2x − 1) ≤ x − 2.</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Para a raiz existir, precisamos que 2x − 1 ≥ 0, ou seja, x ≥ 1/2.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>Como a raiz é sempre ≥ 0, o lado direito também precisa ser ≥ 0: x − 2 ≥ 0, ou seja, x ≥ 2.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>Elevamos ambos os lados ao quadrado (válido pois ambos são não negativos): 2x − 1 ≤ (x − 2)² = x² − 4x + 4.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">4</div>
+            <div class="exercise-step-text"><p>Reorganizando: x² − 6x + 5 ≥ 0 → (x − 1)(x − 5) ≥ 0 → x ≤ 1 ou x ≥ 5.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">5</div>
+            <div class="exercise-step-text"><p>Intersectando com a restrição x ≥ 2, sobra apenas x ≥ 5.</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: S = [5, +∞).</div>
+      </div>
+      <div class="exercise-card" id="medio-2">
+        <div class="exercise-head">
+          <span class="exercise-badge">Curso de Cálculo I · Médio</span>
+          <h3>Reta tangente por derivação implícita</h3>
+        </div>
+        <div class="exercise-problem"><p>Encontre a reta tangente à curva x² − xy + y² = 3 no ponto (1, 2).</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Derivamos implicitamente ambos os lados em relação a x: 2x − (y + x·y') + 2y·y' = 0.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>Isolamos y': y'(2y − x) = y − 2x → y' = (y − 2x)/(2y − x).</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>Substituímos o ponto (1, 2): y' = (2 − 2)/(4 − 1) = 0/3 = 0.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">4</div>
+            <div class="exercise-step-text"><p>A reta tangente tem coeficiente angular 0 e passa por (1, 2): y − 2 = 0·(x − 1).</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: Reta tangente: y = 2.</div>
+      </div>
+      <div class="exercise-card" id="medio-3">
+        <div class="exercise-head">
+          <span class="exercise-badge">Curso de Cálculo I · Médio</span>
+          <h3>Limite trigonométrico fundamental</h3>
+        </div>
+        <div class="exercise-problem"><p>Calcule lim (sen 3x)/x quando x → 0.</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Reescrevemos multiplicando e dividindo por 3: (sen 3x)/x = 3 · (sen 3x)/(3x).</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>Fazemos a substituição u = 3x; quando x → 0, também u → 0.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>Usamos o limite fundamental lim (sen u)/u = 1 quando u → 0.</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: lim = 3 · 1 = 3.</div>
+      </div>
+      <div class="exercise-card" id="medio-4">
+        <div class="exercise-head">
+          <span class="exercise-badge">Curso de Cálculo I · Médio</span>
+          <h3>Aproximação por linearização</h3>
+        </div>
+        <div class="exercise-problem"><p>Use a linearização para aproximar √4,02.</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Escolhemos f(x) = √x e o ponto de referência a = 4, onde f(4) = 2 é fácil de calcular.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>Calculamos f'(x) = 1/(2√x), logo f'(4) = 1/4.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>A linearização é L(x) = f(a) + f'(a)(x − a) = 2 + (1/4)(x − 4).</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">4</div>
+            <div class="exercise-step-text"><p>Substituímos x = 4,02, ou seja, Δx = 0,02: L(4,02) = 2 + (1/4)(0,02).</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: √4,02 ≈ 2,005.</div>
+      </div>
+      <div class="exercise-card" id="medio-5">
+        <div class="exercise-head">
+          <span class="exercise-badge">Curso de Cálculo I · Médio</span>
+          <h3>Extremos absolutos em intervalo fechado</h3>
+        </div>
+        <div class="exercise-problem"><p>Determine os extremos absolutos de f(x) = 3x⁴ − 4x³ em [0, 3].</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Derivamos: f'(x) = 12x³ − 12x² = 12x²(x − 1).</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>Pontos críticos: f'(x) = 0 em x = 0 e x = 1 (ambos dentro de [0, 3]).</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>Avaliamos f nos pontos críticos e nas extremidades: f(0) = 0, f(1) = 3 − 4 = −1, f(3) = 243 − 108 = 135.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">4</div>
+            <div class="exercise-step-text"><p>Comparamos os quatro valores para identificar o maior e o menor.</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: Mínimo absoluto f(1) = −1; máximo absoluto f(3) = 135.</div>
+      </div>
+      </div>
+      <div id="nivel-dificil" style="padding-top:26px; margin-bottom:8px;">
+        <p class="eyebrow"><span class="rule"></span> Nível Difícil</p>
+        <p style="color:rgba(243,238,225,0.6); font-family:var(--mono); font-size:0.85rem; margin-bottom:28px;">Demonstrações e problemas de nível avançado, no espírito dos cursos de referência (MIT).</p>
+      </div>
+      <div style="display:grid; gap:28px; margin-bottom:20px;">
+      <div class="exercise-card" id="dificil-1">
+        <div class="exercise-head">
+          <span class="exercise-badge">Curso de Cálculo I · Difícil · Nível avançado</span>
+          <h3>Prova de irracionalidade</h3>
+        </div>
+        <div class="exercise-problem"><p>Prove que √2 + √3 é irracional.</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Suponha, por absurdo, que √2 + √3 = q, com q racional.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>Elevamos ao quadrado: 2 + 2√6 + 3 = q² → 2√6 = q² − 5.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>Como q é racional, q² − 5 também é racional, logo √6 = (q² − 5)/2 seria racional.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">4</div>
+            <div class="exercise-step-text"><p>Mas √6 é irracional (6 não é quadrado perfeito), o que gera uma contradição.</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: Logo, √2 + √3 é irracional. ∎</div>
+      </div>
+      <div class="exercise-card" id="dificil-2">
+        <div class="exercise-head">
+          <span class="exercise-badge">Curso de Cálculo I · Difícil · Nível avançado</span>
+          <h3>Desigualdade de Bernoulli por indução</h3>
+        </div>
+        <div class="exercise-problem"><p>Prove que (1+x)ⁿ ≥ 1 + nx para todo x &gt; −1 e n ∈ N.</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Base (n=1): (1+x)¹ = 1+x = 1 + 1·x — a igualdade vale, confirmando o caso base.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>Hipótese de indução: suponha (1+x)^k ≥ 1 + kx para algum k ≥ 1.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>Passo indutivo: como 1+x &gt; 0, multiplicamos ambos os lados por (1+x): (1+x)^(k+1) ≥ (1+kx)(1+x).</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">4</div>
+            <div class="exercise-step-text"><p>Expandimos: (1+kx)(1+x) = 1 + (k+1)x + kx² ≥ 1 + (k+1)x, pois kx² ≥ 0.</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: Por indução, (1+x)ⁿ ≥ 1 + nx para todo n ∈ N. ∎</div>
+      </div>
+      <div class="exercise-card" id="dificil-3">
+        <div class="exercise-head">
+          <span class="exercise-badge">Curso de Cálculo I · Difícil · Nível avançado</span>
+          <h3>Prova rigorosa de limite (ε-δ)</h3>
+        </div>
+        <div class="exercise-problem"><p>Use a definição ε-δ para provar que lim (3x − 1) = 14 quando x → 5.</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Dado ε &gt; 0, queremos δ &gt; 0 tal que 0 &lt; |x − 5| &lt; δ implique |(3x−1) − 14| &lt; ε.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>Simplificamos: |(3x−1) − 14| = |3x − 15| = 3|x − 5|.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>Queremos 3|x−5| &lt; ε, ou seja, |x−5| &lt; ε/3. Basta escolher δ = ε/3.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">4</div>
+            <div class="exercise-step-text"><p>Verificação: se 0 &lt; |x−5| &lt; δ = ε/3, então |(3x−1)−14| = 3|x−5| &lt; 3·(ε/3) = ε.</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: Para todo ε &gt; 0, δ = ε/3 satisfaz a definição, logo lim (3x−1) = 14 quando x→5. ∎</div>
+      </div>
+      <div class="exercise-card" id="dificil-4">
+        <div class="exercise-head">
+          <span class="exercise-badge">Curso de Cálculo I · Difícil · Nível avançado</span>
+          <h3>Limite trigonométrico via conjugado</h3>
+        </div>
+        <div class="exercise-problem"><p>Prove que lim (1 − cos x)/x² = 1/2 quando x → 0.</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Multiplicamos numerador e denominador pelo conjugado (1 + cos x): (1−cos x)(1+cos x) / [x²(1+cos x)].</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>O numerador vira 1 − cos²x = sen²x (identidade fundamental).</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>Reescrevemos como [sen x / x]² · 1/(1 + cos x).</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">4</div>
+            <div class="exercise-step-text"><p>Quando x → 0: lim (sen x/x)² = 1² = 1, e lim 1/(1+cos x) = 1/2.</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: lim (1 − cos x)/x² = 1 · 1/2 = 1/2. ∎</div>
+      </div>
+      <div class="exercise-card" id="dificil-5">
+        <div class="exercise-head">
+          <span class="exercise-badge">Curso de Cálculo I · Difícil · Nível avançado</span>
+          <h3>Cone de volume máximo inscrito em uma esfera</h3>
+        </div>
+        <div class="exercise-problem"><p>Um cone é inscrito numa esfera de raio R. Determine as dimensões do cone de volume máximo.</p></div>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <div class="exercise-step-num">1</div>
+            <div class="exercise-step-text"><p>Com o centro da esfera na origem e h a altura do cone medida do 'fundo' da esfera, a geometria dá r² = 2Rh − h², para 0 &lt; h &lt; 2R.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">2</div>
+            <div class="exercise-step-text"><p>O volume do cone é V(h) = (π/3)(2Rh² − h³).</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">3</div>
+            <div class="exercise-step-text"><p>Derivamos e igualamos a zero: V'(h) = (π/3)(4Rh − 3h²) = 0 → h(4R − 3h) = 0 → h = 4R/3.</p></div>
+          </div>
+          <div class="exercise-step">
+            <div class="exercise-step-num">4</div>
+            <div class="exercise-step-text"><p>Verificamos que é máximo e calculamos r² = 2R(4R/3) − (4R/3)² = 8R²/9.</p></div>
+          </div>
+        </div>
+        <div class="exercise-result">Resultado: h = 4R/3 e r = (2√2/3)R, com volume máximo V = (32/81)πR³.</div>
+      </div>
+      </div>
+    </div>
+  </section>
+</main>
+<section class="newsletter-band">
+  <div class="container newsletter-inner">
+    <div class="newsletter-copy">
+      <p class="eyebrow"><span class="rule"></span> Fique por dentro</p>
+      <h3>Novidades, dicas de cálculo e conteúdos exclusivos em primeira mão</h3>
+      <p class="sub">Inscreva-se para receber novidades sobre o Curso de Cálculo I, II e III, além de conteúdos exclusivos do autor.</p>
+    </div>
+    <form class="newsletter-form" novalidate>
+      <input type="email" required placeholder="seu-email@exemplo.com" aria-label="Seu e-mail">
+      <button type="submit">Inscrever-se</button>
+      <p class="newsletter-status" role="status"></p>
+      <p class="newsletter-note">Sem spam. Cancele sua inscrição quando quiser.</p>
+    </form>
+  </div>
+</section>
+<footer id="rodape" class="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <h4>Fale com o autor</h4>
+          <a class="email" href="mailto:tavareswagner21@gmail.com">tavareswagner21@gmail.com</a>
+      </div>
+      <div>
+        <h4>Redes sociais</h4>
+        <div class="social-list">
+          <a href="https://www.facebook.com/profwtares" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M13.5 21v-7h2.3l.35-2.7h-2.65v-1.73c0-.78.22-1.32 1.34-1.32h1.43V5.8c-.25-.03-1.1-.11-2.09-.11-2.07 0-3.48 1.26-3.48 3.58v2h-2.3v2.7h2.3v7h2.8z" fill="currentColor" stroke="none"/></svg>
+            Facebook
+          </a>
+          <a href="https://www.instagram.com/tavares9046/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none"/></svg>
+            Instagram
+          </a>
+          <a href="https://www.linkedin.com/in/wagner-tavares-038772230/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="3"/><line x1="8" y1="11" x2="8" y2="17"/><circle cx="8" cy="7.5" r="0.6" fill="currentColor"/><path d="M12 17v-3.5a2.5 2.5 0 0 1 5 0V17"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://www.youtube.com/@wtaresmatematica" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="12" rx="4"/><path d="M11 10l4 2-4 2z" fill="currentColor" stroke="none"/></svg>
+            YouTube
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="fine-print">
+      <span>© 2026 W. T. Ares — Matemática</span>
+      <span>seravat647.github.io/matematicawtares</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
