@@ -64,13 +64,14 @@
     text-transform:uppercase; color:var(--chalk-yellow);
   }
   nav.main-links{
-    display:flex; gap:32px; list-style:none;
+    display:flex; gap:20px; list-style:none;
   }
   nav.main-links a{
-    font-family:var(--sans); font-size:0.92rem; font-weight:600;
+    font-family:var(--sans); font-size:0.84rem; font-weight:600;
     color:var(--chalk); text-decoration:none;
     position:relative; padding-bottom:4px;
     opacity:0.88;
+    white-space:nowrap;
   }
   nav.main-links a::after{
     content:""; position:absolute; left:0; bottom:0;
@@ -95,7 +96,7 @@
   .nav-toggle.open span::before{transform:translateY(9px) rotate(45deg);}
   .nav-toggle.open span::after{transform:translateY(-9px) rotate(-45deg);}
 
-  @media (max-width:760px){
+  @media (max-width:1180px){
     nav.main-links{
       position:absolute; top:100%; left:0; right:0;
       flex-direction:column; gap:0;
@@ -103,9 +104,10 @@
       max-height:0; overflow:hidden;
       transition:max-height 0.3s ease;
     }
-    nav.main-links.open{max-height:320px;}
+    nav.main-links.open{max-height:380px;}
     nav.main-links a{
       padding:16px 28px; width:100%; border-top:1px solid rgba(228,190,104,0.12);
+      white-space:normal;
     }
     .nav-toggle{display:block;}
   }
@@ -509,7 +511,7 @@
   margin-right:4px;
 }
 .nav-search input{
-  width:180px; padding:8px 12px 8px 34px;
+  width:150px; padding:8px 12px 8px 34px;
   background:rgba(243,238,225,0.08);
   border:1px solid rgba(243,238,225,0.22);
   border-radius:20px; color:var(--chalk);
@@ -518,7 +520,7 @@
 }
 .nav-search input::placeholder{color:rgba(243,238,225,0.5);}
 .nav-search input:focus{
-  width:230px; background:rgba(243,238,225,0.14);
+  width:200px; background:rgba(243,238,225,0.14);
   outline:none; border-color:var(--chalk-yellow);
 }
 .nav-search svg{
@@ -549,7 +551,7 @@
   padding:16px; font-family:var(--mono); font-size:0.8rem;
   color:rgba(243,238,225,0.55);
 }
-@media (max-width:760px){
+@media (max-width:1180px){
   .nav-search{order:3; width:100%; margin:14px 28px 4px;}
   .nav-search input{width:100%;}
   .nav-search input:focus{width:100%;}
