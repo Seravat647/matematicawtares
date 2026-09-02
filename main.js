@@ -22,11 +22,6 @@ const SITE_INDEX = [
   { title: "O Livro — Curso de Cálculo III", url: "livro.html#calculo-3", snippet: "Cálculo em várias variáveis, derivadas parciais e integrais múltiplas." },
   { title: "A Coleção Completa", url: "livro.html#colecao", snippet: "Os três volumes do Curso de Cálculo, lado a lado." },
   { title: "Como Adquirir", url: "adquirir.html", snippet: "Compre na Amazon (Kindle) ou na Loja UICLAP." },
-  { title: "Exercícios Resolvidos", url: "exercicios.html", snippet: "Listas de exercícios resolvidos para os quatro livros, em níveis fácil, médio e difícil." },
-  { title: "Exercícios — Curso de Cálculo I", url: "exercicios-calculo1.html", snippet: "15 exercícios resolvidos de pré-cálculo, limites, derivadas e aplicações." },
-  { title: "Exercícios — Curso de Cálculo II", url: "exercicios-calculo2.html", snippet: "15 exercícios resolvidos de integração, séries e equações diferenciais introdutórias." },
-  { title: "Exercícios — Curso de Cálculo III", url: "exercicios-calculo3.html", snippet: "15 exercícios resolvidos de vetores, funções de várias variáveis e cálculo vetorial." },
-  { title: "Exercícios — Equações Diferenciais", url: "exercicios-equacoes-diferenciais.html", snippet: "15 exercícios resolvidos de EDOs, sistemas lineares, séries de Fourier e EDPs." },
   { title: "História da Matemática", url: "historia-da-matematica.html", snippet: "Os grandes matemáticos da história e suas contribuições para o desenvolvimento da matemática." },
   { title: "Contato", url: "contato.html", snippet: "tavareswagner21@gmail.com — Instagram, LinkedIn, YouTube, Facebook." }
 ];
@@ -186,7 +181,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* -------- Formulário de newsletter --------
      Envia o e-mail de fato via Web3Forms (gratuito), que
-     repassa cada inscrição para tavareswagner21@gmail.com. */
+     repassa cada inscrição para tavareswagner21@gmail.com.
+     Console.log de depuração incluído propositalmente — abra
+     o DevTools (F12) > Console para acompanhar o envio. */
   document.querySelectorAll(".newsletter-form").forEach(form => {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -196,6 +193,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const email = emailInput.value.trim();
 
       if (!email) return;
+
+      console.log("[newsletter] enviando inscrição para Web3Forms:", email);
 
       submitBtn.disabled = true;
       status.classList.remove("ok", "err", "show");
@@ -209,6 +208,7 @@ document.addEventListener("DOMContentLoaded", () => {
       })
         .then(res => res.json())
         .then(data => {
+          console.log("[newsletter] resposta do Web3Forms:", data);
           if (data.success) {
             status.textContent = "Obrigado! Em breve você receberá nossas novidades.";
             status.classList.add("ok", "show");
@@ -217,7 +217,8 @@ document.addEventListener("DOMContentLoaded", () => {
             throw new Error(data.message || "Erro no envio");
           }
         })
-        .catch(() => {
+        .catch((err) => {
+          console.error("[newsletter] erro no envio:", err);
           status.textContent = "Ops, algo deu errado. Tente novamente em instantes.";
           status.classList.add("err", "show");
         })
