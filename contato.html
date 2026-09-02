@@ -29,15 +29,7 @@
 <meta name="twitter:description" content="Fale com W. T. Ares: e-mail, Instagram, LinkedIn, YouTube e Facebook.">
 <meta name="twitter:image" content="https://www.wtaresmatematica.com/images/capa-calculo-1.jpg">
 <link rel="canonical" href="https://www.wtaresmatematica.com/contato.html">
-<!-- MailerLite Universal -->
-<script>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-    ml('account', '2556502');
-</script>
-<!-- End MailerLite Universal -->
+
 </head>
 <body>
 
@@ -121,7 +113,11 @@
       <p class="sub">Inscreva-se para receber novidades sobre o Curso de Cálculo I, II e III, além de conteúdos exclusivos do autor.</p>
     </div>
     <form class="newsletter-form" novalidate>
-      <input type="email" required placeholder="seu-email@exemplo.com" aria-label="Seu e-mail">
+      <input type="hidden" name="access_key" value="5223e774-7849-4e44-a5d8-9e83bba6d7d7">
+      <input type="hidden" name="subject" value="Nova inscrição na newsletter — W. T. Ares Matemática">
+      <input type="hidden" name="from_name" value="Site W. T. Ares Matemática">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+      <input type="email" name="email" required placeholder="seu-email@exemplo.com" aria-label="Seu e-mail">
       <button type="submit">Inscrever-se</button>
       <p class="newsletter-status" role="status"></p>
       <p class="newsletter-note">Sem spam. Cancele sua inscrição quando quiser.</p>
