@@ -778,3 +778,48 @@ nav.main-links a.active::after{width:100%;}
 }
 .breadcrumb a{color:var(--chalk-yellow); text-decoration:none;}
 .breadcrumb a:hover{text-decoration:underline;}
+/* ================= FORMULÁRIO DE CONTATO ================= */
+.contact-section {
+  margin-bottom: 60px; /* Espaço abaixo da seção */
+  border-top: 1px solid #444; /* Linha discreta separando do conteúdo anterior */
+}
+
+.contact-form {
+  max-width: 600px; /* Largura máxima do formulário */
+  margin: 0 auto;   /* Centraliza na página */
+}
+
+.form-group {
+  margin-bottom: 20px; /* Espaço entre os campos */
+}
+
+.form-input, .form-textarea {
+  width: 100%;              /* Ocupa toda a largura */
+  padding: 12px;            /* Espaçamento interno */
+  border: 1px solid #ccc;   /* Borda cinza clara */
+  border-radius: 5px;       /* Cantos arredondados */
+  font-size: 16px;          /* Tamanho da fonte */
+  font-family: var(--sans); /* Usa a fonte já definida no site */
+  background-color: #f9f9f9; /* Fundo claro */
+}
+
+.form-textarea {
+  min-height: 120px; /* Altura mínima para a área de mensagem */
+}
+
+.form-button {
+  display: block;
+  width: 100%;             /* Botão ocupa toda a largura */
+  padding: 12px;
+  background-color: #333;  /* Fundo escuro */
+  color: #fff;             /* Texto branco */
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;        /* Efeito suave ao passar o mouse */
+}
+
+.form-button:hover {
+  background-color: #555;  /* Fundo mais claro no hover */
+}
