@@ -30,8 +30,8 @@
     </div>
   </section>
 
-  <!-- Formulário de contato principal -->
-  <section class="chalkboard-bg reveal" style="padding-top:10px; padding-bottom:70px;">
+  <!-- Formulário de contato -->
+  <section class="contact-section chalkboard-bg reveal" style="padding:40px 0;">
     <div class="container">
       <h2>Envie sua mensagem</h2>
       <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
@@ -40,9 +40,15 @@
         <input type="hidden" name="from_name" value="Site W. T. Ares Matemática">
         <input type="hidden" name="redirect" value="https://www.wtaresmatematica.com/thank-you.html">
 
-        <input type="text" name="name" class="form-input" placeholder="Seu nome" required>
-        <input type="email" name="email" class="form-input" placeholder="Seu e-mail" required>
-        <textarea name="message" class="form-textarea" placeholder="Sua mensagem" required></textarea>
+        <div class="form-group">
+          <input type="text" name="name" class="form-input" placeholder="Seu nome" required>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" class="form-input" placeholder="Seu e-mail" required>
+        </div>
+        <div class="form-group">
+          <textarea name="message" class="form-textarea" placeholder="Sua mensagem" required></textarea>
+        </div>
         <button type="submit" class="form-button">Enviar</button>
       </form>
     </div>
