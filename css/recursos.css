@@ -1,0 +1,125 @@
+/* ======================================================================
+   CSS ADICIONAL — Formulário de Cálculo / Cálculo na Prática
+   Este arquivo é independente do style.css principal: basta linká-lo
+   (além do style.css) no <head> das páginas formulario.html e
+   calculo-na-pratica.html. Não é necessário alterar o style.css atual.
+   ====================================================================== */
+
+/* ---------- Quick-jump pill nav ---------- */
+.topic-nav{
+  display:flex; flex-wrap:wrap; gap:10px; margin-top:30px;
+}
+.topic-nav a{
+  font-family:var(--mono); font-size:0.76rem; letter-spacing:0.04em;
+  color:#5c6b62; text-decoration:none;
+  border:1px solid var(--paper-line); border-radius:20px;
+  padding:8px 16px; transition:all 0.18s ease;
+  background:rgba(255,255,255,0.5);
+}
+.topic-nav a:hover{
+  border-color:var(--chalk-yellow); color:#8a7a3f;
+  transform:translateY(-2px); background:#fff;
+}
+
+/* ---------- Formulário: cards ---------- */
+.formula-part{ scroll-margin-top:100px; }
+h3.formula-topic{
+  font-family:var(--serif); font-size:1.18rem; font-weight:600;
+  margin:34px 0 16px; color:var(--ink);
+}
+.formula-grid{
+  display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));
+  gap:16px; margin-bottom:8px;
+}
+.formula-card{
+  background:#fff; border:1px solid var(--paper-line); border-radius:6px;
+  padding:18px 20px; display:flex; flex-direction:column; gap:9px;
+  box-shadow:0 10px 22px -18px rgba(31,59,50,0.4);
+}
+.formula-card .fname{
+  font-family:var(--sans); font-weight:700; font-size:0.86rem;
+  letter-spacing:0.01em; color:#8a7a3f;
+}
+.formula-card .fexpr{
+  font-family:var(--mono); font-size:0.98rem; line-height:1.5; color:var(--ink);
+  background:rgba(31,59,50,0.05); border-left:3px solid var(--chalk-yellow);
+  padding:9px 12px; border-radius:3px;
+}
+.formula-card .fnote{
+  font-size:0.85rem; color:#5c6b62; line-height:1.5;
+}
+.formula-card-dark{
+  background:rgba(243,238,225,0.05); border-color:rgba(243,238,225,0.16);
+}
+.formula-card-dark .fname{ color:var(--chalk-yellow); }
+.formula-card-dark .fexpr{
+  color:var(--chalk); background:rgba(243,238,225,0.07);
+  border-left-color:var(--chalk-blue);
+}
+.formula-card-dark .fnote{ color:rgba(243,238,225,0.68); }
+
+/* ---------- Cálculo na Prática: case studies ---------- */
+.practice-area{ scroll-margin-top:100px; }
+.case-grid{
+  display:grid; grid-template-columns:repeat(auto-fit, minmax(340px, 1fr));
+  gap:28px;
+}
+.case-card{
+  background:#fff; border-radius:8px; border:1px solid var(--paper-line);
+  border-top:4px solid var(--case-color, var(--chalk-yellow));
+  padding:28px 26px; box-shadow:0 20px 40px -26px rgba(31,59,50,0.5);
+  display:flex; flex-direction:column; gap:16px;
+}
+.chalkboard-bg .case-card{
+  background:rgba(243,238,225,0.04); border-color:rgba(243,238,225,0.14);
+}
+.case-tag{
+  align-self:flex-start; font-family:var(--mono); font-size:0.68rem;
+  letter-spacing:0.06em; text-transform:uppercase; color:var(--case-color, #8a7a3f);
+  background:color-mix(in srgb, var(--case-color, #8a7a3f) 12%, transparent);
+  border:1px solid color-mix(in srgb, var(--case-color, #8a7a3f) 40%, transparent);
+  padding:5px 12px; border-radius:20px;
+}
+.case-card h3{
+  font-family:var(--serif); font-size:1.28rem; font-weight:600; color:var(--ink);
+}
+.chalkboard-bg .case-card h3{ color:var(--chalk); }
+.case-box p{ margin:0; font-size:0.93rem; line-height:1.6; color:#3c453f; }
+.chalkboard-bg .case-box p{ color:rgba(243,238,225,0.85); }
+.case-box-label{
+  display:block; font-family:var(--mono); font-size:0.66rem; letter-spacing:0.1em;
+  text-transform:uppercase; color:var(--case-color, #8a7a3f); margin-bottom:8px;
+}
+.case-dev{
+  background:color-mix(in srgb, var(--case-color, #8a7a3f) 6%, transparent);
+  border-left:3px solid var(--case-color, var(--chalk-yellow));
+  padding:12px 16px; border-radius:0 4px 4px 0;
+}
+.case-dev ul{ margin:0; padding-left:18px; display:flex; flex-direction:column; gap:6px; }
+.case-dev li{ font-size:0.9rem; line-height:1.55; color:#3c453f; font-family:var(--mono); }
+.chalkboard-bg .case-dev li{ color:rgba(243,238,225,0.85); }
+.case-impact{
+  background:color-mix(in srgb, var(--case-color, #8a7a3f) 8%, transparent);
+  padding:12px 16px; border-radius:4px;
+}
+.case-curiosity p{ font-style:italic; }
+.case-curiosity{ padding-top:2px; border-top:1px dashed var(--paper-line); }
+.chalkboard-bg .case-curiosity{ border-top-color:rgba(243,238,225,0.16); }
+
+/* ---------- Tabela-resumo ---------- */
+.table-wrap{ overflow-x:auto; border-radius:8px; box-shadow:0 20px 40px -26px rgba(31,59,50,0.4); }
+table.summary-table{
+  width:100%; border-collapse:collapse; min-width:560px;
+  font-size:0.92rem; background:#fff;
+}
+table.summary-table thead th{
+  background:var(--chalkboard); color:var(--chalk);
+  font-family:var(--sans); font-weight:700; text-align:left;
+  padding:14px 18px; font-size:0.85rem;
+}
+table.summary-table tbody td{
+  padding:14px 18px; border-bottom:1px solid var(--paper-line);
+  color:#3c453f; line-height:1.5;
+}
+table.summary-table tbody tr:nth-child(even){ background:rgba(217,208,184,0.18); }
+table.summary-table tbody tr:last-child td{ border-bottom:none; }
