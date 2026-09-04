@@ -18,7 +18,29 @@
 <body>
 
 <header class="site-nav">
-  <!-- ... seu menu ... -->
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">W. T. Ares</span>
+      <span class="brand-sub">Matemática</span>
+    </a>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" id="navToggle"><span></span></button>
+    <nav class="main-links" id="mainLinks">
+      <a href="index.html">Início</a>
+      <a href="autor.html">Sobre o Autor</a>
+      <a href="livro.html">O Livro</a>
+      <a href="adquirir.html">Como Adquirir</a>
+      <a href="exercicios.html">Exercícios</a>
+      <a href="formulario.html">Formulário</a>
+      <a href="calculo-na-pratica.html">Cálculo na Prática</a>
+      <a href="historia-da-matematica.html">História da Matemática</a>
+      <a href="contato.html" class="active">Contato</a>
+    </nav>
+    <div class="nav-search">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="siteSearch" placeholder="Pesquisar..." autocomplete="off" aria-label="Pesquisar no site">
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
 </header>
 
 <main>
@@ -54,8 +76,6 @@
     </div>
   </section>
 </main>
-</main>
-
 <footer id="rodape" class="contact">
   <div class="container">
     <div class="contact-grid">
