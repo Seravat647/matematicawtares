@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cálculo na Prática — Onde o Cálculo Aparece de Verdade | W. T. Ares</title>
+<meta name="description" content="Como engenheiros, economistas, físicos e outros profissionais usam Cálculo no dia a dia — casos reais, com números, ligados ao Curso de Cálculo I, II, III e Equações Diferenciais.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;600;700&family=Space+Mono:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/recursos.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cálculo na Prática — Onde o Cálculo Aparece de Verdade | W. T. Ares">
+<meta property="og:description" content="Como engenheiros, economistas, físicos e outros profissionais usam Cálculo no dia a dia — casos reais, com números, ligados ao Curso de Cálculo I, II, III e Equações Diferenciais.">
+<meta property="og:image" content="https://www.wtaresmatematica.com/images/capa-calculo-1.jpg">
+<meta property="og:url" content="https://www.wtaresmatematica.com/calculo-na-pratica.html">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cálculo na Prática — Onde o Cálculo Aparece de Verdade | W. T. Ares">
+<meta name="twitter:description" content="Como engenheiros, economistas, físicos e outros profissionais usam Cálculo no dia a dia — casos reais, com números, ligados ao Curso de Cálculo I, II, III e Equações Diferenciais.">
+<meta name="twitter:image" content="https://www.wtaresmatematica.com/images/capa-calculo-1.jpg">
+<link rel="canonical" href="https://www.wtaresmatematica.com/calculo-na-pratica.html">
+ <!-- MailerLite Universal --> <script> (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]) .push(arguments);},l=d.createElement(e),l.async=1,l.src=u, n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);}) (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml'); ml('account', '2556502'); </script> <!-- End MailerLite Universal -->
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute">
+  <filter id="chalkTexture" x="-20%" y="-20%" width="140%" height="140%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="noise" seed="7"/>
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.4"/>
+  </filter>
+</svg>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">W. T. Ares</span>
+      <span class="brand-sub">Matemática</span>
+    </a>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" id="navToggle"><span></span></button>
+    <nav class="main-links" id="mainLinks">
+      <a href="index.html">Início</a>
+      <a href="autor.html">Sobre o Autor</a>
+      <a href="livro.html">O Livro</a>
+      <a href="adquirir.html">Como Adquirir</a>
+      <a href="exercicios.html">Exercícios</a>
+      <a href="formulario.html">Formulário</a>
+      <a href="calculo-na-pratica.html" class="active">Cálculo na Prática</a>
+      <a href="historia-da-matematica.html">História da Matemática</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+    <div class="nav-search">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="siteSearch" placeholder="Pesquisar..." autocomplete="off" aria-label="Pesquisar no site">
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="page-hero chalkboard-bg">
+    <div class="container">
+      <p class="breadcrumb"><a href="index.html">Início</a> / Cálculo na Prática</p>
+      <h1>Cálculo na Prática</h1>
+      <p class="sub">Do quadro-negro à profissão: como engenheiros, economistas, físicos e outros profissionais usam Cálculo todos os dias — com números reais, do jeito que acontece de verdade.</p>
+    </div>
+  </section>
+  <section class="paper-bg reveal">
+    <div class="container">
+      <p class="eyebrow"><span class="rule"></span> Por que isso importa</p>
+      <h2 style="margin-bottom:22px;">"Quando é que eu vou usar isso na vida real?"</h2>
+      <p class="lead-text">Se você já se fez essa pergunta resolvendo uma derivada, este material é a resposta. O <a href="formulario.html" style="color:#8a7a3f; text-decoration:underline;">Formulário</a> e os <a href="exercicios.html" style="color:#8a7a3f; text-decoration:underline;">exercícios comentados</a> dão a ferramenta técnica — derivada, integral, séries, equações diferenciais. Aqui, essas mesmas ferramentas entram em ação, dentro de decisões reais que profissionais tomam todos os dias, muitas vezes sem perceber que estão "fazendo Cálculo".</p>
+      <p class="lead-text">Cada caso a seguir segue a mesma estrutura: <strong>Cenário</strong> — a situação real; <strong>Conceito</strong> — a ferramenta de Cálculo que resolve o problema; <strong>Desenvolvimento</strong> — a conta, passo a passo; <strong>Por que isso importa</strong> — o impacto prático; e uma <strong>Curiosidade</strong> extra.</p>
+      <div class="topic-nav" aria-label="Ir para a área">
+        <a href="#engenharia" style="border-color:#2E5C8A66;">Engenharia</a>
+        <a href="#economia" style="border-color:#1E7F4F66;">Economia &amp; Administração</a>
+        <a href="#fisica" style="border-color:#6A3EA166;">Física</a>
+        <a href="#tecnologia" style="border-color:#128C7E66;">Bônus — Tecnologia &amp; Inteligência Artificial</a>
+        <a href="#saude" style="border-color:#B0344C66;">Bônus — Saúde &amp; Biologia</a>
+      </div>
+    </div>
+  </section>
+  <section id="engenharia" class="chalkboard-bg reveal practice-area">
+    <div class="container">
+      <p class="eyebrow" style="color:var(--chalk-yellow);"><span class="rule"></span> Pontes, circuitos e estruturas que não podem falhar</p>
+      <h2 style="color:var(--chalk); margin-bottom:32px;">Engenharia</h2>
+      <div class="case-grid">
+        <article class="case-card" style="--case-color:#2E5C8A;">
+          <span class="case-tag">Engenharia Civil · Otimização</span>
+          <h3>O reservatório mais barato de construir</h3>
+          <div class="case-box case-scenario"><span class="case-box-label">Cenário</span><p>Você é a engenheira responsável por projetar um reservatório cilíndrico de aço para armazenar 1000 m³ de água tratada. Cada metro quadrado de chapa de aço custa caro, e a construtora exige o menor gasto possível de material — sem perder um litro de capacidade.</p></div>
+          <div class="case-box case-dev"><span class="case-box-label">Conceito: Otimização com derivada (Cálculo I, Bloco 3)</span><ul>
+<li>Volume fixo: V = πr²h = 1000  ⇒  h = 1000/(πr²)</li>
+<li>Área total de aço (fundo + tampa + lateral): A(r) = 2πr² + 2πrh = 2πr² + 2000/r</li>
+<li>Minimizar: A'(r) = 4πr − 2000/r² = 0  ⇒  r³ = 500/π  ⇒  r ≈ 5,42 m</li>
+<li>h = 1000/(πr²) ≈ 10,83 m  (note que h ≈ 2r — resultado clássico do 'problema da lata')</li>
+<li>Área mínima: A(5,42) ≈ 553,7 m²</li>
+</ul></div>
+          <div class="case-box case-impact"><span class="case-box-label">Por que isso importa</span><p>Um projetista sem otimização poderia 'chutar' r = 3 m: a altura sairia um exagero (35,4 m) e a área subiria para 723 m² — 30% a mais de aço. A R$180/m², isso é mais de R$30.000 jogados fora em um único reservatório.</p></div>
+          <div class="case-box case-curiosity"><span class="case-box-label">Curiosidade</span><p>É o mesmo cálculo do clássico 'problema da lata de refrigerante' do Cálculo I — só que aqui a lata guarda 1000 m³ e ninguém vai bebê-la.</p></div>
+        </article>
+        <article class="case-card" style="--case-color:#2E5C8A;">
+          <span class="case-tag">Engenharia Elétrica · Taxas de variação</span>
+          <h3>O flash da câmera e o capacitor que carrega em décimos de segundo</h3>
+          <div class="case-box case-scenario"><span class="case-box-label">Cenário</span><p>Você projeta o circuito de flash de uma câmera profissional. O capacitor precisa carregar rápido o bastante para o fotógrafo não perder o momento, mas sem ultrapassar a corrente máxima que os componentes suportam.</p></div>
+          <div class="case-box case-dev"><span class="case-box-label">Conceito: Função exponencial e derivada (Cálculo I, Blocos 1 e 2)</span><ul>
+<li>Carga do capacitor: V(t) = V₀(1 − e^(−t/RC}), com V₀ = 300 V, R = 50 Ω, C = 2000 µF</li>
+<li>Constante de tempo: τ = RC = 0,1 s</li>
+<li>Em t = τ: V(0,1) = 300(1 − e⁻¹) ≈ 189,6 V (63,2% da carga — regra prática de todo circuito RC)</li>
+<li>Corrente: i(t) = C·dV/dt = (V₀/R)·e^(−t/RC)</li>
+<li>Corrente inicial (pico): i(0) = 300/50 = 6 A</li>
+</ul></div>
+          <div class="case-box case-impact"><span class="case-box-label">Por que isso importa</span><p>A derivada de V(t) revela exatamente o pico de corrente no instante t = 0. Se o componente aguenta no máximo 6,5 A, o engenheiro sabe que R = 50 Ω é seguro — reduzir R aumentaria a corrente de pico e poderia queimar o circuito.</p></div>
+          <div class="case-box case-curiosity"><span class="case-box-label">Curiosidade</span><p>A mesma família de fórmula exponencial modela o resfriamento de um café, a descarga de uma bateria e — como você verá mais à frente — o decaimento de um medicamento no sangue.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section id="economia" class="paper-bg reveal practice-area">
+    <div class="container">
+      <p class="eyebrow" style="color:#1E7F4F;"><span class="rule"></span> Preço, lucro e estoque: decisões que valem milhões</p>
+      <h2 style="margin-bottom:32px;">Economia &amp; Administração</h2>
+      <div class="case-grid">
+        <article class="case-card" style="--case-color:#1E7F4F;">
+          <span class="case-tag">Economia · Maximização de lucro</span>
+          <h3>Quantos pares de tênis produzir por dia?</h3>
+          <div class="case-box case-scenario"><span class="case-box-label">Cenário</span><p>Você dirige uma fábrica de tênis. Produzir mais gera mais receita, mas também mais custo (energia, desgaste de máquina, hora extra). A pergunta de um milhão de reais: qual é o volume de produção que maximiza o lucro diário?</p></div>
+          <div class="case-box case-dev"><span class="case-box-label">Conceito: Derivada e ponto crítico (Cálculo I, Bloco 3)</span><ul>
+<li>Custo diário: C(x) = 800 + 15x + 0,005x²   (x = pares produzidos)</li>
+<li>Receita diária: R(x) = 45x − 0,01x²</li>
+<li>Lucro: L(x) = R(x) − C(x) = −0,015x² + 30x − 800</li>
+<li>Ponto crítico: L'(x) = −0,03x + 30 = 0  ⇒  x = 1000 pares/dia</li>
+<li>Lucro máximo: L(1000) = R$ 14.200 por dia</li>
+</ul></div>
+          <div class="case-box case-impact"><span class="case-box-label">Por que isso importa</span><p>No ponto ótimo, a receita marginal R'(1000) = 25 é exatamente igual ao custo marginal C'(1000) = 25 — a regra de ouro da microeconomia ("produza até que RMg = CMg") nada mais é do que igualar a derivada do lucro a zero.</p></div>
+          <div class="case-box case-curiosity"><span class="case-box-label">Curiosidade</span><p>Produzir 1500 pares ("mais é sempre melhor", certo?) na verdade reduziria o lucro para R$ 8.950/dia — quase 40% a menos. Otimizar não é maximizar o volume, é maximizar a derivada certa.</p></div>
+        </article>
+        <article class="case-card" style="--case-color:#1E7F4F;">
+          <span class="case-tag">Administração · Gestão de estoque (EOQ)</span>
+          <h3>O tamanho de lote que economiza dinheiro todo ano</h3>
+          <div class="case-box case-scenario"><span class="case-box-label">Cenário</span><p>Você é gerente de suprimentos de uma rede de farmácias. Pedir em lotes grandes reduz o número de pedidos (e a taxa fixa de cada um), mas aumenta o custo de armazenagem. Qual o tamanho de lote ideal?</p></div>
+          <div class="case-box case-dev"><span class="case-box-label">Conceito: Otimização — Lote Econômico de Compra / fórmula de Wilson (Cálculo I, Bloco 3)</span><ul>
+<li>Custo total anual: CT(Q) = (D/Q)·S + (Q/2)·H,  D = 12.000 un/ano, S = R$ 80/pedido, H = R$ 4/un·ano</li>
+<li>Minimizar: CT'(Q) = −DS/Q² + H/2 = 0  ⇒  Q* = √(2DS/H)</li>
+<li>Q* = √(2·12000·80/4) = √480.000 ≈ 693 unidades por pedido</li>
+<li>Número de pedidos por ano: D/Q* ≈ 17,3</li>
+<li>Custo mínimo: CT(Q*) = √(2DSH) ≈ R$ 2.771/ano</li>
+</ul></div>
+          <div class="case-box case-impact"><span class="case-box-label">Por que isso importa</span><p>Comparado a um lote 'redondo' de 1000 unidades (CT ≈ R$ 2.960/ano), a diferença é de R$ 189/ano — pequena numa única loja. Mas redes com centenas de itens e milhares de lojas aplicam essa mesma derivada a cada SKU, e a economia agregada chega facilmente a centenas de milhares de reais por ano.</p></div>
+          <div class="case-box case-curiosity"><span class="case-box-label">Curiosidade</span><p>A fórmula de Wilson (EOQ) foi publicada em 1913 e continua rodando, hoje, dentro de sistemas de gestão como SAP e Oracle.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section id="fisica" class="chalkboard-bg reveal practice-area">
+    <div class="container">
+      <p class="eyebrow" style="color:var(--chalk-yellow);"><span class="rule"></span> Do circuito de corrida à mola que salva vidas</p>
+      <h2 style="color:var(--chalk); margin-bottom:32px;">Física</h2>
+      <div class="case-grid">
+        <article class="case-card" style="--case-color:#6A3EA1;">
+          <span class="case-tag">Cinemática · Integral (área sob a curva)</span>
+          <h3>Quantos metros o carro andou nos primeiros 4 segundos?</h3>
+          <div class="case-box case-scenario"><span class="case-box-label">Cenário</span><p>Um carro de corrida acelera saindo dos boxes. A telemetria mede a velocidade instantânea, mas a engenharia de pista precisa saber a distância total percorrida para ajustar a estratégia de ultrapassagem.</p></div>
+          <div class="case-box case-dev"><span class="case-box-label">Conceito: Integral definida (Cálculo I, Bloco 4)</span><ul>
+<li>Velocidade medida: v(t) = 3t² + 2  (m/s), para t ∈ [0, 4] s</li>
+<li>Distância = ∫₀⁴ (3t² + 2) dt = [t³ + 2t]₀⁴ = (64 + 8) − 0 = 72 m</li>
+<li>Velocidade final: v(4) = 3(16) + 2 = 50 m/s ≈ 180 km/h</li>
+</ul></div>
+          <div class="case-box case-impact"><span class="case-box-label">Por que isso importa</span><p>Exatamente o conceito de 'área sob a curva' do Bloco 4 da apostila de exercícios: a distância é a integral da velocidade, calculada em tempo real pela telemetria a cada volta.</p></div>
+          <div class="case-box case-curiosity"><span class="case-box-label">Curiosidade</span><p>O caminho inverso também é usado o tempo todo: a derivada da posição dá a velocidade, e a derivada da velocidade dá a aceleração — sentida por você toda vez que o carro (ou o elevador) arranca.</p></div>
+        </article>
+        <article class="case-card" style="--case-color:#6A3EA1;">
+          <span class="case-tag">Trabalho e energia · Integral</span>
+          <h3>A mola que precisa absorver o impacto de uma queda</h3>
+          <div class="case-box case-scenario"><span class="case-box-label">Cenário</span><p>Uma fabricante de elevadores testa uma mola de segurança que deve frear a cabine com segurança em caso de falha do sistema principal. Quanta energia a mola consegue absorver ao ser comprimida?</p></div>
+          <div class="case-box case-dev"><span class="case-box-label">Conceito: Trabalho como integral da força (Cálculo I, Bloco 4)</span><ul>
+<li>Lei de Hooke: F(x) = kx,  k = 20.000 N/m (rigidez da mola)</li>
+<li>Compressão de 0 a 0,3 m</li>
+<li>Trabalho: W = ∫₀^0,3 kx dx = k·x²/2 |₀^0,3 = 20000·(0,09)/2 = 900 J</li>
+</ul></div>
+          <div class="case-box case-impact"><span class="case-box-label">Por que isso importa</span><p>Os engenheiros comparam esses 900 J com a energia cinética da cabine em queda (½mv²). Se a mola absorve mais energia do que a cabine carrega, o sistema é seguro — uma verificação de segurança que nasce direto da integral da força.</p></div>
+          <div class="case-box case-curiosity"><span class="case-box-label">Curiosidade</span><p>A mesma ideia — força integrada ao longo de uma distância — está por trás de air-bags, amortecedores de carro e redes de proteção em obras.</p></div>
+        </article>
+        <article class="case-card" style="--case-color:#6A3EA1;">
+          <span class="case-tag">Lei do Resfriamento de Newton</span>
+          <h3>Por que o café esfria mais rápido no início</h3>
+          <div class="case-box case-scenario"><span class="case-box-label">Cenário</span><p><p>Um café sai da máquina a 90 °C e a sala está a 22 °C. Um sensor mostra que, nos primeiros 5 minutos, a temperatura cai bem mais rápido do que nos 5 minutos seguintes — mesmo a diferença de temperatura para o ambiente sempre diminuindo.</p></p></div>
+          <div class="case-box case-dev"><span class="case-box-label">Desenvolvimento</span><ul><li>A Lei do Resfriamento de Newton modela isso com uma EDO linear de 1ª ordem: dT/dt = −k(T − T_amb).</li><li>É uma equação separável: resolvendo, T(t) = T_amb + (T₀ − T_amb)e^(−kt).</li><li>Quanto maior a diferença (T − T_amb), maior a taxa de queda — por isso o café esfria mais depressa logo no início.</li><li>Com duas medições reais, calcula-se k e prevê-se a temperatura em qualquer instante t.</li></ul></div>
+          <div class="case-box case-impact"><span class="case-box-label">Por que isso importa</span><p><p>O mesmo modelo (uma EDO linear simples) descreve o resfriamento de um motor, o equilíbrio térmico de um servidor de dados e até a queda da concentração de um medicamento no sangue — sempre que a taxa de variação é proporcional à distância até um valor de equilíbrio.</p></p></div>
+          <div class="case-box case-curiosity"><span class="case-box-label">Curiosidade</span><p><p>É a mesma estrutura matemática usada por investigadores forenses para estimar a hora da morte a partir da temperatura corporal — e por engenheiros para prever quanto tempo um chip leva para esfriar depois de desligado.</p></p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section id="tecnologia" class="paper-bg reveal practice-area">
+    <div class="container">
+      <p class="eyebrow" style="color:#128C7E;"><span class="rule"></span> A derivada que faz a IA &quot;aprender&quot;</p>
+      <h2 style="margin-bottom:32px;">Bônus — Tecnologia &amp; Inteligência Artificial</h2>
+      <div class="case-grid">
+        <article class="case-card" style="--case-color:#128C7E;">
+          <span class="case-tag">Machine Learning · Gradiente descendente</span>
+          <h3>Como uma IA encontra a resposta certa, passo a passo</h3>
+          <div class="case-box case-scenario"><span class="case-box-label">Cenário</span><p>Toda vez que um app de streaming recomenda um filme, o corretor do teclado acerta a próxima palavra, ou um carro autônomo decide frear, existe uma derivada trabalhando nos bastidores — repetida bilhões de vezes.</p></div>
+          <div class="case-box case-dev"><span class="case-box-label">Conceito: Derivada e regra da cadeia (Cálculo I, Bloco 2)</span><ul>
+<li>Função de erro simplificada: f(w) = (w − 3)², onde w é um parâmetro do modelo e 3 é o valor ideal (desconhecido pela IA)</li>
+<li>Derivada: f'(w) = 2(w − 3)</li>
+<li>Atualização (gradiente descendente): wₙ₊₁ = wₙ − α·f'(wₙ), com taxa de aprendizado α = 0,1</li>
+<li>w₀ = 10 → w₁ = 10 − 0,1·2·(7) = 8,6 → w₂ = 8,6 − 0,1·2·(5,6) = 7,48 → w₃ ≈ 6,58 → …</li>
+<li>Após algumas dezenas de passos, wₙ converge para 3 — o mínimo da função de erro</li>
+</ul></div>
+          <div class="case-box case-impact"><span class="case-box-label">Por que isso importa</span><p>Modelos reais têm milhões (ou bilhões) de parâmetros em vez de um só, mas o mecanismo é idêntico: calcular a derivada do erro em relação a cada parâmetro e dar um passo na direção que a reduz. É esse loop que 'treina' um modelo de linguagem ou de reconhecimento de imagem.</p></div>
+          <div class="case-box case-curiosity"><span class="case-box-label">Curiosidade</span><p>A regra da cadeia que você usou no exercício F17 (Bloco 2 da apostila de exercícios) tem, em Machine Learning, um nome próprio: backpropagation — o algoritmo que treina redes neurais.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section id="saude" class="chalkboard-bg reveal practice-area">
+    <div class="container">
+      <p class="eyebrow" style="color:var(--chalk-yellow);"><span class="rule"></span> Da dose do remédio ao crescimento de uma cultura de células</p>
+      <h2 style="color:var(--chalk); margin-bottom:32px;">Bônus — Saúde &amp; Biologia</h2>
+      <div class="case-grid">
+        <article class="case-card" style="--case-color:#B0344C;">
+          <span class="case-tag">Biotecnologia · Crescimento exponencial (EDO)</span>
+          <h3>Quando o tanque de bactérias vai encher?</h3>
+          <div class="case-box case-scenario"><span class="case-box-label">Cenário</span><p>Num laboratório de biotecnologia, uma cultura de bactérias é monitorada para a produção de insulina. A equipe precisa prever com precisão quando o tanque estará cheio, para programar a próxima etapa da produção.</p></div>
+          <div class="case-box case-dev"><span class="case-box-label">Conceito: Equação diferencial separável (Cálculo II, Bloco 8)</span><ul>
+<li>Modelo: dP/dt = kP  ⇒  P(t) = P₀·e^(kt)</li>
+<li>População inicial P₀ = 1000; a cultura dobra a cada 20 minutos</li>
+<li>k = ln(2)/20 ≈ 0,0347 por minuto</li>
+<li>Em 60 minutos (3 duplicações): P(60) = 1000·e^(0,0347·60) = 1000·8 = 8000 bactérias</li>
+</ul></div>
+          <div class="case-box case-impact"><span class="case-box-label">Por que isso importa</span><p>A mesma EDO de crescimento exponencial resolvida no exercício D3 da apostila de exercícios (dy/dx = xy) pertence à mesma família de modelos usada para prever a curva de crescimento de uma cultura — e, em versões mais completas, a propagação de epidemias (modelo SIR).</p></div>
+          <div class="case-box case-curiosity"><span class="case-box-label">Curiosidade</span><p>Trocando k por um valor negativo, a mesma fórmula descreve decaimento — que é exatamente o próximo caso.</p></div>
+        </article>
+        <article class="case-card" style="--case-color:#B0344C;">
+          <span class="case-tag">Farmacocinética · Decaimento exponencial (EDO)</span>
+          <h3>Quando tomar a próxima dose do remédio?</h3>
+          <div class="case-box case-scenario"><span class="case-box-label">Cenário</span><p>Um médico prescreve um analgésico e precisa calcular o intervalo correto entre as doses: cedo demais pode causar overdose, tarde demais deixa o paciente sem efeito terapêutico.</p></div>
+          <div class="case-box case-dev"><span class="case-box-label">Conceito: Equação diferencial de decaimento (Cálculo II, Bloco 8)</span><ul>
+<li>Modelo: C(t) = C₀·e^(−kt), meia-vida t½ = ln(2)/k</li>
+<li>Medicamento com meia-vida de 4 h: k = ln(2)/4 ≈ 0,1733 /h</li>
+<li>Dose inicial C₀ = 500 mg/L; nível terapêutico mínimo = 100 mg/L</li>
+<li>Resolver 100 = 500·e^(−kt): t = ln(5)/0,1733 ≈ 9,3 h</li>
+</ul></div>
+          <div class="case-box case-impact"><span class="case-box-label">Por que isso importa</span><p>O cálculo mostra que o paciente deve tomar a próxima dose por volta de 9 horas depois da primeira — nem antes (risco de acúmulo/overdose), nem depois (janela sem proteção). É Cálculo II decidindo, literalmente, a saúde de alguém.</p></div>
+          <div class="case-box case-curiosity"><span class="case-box-label">Curiosidade</span><p>Meia-vida é o mesmo conceito usado para datar fósseis por carbono-14 — só muda o valor de k.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section class="paper-bg reveal">
+    <div class="container">
+      <p class="eyebrow"><span class="rule"></span> Panorama geral</p>
+      <h2 style="margin-bottom:26px;">Onde o Cálculo aparece — quadro-resumo</h2>
+      <div class="table-wrap">
+        <table class="summary-table">
+          <thead><tr>
+            <th>Ferramenta de Cálculo</th>
+            <th>Usada para...</th>
+            <th>Aparece em...</th>
+          </tr></thead>
+          <tbody>
+          <tr>
+            <td>Derivada / taxa de variação</td>
+            <td>Custo e receita marginal, corrente em circuitos, velocidade e aceleração</td>
+            <td>Economia, Engenharia Elétrica, Física</td>
+          </tr>
+          <tr>
+            <td>Otimização (f&#x27;(x)=0)</td>
+            <td>Menor custo de material, maior lucro, lote econômico de compra</td>
+            <td>Engenharia Civil, Economia, Administração</td>
+          </tr>
+          <tr>
+            <td>Integral definida</td>
+            <td>Distância percorrida, trabalho de uma força, área e volume de peças</td>
+            <td>Física, Engenharia Mecânica</td>
+          </tr>
+          <tr>
+            <td>Regra da cadeia</td>
+            <td>Backpropagation em redes neurais (Machine Learning)</td>
+            <td>Tecnologia / IA</td>
+          </tr>
+          <tr>
+            <td>Equações diferenciais (EDO)</td>
+            <td>Crescimento populacional, decaimento de medicamento, radioatividade</td>
+            <td>Biologia, Saúde, Farmácia</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  <section class="chalkboard-bg reveal">
+    <div class="container" style="max-width:760px; text-align:center;">
+      <p class="eyebrow" style="color:var(--chalk-yellow); justify-content:center;"><span class="rule"></span> Continue praticando</p>
+      <h2 style="color:var(--chalk); margin-bottom:18px;">Volte ao Formulário e aos Exercícios sempre que precisar</h2>
+      <p class="lead-text" style="color:rgba(243,238,225,0.85); margin:0 auto 34px; text-align:center;">O Cálculo que parece abstrato no quadro-negro é, na prática, a linguagem usada para tomar decisões melhores — em qualquer profissão. E o Curso de Cálculo I, II, III e Equações Diferenciais é onde essa linguagem é ensinada do início ao fim.</p>
+      <div class="cta-row" style="justify-content:center;">
+        <a href="formulario.html" class="btn btn-ghost">Ver o formulário</a>
+        <a href="exercicios.html" class="btn btn-ghost">Ver os exercícios</a>
+        <a href="adquirir.html" class="btn btn-primary">Conhecer o livro</a>
+      </div>
+    </div>
+  </section>
+</main>
+<section class="newsletter-band">
+  <div class="container newsletter-inner">
+    <div class="newsletter-copy">
+      <p class="eyebrow"><span class="rule"></span> Fique por dentro</p>
+      <h3>Novidades, dicas de cálculo e conteúdos exclusivos em primeira mão</h3>
+      <p class="sub">Inscreva-se para receber novidades sobre o Curso de Cálculo I, II e III, além de conteúdos exclusivos do autor.</p>
+    </div>
+    <form class="newsletter-form" novalidate>
+      <input type="email" required placeholder="seu-email@exemplo.com" aria-label="Seu e-mail">
+      <button type="submit">Inscrever-se</button>
+      <p class="newsletter-status" role="status"></p>
+      <p class="newsletter-note">Sem spam. Cancele sua inscrição quando quiser.</p>
+    </form>
+  </div>
+</section>
+<footer id="rodape" class="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <h4>Fale com o autor</h4>
+       <a class="email" href="mailto:tavareswagner21@gmail.com">tavareswagner21@gmail.com</a>
+      </div>
+      <div>
+        <h4>Redes sociais</h4>
+        <div class="social-list">
+          <a href="https://www.facebook.com/profwtares" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M13.5 21v-7h2.3l.35-2.7h-2.65v-1.73c0-.78.22-1.32 1.34-1.32h1.43V5.8c-.25-.03-1.1-.11-2.09-.11-2.07 0-3.48 1.26-3.48 3.58v2h-2.3v2.7h2.3v7h2.8z" fill="currentColor" stroke="none"/></svg>
+            Facebook
+          </a>
+          <a href="https://www.instagram.com/tavares9046/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none"/></svg>
+            Instagram
+          </a>
+          <a href="https://www.linkedin.com/in/wagner-tavares-038772230/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="3"/><line x1="8" y1="11" x2="8" y2="17"/><circle cx="8" cy="7.5" r="0.6" fill="currentColor"/><path d="M12 17v-3.5a2.5 2.5 0 0 1 5 0V17"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://www.youtube.com/@wtaresmatematica" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="12" rx="4"/><path d="M11 10l4 2-4 2z" fill="currentColor" stroke="none"/></svg>
+            YouTube
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="fine-print">
+      <span>© 2026 W. T. Ares — Matemática</span>
+      <span>seravat647.github.io/matematicawtares</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
