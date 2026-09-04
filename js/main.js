@@ -15,15 +15,16 @@ const WHATSAPP_MESSAGE = "Olá! Vi o site do Curso de Cálculo e gostaria de mai
    Sempre que publicar um novo livro ou página, adicione uma
    entrada aqui — a busca já passa a encontrá-la. */
 const SITE_INDEX = [
-  { title: "Início", url: "index.html", snippet: "Página inicial — Curso de Cálculo I, II e III, de W. T. Ares." },
-  { title: "Sobre o Autor", url: "autor.html", snippet: "Bacharel em Matemática, professor de cursos regulares e preparatórios." },
-  { title: "O Livro — Curso de Cálculo I", url: "livro.html#calculo-1", snippet: "Limites, derivadas e os fundamentos do cálculo diferencial." },
-  { title: "O Livro — Curso de Cálculo II", url: "livro.html#calculo-2", snippet: "Técnicas de integração, sequências, séries e equações diferenciais." },
-  { title: "O Livro — Curso de Cálculo III", url: "livro.html#calculo-3", snippet: "Cálculo em várias variáveis, derivadas parciais e integrais múltiplas." },
-  { title: "A Coleção Completa", url: "livro.html#colecao", snippet: "Os três volumes do Curso de Cálculo, lado a lado." },
-  { title: "Como Adquirir", url: "adquirir.html", snippet: "Compre na Amazon (Kindle) ou na Loja UICLAP." },
-  { title: "História da Matemática", url: "historia-da-matematica.html", snippet: "Os grandes matemáticos da história e suas contribuições para o desenvolvimento da matemática." },
-  { title: "Contato", url: "contato.html", snippet: "tavareswagner21@gmail.com — Instagram, LinkedIn, YouTube, Facebook." }
+ { title: "Início", url: "index.html", snippet: "Página inicial — Curso de Cálculo I, II, III e Equações Diferenciais de W. T. Ares." },
+{ title: "Sobre o Autor", url: "autor.html", snippet: "Bacharel em Matemática, professor de cursos regulares e preparatórios." },
+{ title: "O Livro — Curso de Cálculo I", url: "livro.html#calculo-1", snippet: "Limites, derivadas e os fundamentos do cálculo diferencial." },
+{ title: "O Livro — Curso de Cálculo II", url: "livro.html#calculo-2", snippet: "Técnicas de integração, sequências, séries e equações diferenciais." },
+{ title: "O Livro — Curso de Cálculo III", url: "livro.html#calculo-3", snippet: "Cálculo em várias variáveis, derivadas parciais e integrais múltiplas." },
+{ title: "A Coleção Completa", url: "livro.html#colecao", snippet: "Os três volumes do Curso de Cálculo, lado a lado." },
+{ title: "Equações Diferenciais", url: "equacoes-diferenciais.html", snippet: "Didático para dominar os fundamentos das equações diferenciais, aplicando cálculo diferencial e integral." },
+{ title: "Como Adquirir", url: "adquirir.html", snippet: "Compre na Amazon (Kindle) ou na Loja UICLAP." },
+{ title: "História da Matemática", url: "historia-da-matematica.html", snippet: "Os grandes matemáticos da história e suas contribuições para o desenvolvimento da matemática." },
+{ title: "Contato", url: "contato.html", snippet: "tavareswagner21@gmail.com — Instagram, LinkedIn, YouTube, Facebook." }
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
