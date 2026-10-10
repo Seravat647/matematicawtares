@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Formulário de Funções e Curvas | W. T. Ares – Matemática</title>
+<meta name="description" content="Formulário completo de função afim e função quadrática, com exemplos de aplicação resolvidos passo a passo e gráfico interativo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f1f7f3;--paper:#fff;--ink:#0a4d26;--mute:#50665a;--line:#cfe0d5;--accent:#13893f;--gold:#a87a1c;--g1:#08602b;--g2:#16a04e;--tint:#dcf3e4;--fh:'Fraunces',Georgia,serif;--fb:'Instrument Sans',system-ui,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0b1a14;--paper:#12281e;--ink:#e4f3ea;--mute:#9bb8a8;--line:#2a4a3a;--accent:#5fd08f;--gold:#e0b45a;--tint:#173a2a}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--fb)}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+header.top{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Cg fill='none' stroke='%23fff' stroke-opacity='.4' stroke-width='2.5'%3E%3Cpath d='M20 10Q200 580 380 10'/%3E%3Cpath d='M10 280L390 40'/%3E%3Cpath d='M10 150C100 20 160 20 200 150S300 280 390 150'/%3E%3Ccircle cx='300' cy='150' r='90'/%3E%3C/g%3E%3C/svg%3E") right center/auto 100% no-repeat,linear-gradient(135deg,var(--g1),var(--g2));color:#fff;padding:clamp(2.5rem,7vw,5rem) 0 clamp(2rem,5vw,3.5rem)}
+header.top a{color:#fff;font-weight:600;font-size:.98rem;text-decoration:underline}
+header.top a:hover{text-decoration:none}
+h1{font:700 clamp(2.1rem,6vw,3.8rem)/1.08 var(--fh);margin:1.2rem 0 .8rem;letter-spacing:-.01em}
+h1 em{font-weight:500;color:#ffd978}
+header.top p{max-width:40rem;color:#fff;font-size:1.12rem;margin:0}
+.toc{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.6rem}
+header.top .toc a{background:#e0b45a;color:#0a4d26;font-weight:600;border-radius:99px;padding:.65rem 1.4rem;text-decoration:none;box-shadow:0 3px 0 rgba(0,0,0,.3);transition:transform .15s}
+header.top .toc a:hover{background:#fff;transform:translateY(-2px);text-decoration:none}
+section{padding:clamp(2.5rem,6vw,4.5rem) 0 0}
+h2{font:700 clamp(1.7rem,4vw,2.4rem)/1.15 var(--fh);margin:0 0 .4rem}
+h3{font:600 1.3rem/1.3 var(--fh);margin:2.4rem 0 .8rem}
+.lead{color:var(--mute);max-width:44rem;margin:0 0 1.6rem}
+.m{font-family:var(--fh);font-style:italic;white-space:nowrap}
+.sheet{background:var(--paper);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.row{display:grid;grid-template-columns:minmax(9rem,14rem) 1fr;gap:.4rem 1.5rem;padding:.95rem 1.4rem;border-top:1px solid var(--line);align-items:baseline}
+.row:first-child{border-top:0}
+.row dt{font-weight:600;color:var(--mute);font-size:.98rem}
+.row dd{margin:0;font-family:var(--fh);font-size:1.25rem}
+.row dd small{display:block;font:400 .93rem/1.5 var(--fb);color:var(--mute);margin-top:.15rem}
+.key{background:var(--tint);border-left:4px solid var(--gold)}
+sup,sub{line-height:0}
+.ex{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:1.3rem 1.5rem;margin:1.2rem 0}
+.ex h4{font:600 1.15rem var(--fh);margin:0 0 .5rem}
+.ex .tag{font-size:.9rem;color:var(--accent);font-weight:600}
+.ex ol{margin:.6rem 0;padding-left:1.3rem}
+.ex li{margin:.3rem 0}
+.res{display:inline-block;margin-top:.4rem;background:var(--tint);border-radius:6px;padding:.35rem .8rem;font-weight:600}
+.lab{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:1.4rem;background:var(--ink);color:#f1f7f3;border-radius:12px;padding:1.4rem;margin:1.6rem 0}
+.lab svg{width:100%;height:auto;background:#08261b;border-radius:8px;display:block}
+.lab h3{margin:0 0 .3rem;color:#fff}
+.lab p{color:#d4ecdc;margin:.2rem 0 1rem;font-size:.97rem}
+.lab label{display:flex;justify-content:space-between;font-size:.95rem;margin-top:.7rem}
+.lab input[type=range]{width:100%;accent-color:#e0b45a}
+.out{margin-top:1rem;padding-top:.8rem;border-top:1px solid #2e6a4f;font-size:.97rem;line-height:1.7}
+.out b{color:#e0b45a}
+table{width:100%;border-collapse:collapse;background:var(--paper);border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:.98rem}
+th,td{padding:.7rem 1rem;text-align:left;border-top:1px solid var(--line)}
+th{background:var(--tint);border-top:0;font-weight:600}
+.scroll{overflow-x:auto}
+footer{margin-top:4rem;background:var(--ink);color:#d4ecdc;padding:2rem 0;font-size:.95rem}
+footer a{color:#fff}
+@media (max-width:700px){.row{grid-template-columns:1fr}.lab{grid-template-columns:1fr}}
+h3.cv3{margin-top:2.6rem}
+.leg{font-size:.92rem;color:var(--mute);margin:0 0 1rem}
+.leg i{display:inline-block;width:.8rem;height:.8rem;border-radius:50%;vertical-align:-1px;margin:0 .3rem 0 .8rem}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(15.5rem,1fr));gap:1rem}
+.gc{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:.8rem .8rem 1rem}
+.gc svg{width:100%;height:auto;display:block;background:var(--bg);border-radius:6px}
+.gc b{display:block;font:italic 500 1.15rem var(--fh);margin-top:.6rem}
+.gc small{display:block;color:var(--mute);font-size:.92rem;line-height:1.45;margin-top:.15rem}
+.gr{stroke:var(--line);stroke-width:1}.ax{stroke:var(--mute);stroke-width:1.4}.cv{stroke:var(--accent);fill:none;stroke-width:2.8}.gh{stroke:var(--mute);stroke-dasharray:4 3;fill:none;stroke-width:1.2}
+.pr{fill:#1590a8}.pv{fill:#e0556b}.pi{fill:#d9a32f}.pr,.pv,.pi{stroke:var(--paper);stroke-width:1.5}
+</style>
+</head>
+<body>
+<header class="top">
+ <div class="wrap">
+  <a href="https://seravat647.github.io/matematicawtares/index.html">← W. T. Ares · Matemática</a>
+  <h1>Funções e curvas,<br><em>do jeito mais direto.</em></h1>
+  <p>Função afim, função quadrática, cônicas (círculo, elipse, parábola e hipérbole) e curvas famosas, com a fórmula e o gráfico de cada uma, exemplos resolvidos e um gráfico interativo.</p>
+  <nav class="toc" aria-label="Seções">
+   <a href="#afim">Função afim</a><a href="#quadratica">Função quadrática</a><a href="#conicas">Cônicas</a><a href="#outras">Outras curvas</a><a href="#lab">Gráfico interativo</a><a href="#comparativo">Comparativo</a>
+  </nav>
+ </div>
+</header>
+
+<main class="wrap">
+
+<section id="afim">
+ <h2>Função afim (1º grau)</h2>
+ <p class="lead">Descreve uma variação constante: a cada unidade de <span class="m">x</span>, o valor de <span class="m">f(x)</span> muda sempre na mesma quantidade.</p>
+ <dl class="sheet" style="margin:0">
+  <div class="row key"><dt>Definição</dt><dd><span class="m">f(x) = ax + b</span><small>com <span class="m">a ≠ 0</span>; domínio e imagem iguais a ℝ.</small></dd></div>
+  <div class="row"><dt>Coeficiente angular</dt><dd><span class="m">a = Δy / Δx = (y₂ − y₁) / (x₂ − x₁)</span><small>É a inclinação da reta e a taxa de variação da função.</small></dd></div>
+  <div class="row"><dt>Coeficiente linear</dt><dd><span class="m">b = f(0)</span><small>Ponto em que a reta corta o eixo y: <span class="m">(0, b)</span>.</small></dd></div>
+  <div class="row"><dt>Raiz (zero)</dt><dd><span class="m">x = −b / a</span><small>Ponto em que a reta corta o eixo x: <span class="m">(−b/a, 0)</span>.</small></dd></div>
+  <div class="row"><dt>Crescimento</dt><dd><span class="m">a &gt; 0</span> crescente · <span class="m">a &lt; 0</span> decrescente</dd></div>
+  <div class="row"><dt>Sinal</dt><dd><small style="margin:0;font-size:1.02rem;color:var(--ink)">Com <span class="m">a &gt; 0</span>: <span class="m">f(x) &gt; 0</span> para <span class="m">x &gt; −b/a</span> e <span class="m">f(x) &lt; 0</span> para <span class="m">x &lt; −b/a</span>. Com <span class="m">a &lt; 0</span>, inverte-se.</small></dd></div>
+  <div class="row"><dt>Reta por dois pontos</dt><dd><span class="m">y − y₁ = a(x − x₁)</span><small>Calcule <span class="m">a</span> com os dois pontos e substitua um deles.</small></dd></div>
+  <div class="row"><dt>Casos particulares</dt><dd><small style="margin:0;font-size:1.02rem;color:var(--ink)">Linear: <span class="m">f(x) = ax</span> (passa pela origem) · Identidade: <span class="m">f(x) = x</span> · Constante: <span class="m">f(x) = b</span> (<span class="m">a = 0</span>, reta horizontal)</small></dd></div>
+  <div class="row"><dt>Função inversa</dt><dd><span class="m">f⁻¹(x) = (x − b) / a</span></dd></div>
+  <div class="row"><dt>Paralelas e perpendiculares</dt><dd><span class="m">a₁ = a₂</span> paralelas · <span class="m">a₁ · a₂ = −1</span> perpendiculares</dd></div>
+  <div class="row"><dt>Interseção de retas</dt><dd><span class="m">a₁x + b₁ = a₂x + b₂ ⇒ x = (b₂ − b₁)/(a₁ − a₂)</span></dd></div>
+ </dl>
+
+ <h3 class="cv3">As curvas da função afim e suas fórmulas</h3><p class="leg"><i class="pr"></i>raízes<i class="pv"></i>vértice<i class="pi"></i>intercepto no eixo y</p><div class="gal" id="ga"></div>
+
+ <h3>Aplicações resolvidas</h3>
+ <article class="ex">
+  <span class="tag">Custo de corrida de aplicativo</span>
+  <h4>Bandeirada mais valor por quilômetro</h4>
+  <p>Uma corrida cobra R$ 5,00 fixos mais R$ 2,50 por km rodado. Qual o custo de 12 km? Quantos km dá para rodar com R$ 40,00?</p>
+  <ol>
+   <li>Modelo: <span class="m">C(x) = 2,5x + 5</span>, em que <span class="m">a = 2,5</span> é o preço por km e <span class="m">b = 5</span> é a taxa fixa.</li>
+   <li>Para 12 km: <span class="m">C(12) = 2,5 · 12 + 5 = 35</span>.</li>
+   <li>Para R$ 40,00: <span class="m">2,5x + 5 = 40 ⇒ x = 35 / 2,5 = 14</span>.</li>
+  </ol>
+  <span class="res">12 km custam R$ 35,00 · R$ 40,00 pagam 14 km</span>
+ </article>
+ <article class="ex">
+  <span class="tag">Qual plano compensa?</span>
+  <h4>Interseção de duas funções afins</h4>
+  <p>O plano A custa R$ 30 fixos mais R$ 0,10 por minuto. O plano B não tem taxa fixa e cobra R$ 0,25 por minuto. A partir de quantos minutos o plano A fica mais barato?</p>
+  <ol>
+   <li><span class="m">A(x) = 0,10x + 30</span> e <span class="m">B(x) = 0,25x</span>.</li>
+   <li>Igualando: <span class="m">0,10x + 30 = 0,25x ⇒ 30 = 0,15x ⇒ x = 200</span>.</li>
+   <li>Como <span class="m">B</span> cresce mais depressa (<span class="m">0,25 &gt; 0,10</span>), acima de 200 min o plano A vence.</li>
+  </ol>
+  <span class="res">Acima de 200 minutos, o plano A é mais vantajoso</span>
+ </article>
+ <article class="ex">
+  <span class="tag">Reta por dois pontos</span>
+  <h4>Dilatação de uma barra metálica</h4>
+  <p>Uma barra mede 100,0 cm a 20 °C e 100,2 cm a 120 °C. Determine o comprimento <span class="m">L(T)</span> supondo variação linear.</p>
+  <ol>
+   <li><span class="m">a = (100,2 − 100,0) / (120 − 20) = 0,002</span> cm/°C.</li>
+   <li><span class="m">L − 100 = 0,002(T − 20) ⇒ L(T) = 0,002T + 99,96</span>.</li>
+  </ol>
+  <span class="res">L(T) = 0,002T + 99,96</span>
+ </article>
+</section>
+
+<section id="quadratica">
+ <h2>Função quadrática (2º grau)</h2>
+ <p class="lead">Descreve uma variação que acelera ou desacelera. Seu gráfico é uma parábola, com um ponto de máximo ou de mínimo.</p>
+ <dl class="sheet" style="margin:0">
+  <div class="row key"><dt>Definição</dt><dd><span class="m">f(x) = ax² + bx + c</span><small>com <span class="m">a ≠ 0</span>; domínio ℝ.</small></dd></div>
+  <div class="row"><dt>Concavidade</dt><dd><span class="m">a &gt; 0</span> para cima (mínimo) · <span class="m">a &lt; 0</span> para baixo (máximo)</dd></div>
+  <div class="row"><dt>Discriminante</dt><dd><span class="m">Δ = b² − 4ac</span><small><span class="m">Δ &gt; 0</span>: duas raízes reais distintas · <span class="m">Δ = 0</span>: uma raiz dupla · <span class="m">Δ &lt; 0</span>: nenhuma raiz real.</small></dd></div>
+  <div class="row key"><dt>Fórmula de Bhaskara</dt><dd><span class="m">x = (−b ± √Δ) / 2a</span></dd></div>
+  <div class="row"><dt>Soma e produto</dt><dd><span class="m">x₁ + x₂ = −b/a</span> &nbsp;·&nbsp; <span class="m">x₁ · x₂ = c/a</span></dd></div>
+  <div class="row"><dt>Forma fatorada</dt><dd><span class="m">f(x) = a(x − x₁)(x − x₂)</span></dd></div>
+  <div class="row"><dt>Forma canônica</dt><dd><span class="m">f(x) = a(x − x<sub>v</sub>)² + y<sub>v</sub></span></dd></div>
+  <div class="row key"><dt>Vértice</dt><dd><span class="m">x<sub>v</sub> = −b/2a</span> &nbsp;·&nbsp; <span class="m">y<sub>v</sub> = −Δ/4a</span><small>Também vale <span class="m">x<sub>v</sub> = (x₁ + x₂)/2</span> e <span class="m">y<sub>v</sub> = f(x<sub>v</sub>)</span>.</small></dd></div>
+  <div class="row"><dt>Eixo de simetria</dt><dd><span class="m">x = x<sub>v</sub> = −b/2a</span></dd></div>
+  <div class="row"><dt>Intercepto no eixo y</dt><dd><span class="m">(0, c)</span></dd></div>
+  <div class="row"><dt>Conjunto imagem</dt><dd><span class="m">a &gt; 0</span>: <span class="m">Im = [y<sub>v</sub>, +∞)</span> · <span class="m">a &lt; 0</span>: <span class="m">Im = (−∞, y<sub>v</sub>]</span></dd></div>
+  <div class="row"><dt>Sinal de f(x)</dt><dd><small style="margin:0;font-size:1.02rem;color:var(--ink)">Com <span class="m">Δ &gt; 0</span>, mesmo sinal de <span class="m">a</span> fora das raízes e sinal contrário entre elas. Com <span class="m">Δ ≤ 0</span>, sempre o sinal de <span class="m">a</span> (zero em <span class="m">x<sub>v</sub></span> se <span class="m">Δ = 0</span>).</small></dd></div>
+ </dl>
+
+ <h3 class="cv3">As seis parábolas: sinal de a e de Δ</h3><p class="leg"><i class="pr"></i>raízes<i class="pv"></i>vértice<i class="pi"></i>intercepto no eixo y</p><div class="gal" id="gq"></div>
+
+ <h3 class="cv3">Transformações da parábola</h3><p class="leg">A curva tracejada é a parábola-base <span class="m">y = x²</span>.</p><div class="gal" id="gt"></div>
+
+ <h3>Aplicações resolvidas</h3>
+ <article class="ex">
+  <span class="tag">Física · lançamento</span>
+  <h4>Altura máxima de uma bola</h4>
+  <p>Uma bola é lançada para cima e sua altura, em metros, é <span class="m">h(t) = −5t² + 20t</span>, com <span class="m">t</span> em segundos. Qual a altura máxima e quando ela volta ao chão?</p>
+  <ol>
+   <li>Como <span class="m">a = −5 &lt; 0</span>, há um ponto de máximo, o vértice.</li>
+   <li><span class="m">t<sub>v</sub> = −20 / (2 · (−5)) = 2 s</span>.</li>
+   <li><span class="m">h(2) = −5 · 4 + 20 · 2 = 20 m</span>.</li>
+   <li>Volta ao solo quando <span class="m">h = 0</span>: <span class="m">−5t(t − 4) = 0 ⇒ t = 0</span> ou <span class="m">t = 4 s</span>.</li>
+  </ol>
+  <span class="res">Altura máxima de 20 m em t = 2 s · retorno ao solo em t = 4 s</span>
+ </article>
+ <article class="ex">
+  <span class="tag">Economia · receita</span>
+  <h4>Preço que maximiza a receita</h4>
+  <p>Uma loja vende <span class="m">(100 − 2p)</span> unidades quando o preço é <span class="m">p</span> reais. Qual preço gera a maior receita?</p>
+  <ol>
+   <li>Receita = preço × quantidade: <span class="m">R(p) = p(100 − 2p) = −2p² + 100p</span>.</li>
+   <li><span class="m">p<sub>v</sub> = −100 / (2 · (−2)) = 25</span>.</li>
+   <li><span class="m">R(25) = −2 · 625 + 2500 = 1250</span>.</li>
+  </ol>
+  <span class="res">Preço de R$ 25,00 gera a receita máxima de R$ 1.250,00</span>
+ </article>
+ <article class="ex">
+  <span class="tag">Geometria · otimização</span>
+  <h4>Cercado de área máxima</h4>
+  <p>Com 40 m de tela, deseja-se cercar um terreno retangular. Quais dimensões dão a maior área?</p>
+  <ol>
+   <li>Perímetro: <span class="m">2x + 2y = 40 ⇒ y = 20 − x</span>.</li>
+   <li>Área: <span class="m">A(x) = x(20 − x) = −x² + 20x</span>.</li>
+   <li><span class="m">x<sub>v</sub> = −20 / (2 · (−1)) = 10</span> e <span class="m">A(10) = 100</span>.</li>
+  </ol>
+  <span class="res">Quadrado de 10 m × 10 m, com área de 100 m²</span>
+ </article>
+ <article class="ex">
+  <span class="tag">Equação completa</span>
+  <h4>Aplicando Bhaskara</h4>
+  <p>Resolva <span class="m">x² − 5x + 6 = 0</span>.</p>
+  <ol>
+   <li><span class="m">Δ = (−5)² − 4 · 1 · 6 = 25 − 24 = 1</span>.</li>
+   <li><span class="m">x = (5 ± 1) / 2</span>, logo <span class="m">x₁ = 3</span> e <span class="m">x₂ = 2</span>.</li>
+   <li>Conferência: soma <span class="m">= 5 = −b/a</span> e produto <span class="m">= 6 = c/a</span>.</li>
+  </ol>
+  <span class="res">S = {2, 3}</span>
+ </article>
+</section>
+
+ <section id="conicas">
+ <h2>Cônicas: círculo, elipse, parábola e hipérbole</h2>
+ <p class="lead">São as curvas obtidas ao cortar um cone por um plano. Todas saem de uma mesma equação do 2º grau em x e y.</p>
+ <dl class="sheet" style="margin:0">
+  <div class="row"><dt>Distância entre pontos</dt><dd><span class="m">d = √[(x₂ − x₁)² + (y₂ − y₁)²]</span></dd></div>
+  <div class="row"><dt>Ponto médio</dt><dd><span class="m">M = ((x₁ + x₂)/2 ; (y₁ + y₂)/2)</span></dd></div>
+  <div class="row key"><dt>Equação geral</dt><dd>Ax² + Bxy + Cy² + Dx + Ey + F = 0<small>Classifique por <span class="m">B² − 4AC</span>: <span class="m">< 0</span> elipse (ou circunferência, se <span class="m">A = C</span> e <span class="m">B = 0</span>) · <span class="m">= 0</span> parábola · <span class="m">> 0</span> hipérbole.</small></dd></div>
+  <div class="row key"><dt>Circunferência</dt><dd><span class="m">(x − h)² + (y − k)² = r²</span><small>Centro <span class="m">(h, k)</span> e raio <span class="m">r</span>. Na forma geral <span class="m">x² + y² + Dx + Ey + F = 0</span>: centro <span class="m">(−D/2 ; −E/2)</span> e <span class="m">r = √(D²/4 + E²/4 − F)</span>. Área <span class="m">πr²</span> e comprimento <span class="m">2πr</span>.</small></dd></div>
+  <div class="row key"><dt>Elipse horizontal</dt><dd><span class="m">(x − h)²/a² + (y − k)²/b² = 1</span><small>Com <span class="m">a > b</span>: <span class="m">c² = a² − b²</span>, excentricidade <span class="m">e = c/a</span> (<span class="m">0 < e < 1</span>), focos <span class="m">(h ± c ; k)</span>, vértices <span class="m">(h ± a ; k)</span>. Área <span class="m">πab</span>. A soma das distâncias a cada ponto até os focos vale <span class="m">2a</span>.</small></dd></div>
+  <div class="row"><dt>Elipse vertical</dt><dd><span class="m">(x − h)²/b² + (y − k)²/a² = 1</span><small>Focos <span class="m">(h ; k ± c)</span> e vértices <span class="m">(h ; k ± a)</span>, com <span class="m">a > b</span> e <span class="m">c² = a² − b²</span>.</small></dd></div>
+  <div class="row key"><dt>Parábola vertical</dt><dd><span class="m">(x − h)² = 4p(y − k)</span><small>Vértice <span class="m">(h, k)</span>, foco <span class="m">(h ; k + p)</span>, diretriz <span class="m">y = k − p</span>, eixo <span class="m">x = h</span>, <span class="m">e = 1</span>. Abre para cima se <span class="m">p > 0</span>. Em <span class="m">y = ax² + bx + c</span>, vale <span class="m">p = 1/(4a)</span>.</small></dd></div>
+  <div class="row"><dt>Parábola horizontal</dt><dd><span class="m">(y − k)² = 4p(x − h)</span><small>Foco <span class="m">(h + p ; k)</span>, diretriz <span class="m">x = h − p</span>. Abre para a direita se <span class="m">p > 0</span>.</small></dd></div>
+  <div class="row key"><dt>Hipérbole horizontal</dt><dd><span class="m">(x − h)²/a² − (y − k)²/b² = 1</span><small><span class="m">c² = a² + b²</span>, <span class="m">e = c/a > 1</span>, focos <span class="m">(h ± c ; k)</span>, vértices <span class="m">(h ± a ; k)</span>. Assíntotas: <span class="m">y − k = ±(b/a)(x − h)</span>. A diferença das distâncias aos focos vale <span class="m">2a</span> em módulo.</small></dd></div>
+  <div class="row"><dt>Hipérbole vertical</dt><dd><span class="m">(y − k)²/a² − (x − h)²/b² = 1</span><small>Focos <span class="m">(h ; k ± c)</span> e assíntotas <span class="m">y − k = ±(a/b)(x − h)</span>.</small></dd></div>
+  <div class="row"><dt>Hipérbole equilátera</dt><dd><span class="m">x · y = k</span><small>Assíntotas são os eixos coordenados (<span class="m">a = b</span>). É o gráfico da função <span class="m">f(x) = k/x</span>.</small></dd></div>
+ </dl>
+
+ <h3 class="cv3">As curvas e suas fórmulas</h3><p class="leg"><i class="pr"></i>focos<i class="pv"></i>centro e vértices<i style="background:none;border:2px dashed var(--mute);width:1.1rem;height:0;border-radius:0;vertical-align:3px"></i>assíntotas e diretriz</p><div class="gal" id="gc"></div>
+
+ <h3>Aplicações resolvidas</h3>
+ <article class="ex">
+  <span class="tag">Completando quadrados</span>
+  <h4>Identificando uma circunferência</h4>
+  <p>Determine centro e raio de <span class="m">x² + y² − 6x + 4y − 12 = 0</span>.</p>
+  <ol>
+   <li>Agrupe: <span class="m">(x² − 6x) + (y² + 4y) = 12</span>.</li>
+   <li>Complete os quadrados: <span class="m">(x − 3)² + (y + 2)² = 12 + 9 + 4 = 25</span>.</li>
+  </ol>
+  <span class="res">Centro (3 ; −2) e raio 5</span>
+ </article>
+ <article class="ex">
+  <span class="tag">Elementos da elipse</span>
+  <h4>Órbita elíptica</h4>
+  <p>Para <span class="m">9x² + 25y² = 225</span>, ache <span class="m">a</span>, <span class="m">b</span>, os focos e a excentricidade.</p>
+  <ol>
+   <li>Divida por 225: <span class="m">x²/25 + y²/9 = 1</span>, logo <span class="m">a = 5</span> e <span class="m">b = 3</span>.</li>
+   <li><span class="m">c² = 25 − 9 = 16</span>, então <span class="m">c = 4</span> e os focos são <span class="m">(±4 ; 0)</span>.</li>
+   <li><span class="m">e = c/a = 4/5 = 0,8</span>.</li>
+  </ol>
+  <span class="res">Focos (±4 ; 0) e e = 0,8</span>
+ </article>
+ <article class="ex">
+  <span class="tag">Parábola na prática</span>
+  <h4>Antena parabólica</h4>
+  <p>Uma antena de 2 m de diâmetro tem 0,25 m de profundidade. A que distância do vértice fica o receptor?</p>
+  <ol>
+   <li>Com o vértice na origem: <span class="m">x² = 4py</span>. O ponto da borda é <span class="m">(1 ; 0,25)</span>.</li>
+   <li><span class="m">1 = 4p · 0,25 ⇒ p = 1</span>. O receptor fica no foco <span class="m">(0 ; p)</span>.</li>
+  </ol>
+  <span class="res">Receptor a 1 m do vértice</span>
+ </article>
+ <article class="ex">
+  <span class="tag">Elementos da hipérbole</span>
+  <h4>Assíntotas e focos</h4>
+  <p>Para <span class="m">x²/16 − y²/9 = 1</span>, determine focos, assíntotas e excentricidade.</p>
+  <ol>
+   <li><span class="m">a = 4</span>, <span class="m">b = 3</span> e <span class="m">c² = 16 + 9 = 25</span>, logo <span class="m">c = 5</span>.</li>
+   <li>Focos <span class="m">(±5 ; 0)</span>; assíntotas <span class="m">y = ±(3/4)x</span>; <span class="m">e = 5/4</span>.</li>
+  </ol>
+  <span class="res">Focos (±5 ; 0), y = ±3x/4 e e = 1,25</span>
+ </article>
+ </section>
+
+ <section id="outras">
+ <h2>Outras curvas importantes</h2>
+ <p class="lead">Curvas dadas em coordenadas polares ou na forma paramétrica, muito usadas no Cálculo II e III.</p>
+ <dl class="sheet" style="margin:0">
+  <div class="row key"><dt>Conversão polar</dt><dd><span class="m">x = r cos θ</span> · <span class="m">y = r sen θ</span> · <span class="m">r² = x² + y²</span> · <span class="m">tg θ = y/x</span></dd></div>
+  <div class="row"><dt>Cardioide</dt><dd><span class="m">r = a(1 − cos θ)</span><small>Área <span class="m">3πa²/2</span> e comprimento <span class="m">8a</span>.</small></dd></div>
+  <div class="row"><dt>Espiral de Arquimedes</dt><dd><span class="m">r = aθ</span><small>O raio cresce de forma proporcional ao ângulo.</small></dd></div>
+  <div class="row"><dt>Rosa</dt><dd><span class="m">r = a cos(nθ)</span><small>Tem <span class="m">n</span> pétalas se <span class="m">n</span> é ímpar e <span class="m">2n</span> se <span class="m">n</span> é par.</small></dd></div>
+  <div class="row"><dt>Lemniscata de Bernoulli</dt><dd><span class="m">r² = a² cos 2θ</span><small>Forma de “8” deitado; área total <span class="m">a²</span>.</small></dd></div>
+  <div class="row"><dt>Astroide</dt><dd><span class="m">x^(2/3) + y^(2/3) = a^(2/3)</span><small>Paramétrica: <span class="m">x = a cos³t</span>, <span class="m">y = a sen³t</span>. Área <span class="m">3πa²/8</span> e comprimento <span class="m">6a</span>.</small></dd></div>
+  <div class="row"><dt>Cicloide</dt><dd><span class="m">x = a(t − sen t)</span> · <span class="m">y = a(1 − cos t)</span><small>Trajetória de um ponto de uma roda que rola. Área sob um arco <span class="m">3πa²</span> e comprimento <span class="m">8a</span>.</small></dd></div>
+ </dl>
+ <h3 class="cv3">As curvas</h3><div class="gal" id="go"></div>
+ </section>
+
+<section id="lab">
+ <h2>Experimente no gráfico</h2>
+ <p class="lead">Mude os coeficientes e veja como cada fórmula se reflete na curva. Com <span class="m">a = 0</span>, a parábola vira uma reta.</p>
+ <div class="lab">
+  <svg id="g" viewBox="0 0 400 300" role="img" aria-label="Gráfico de f(x) = ax² + bx + c"></svg>
+  <div>
+   <h3 class="m" id="eq" style="font-weight:500"></h3>
+   <p>Arraste os controles.</p>
+   <label for="ra">a <b id="va"></b></label><input id="ra" type="range" min="-3" max="3" step="0.5" value="1">
+   <label for="rb">b <b id="vb"></b></label><input id="rb" type="range" min="-8" max="8" step="1" value="-4">
+   <label for="rc">c <b id="vc"></b></label><input id="rc" type="range" min="-8" max="8" step="1" value="3">
+   <div class="out" id="out" aria-live="polite"></div>
+  </div>
+ </div>
+</section>
+
+<section id="comparativo">
+ <h2>Comparativo rápido</h2>
+ <p class="lead">As diferenças essenciais lado a lado.</p>
+ <div class="scroll"><table>
+  <thead><tr><th></th><th>Função afim</th><th>Função quadrática</th></tr></thead>
+  <tbody>
+   <tr><td>Lei</td><td class="m">ax + b</td><td class="m">ax² + bx + c</td></tr>
+   <tr><td>Gráfico</td><td>Reta</td><td>Parábola</td></tr>
+   <tr><td>Raízes</td><td>Uma</td><td>Duas, uma ou nenhuma</td></tr>
+   <tr><td>Ponto notável</td><td>Intercepto <span class="m">(0, b)</span></td><td>Vértice <span class="m">(−b/2a, −Δ/4a)</span></td></tr>
+   <tr><td>Imagem</td><td>ℝ</td><td>Limitada por <span class="m">y<sub>v</sub></span></td></tr>
+   <tr><td>Taxa de variação</td><td>Constante (<span class="m">a</span>)</td><td>Varia ao longo de <span class="m">x</span></td></tr>
+   <tr><td>Aplicações típicas</td><td>Tarifas, custo fixo + variável, movimento uniforme</td><td>Lançamentos, receita máxima, áreas ótimas</td></tr>
+  </tbody>
+ </table></div>
+</section>
+
+</main>
+
+<footer>
+ <div class="wrap">
+  Quer ir além das funções? Veja o <a href="https://seravat647.github.io/matematicawtares/livro.html">Curso de Cálculo I, II, III e Equações Diferenciais</a>.<br>
+  © 2026 W. T. Ares — Matemática
+ </div>
+</footer>
+
+<script>
+(function(){
+var $=function(i){return document.getElementById(i)},NS='http://www.w3.org/2000/svg';
+function f(n){return (Math.round(n*100)/100).toString().replace('.',',').replace('-','−')}
+function X(x){return 200+x*20}function Y(y){return 150-y*20}
+function el(t,at,p){var e=document.createElementNS(NS,t);for(var k in at)e.setAttribute(k,at[k]);(p||$('g')).appendChild(e);return e}
+function draw(){
+ var a=+$('ra').value,b=+$('rb').value,c=+$('rc').value,g=$('g');
+ $('va').textContent=f(a);$('vb').textContent=f(b);$('vc').textContent=f(c);
+ g.innerHTML='';
+ for(var i=-10;i<=10;i++){el('line',{x1:X(i),y1:0,x2:X(i),y2:300,stroke:'#1b4a38','stroke-width':.6});}
+ for(var j=-7;j<=7;j++){el('line',{x1:0,y1:Y(j),x2:400,y2:Y(j),stroke:'#1b4a38','stroke-width':.6});}
+ el('line',{x1:0,y1:150,x2:400,y2:150,stroke:'#8fcaa8','stroke-width':1.2});
+ el('line',{x1:200,y1:0,x2:200,y2:300,stroke:'#8fcaa8','stroke-width':1.2});
+ var d='';for(var x=-10;x<=10.001;x+=.1){d+=(x<-9.99?'M':'L')+X(x).toFixed(1)+' '+Y(a*x*x+b*x+c).toFixed(1)}
+ el('path',{d:d,fill:'none',stroke:'#e0b45a','stroke-width':2.6});
+ var out='',eq=(a?f(a)+'x² ':'')+(b<0?'− ':'+ ')+f(Math.abs(b))+'x '+(c<0?'− ':'+ ')+f(Math.abs(c));
+ $('eq').textContent='f(x) = '+eq.replace(/^\+ /,'');
+ function pt(x,y,col){if(Math.abs(x)<=10&&Math.abs(y)<=7.5)el('circle',{cx:X(x),cy:Y(y),r:5,fill:col,stroke:'#08261b','stroke-width':1.5})}
+ if(a===0){
+  out='<b>a = 0:</b> a função é afim.<br>';
+  if(b!==0){var r=-c/b;pt(r,0,'#5cc3cc');out+='Raiz: <b>x = '+f(r)+'</b>'}else out+='Função constante, sem raiz (ou identicamente nula).';
+  pt(0,c,'#fff');
+ }else{
+  var D=b*b-4*a*c,xv=-b/(2*a),yv=-D/(4*a);
+  out='Δ = <b>'+f(D)+'</b> · '+(a>0?'concavidade para cima':'concavidade para baixo')+'<br>';
+  if(D>0){var s=Math.sqrt(D),x1=(-b-s)/(2*a),x2=(-b+s)/(2*a);pt(x1,0,'#5cc3cc');pt(x2,0,'#5cc3cc');out+='Raízes: <b>'+f(Math.min(x1,x2))+'</b> e <b>'+f(Math.max(x1,x2))+'</b><br>'}
+  else if(D===0){pt(xv,0,'#5cc3cc');out+='Raiz dupla: <b>'+f(xv)+'</b><br>'}
+  else out+='Sem raízes reais<br>';
+  pt(xv,yv,'#ff8f8f');pt(0,c,'#fff');
+  out+='Vértice: <b>('+f(xv)+'; '+f(yv)+')</b> ('+(a>0?'mínimo':'máximo')+')';
+ }
+ $('out').innerHTML=out+'<br><span style="color:#9bb8a8;font-size:.88rem">Azul: raízes · vermelho: vértice · branco: intercepto em y</span>';
+}
+['ra','rb','rc'].forEach(function(i){$(i).addEventListener('input',draw)});
+draw();
+})();
+
+(function(){
+function f(n){return (Math.round(n*100)/100).toString().replace('.',',').replace('-','−')}
+function P(a,b,c){var r='';function t(k,v){if(!k)return;var m=Math.abs(k);r+=(r?(k<0?' − ':' + '):(k<0?'−':''))+((m===1&&v)?'':f(m))+v}t(a,'x²');t(b,'x');t(c,'');return r||'0'}
+function card(id,s){var q=function(x){return 100+x*20},w=function(y){return 100-y*20},o='<svg viewBox="0 0 200 200" role="img" aria-label="Gráfico de f(x) = '+s.f+'">',i,d;
+for(i=-4;i<=4;i++)o+='<line class="gr" x1="'+q(i)+'" y1="0" x2="'+q(i)+'" y2="200"/><line class="gr" x1="0" y1="'+w(i)+'" x2="200" y2="'+w(i)+'"/>';
+o+='<line class="ax" x1="0" y1="100" x2="200" y2="100"/><line class="ax" x1="100" y1="0" x2="100" y2="200"/>';
+function path(fn,c){d='';for(var x=-5;x<=5.001;x+=.1){d+=(x<-4.99?'M':'L')+q(x).toFixed(1)+' '+w(Math.max(-30,Math.min(30,fn(x)))).toFixed(1)}return '<path class="'+c+'" d="'+d+'"/>'}
+if(s.ghost)o+=path(function(x){return x*x},'gh');
+o+=path(s.fn,'cv');
+(s.pts||[]).forEach(function(p){if(Math.abs(p[0])<=5&&Math.abs(p[1])<=5)o+='<circle class="'+p[2]+'" cx="'+q(p[0])+'" cy="'+w(p[1])+'" r="4.5"/>'});
+o+='</svg><b>f(x) = '+s.f+'</b><small><strong>'+s.t+'.</strong> '+s.n+'</small>';
+var e=document.createElement('div');e.className='gc';e.innerHTML=o;document.getElementById(id).appendChild(e)}
+function L(a,b,t,n){var p=[[0,b,'pi']];if(a)p.push([-b/a,0,'pr']);card('ga',{t:t,n:n,f:P(0,a,b)==='0'?'0':(a?P(0,a,b):f(b)),fn:function(x){return a*x+b},pts:p})}
+function Q(a,b,c,t,n){var D=b*b-4*a*c,p=[],xv=-b/(2*a);if(D>=0){var s=Math.sqrt(D);p.push([(-b-s)/(2*a),0,'pr']);if(D>0)p.push([(-b+s)/(2*a),0,'pr'])}p.push([0,c,'pi'],[xv,-D/(4*a),'pv']);card('gq',{t:t,n:n,f:P(a,b,c),fn:function(x){return a*x*x+b*x+c},pts:p})}
+function T(f2,fn,p,t,n){card('gt',{t:t,n:n,f:f2,fn:fn,pts:p,ghost:t!=='Parábola-base'})}
+L(2,1,'a > 0: crescente','Sobe da esquerda para a direita. Raiz em x = −b/a = −0,5.');
+L(-1,3,'a < 0: decrescente','Desce da esquerda para a direita. Raiz em x = 3.');
+L(0,2,'a = 0: constante','Reta horizontal. Não há raiz e a imagem é só {b}.');
+L(1.5,0,'b = 0: linear','Passa pela origem, que é a raiz e o intercepto ao mesmo tempo.');
+L(1,0,'Identidade','Bissetriz do 1º e do 3º quadrantes: f(x) = x.');
+L(-0.5,-1,'a < 0 e b < 0','Decrescente e cortando o eixo y abaixo da origem.');
+Q(1,-2,-3,'a > 0 e Δ > 0','Concavidade para cima, duas raízes (−1 e 3) e vértice de mínimo (1; −4).');
+Q(1,-2,1,'a > 0 e Δ = 0','Raiz dupla em x = 1: o vértice toca o eixo x.');
+Q(1,-2,2,'a > 0 e Δ < 0','Sem raízes reais: a parábola fica toda acima do eixo x.');
+Q(-1,2,3,'a < 0 e Δ > 0','Concavidade para baixo, raízes −1 e 3 e vértice de máximo (1; 4).');
+Q(-1,2,-1,'a < 0 e Δ = 0','Raiz dupla em x = 1: o vértice de máximo toca o eixo x.');
+Q(-1,2,-2,'a < 0 e Δ < 0','Sem raízes reais: a parábola fica toda abaixo do eixo x.');
+T('x²',function(x){return x*x},[[0,0,'pv']],'Parábola-base','Vértice na origem e simetria em relação ao eixo y.');
+T('x² + 2',function(x){return x*x+2},[[0,2,'pv']],'Translação vertical','Somar k desloca o gráfico k unidades para cima (aqui, k = 2).');
+T('(x − 2)²',function(x){return (x-2)*(x-2)},[[2,0,'pv']],'Translação horizontal','Trocar x por x − h desloca h unidades para a direita (aqui, h = 2).');
+T('−x²',function(x){return -x*x},[[0,0,'pv']],'Reflexão','O sinal negativo espelha a parábola em relação ao eixo x.');
+T('2x²',function(x){return 2*x*x},[[0,0,'pv']],'|a| > 1: mais fechada','Quanto maior |a|, mais estreita é a abertura.');
+T('0,5x²',function(x){return x*x/2},[[0,0,'pv']],'|a| < 1: mais aberta','Quanto menor |a|, mais larga é a abertura.');
+})();
+
+(function(){
+var C=Math.cos,S=Math.sin,CH=Math.cosh,SH=Math.sinh,PI=Math.PI;
+function cc(id,s){var R=s.R||5,k=100/R,cx=s.cx||0,cy=s.cy||0,q=function(x){return 100+(x-cx)*k},w=function(y){return 100-(y-cy)*k},st=R>6?2:1,i,j,o='<svg viewBox="0 0 200 200" role="img" aria-label="Gráfico: '+s.f+'">';
+for(i=-16;i<=16;i+=st)o+='<line class="gr" x1="'+q(i)+'" y1="0" x2="'+q(i)+'" y2="200"/><line class="gr" x1="0" y1="'+w(i)+'" x2="200" y2="'+w(i)+'"/>';
+o+='<line class="ax" x1="0" y1="'+w(0)+'" x2="200" y2="'+w(0)+'"/><line class="ax" x1="'+q(0)+'" y1="0" x2="'+q(0)+'" y2="200"/>';
+(s.ln||[]).forEach(function(l){o+='<line class="gh" x1="'+q(l[0])+'" y1="'+w(l[1])+'" x2="'+q(l[2])+'" y2="'+w(l[3])+'"/>'});
+s.p.forEach(function(g){var d='',t,v;for(j=0;j<=g.n;j++){t=g.a+(g.b-g.a)*j/g.n;v=g.f(t);d+=(j?'L':'M')+q(v[0]).toFixed(1)+' '+w(v[1]).toFixed(1)}o+='<path class="cv" d="'+d+'"/>'});
+(s.pt||[]).forEach(function(p){o+='<circle class="'+p[2]+'" cx="'+q(p[0])+'" cy="'+w(p[1])+'" r="4.5"/>'});
+o+='</svg><b>'+s.f+'</b><small><strong>'+s.t+'.</strong> '+s.n+'</small>';
+var e=document.createElement('div');e.className='gc';e.innerHTML=o;document.getElementById(id).appendChild(e)}
+function A(f,a,b,n){return {f:f,a:a,b:b,n:n||120}}
+var X=function(a,b,c,d){return [a,b,c,d]};
+cc('gc',{t:'Circunferência',f:'x² + y² = 9',n:'Centro na origem e raio 3.',p:[A(function(t){return [3*C(t),3*S(t)]},0,2*PI,90)],pt:[[0,0,'pv']]});
+cc('gc',{t:'Circunferência deslocada',f:'(x − 1)² + (y + 1)² = 4',n:'Centro (1 ; −1) e raio 2.',p:[A(function(t){return [1+2*C(t),-1+2*S(t)]},0,2*PI,90)],pt:[[1,-1,'pv']]});
+cc('gc',{t:'Elipse horizontal',f:'x²/25 + y²/9 = 1',n:'a = 5, b = 3, c = 4 e e = 0,8. Focos em (±4 ; 0).',R:6,p:[A(function(t){return [5*C(t),3*S(t)]},0,2*PI,120)],pt:[[4,0,'pr'],[-4,0,'pr'],[5,0,'pv'],[-5,0,'pv'],[0,3,'pv'],[0,-3,'pv']]});
+cc('gc',{t:'Elipse vertical',f:'x²/9 + y²/25 = 1',n:'Eixo maior vertical. Focos em (0 ; ±4).',R:6,p:[A(function(t){return [3*C(t),5*S(t)]},0,2*PI,120)],pt:[[0,4,'pr'],[0,-4,'pr'],[0,5,'pv'],[0,-5,'pv'],[3,0,'pv'],[-3,0,'pv']]});
+cc('gc',{t:'Parábola vertical',f:'x² = 4y',n:'p = 1: foco (0 ; 1) e diretriz y = −1.',ln:[X(-20,-1,20,-1)],p:[A(function(t){return [t,t*t/4]},-5,5,80)],pt:[[0,1,'pr'],[0,0,'pv']]});
+cc('gc',{t:'Parábola horizontal',f:'y² = 8x',n:'p = 2: foco (2 ; 0) e diretriz x = −2.',ln:[X(-2,-20,-2,20)],p:[A(function(t){return [t*t/8,t]},-5,5,80)],pt:[[2,0,'pr'],[0,0,'pv']]});
+cc('gc',{t:'Hipérbole horizontal',f:'x²/9 − y²/16 = 1',n:'a = 3, b = 4, c = 5. Assíntotas y = ±4x/3.',R:8,ln:[X(-12,-16,12,16),X(-12,16,12,-16)],p:[A(function(t){return [3*CH(t),4*SH(t)]},-2.2,2.2,80),A(function(t){return [-3*CH(t),4*SH(t)]},-2.2,2.2,80)],pt:[[5,0,'pr'],[-5,0,'pr'],[3,0,'pv'],[-3,0,'pv']]});
+cc('gc',{t:'Hipérbole vertical',f:'y²/9 − x²/16 = 1',n:'Ramos para cima e para baixo. Assíntotas y = ±3x/4.',R:8,ln:[X(-12,-9,12,9),X(-12,9,12,-9)],p:[A(function(t){return [4*SH(t),3*CH(t)]},-2.2,2.2,80),A(function(t){return [4*SH(t),-3*CH(t)]},-2.2,2.2,80)],pt:[[0,5,'pr'],[0,-5,'pr'],[0,3,'pv'],[0,-3,'pv']]});
+cc('gc',{t:'Hipérbole equilátera',f:'x · y = 4',n:'As assíntotas são os eixos. Gráfico de f(x) = 4/x.',R:6,p:[A(function(t){return [t,4/t]},.6,9,100),A(function(t){return [-t,-4/t]},.6,9,100)],pt:[[2,2,'pv'],[-2,-2,'pv']]});
+cc('go',{t:'Cardioide',f:'r = 2(1 − cos θ)',n:'Curva em forma de coração, com ponto de retorno na origem.',cx:-1.5,p:[A(function(t){var r=2*(1-C(t));return [r*C(t),r*S(t)]},0,2*PI,160)],pt:[[0,0,'pv']]});
+cc('go',{t:'Espiral de Arquimedes',f:'r = 0,4θ',n:'Voltas igualmente espaçadas, de 0 a 4π.',R:5.5,p:[A(function(t){return [.4*t*C(t),.4*t*S(t)]},0,4*PI,240)]});
+cc('go',{t:'Lemniscata',f:'r² = 16 cos 2θ',n:'Forma de “8” deitado, com cruzamento na origem.',p:[A(function(t){var d=1+S(t)*S(t);return [4*C(t)/d,4*S(t)*C(t)/d]},0,2*PI,160)],pt:[[0,0,'pv']]});
+cc('go',{t:'Rosa de quatro pétalas',f:'r = 4 cos 2θ',n:'Com n = 2 (par), aparecem 2n = 4 pétalas.',p:[A(function(t){var r=4*C(2*t);return [r*C(t),r*S(t)]},0,2*PI,240)]});
+cc('go',{t:'Astroide',f:'x^(2/3) + y^(2/3) = 4^(2/3)',n:'Paramétrica: x = 4cos³t e y = 4sen³t. Quatro bicos.',p:[A(function(t){return [4*Math.pow(C(t),3),4*Math.pow(S(t),3)]},0,2*PI,160)]});
+cc('go',{t:'Cicloide',f:'x = t − sen t, y = 1 − cos t',n:'Trajetória de um ponto de uma roda que rola (duas voltas).',R:7,cx:6.3,cy:1.5,p:[A(function(t){return [t-S(t),1-C(t)]},0,4*PI,200)]});
+})();
+</script>
+</body>
+</html>
