@@ -44,8 +44,8 @@
     <a href="livro.html">O Livro</a>
     <a href="adquirir.html">Como Adquirir</a>
     <a href="exercicios.html">Exercícios</a>
+    <a href="formulario.html">Formulário de Cálculo</a>
     <a href="formulario-funcoes.html">Formulário de Funções</a>
-    <a href="formulario.html">Formulário de Cálculo</a>    
     <a href="ferramentas.html" class="active">Ferramentas</a>
     <a href="calculo-na-pratica.html">Cálculo na Prática</a>
     <a href="historia-da-matematica.html">História da Matemática</a>
@@ -111,19 +111,20 @@
           <a href="https://www.instagram.com/tavares9046/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none"/></svg>Instagram</a>
           <a href="https://www.linkedin.com/in/wagner-tavares-038772230/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="3"/><line x1="8" y1="11" x2="8" y2="17"/><circle cx="8" cy="7.5" r="0.6" fill="currentColor"/><path d="M12 17v-3.5a2.5 2.5 0 0 1 5 0V17"/></svg>LinkedIn</a>
           <a href="https://www.youtube.com/@wtaresmatematica" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="12" rx="4"/><path d="M11 10l4 2-4 2z" fill="currentColor" stroke="none"/></svg>YouTube</a>
-       </div>
+          <a id="wa2" href="contato.html" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21l1.6-4.6A8.5 8.5 0 1 1 8 19.5z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 .9c-.8-.4-1.7-1.3-2.1-2.1l.9-1-1-2z" fill="currentColor" stroke="none"/></svg>WhatsApp</a>
+        </div>
       </div>
     </div>
     <div class="fine-print"><span>© 2026 W. T. Ares — Matemática</span><span>seravat647.github.io/matematicawtares</span></div>
   </div>
 </footer>
 <script src="js/main.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/12.4.1/math.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjs@12.4.1/lib/browser/math.js"></script>
 <script>
 /* WHATSAPP: coloque o número com país e DDD, só dígitos. Exemplo: '5521999999999' */
 var WA_NUMERO='5521971431679';
 if(WA_NUMERO){var u='https://wa.me/'+WA_NUMERO+'?text='+encodeURIComponent('Olá! Vim pela página de Funções do site W. T. Ares – Matemática.');['wa2'].forEach(function(i){document.getElementById(i).href=u})}
-(function(){
+function boot(){
 var $=function(i){return document.getElementById(i)},M=math,cv=$('cv'),c=cv.getContext('2d'),W=1000,H=620,tab='der',node,f,ders,key='';
 var D={der:{f:'x^3 - 4*x^2 + 5*x - 2',xa:-1,xb:5,p:['x^3 - 4*x^2 + 5*x - 2','sin(x)','x^2','exp(x)','1/x','sqrt(x)']},rie:{f:'x^2',xa:-1,xb:4,p:['x^2','sin(x)+2','exp(x)','sqrt(x)','1/x']},tay:{f:'sin(x)',xa:-7,xb:7,p:['sin(x)','cos(x)','exp(x)','ln(1+x)','1/(1-x)']}};
 function F(v){return isFinite(v)?String(+v.toPrecision(5)).replace('.',',').replace('-','−'):'indefinido'}
@@ -154,7 +155,7 @@ else if(tab==='rie'){var a=+$('ra').value,b=+$('rb').value,n=+$('rn').value,md=$
  o.innerHTML="Soma de Riemann (n = "+n+"): <b>"+F(S)+"</b><br>Valor da integral ≈ <b>"+F(T)+"</b><br>Erro: <b>"+F(Math.abs(S-T))+"</b><br><span style='opacity:.65'>Aumente n e veja o erro diminuir.</span>"}
 else{var a2=+$('tc').value,N2=+$('td').value,cs=[],fa=1,j;try{for(j=0;j<=N2;j++){if(j>0)fa*=j;var dv=dnode(j).compile().evaluate({x:a2});cs.push(dv/fa)}}catch(e){o.innerHTML='Não consegui derivar essa função neste ponto. Tente outro centro.';path(f,CH,3);return}
  var P=function(x){var r=0,p=1,q;for(q=0;q<cs.length;q++){r+=cs[q]*p;p*=x-a2}return r};path(f,CH,3);path(P,YE,2.4);dot(a2,f(a2),BL);
- var tm=[],q;for(q=0;q<cs.length&&tm.length<5;q++)if(Math.abs(cs[q])>1e-12)tm.push(F(cs[q])+(q?'(x'+(a2?(a2<0?' + ':' − ')+F(Math.abs(a2)):'')+')'+(q>1?'^'+q:''):''));
+ var tm=[],q;for(q=0;q<cs.length&&tm.length<5;q++)if(Math.abs(cs[q])>1e-12)tm.push(F(cs[q])+(q?'·'+(a2?'(x'+(a2<0?' + ':' − ')+F(Math.abs(a2))+')':'x')+(q>1?'^'+q:''):''));
  var xe=a2+1;o.innerHTML="P<sub>"+N2+"</sub>(x) = <b>"+tm.join(' + ').replace(/\+ −/g,'− ')+(cs.length>5?' + …':'')+"</b><br>Erro em x = "+F(xe)+": <b>"+F(Math.abs(f(xe)-P(xe)))+"</b><br><span style='opacity:.65'>Aumente o grau n: o polinômio (amarelo) abraça a curva.</span>"}}
 function setTab(t){tab=t;var d=D[t];document.querySelectorAll('.tabbtn').forEach(function(b){b.setAttribute('aria-selected',b.dataset.t===t)});document.querySelectorAll('.blk').forEach(function(b){b.classList.toggle('on',b.dataset.for===t)});
  $('fx').value=d.f;$('xa').value=d.xa;$('xb').value=d.xb;if(t==='der')$('x0').value=2;if(t==='rie'){$('ra').value=0;$('rb').value=3}
@@ -162,7 +163,8 @@ function setTab(t){tab=t;var d=D[t];document.querySelectorAll('.tabbtn').forEach
 document.querySelectorAll('.tabbtn').forEach(function(b){b.onclick=function(){setTab(b.dataset.t)}});
 ['fx','xa','xb','x0','ra','rb','rn','rm','tc','td'].forEach(function(i){$(i).addEventListener('input',update)});
 setTab('der');
-})();
+}
+if(window.math)boot();else{var sc=document.createElement('script');sc.src='https://unpkg.com/mathjs@12.4.1/lib/browser/math.js';sc.onload=boot;sc.onerror=function(){document.getElementById('out').textContent='Não foi possível carregar a biblioteca matemática. Verifique a conexão e recarregue a página.'};document.head.appendChild(sc)}
 </script>
 </body>
 </html>
