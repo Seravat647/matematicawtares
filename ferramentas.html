@@ -29,6 +29,8 @@
 .soon{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:16px;margin-top:26px}
 .soon div{border:1px dashed #8a7a3f;border-radius:4px;padding:16px 18px;background:rgba(251,247,238,.9);font-size:.95rem}.soon b{display:block;font-family:var(--serif);font-size:1.05rem}
 .hero.short{padding-bottom:70px}
+.hint{font:.8rem var(--mono);opacity:.7;margin:8px 0 0}
+#cv.pick{cursor:crosshair;touch-action:pan-y}
 @media(max-width:860px){.tool{grid-template-columns:1fr}}
 </style>
 </head>
@@ -63,23 +65,27 @@
 <section class="hero chalkboard-bg short"><div class="container">
  <p class="eyebrow"><span class="rule"></span> Ferramentas interativas</p>
  <h1>Veja o cálculo <em>acontecer</em>.</h1>
- <p class="lede" style="margin-bottom:0">Digite uma função e explore: a reta tangente que mostra a derivada, os retângulos que formam a integral e o polinômio de Taylor que se aproxima da curva. Cada ferramenta acompanha um capítulo do Curso de Cálculo.</p>
+ <p class="lede" style="margin-bottom:0">Digite uma função e explore: a reta tangente que mostra a derivada, os retângulos que formam a integral e o polinômio de Taylor que se aproxima da curva, o gradiente sobre as curvas de nível e o campo de direções das equações diferenciais. Cada ferramenta acompanha um capítulo do Curso de Cálculo.</p>
 </div></section>
 <section class="paper-bg" style="padding:70px 0 90px"><div class="container">
  <p class="eyebrow"><span class="rule"></span> Laboratório</p>
  <h2>Escolha uma ferramenta</h2>
- <p class="note">Use <code>x</code> como variável e operadores comuns: <code>x^2</code>, <code>sin(x)</code> (ou <code>sen(x)</code>), <code>cos(x)</code>, <code>exp(x)</code>, <code>ln(x)</code>, <code>sqrt(x)</code>, <code>abs(x)</code>, <code>pi</code>. Multiplicação sempre com <code>*</code>.</p>
- <div class="tabs" role="tablist">
+ <p class="note">Use <code>x</code> como variável (e <code>y</code> nas ferramentas de duas variáveis) e operadores comuns: <code>x^2</code>, <code>sin(x)</code> (ou <code>sen(x)</code>), <code>cos(x)</code>, <code>exp(x)</code>, <code>ln(x)</code>, <code>sqrt(x)</code>, <code>abs(x)</code>, <code>pi</code>. Multiplicação sempre com <code>*</code>.</p>
+ <div class="tabs" role="tablist" id="lab">
   <button class="tabbtn" role="tab" data-t="der" aria-selected="true">Derivada e reta tangente</button>
   <button class="tabbtn" role="tab" data-t="rie" aria-selected="false">Somas de Riemann</button>
   <button class="tabbtn" role="tab" data-t="tay" aria-selected="false">Série de Taylor</button>
+  <button class="tabbtn" role="tab" data-t="gra" aria-selected="false">Gradiente (Cálculo III)</button>
+  <button class="tabbtn" role="tab" data-t="edo" aria-selected="false">Campo de direções (EDO)</button>
  </div>
  <div class="tool">
   <canvas id="cv" width="1000" height="620" role="img" aria-label="Gráfico da função"></canvas>
   <div>
-   <label for="fx">f(x) =</label><input type="text" id="fx" value="x^3 - 4*x^2 + 5*x - 2" autocomplete="off" spellcheck="false">
+   <label for="fx" id="fxl">f(x) =</label><input type="text" id="fx" value="x^3 - 4*x^2 + 5*x - 2" autocomplete="off" spellcheck="false">
    <div class="pre" id="pre"></div>
    <div class="row2"><div><label for="xa">x de</label><input type="number" id="xa" value="-1" step="any"></div><div><label for="xb">até</label><input type="number" id="xb" value="5" step="any"></div></div>
+   <div class="blk" data-for="gra edo"><div class="row2"><div><label for="ya">y de</label><input type="number" id="ya" value="-3" step="any"></div><div><label for="yb">até</label><input type="number" id="yb" value="3" step="any"></div></div><label for="p1">x₀ <span id="p1v"></span></label><input type="range" id="p1" min="-3" max="3" step="0.05" value="1"><label for="p2">y₀ <span id="p2v"></span></label><input type="range" id="p2" min="-3" max="3" step="0.05" value="1"><p class="hint">Clique ou arraste no gráfico para escolher o ponto.</p></div>
+   <div class="blk" data-for="edo"><label for="em">Método</label><select id="em"><option value="R">Solução (RK4)</option><option value="E">Comparar com Euler</option></select><label for="eh">Passo h do Euler <span id="ehv"></span></label><input type="range" id="eh" min="0.05" max="1" step="0.05" value="0.5"></div>
    <div class="blk on" data-for="der"><label for="x0">Ponto x₀ <span id="x0v"></span></label><input type="range" id="x0" min="-1" max="5" step="0.05" value="2"></div>
    <div class="blk" data-for="rie">
     <div class="row2"><div><label for="ra">a</label><input type="number" id="ra" value="0" step="any"></div><div><label for="rb">b</label><input type="number" id="rb" value="3" step="any"></div></div>
@@ -95,7 +101,7 @@
  </div>
  <div class="soon">
   <div><b>Limites e continuidade</b>Em breve: zoom no ponto.</div>
-  <div><b>Campo de direções (EDO)</b>Em breve: clique e veja a solução.</div>
+  <div><b>Integral dupla e volume</b>Em breve: somas sobre retângulos.</div>
   <div><b>Passo a passo</b>Em breve: derivadas e integrais explicadas.</div>
  </div>
  <p style="margin-top:34px"><a href="livro.html" class="btn btn-primary">Conhecer o livro</a> <a href="adquirir.html" class="btn" style="border-color:var(--chalkboard)">Como adquirir</a></p>
@@ -127,7 +133,7 @@ var WA_NUMERO='5521971431679';
 if(WA_NUMERO){var u='https://wa.me/'+WA_NUMERO+'?text='+encodeURIComponent('Olá! Vim pela página de Funções do site W. T. Ares – Matemática.');['wa2'].forEach(function(i){document.getElementById(i).href=u})}
 function boot(){
 var $=function(i){return document.getElementById(i)},M=math,cv=$('cv'),c=cv.getContext('2d'),W=1000,H=620,tab='der',node,f,ders,key='';
-var D={der:{f:'x^3 - 4*x^2 + 5*x - 2',xa:-1,xb:5,p:['x^3 - 4*x^2 + 5*x - 2','sin(x)','x^2','exp(x)','1/x','sqrt(x)']},rie:{f:'x^2',xa:-1,xb:4,p:['x^2','sin(x)+2','exp(x)','sqrt(x)','1/x']},tay:{f:'sin(x)',xa:-7,xb:7,p:['sin(x)','cos(x)','exp(x)','ln(1+x)','1/(1-x)']}};
+var D={der:{f:'x^3 - 4*x^2 + 5*x - 2',xa:-1,xb:5,p:['x^3 - 4*x^2 + 5*x - 2','sin(x)','x^2','exp(x)','1/x','sqrt(x)']},rie:{f:'x^2',xa:-1,xb:4,p:['x^2','sin(x)+2','exp(x)','sqrt(x)','1/x']},tay:{f:'sin(x)',xa:-7,xb:7,p:['sin(x)','cos(x)','exp(x)','ln(1+x)','1/(1-x)']},gra:{f:'x^2 + y^2',xa:-3,xb:3,ya:-3,yb:3,p:['x^2 + y^2','x^2 - y^2','x*y','sin(x)*cos(y)','exp(-(x^2+y^2))','x^2*y']},edo:{f:'x - y',xa:-4,xb:4,ya:-4,yb:4,p:['x - y','y','-2*y','x*y','sin(x) - y','y*(1 - y)']}};
 function F(v){return isFinite(v)?String(+v.toPrecision(5)).replace('.',',').replace('-','−'):'indefinido'}
 function norm(s){return s.replace(/\bsen\b/g,'sin').replace(/\btg\b/g,'tan').replace(/\bln\b/g,'log').replace(/π/g,'pi').replace(/√/g,'sqrt')}
 function mk(n){var e=n.compile();return function(x){try{var v=e.evaluate({x:x});return typeof v==='number'&&isFinite(v)?v:NaN}catch(_){return NaN}}}
@@ -144,7 +150,7 @@ for(t=Math.ceil(V.xa/sx)*sx;t<=V.xb;t+=sx){c.strokeStyle='rgba(243,238,225,.08)'
 for(t=Math.ceil(V.ya/sy)*sy;t<=V.yb;t+=sy){c.strokeStyle='rgba(243,238,225,.08)';c.beginPath();c.moveTo(0,Y(t));c.lineTo(W,Y(t));c.stroke();c.fillStyle='rgba(243,238,225,.55)';c.fillText(F(+t.toFixed(6)),Math.min(W-50,Math.max(4,X(0)+5)),Y(t)-4)}
 c.strokeStyle='rgba(243,238,225,.6)';c.lineWidth=1.5;c.beginPath();c.moveTo(X(0),0);c.lineTo(X(0),H);c.moveTo(0,Y(0));c.lineTo(W,Y(0));c.stroke()}
 function dot(x,y,col){c.fillStyle=col;c.beginPath();c.arc(X(x),Y(y),7,0,7);c.fill();c.strokeStyle='#16302A';c.lineWidth=2;c.stroke()}
-function update(){var o=$('out');if(!load()){c.clearRect(0,0,W,H);o.innerHTML='Não entendi a função. Use <b>x</b> como variável, por exemplo <b>sin(x)</b>, <b>x^2</b> ou <b>exp(x)</b>.';return}
+function update(){if(tab==='gra'||tab==='edo')return update2();var o=$('out');if(!load()){c.clearRect(0,0,W,H);o.innerHTML='Não entendi a função. Use <b>x</b> como variável, por exemplo <b>sin(x)</b>, <b>x^2</b> ou <b>exp(x)</b>.';return}
 V=view();grid();var CH='#F3EEE1',YE='#E4BE68',BL='#8FB4C0';$('rnv').textContent=$('rn').value;$('tdv').textContent=$('td').value;
 if(tab==='der'){var s=$('x0');s.min=V.xa;s.max=V.xb;var x0=Math.min(V.xb,Math.max(V.xa,+s.value));$('x0v').textContent='= '+F(x0);var dt='',df=function(x){var h=1e-5;return(f(x+h)-f(x-h))/(2*h)};
  try{var dn=dnode(1),de=dn.compile();dt=dn.toString();df=function(x){try{var v=de.evaluate({x:x});return typeof v==='number'?v:NaN}catch(_){return NaN}}}catch(e){dt='(derivada numérica)'}
@@ -158,12 +164,36 @@ else{var a2=+$('tc').value,N2=+$('td').value,cs=[],fa=1,j;try{for(j=0;j<=N2;j++)
  var P=function(x){var r=0,p=1,q;for(q=0;q<cs.length;q++){r+=cs[q]*p;p*=x-a2}return r};path(f,CH,3);path(P,YE,2.4);dot(a2,f(a2),BL);
  var tm=[],q;for(q=0;q<cs.length&&tm.length<5;q++)if(Math.abs(cs[q])>1e-12)tm.push(F(cs[q])+(q?'·'+(a2?'(x'+(a2<0?' + ':' − ')+F(Math.abs(a2))+')':'x')+(q>1?'^'+q:''):''));
  var xe=a2+1;o.innerHTML="P<sub>"+N2+"</sub>(x) = <b>"+tm.join(' + ').replace(/\+ −/g,'− ')+(cs.length>5?' + …':'')+"</b><br>Erro em x = "+F(xe)+": <b>"+F(Math.abs(f(xe)-P(xe)))+"</b><br><span style='opacity:.65'>Aumente o grau n: o polinômio (amarelo) abraça a curva.</span>"}}
-function setTab(t){tab=t;var d=D[t];document.querySelectorAll('.tabbtn').forEach(function(b){b.setAttribute('aria-selected',b.dataset.t===t)});document.querySelectorAll('.blk').forEach(function(b){b.classList.toggle('on',b.dataset.for===t)});
- $('fx').value=d.f;$('xa').value=d.xa;$('xb').value=d.xb;if(t==='der')$('x0').value=2;if(t==='rie'){$('ra').value=0;$('rb').value=3}
+var node2,f2,key2='';
+function load2(){var k=$('fx').value;if(k===key2&&node2)return true;try{node2=M.parse(norm(k));var e=node2.compile();f2=function(x,y){try{var v=e.evaluate({x:x,y:y});return typeof v==='number'&&isFinite(v)?v:NaN}catch(_){return NaN}};f2(1,1);key2=k;return true}catch(err){return false}}
+function pd(v){try{var n=M.simplify(M.derivative(node2,v)),e=n.compile();return{s:n.toString().replace(/ \^ /g,'^').replace(/ \* /g,'·').replace(/ - /g,' − ').replace(/^-\((.*)\)$/,'−$1'),f:function(x,y){try{var r=e.evaluate({x:x,y:y});return typeof r==='number'?r:NaN}catch(_){return NaN}}}}catch(err){var h=1e-5;return{s:'(numérica)',f:v==='x'?function(x,y){return(f2(x+h,y)-f2(x-h,y))/(2*h)}:function(x,y){return(f2(x,y+h)-f2(x,y-h))/(2*h)}}}}
+function view2(){var xa=parseFloat($('xa').value),xb=parseFloat($('xb').value),ya=parseFloat($('ya').value),yb=parseFloat($('yb').value);if(!(xb>xa)){xa=-3;xb=3}if(!(yb>ya)){ya=-3;yb=3}return{xa:xa,xb:xb,ya:ya,yb:yb}}
+function heat(){var NC=100,NR=62,cw=W/NC,rh=H/NR,v=[],lo=1e18,hi=-1e18,i,j,z,t;for(j=0;j<NR;j++)for(i=0;i<NC;i++){z=f2(V.xa+(i+.5)/NC*(V.xb-V.xa),V.yb-(j+.5)/NR*(V.yb-V.ya));v.push(z);if(isFinite(z)){lo=Math.min(lo,z);hi=Math.max(hi,z)}}
+c.globalCompositeOperation='destination-over';for(j=0;j<NR;j++)for(i=0;i<NC;i++){z=v[j*NC+i];if(!isFinite(z))continue;t=hi>lo?(z-lo)/(hi-lo):.5;t=Math.floor(t*12)/12;c.fillStyle='rgb('+Math.round(22+t*176)+','+Math.round(48+t*121)+','+Math.round(42+t*50)+')';c.fillRect(i*cw,j*rh,cw+1,rh+1)}c.globalCompositeOperation='source-over'}
+function arrow(a,b,p,q,col,w,dash){c.strokeStyle=col;c.fillStyle=col;c.lineWidth=w;c.setLineDash(dash||[]);c.beginPath();c.moveTo(a,b);c.lineTo(p,q);c.stroke();c.setLineDash([]);var an=Math.atan2(q-b,p-a);c.beginPath();c.moveTo(p,q);c.lineTo(p-15*Math.cos(an-.4),q-15*Math.sin(an-.4));c.lineTo(p-15*Math.cos(an+.4),q-15*Math.sin(an+.4));c.closePath();c.fill()}
+function integ(m,x0,y0,x1,h){var n=Math.max(1,Math.ceil(Math.abs(x1-x0)/h)),st=(x1-x0)/n,x=x0,y=y0,pts=[[x,y]],i,k1,k2,k3,k4;for(i=0;i<n;i++){if(m==='E')y+=st*f2(x,y);else{k1=f2(x,y);k2=f2(x+st/2,y+st*k1/2);k3=f2(x+st/2,y+st*k2/2);k4=f2(x+st,y+st*k3);y+=st*(k1+2*k2+2*k3+k4)/6}x+=st;if(!isFinite(y)||Math.abs(y)>1e6)break;pts.push([x,y])}return pts}
+function dpts(pts,col,w,dash,mk){c.beginPath();c.strokeStyle=col;c.lineWidth=w;c.setLineDash(dash||[]);pts.forEach(function(p,i){i?c.lineTo(X(p[0]),Y(p[1])):c.moveTo(X(p[0]),Y(p[1]))});c.stroke();c.setLineDash([]);if(mk){c.fillStyle=col;pts.forEach(function(p){c.beginPath();c.arc(X(p[0]),Y(p[1]),3.6,0,7);c.fill()})}}
+function update2(){var o=$('out');if(!load2()){c.clearRect(0,0,W,H);o.innerHTML='Não entendi a função. Use <b>x</b> e <b>y</b>, por exemplo <b>x^2 + y^2</b> ou <b>x - y</b>.';return}
+V=view2();grid();var CH='#F3EEE1',YE='#E4BE68',BL='#8FB4C0',s1=$('p1'),s2=$('p2');s1.min=V.xa;s1.max=V.xb;s2.min=V.ya;s2.max=V.yb;
+var px=Math.min(V.xb,Math.max(V.xa,+s1.value)),py=Math.min(V.yb,Math.max(V.ya,+s2.value));$('p1v').textContent='= '+F(px);$('p2v').textContent='= '+F(py);$('ehv').textContent='= '+F(+$('eh').value);
+if(tab==='gra'){heat();var A=pd('x'),B=pd('y'),gx=A.f(px,py),gy=B.f(px,py),m=Math.sqrt(gx*gx+gy*gy);
+ if(m>1e-9&&isFinite(m)){arrow(X(px),Y(py),X(px)+gx*95/m,Y(py),BL,2.2,[6,5]);arrow(X(px),Y(py),X(px),Y(py)-gy*95/m,BL,2.2,[6,5]);arrow(X(px),Y(py),X(px)+gx*95/m,Y(py)-gy*95/m,CH,3.6)}
+ dot(px,py,YE);
+ o.innerHTML='f(x₀, y₀) = <b>'+F(f2(px,py))+'</b><br>∂f/∂x = <b>'+A.s+'</b> = <b>'+F(gx)+'</b><br>∂f/∂y = <b>'+B.s+'</b> = <b>'+F(gy)+'</b><br>∇f = <b>('+F(gx)+'; '+F(gy)+')</b><br>|∇f| = <b>'+F(m)+'</b>'+(m<1e-9?'<br>Ponto crítico: o gradiente é nulo.':'')+'<br><span style="opacity:.65">Seta branca: o gradiente, direção de maior crescimento e perpendicular à curva de nível. Tracejadas azuis: componentes ∂f/∂x e ∂f/∂y. Cores: de escuro (f menor) a amarelo (f maior).</span>'}
+else{var NX=26,NY=16,i,j,xx,yy,s,ps,L=13,ln;for(i=0;i<NX;i++)for(j=0;j<NY;j++){xx=V.xa+(i+.5)/NX*(V.xb-V.xa);yy=V.ya+(j+.5)/NY*(V.yb-V.ya);s=f2(xx,yy);if(!isFinite(s))continue;ps=s*(H/(V.yb-V.ya))/(W/(V.xb-V.xa));ln=Math.sqrt(1+ps*ps);c.strokeStyle='rgba(243,238,225,.4)';c.lineWidth=1.6;c.beginPath();c.moveTo(X(xx)-L/ln,Y(yy)+L*ps/ln);c.lineTo(X(xx)+L/ln,Y(yy)-L*ps/ln);c.stroke()}
+ var hR=(V.xb-V.xa)/400,fw=integ('R',px,py,V.xb,hR),bw=integ('R',px,py,V.xa,hR);dpts(bw,YE,3.2);dpts(fw,YE,3.2);
+ var last=fw[fw.length-1],txt='Condição inicial: y('+F(px)+') = <b>'+F(py)+'</b><br>'+(last[0]>=V.xb-1e-9?'y('+F(V.xb)+') ≈ <b>'+F(last[1])+'</b> (RK4)':'A solução sai da janela antes de x = '+F(V.xb));
+ if($('em').value==='E'){var h=+$('eh').value,ef=integ('E',px,py,V.xb,h),eb=integ('E',px,py,V.xa,h);dpts(eb,BL,2.4,[7,5],1);dpts(ef,BL,2.4,[7,5],1);var le=ef[ef.length-1];if(le[0]>=V.xb-1e-9&&last[0]>=V.xb-1e-9)txt+='<br>Euler (h = '+F(h)+'): <b>'+F(le[1])+'</b><br>Erro do Euler: <b>'+F(Math.abs(le[1]-last[1]))+'</b>'}
+ dot(px,py,'#fff');
+ o.innerHTML=txt+'<br><span style="opacity:.65">Os tracinhos são o campo de direções: a inclinação das soluções em cada ponto. Clique no gráfico para mudar a condição inicial.'+($('em').value==='E'?' Azul tracejado: método de Euler. Diminua h e ele chega perto da solução.':'')+'</span>'}}
+function pick(ev){if(tab!=='gra'&&tab!=='edo')return;if(ev.type==='pointermove'&&!ev.buttons)return;var r=cv.getBoundingClientRect();$('p1').value=V.xa+(ev.clientX-r.left)/r.width*(V.xb-V.xa);$('p2').value=V.yb-(ev.clientY-r.top)/r.height*(V.yb-V.ya);update2()}
+cv.addEventListener('pointerdown',pick);cv.addEventListener('pointermove',pick);
+function setTab(t){tab=t;var d=D[t];document.querySelectorAll('.tabbtn').forEach(function(b){b.setAttribute('aria-selected',b.dataset.t===t)});document.querySelectorAll('.blk').forEach(function(b){b.classList.toggle('on',b.dataset.for.split(' ').indexOf(t)>-1)});
+ $('fx').value=d.f;$('xa').value=d.xa;$('xb').value=d.xb;var two=t==='gra'||t==='edo';$('fxl').textContent=t==='edo'?'y′ =':two?'f(x, y) =':'f(x) =';cv.className=two?'pick':'';if(two){$('ya').value=d.ya;$('yb').value=d.yb;$('p1').value=t==='edo'?0:1;$('p2').value=1}if(t==='der')$('x0').value=2;if(t==='rie'){$('ra').value=0;$('rb').value=3}
  $('pre').innerHTML='';d.p.forEach(function(p){var b=document.createElement('button');b.type='button';b.textContent=p;b.onclick=function(){$('fx').value=p;update()};$('pre').appendChild(b)});update()}
 document.querySelectorAll('.tabbtn').forEach(function(b){b.onclick=function(){setTab(b.dataset.t)}});
-['fx','xa','xb','x0','ra','rb','rn','rm','tc','td'].forEach(function(i){$(i).addEventListener('input',update)});
-setTab('der');
+['fx','xa','xb','x0','ra','rb','rn','rm','tc','td','ya','yb','p1','p2','em','eh'].forEach(function(i){$(i).addEventListener('input',update)});
+var h0=location.hash.slice(1);setTab(D[h0]?h0:'der');if(D[h0])setTimeout(function(){$('lab').scrollIntoView()},300);
 }
 if(window.math)boot();else{var sc=document.createElement('script');sc.src='https://unpkg.com/mathjs@12.4.1/lib/browser/math.js';sc.onload=boot;sc.onerror=function(){document.getElementById('out').textContent='Não foi possível carregar a biblioteca matemática. Verifique a conexão e recarregue a página.'};document.head.appendChild(sc)}
 </script>
