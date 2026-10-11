@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;600;700&family=Space+Mono:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <style>
+
 :root{--bg:#F3EEE1;--card:#FFFDF8;--board:#1F3B32;--mute:#4d5a52;--line:#D9D0B8;--accent:#2b6e56;--gold:#8a6a1c;--tint:#F3EEE1;--fh:var(--serif);--fb:var(--sans)}
 section.fx{padding:70px 0 0}section.fx:last-of-type{padding-bottom:90px}
 .paper-bg .container{position:relative;z-index:1}
@@ -57,10 +58,16 @@ h3.cv3{margin-top:2.6rem}
 .gc small{display:block;color:var(--mute);font-size:.92rem;line-height:1.45;margin-top:.15rem}
 .gr{stroke:var(--line);stroke-width:1}.ax{stroke:var(--mute);stroke-width:1.4}.cv{stroke:var(--accent);fill:none;stroke-width:2.8}.gh{stroke:var(--mute);stroke-dasharray:4 3;fill:none;stroke-width:1.2}
 .pr{fill:#1590a8}.pv{fill:#e0556b}.pi{fill:#d9a32f}.pr,.pv,.pi{stroke:var(--card);stroke-width:1.5}
-.wa{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:50;display:flex;align-items:center;gap:.55rem;background:#25d366;color:#05301a;font-weight:700;text-decoration:none;border-radius:99px;padding:.7rem 1.1rem .7rem .8rem;box-shadow:0 6px 18px rgba(0,0,0,.35);transition:transform .15s}
-.wa:hover{transform:translateY(-3px);color:#05301a}
-.wa svg{width:1.9rem;height:1.9rem;flex:none}
-@media (max-width:560px){.wa{padding:.7rem}.wa span{display:none}}
+
+.wa{position:fixed;right:24px;bottom:82px;z-index:200;width:46px;height:46px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px -10px rgba(0,0,0,.5);transition:transform .2s ease,box-shadow .2s ease}
+.wa svg{width:26px;height:26px}
+.wa::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25D366;animation:waPulse 2.4s ease-out infinite;pointer-events:none}
+@keyframes waPulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.7);opacity:0}}
+.wa:hover{transform:translateY(-3px) scale(1.08);box-shadow:0 14px 30px -8px rgba(37,211,102,.65)}
+.wa:hover::before{animation:none;opacity:0}
+.wa:active{transform:scale(.94)}
+.wa::after{content:attr(data-tip);position:absolute;right:58px;white-space:nowrap;background:var(--chalkboard);color:var(--chalk);font:600 .85rem var(--sans);padding:7px 12px;border-radius:3px;border:1px solid rgba(228,190,104,.4);opacity:0;transform:translateX(6px);pointer-events:none;transition:opacity .2s ease,transform .2s ease}
+.wa:hover::after,.wa:focus-visible::after{opacity:1;transform:none}
 </style>
 </head>
 <body>
@@ -77,6 +84,7 @@ h3.cv3{margin-top:2.6rem}
     <a href="exercicios.html">Exercícios</a>
     <a href="formulario.html">Formulário de Cálculo</a>
     <a href="formulario-funcoes.html" class="active">Formulário de Funções</a>
+    <a href="ferramentas.html">Ferramentas</a>
     <a href="calculo-na-pratica.html">Cálculo na Prática</a>
     <a href="historia-da-matematica.html">História da Matemática</a>
     <a href="contato.html">Contato</a>
@@ -367,14 +375,15 @@ h3.cv3{margin-top:2.6rem}
           <a href="https://www.instagram.com/tavares9046/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none"/></svg>Instagram</a>
           <a href="https://www.linkedin.com/in/wagner-tavares-038772230/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="3"/><line x1="8" y1="11" x2="8" y2="17"/><circle cx="8" cy="7.5" r="0.6" fill="currentColor"/><path d="M12 17v-3.5a2.5 2.5 0 0 1 5 0V17"/></svg>LinkedIn</a>
           <a href="https://www.youtube.com/@wtaresmatematica" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="12" rx="4"/><path d="M11 10l4 2-4 2z" fill="currentColor" stroke="none"/></svg>YouTube</a>
-          
+          <a id="wa2" href="contato.html" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21l1.6-4.6A8.5 8.5 0 1 1 8 19.5z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 .9c-.8-.4-1.7-1.3-2.1-2.1l.9-1-1-2z" fill="currentColor" stroke="none"/></svg>WhatsApp</a>
+        </div>
       </div>
     </div>
     <div class="fine-print"><span>© 2026 W. T. Ares — Matemática</span><span>seravat647.github.io/matematicawtares</span></div>
   </div>
 </footer>
 
-<a class="wa" id="wa" href="contato.html" target="_blank" rel="noopener" aria-label="Fale com o autor pelo WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="#05301a" d="M16 3C8.8 3 3 8.8 3 16c0 2.5.7 4.800 1.900 6.800L3 29l6.400-1.800A13 13 0 1 0 16 3zm0 2.400a10.600 10.600 0 1 1-5.400 19.700l-.4-.2-3.800 1.100 1.100-3.700-.3-.4A10.600 10.600 0 0 1 16 5.400z"/><path fill="#05301a" d="M12 9.800c-.3 0-.7.100-1 .5-.4.400-1.300 1.300-1.300 3.100s1.300 3.600 1.500 3.800c.2.300 2.600 4.100 6.400 5.600 3.100 1.200 3.700.9 4.400.9.700-.1 2.200-.9 2.500-1.800.3-.9.3-1.600.2-1.800-.1-.2-.3-.3-.7-.5l-2.200-1.100c-.3-.1-.5-.2-.8.200l-1 1.200c-.2.300-.4.300-.8.100-.4-.2-1.500-.6-2.800-1.700-1-.9-1.700-2.100-1.900-2.400-.2-.4 0-.6.200-.8l.6-.7c.2-.2.200-.4.400-.6.100-.3.100-.5 0-.7l-1-2.400c-.3-.6-.5-.5-.8-.5z"/></svg><span>Fale pelo WhatsApp</span></a>
+<a class="wa" id="wa" href="contato.html" target="_blank" rel="noopener noreferrer" aria-label="Fale com o autor pelo WhatsApp" data-tip="Fale pelo WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="#fff" d="M16 3C8.8 3 3 8.8 3 16c0 2.5.7 4.8 1.9 6.8L3 29l6.4-1.8A13 13 0 1 0 16 3zm0 2.4a10.6 10.6 0 1 1-5.4 19.7l-.4-.2-3.8 1.1 1.1-3.7-.3-.4A10.6 10.6 0 0 1 16 5.4z"/><path fill="#fff" d="M12 9.8c-.3 0-.7.1-1 .5-.4.4-1.3 1.3-1.3 3.1s1.3 3.6 1.5 3.8c.2.3 2.6 4.1 6.4 5.6 3.1 1.2 3.7.9 4.4.9.7-.1 2.2-.9 2.5-1.8.3-.9.3-1.6.2-1.8-.1-.2-.3-.3-.7-.5l-2.200-1.100c-.3-.1-.5-.2-.8.2l-1 1.200c-.2.3-.4.3-.8.1-.4-.2-1.500-.6-2.800-1.700-1-.9-1.700-2.100-1.900-2.400-.2-.4 0-.6.200-.8l.6-.7c.2-.2.200-.4.400-.6.100-.3.100-.5 0-.7l-1-2.400c-.3-.6-.5-.5-.8-.5z"/></svg></a>
 <script src="js/main.js"></script>
 <script>
 (function(){
