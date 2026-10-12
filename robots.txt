@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://seravat647.github.io/matematicawtares/sitemap.xml
