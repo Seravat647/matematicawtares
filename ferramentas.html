@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;600;700&family=Space+Mono:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
 <link rel="stylesheet" href="css/style.css">
 <style>
 .tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
@@ -29,6 +30,8 @@
 .soon{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:16px;margin-top:26px}
 .soon div{border:1px dashed #8a7a3f;border-radius:4px;padding:16px 18px;background:rgba(251,247,238,.9);font-size:.95rem}.soon b{display:block;font-family:var(--serif);font-size:1.05rem}
 .hero.short{padding-bottom:70px}
+.soon a{display:block;border:1px solid #8a7a3f;border-radius:4px;padding:16px 18px;background:#FFFDF8;font-size:.95rem;color:#1F3B32;transition:transform .18s,box-shadow .18s}.soon a:hover{transform:translateY(-3px);box-shadow:0 14px 26px -16px rgba(31,59,50,.6)}.soon a b{display:block;font-family:var(--serif);font-size:1.05rem}
+.stepbox{background:var(--chalkboard-2);border:1px solid rgba(243,238,225,.15);border-radius:4px;padding:18px 22px;max-height:640px;overflow:auto}.stepbox ol{margin:12px 0 0 20px;padding:0}.stepbox li{margin:0 0 14px}.stepbox .r{color:var(--chalk-yellow)}.stepbox .hn{font-size:.9rem;opacity:.8}.stepbox .sh{font:.75rem var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--chalk-yellow);margin:0 0 6px}.stepbox .fin{margin-top:14px;padding:12px 16px;border-left:4px solid var(--chalk-yellow);background:rgba(228,190,104,.1)}.stepbox .vf{font:.85rem var(--mono);margin:6px 0 0}.stepbox .warn{color:#f0b9a8}.stepbox .katex{font-size:1.1em}.stepbox .katex-display{overflow-x:auto;overflow-y:hidden;margin:.5em 0}
 .hint{font:.8rem var(--mono);opacity:.7;margin:8px 0 0}
 #cv.pick{cursor:crosshair;touch-action:pan-y}
 @media(max-width:860px){.tool{grid-template-columns:1fr}}
@@ -77,13 +80,16 @@
   <button class="tabbtn" role="tab" data-t="tay" aria-selected="false">Série de Taylor</button>
   <button class="tabbtn" role="tab" data-t="gra" aria-selected="false">Gradiente (Cálculo III)</button>
   <button class="tabbtn" role="tab" data-t="edo" aria-selected="false">Campo de direções (EDO)</button>
+  <button class="tabbtn" role="tab" data-t="lim" aria-selected="false">Limites e continuidade</button>
+  <button class="tabbtn" role="tab" data-t="dup" aria-selected="false">Integral dupla e volume</button>
+  <button class="tabbtn" role="tab" data-t="pas" aria-selected="false">Passo a passo</button>
  </div>
  <div class="tool">
-  <canvas id="cv" width="1000" height="620" role="img" aria-label="Gráfico da função"></canvas>
+  <div><canvas id="cv" width="1000" height="620" role="img" aria-label="Gráfico da função"></canvas><div id="stepbox" class="stepbox" hidden></div></div>
   <div>
    <label for="fx" id="fxl">f(x) =</label><input type="text" id="fx" value="x^3 - 4*x^2 + 5*x - 2" autocomplete="off" spellcheck="false">
    <div class="pre" id="pre"></div>
-   <div class="row2"><div><label for="xa">x de</label><input type="number" id="xa" value="-1" step="any"></div><div><label for="xb">até</label><input type="number" id="xb" value="5" step="any"></div></div>
+   <div class="blk on" data-for="der rie tay gra edo"><div class="row2"><div><label for="xa">x de</label><input type="number" id="xa" value="-1" step="any"></div><div><label for="xb">até</label><input type="number" id="xb" value="5" step="any"></div></div></div>
    <div class="blk" data-for="gra edo"><div class="row2"><div><label for="ya">y de</label><input type="number" id="ya" value="-3" step="any"></div><div><label for="yb">até</label><input type="number" id="yb" value="3" step="any"></div></div><label for="p1">x₀ <span id="p1v"></span></label><input type="range" id="p1" min="-3" max="3" step="0.05" value="1"><label for="p2">y₀ <span id="p2v"></span></label><input type="range" id="p2" min="-3" max="3" step="0.05" value="1"><p class="hint">Clique ou arraste no gráfico para escolher o ponto.</p></div>
    <div class="blk" data-for="edo"><label for="em">Método</label><select id="em"><option value="R">Solução (RK4)</option><option value="E">Comparar com Euler</option></select><label for="eh">Passo h do Euler <span id="ehv"></span></label><input type="range" id="eh" min="0.05" max="1" step="0.05" value="0.5"></div>
    <div class="blk on" data-for="der"><label for="x0">Ponto x₀ <span id="x0v"></span></label><input type="range" id="x0" min="-1" max="5" step="0.05" value="2"></div>
@@ -96,13 +102,16 @@
     <label for="tc">Centro a</label><input type="number" id="tc" value="0" step="any">
     <label for="td">Grau n <span id="tdv"></span></label><input type="range" id="td" min="0" max="15" value="3">
    </div>
+   <div class="blk" data-for="lim"><label for="la">Ponto a</label><input type="number" id="la" value="2" step="any"><label for="lz">Zoom em a <span id="lzv"></span></label><input type="range" id="lz" min="0" max="6" step="0.1" value="0"><p class="hint">Arraste o zoom para a direita: a janela fica cada vez mais perto de a.</p></div>
+   <div class="blk" data-for="dup"><div class="row2"><div><label for="da">x de</label><input type="number" id="da" value="0" step="any"></div><div><label for="db">até</label><input type="number" id="db" value="2" step="any"></div></div><div class="row2"><div><label for="dc">y de</label><input type="number" id="dc" value="0" step="any"></div><div><label for="dd">até</label><input type="number" id="dd" value="2" step="any"></div></div><label for="dn">Divisões n <span id="dnv"></span></label><input type="range" id="dn" min="1" max="30" value="6"><label for="dm">Altura de cada coluna</label><select id="dm"><option value="L">Canto inferior esquerdo</option><option value="U">Canto superior direito</option><option value="M" selected>Ponto médio</option></select></div>
+   <div class="blk" data-for="pas"><label for="sm">O que fazer</label><select id="sm"><option value="D">Derivar</option><option value="I">Integrar</option></select></div>
    <div class="out" id="out" aria-live="polite"></div>
   </div>
  </div>
  <div class="soon">
-  <div><b>Limites e continuidade</b>Em breve: zoom no ponto.</div>
-  <div><b>Integral dupla e volume</b>Em breve: somas sobre retângulos.</div>
-  <div><b>Passo a passo</b>Em breve: derivadas e integrais explicadas.</div>
+  <a href="#lim"><b>Limites e continuidade</b>Dê zoom no ponto e veja o limite aparecer.</a>
+  <a href="#dup"><b>Integral dupla e volume</b>Some colunas sobre retângulos e veja o volume.</a>
+  <a href="#pas"><b>Passo a passo</b>Derivadas e integrais explicadas em cada regra.</a>
  </div>
  <p style="margin-top:34px"><a href="livro.html" class="btn btn-primary">Conhecer o livro</a> <a href="adquirir.html" class="btn" style="border-color:var(--chalkboard)">Como adquirir</a> <a href="topicos.html" class="btn" style="border-color:var(--chalkboard)">Explicações por tópico</a></p>
 </div></section>
@@ -126,6 +135,7 @@
   </div>
 </footer>
 <script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjs@12.4.1/lib/browser/math.js"></script>
 <script>
 /* WHATSAPP: coloque o número com país e DDD, só dígitos. Exemplo: '5521999999999' */
@@ -133,7 +143,7 @@ var WA_NUMERO='5521971431679';
 if(WA_NUMERO){var u='https://wa.me/'+WA_NUMERO+'?text='+encodeURIComponent('Olá! Vim pela página de Funções do site W. T. Ares – Matemática.');['wa2'].forEach(function(i){document.getElementById(i).href=u})}
 function boot(){
 var $=function(i){return document.getElementById(i)},M=math,cv=$('cv'),c=cv.getContext('2d'),W=1000,H=620,tab='der',node,f,ders,key='';
-var D={der:{f:'x^3 - 4*x^2 + 5*x - 2',xa:-1,xb:5,p:['x^3 - 4*x^2 + 5*x - 2','sin(x)','x^2','exp(x)','1/x','sqrt(x)']},rie:{f:'x^2',xa:-1,xb:4,p:['x^2','sin(x)+2','exp(x)','sqrt(x)','1/x']},tay:{f:'sin(x)',xa:-7,xb:7,p:['sin(x)','cos(x)','exp(x)','ln(1+x)','1/(1-x)']},gra:{f:'x^2 + y^2',xa:-3,xb:3,ya:-3,yb:3,p:['x^2 + y^2','x^2 - y^2','x*y','sin(x)*cos(y)','exp(-(x^2+y^2))','x^2*y']},edo:{f:'x - y',xa:-4,xb:4,ya:-4,yb:4,p:['x - y','y','-2*y','x*y','sin(x) - y','y*(1 - y)']}};
+var D={der:{f:'x^3 - 4*x^2 + 5*x - 2',xa:-1,xb:5,p:['x^3 - 4*x^2 + 5*x - 2','sin(x)','x^2','exp(x)','1/x','sqrt(x)']},rie:{f:'x^2',xa:-1,xb:4,p:['x^2','sin(x)+2','exp(x)','sqrt(x)','1/x']},tay:{f:'sin(x)',xa:-7,xb:7,p:['sin(x)','cos(x)','exp(x)','ln(1+x)','1/(1-x)']},gra:{f:'x^2 + y^2',xa:-3,xb:3,ya:-3,yb:3,p:['x^2 + y^2','x^2 - y^2','x*y','sin(x)*cos(y)','exp(-(x^2+y^2))','x^2*y']},lim:{f:'(x^2-4)/(x-2)',p:['(x^2-4)/(x-2)','sin(x)/x','(1-cos(x))/x^2','abs(x)/x','1/x','(sqrt(x+1)-1)/x']},dup:{f:'x*y',p:['x*y','x^2 + y^2','4 - x - y','sin(x)*cos(y)','exp(-(x^2+y^2))','x + y^2']},pas:{f:'x^2*sin(x)',p:['x^2*sin(x)','x*exp(x)','(3*x^2+1)^5','sin(x)/x','x^3 - 4*x^2 + 5*x - 2','x*log(x)','1/(2*x+1)','exp(2*x)*cos(x)']},edo:{f:'x - y',xa:-4,xb:4,ya:-4,yb:4,p:['x - y','y','-2*y','x*y','sin(x) - y','y*(1 - y)']}};
 function F(v){return isFinite(v)?String(+v.toPrecision(5)).replace('.',',').replace('-','−'):'indefinido'}
 function norm(s){return s.replace(/\bsen\b/g,'sin').replace(/\btg\b/g,'tan').replace(/\bln\b/g,'log').replace(/π/g,'pi').replace(/√/g,'sqrt')}
 function mk(n){var e=n.compile();return function(x){try{var v=e.evaluate({x:x});return typeof v==='number'&&isFinite(v)?v:NaN}catch(_){return NaN}}}
@@ -150,7 +160,8 @@ for(t=Math.ceil(V.xa/sx)*sx;t<=V.xb;t+=sx){c.strokeStyle='rgba(243,238,225,.08)'
 for(t=Math.ceil(V.ya/sy)*sy;t<=V.yb;t+=sy){c.strokeStyle='rgba(243,238,225,.08)';c.beginPath();c.moveTo(0,Y(t));c.lineTo(W,Y(t));c.stroke();c.fillStyle='rgba(243,238,225,.55)';c.fillText(F(+t.toFixed(6)),Math.min(W-50,Math.max(4,X(0)+5)),Y(t)-4)}
 c.strokeStyle='rgba(243,238,225,.6)';c.lineWidth=1.5;c.beginPath();c.moveTo(X(0),0);c.lineTo(X(0),H);c.moveTo(0,Y(0));c.lineTo(W,Y(0));c.stroke()}
 function dot(x,y,col){c.fillStyle=col;c.beginPath();c.arc(X(x),Y(y),7,0,7);c.fill();c.strokeStyle='#16302A';c.lineWidth=2;c.stroke()}
-function update(){if(tab==='gra'||tab==='edo')return update2();var o=$('out');if(!load()){c.clearRect(0,0,W,H);o.innerHTML='Não entendi a função. Use <b>x</b> como variável, por exemplo <b>sin(x)</b>, <b>x^2</b> ou <b>exp(x)</b>.';return}
+function update(){try{if(tab==='gra'||tab==='edo')return update2();if(tab==='lim')return updL();if(tab==='dup')return updD();if(tab==='pas')return updS();return updBase()}catch(err){$('out').innerHTML='Algo deu errado com esta função. Tente outra expressão.';return}}
+function updBase(){var o=$('out');if(!load()){c.clearRect(0,0,W,H);o.innerHTML='Não entendi a função. Use <b>x</b> como variável, por exemplo <b>sin(x)</b>, <b>x^2</b> ou <b>exp(x)</b>.';return}
 V=view();grid();var CH='#F3EEE1',YE='#E4BE68',BL='#8FB4C0';$('rnv').textContent=$('rn').value;$('tdv').textContent=$('td').value;
 if(tab==='der'){var s=$('x0');s.min=V.xa;s.max=V.xb;var x0=Math.min(V.xb,Math.max(V.xa,+s.value));$('x0v').textContent='= '+F(x0);var dt='',df=function(x){var h=1e-5;return(f(x+h)-f(x-h))/(2*h)};
  try{var dn=dnode(1),de=dn.compile();dt=dn.toString();df=function(x){try{var v=de.evaluate({x:x});return typeof v==='number'?v:NaN}catch(_){return NaN}}}catch(e){dt='(derivada numérica)'}
@@ -188,12 +199,137 @@ else{var NX=26,NY=16,i,j,xx,yy,s,ps,L=13,ln;for(i=0;i<NX;i++)for(j=0;j<NY;j++){x
  o.innerHTML=txt+'<br><span style="opacity:.65">Os tracinhos são o campo de direções: a inclinação das soluções em cada ponto. Clique no gráfico para mudar a condição inicial.'+($('em').value==='E'?' Azul tracejado: método de Euler. Diminua h e ele chega perto da solução.':'')+'</span>'}}
 function pick(ev){if(tab!=='gra'&&tab!=='edo')return;if(ev.type==='pointermove'&&!ev.buttons)return;var r=cv.getBoundingClientRect();$('p1').value=V.xa+(ev.clientX-r.left)/r.width*(V.xb-V.xa);$('p2').value=V.yb-(ev.clientY-r.top)/r.height*(V.yb-V.ya);update2()}
 cv.addEventListener('pointerdown',pick);cv.addEventListener('pointermove',pick);
+function TX(s){try{return window.katex?window.katex.renderToString(s,{displayMode:true,throwOnError:false}):'<code>'+s+'</code>'}catch(e){return s}}
+function G(v){return String(+v.toPrecision(10)).replace('.',',').replace('-','−')}
+/* ---------- LIMITES ---------- */
+function updL(){var o=$('out');if(!load()){c.clearRect(0,0,W,H);o.innerHTML='Não entendi a função. Use <b>x</b> como variável, por exemplo <b>(x^2-4)/(x-2)</b>.';return}
+var a=+$('la').value,s=+$('lz').value,dl=3*Math.pow(10,-s);$('lzv').textContent='= '+F(dl);
+var ys=[],i,x,y;for(i=0;i<=600;i++){x=a-dl+2*dl*i/600;y=f(x);if(isFinite(y))ys.push(y)}ys.sort(function(p,q){return p-q});
+var he=1e-6*Math.max(1,Math.abs(a)),Ll=f(a-he),Lr=f(a+he),fa=f(a),big=function(v){return isFinite(v)&&Math.abs(v)>1e4},ex=false,L=NaN;
+if(isFinite(Ll)&&isFinite(Lr)&&!big(Ll)&&!big(Lr)&&Math.abs(Ll-Lr)<1e-3*Math.max(1,Math.abs(Ll))){ex=true;L=(Ll+Lr)/2}
+var lo=ys.length?ys[Math.floor(ys.length*.04)]:-1,hi=ys.length?ys[Math.floor(ys.length*.96)]:1;if(ex){lo=Math.min(lo,L);hi=Math.max(hi,L)}if(hi-lo<1e-9){lo-=1;hi+=1}var pd=(hi-lo)*.15;
+V={xa:a-dl,xb:a+dl,ya:lo-pd,yb:hi+pd};grid();var CH='#F3EEE1',YE='#E4BE68',BL='#8FB4C0';path(f,CH,3);
+c.setLineDash([6,5]);c.lineWidth=1.6;c.strokeStyle='rgba(228,190,104,.7)';c.beginPath();c.moveTo(X(a),0);c.lineTo(X(a),H);c.stroke();
+if(ex){c.strokeStyle='rgba(143,180,192,.8)';c.beginPath();c.moveTo(0,Y(L));c.lineTo(W,Y(L));c.stroke()}c.setLineDash([]);
+var same=ex&&isFinite(fa)&&Math.abs(fa-L)<1e-6*Math.max(1,Math.abs(L));
+if(ex){if(same)dot(a,L,YE);else{c.fillStyle='#16302A';c.strokeStyle=YE;c.lineWidth=3;c.beginPath();c.arc(X(a),Y(L),8,0,7);c.fill();c.stroke()}}
+if(isFinite(fa)&&!same&&fa>=V.ya&&fa<=V.yb)dot(a,fa,'#E0556B');
+var row=function(sg){return[1,10,100].map(function(k){var xx=a+sg*dl/k;return 'f('+G(xx)+') = '+F(f(xx))}).join('<br>')};
+var lim,cont;
+if(ex){lim='lim = <b>'+F(L)+'</b>'}
+else if(big(Ll)&&big(Lr)){lim=(Ll>0)===(Lr>0)?'o limite tende a <b>'+(Ll>0?'+∞':'−∞')+'</b>':'os lados vão para <b>+∞ e −∞</b>: o limite não existe'}
+else if(isFinite(Ll)&&isFinite(Lr)){lim='<b>limites laterais diferentes</b> ('+F(Ll)+' e '+F(Lr)+'): o limite não existe'}
+else if(isFinite(Ll)||isFinite(Lr)){lim='só um lado está definido: <b>'+F(isFinite(Ll)?Ll:Lr)+'</b>'}else lim='não consegui estimar o limite aqui';
+cont=ex?(same?'<b>contínua</b> em a: f(a) existe e é igual ao limite.':(isFinite(fa)?'<b>descontinuidade removível</b>: f(a) = '+F(fa)+' é diferente do limite.':'<b>descontinuidade removível</b> (buraco): f(a) não existe, mas o limite existe.')):'<b>descontinuidade não removível</b> em a.';
+o.innerHTML='a = <b>'+F(a)+'</b> · δ = <b>'+F(dl)+'</b><br><u>pela esquerda</u><br>'+row(-1)+'<br><u>pela direita</u><br>'+row(1)+'<br><br>'+lim+'<br>'+(isFinite(fa)?'f(a) = '+F(fa):'f(a) não existe')+'<br>'+cont+'<br><span style="opacity:.65">Aumente o zoom (δ menor): perto de a a curva se achata e o valor do limite aparece. Círculo vazio = buraco.</span>'}
+/* ---------- INTEGRAL DUPLA ---------- */
+function updD(){var o=$('out');if(!load2()){c.clearRect(0,0,W,H);o.innerHTML='Não entendi a função. Use <b>x</b> e <b>y</b>, por exemplo <b>x*y</b>.';return}
+var a=+$('da').value,b=+$('db').value,c0=+$('dc').value,d0=+$('dd').value,n=+$('dn').value,md=$('dm').value;$('dnv').textContent='= '+n+' × '+n+' = '+n*n;
+c.clearRect(0,0,W,H);if(!(b>a&&d0>c0)){o.innerHTML='Escolha <b>b &gt; a</b> e <b>d &gt; c</b>.';return}
+var dx=(b-a)/n,dy=(d0-c0)/n,v=[],zm=0,S=0,i,j,xs,ys2,z,off=md==='L'?0:md==='U'?1:.5;
+for(i=0;i<n;i++){v.push([]);for(j=0;j<n;j++){xs=a+(i+off)*dx;ys2=c0+(j+off)*dy;z=f2(xs,ys2);v[i].push(z);if(isFinite(z)){S+=z*dx*dy;zm=Math.max(zm,Math.abs(z))}}}
+var N=120,T=0,hx=(b-a)/N,hy=(d0-c0)/N;for(i=0;i<N;i++)for(j=0;j<N;j++){z=f2(a+(i+.5)*hx,c0+(j+.5)*hy);if(isFinite(z))T+=z*hx*hy}
+var SX=300,SY=150,CX=500,CY=190,ZH=130,neg=v.some(function(r){return r.some(function(q){return q<0})});
+function P(u,w,z){return[CX+(u-w)*SX,CY+(u+w)*SY-z]}
+function poly(pts,fill){c.beginPath();pts.forEach(function(p,k){k?c.lineTo(p[0],p[1]):c.moveTo(p[0],p[1])});c.closePath();c.fillStyle=fill;c.fill();c.strokeStyle='rgba(22,48,42,.85)';c.lineWidth=1;c.stroke()}
+poly([P(0,0,0),P(1,0,0),P(1,1,0),P(0,1,0)],'rgba(243,238,225,.07)');
+var k,u0,u1,w0,w1,h,p0,p1,p2,p3,col;
+for(k=0;k<=2*n-2;k++)for(i=0;i<n;i++){j=k-i;if(j<0||j>=n)continue;z=v[i][j];if(!isFinite(z)||zm===0)continue;h=z/zm*ZH;u0=i/n;u1=(i+1)/n;w0=j/n;w1=(j+1)/n;
+ col=z>=0?[228,190,104]:[224,110,90];var hi0=h>=0?h:0,lo0=h<0?h:0;
+ poly([P(u1,w0,lo0),P(u1,w1,lo0),P(u1,w1,hi0),P(u1,w0,hi0)],'rgb('+Math.round(col[0]*.72)+','+Math.round(col[1]*.72)+','+Math.round(col[2]*.72)+')');
+ poly([P(u0,w1,lo0),P(u1,w1,lo0),P(u1,w1,hi0),P(u0,w1,hi0)],'rgb('+Math.round(col[0]*.55)+','+Math.round(col[1]*.55)+','+Math.round(col[2]*.55)+')');
+ poly([P(u0,w0,hi0),P(u1,w0,hi0),P(u1,w1,hi0),P(u0,w1,hi0)],'rgb('+col[0]+','+col[1]+','+col[2]+')')}
+c.fillStyle='#F3EEE1';c.font='15px "Space Mono",monospace';var q1=P(.5,1,0),q2=P(1,.5,0);c.fillText('x: '+F(a)+' → '+F(b),q1[0]-150,q1[1]+34);c.fillText('y: '+F(c0)+' → '+F(d0),q2[0]+20,q2[1]+22);
+o.innerHTML='Soma dupla Σ f·ΔxΔy = <b>'+F(S)+'</b><br>Retângulos: '+n*n+' (Δx = '+F(dx)+', Δy = '+F(dy)+')<br>Valor da integral ≈ <b>'+F(T)+'</b><br>Erro: <b>'+F(Math.abs(S-T))+'</b><br>'+(neg?'Colunas coral: f &lt; 0 (volume com sinal negativo).':'Como f ≥ 0, a integral é o <b>volume</b> sob a superfície: '+F(T)+'.')+'<br><span style="opacity:.65">Cada coluna é um retângulo da base com altura f. Aumente n e a soma se aproxima da integral.</span>'}
+/* ---------- PASSO A PASSO ---------- */
+function Nm(v){if(Math.abs(v-Math.round(v))<1e-12)return String(Math.round(v));try{var q=M.fraction(v);if(q.d<=1000)return'('+(q.s*q.n)+'/'+q.d+')'}catch(_){}return String(+v.toPrecision(10))}
+function st(n){while(n.type==='ParenthesisNode')n=n.content;return n}
+function hasX(n){var r=false;n.traverse(function(q){if(q.type==='SymbolNode'&&q.name==='x')r=true});return r}
+function tx(n){return n.toTex({parenthesis:'keep'})}
+function dS(n){return M.simplify(M.derivative(n,'x'))}
+function terms(n,sg,out){n=st(n);if(n.type==='OperatorNode'&&(n.op==='+'||n.op==='-')&&n.args.length===2){terms(n.args[0],sg,out);terms(n.args[1],n.op==='-'?-sg:sg,out)}else if(n.type==='OperatorNode'&&n.fn==='unaryMinus'){terms(n.args[0],-sg,out)}else out.push([sg,n])}
+function flatM(n,o){n=st(n);if(n.type==='OperatorNode'&&n.op==='*'&&n.args.length===2){flatM(n.args[0],o);flatM(n.args[1],o)}else o.push(n)}
+function prod(a){return a.length===1?a[0]:M.parse(a.map(function(q){return'('+q.toString()+')'}).join('*'))}
+function Dn(n){return String.raw`\frac{d}{dx}\left[${tx(n)}\right]`}
+function Ds(q){return tx(dS(q))}
+var FD={exp:[String.raw`e^{u}`,String.raw`e^{u}`],sin:[String.raw`\sin u`,String.raw`\cos u`],cos:[String.raw`\cos u`,String.raw`-\sin u`],tan:[String.raw`\tan u`,String.raw`\sec^{2}u`],log:[String.raw`\ln u`,String.raw`\frac{1}{u}`],sqrt:[String.raw`\sqrt{u}`,String.raw`\frac{1}{2\sqrt{u}}`],asin:[String.raw`\arcsin u`,String.raw`\frac{1}{\sqrt{1-u^{2}}}`],atan:[String.raw`\arctan u`,String.raw`\frac{1}{1+u^{2}}`]};
+function E(n,o,top){n=st(n);
+ if(!top&&(!hasX(n)||(n.type==='SymbolNode'&&n.name==='x')))return;
+ if(!hasX(n)){o.push(['Constante','A derivada de uma constante é zero.',Dn(n)+'=0']);return}
+ if(n.type==='SymbolNode'){o.push(['Derivada básica','',Dn(n)+'=1']);return}
+ var tm=[];terms(n,1,tm);
+ if(tm.length>1){o.push(['Regra da soma','Derive cada parcela separadamente.',Dn(n)+'='+tm.map(function(t,i){return(t[0]<0?'-':(i?'+':''))+Dn(t[1])}).join('')]);tm.forEach(function(t){E(t[1],o)});return}
+ if(tm[0][0]<0){o.push(['Sinal negativo','O sinal fica e derivamos o que sobra.',Dn(n)+'=-'+Dn(tm[0][1])]);E(tm[0][1],o);return}
+ n=tm[0][1];
+ if(n.type==='OperatorNode'&&n.op==='*'){var fs=[];flatM(n,fs);var cs=fs.filter(function(q){return!hasX(q)}),rs=fs.filter(hasX);
+  if(cs.length&&rs.length){var cc=prod(cs),r=prod(rs);o.push(['Constante multiplicativa','Uma constante multiplicativa sai da derivada.',Dn(n)+'='+tx(cc)+String.raw`\cdot`+Dn(r)]);E(r,o);return}
+  var u=fs[0],v=prod(fs.slice(1));o.push(['Regra do produto','Derivada do primeiro vezes o segundo, mais o primeiro vezes a derivada do segundo.',String.raw`\begin{aligned}(u\,v)'&=u'v+u\,v'\\u&=${tx(u)},\quad v=${tx(v)}\\u'&=${Ds(u)},\quad v'=${Ds(v)}\end{aligned}`]);E(u,o);E(v,o);return}
+ if(n.type==='OperatorNode'&&n.op==='/'){var nu=n.args[0],de=n.args[1];
+  if(!hasX(de)){o.push(['Constante no denominador','Dividir por uma constante é multiplicar por 1/c.',Dn(n)+String.raw`=\frac{1}{${tx(de)}}\cdot`+Dn(nu)]);E(nu,o);return}
+  o.push(['Regra do quociente','Derivada de cima vezes o de baixo, menos o de cima vezes a derivada de baixo, tudo sobre o quadrado do de baixo.',String.raw`\begin{aligned}\left(\frac{u}{v}\right)'&=\frac{u'v-u\,v'}{v^{2}}\\u&=${tx(nu)},\quad v=${tx(de)}\\u'&=${Ds(nu)},\quad v'=${Ds(de)}\end{aligned}`]);E(nu,o);E(de,o);return}
+ if(n.type==='OperatorNode'&&n.op==='^'){var b=st(n.args[0]),e=st(n.args[1]);
+  if(!hasX(e)){if(b.type==='SymbolNode'){o.push(['Regra da potência','Desça o expoente e diminua 1 dele.',Dn(n)+'='+tx(e)+String.raw`\,`+(function(){var q=tx(M.simplify(M.parse('('+e.toString()+')-1')));return q==='1'?'x':q==='0'?'1':'x^{'+q+'}'})()]);return}
+   o.push(['Regra da cadeia com potência','Derive a potência e multiplique pela derivada da base.',String.raw`\frac{d}{dx}\left[u^{n}\right]=n\,u^{n-1}\,u'\;\text{ com }\;u=${tx(b)},\;n=${tx(e)},\;u'=${Ds(b)}`]);E(b,o);return}
+  if(!hasX(b)){if(b.type==='SymbolNode'&&b.name==='e'){o.push(['Exponencial','Derivada de e elevado a u: o mesmo e^u vezes u′.',String.raw`\frac{d}{dx}\left[e^{u}\right]=e^{u}\,u'\;\text{ com }\;u=${tx(e)},\;u'=${Ds(e)}`])}
+   else o.push(['Exponencial de base a','Derivada de aᵘ: aᵘ vezes ln a vezes u′.',String.raw`\frac{d}{dx}\left[a^{u}\right]=a^{u}\ln a\;u'\;\text{ com }\;a=${tx(b)},\;u=${tx(e)}`]);E(e,o);return}
+  o.push(['Derivação logarítmica','Base e expoente dependem de x.',String.raw`\left(u^{v}\right)'=u^{v}\left(v'\ln u+\frac{v\,u'}{u}\right)`]);return}
+ if(n.type==='FunctionNode'&&FD[n.fn.name]){var nm=n.fn.name,ar=n.args[0],Fx=FD[nm];
+  if(ar.type==='SymbolNode')o.push(['Derivada básica','Derivada de uma função da tabela.',Dn(n)+'='+Fx[1].replace(/u/g,'x').replace('sec^{2}x','\\sec^{2}x')]);
+  else{o.push(['Regra da cadeia','Derive a função de fora (mantendo u) e multiplique pela derivada de u.',String.raw`\frac{d}{dx}\left[${Fx[0]}\right]=${Fx[1]}\cdot u'\;\text{ com }\;u=${tx(ar)},\;u'=${Ds(ar)}`]);E(ar,o)}return}
+ o.push(['Derivada','',Dn(n)+'='+Ds(n)])}
+/* integrais */
+function lin(n){if(!hasX(n))return null;var ok=true;n.traverse(function(q){var t=q.type;if(!(t==='OperatorNode'||t==='ConstantNode'||t==='SymbolNode'||t==='ParenthesisNode'))ok=false;if(t==='OperatorNode'&&['+','-','*','/'].indexOf(q.op)<0&&q.fn!=='unaryMinus')ok=false;if(t==='SymbolNode'&&['x','pi','e'].indexOf(q.name)<0)ok=false});if(!ok)return null;
+ try{var e=n.compile(),f0=e.evaluate({x:0}),f1=e.evaluate({x:1}),f2_=e.evaluate({x:2}),f3=e.evaluate({x:3});if(Math.abs(f2_-2*f1+f0)>1e-9||Math.abs(f3-2*f2_+f1)>1e-9)return null;var a=f1-f0;if(Math.abs(a)<1e-12)return null;return{a:a,b:f0}}catch(_){return null}}
+function Ft(F_){try{return tx(M.simplify(M.parse(F_)))}catch(_){return F_}}
+function gOf(q){q=st(q);var nm=null,arg=null;if(q.type==='FunctionNode'){nm=q.fn.name;if(['exp','sin','cos'].indexOf(nm)<0)return null;arg=q.args[0]}else if(q.type==='OperatorNode'&&q.op==='^'&&st(q.args[0]).type==='SymbolNode'&&st(q.args[0]).name==='e'){nm='exp';arg=q.args[1]}else return null;var l=lin(arg);return l?{t:nm,a:l.a,b:l.b}:null}
+function parts(k,g,o){var a=Nm(g.a),b=Nm(g.b),arg='('+(a==='1'?'x':a+'*x')+(b==='0'?'':'+('+b+')')+')',h={exp:['exp',1],sin:['cos',-1],cos:['sin',1]}[g.t],sg=h[1]<0?'-':'';
+ if(k===0){var F0=sg+h[0]+'('+arg+')/'+a;o.push(['Substituição linear','Com u = ax + b, du = a dx: ∫g(ax+b)dx = (1/a)∫g(u)du.',String.raw`\int ${tx(M.parse(g.t+'('+arg+')'))}\,dx=${Ft(F0)}`]);return F0}
+ var vF=sg+h[0]+'('+arg+')/'+a;o.push(['Integração por partes','Escolha u = xᵏ (fica mais simples ao derivar) e dv = a parte restante.',String.raw`\int u\,dv=u\,v-\int v\,du\;\text{ com }\;u=x^{${k}},\;dv=${tx(M.parse(g.t+'('+arg+')'))}\,dx,\;du=${k===1?'':k+(k===2?'x':'x^{'+(k-1)+'}')}${k===1?'':''}dx,\;v=${Ft(vF)}`]);
+ var inner=parts(k-1,{t:h[0],a:g.a,b:g.b},o);return'x^'+k+'*('+vF+') - ('+h[1]+'*'+k+'/'+a+')*('+inner+')'}
+function lnParts(k,nn,o){var m=k+1,F_='x^'+m+'/'+m+'*log(x) - x^'+m+'/'+(m*m);o.push(['Integração por partes','Escolha u = ln x (derivar simplifica) e dv = xᵏ dx.',String.raw`\int u\,dv=u\,v-\int v\,du\;\text{ com }\;u=\ln x,\;dv=x^{${k}}dx,\;du=\frac{dx}{x},\;v=\frac{x^{${m}}}{${m}}\;\Rightarrow\;\int ${tx(nn)}\,dx=${Ft(F_)}`]);return F_}
+function expandTry(n,o){try{var r=M.rationalize(n),s2=r.toString();if(s2.replace(/\s/g,'')===n.toString().replace(/\s/g,''))return null;var tm=[];terms(r,1,tm);if(tm.length<2)return null;o.push(['Expandir','Multiplique para obter uma soma de termos que sabemos integrar.',tx(n)+'='+tx(r)]);return Ii(r,o)}catch(_){return null}}
+function Iprod(n,fs,o){var k=0,g=null,lg=false,ok=true;fs.forEach(function(q){q=st(q);if(q.type==='SymbolNode'&&q.name==='x')k++;else if(q.type==='OperatorNode'&&q.op==='^'&&st(q.args[0]).type==='SymbolNode'&&st(q.args[0]).name==='x'&&!hasX(q.args[1])){var e=q.args[1].compile().evaluate();if(Number.isInteger(e)&&e>=1&&e<=6)k+=e;else ok=false}else{var ge=gOf(q);if(ge&&!g)g=ge;else if(q.type==='FunctionNode'&&q.fn.name==='log'&&st(q.args[0]).type==='SymbolNode'&&!lg)lg=true;else ok=false}});
+ if(!ok||(g&&lg)||(!g&&!lg))return expandTry(n,o);return lg?lnParts(k,n,o):parts(k,g,o)}
+function Ii(n,o){n=st(n);var step=function(r,h,F_,nn){o.push([r,h,String.raw`\int ${tx(nn||n)}\,dx=${Ft(F_)}`])};
+ if(!hasX(n)){var Fc='('+n.toString()+')*x';step('Constante','A integral de uma constante é a constante vezes x.',Fc);return Fc}
+ var tm=[];terms(n,1,tm);
+ if(tm.length>1||tm[0][0]<0){o.push(['Linearidade',tm.length>1?'A integral de uma soma é a soma das integrais: integre cada parcela.':'O sinal negativo sai da integral.',String.raw`\int ${tx(n)}\,dx=`+tm.map(function(t,i){return(t[0]<0?'-':(i?'+':''))+String.raw`\int ${tx(t[1])}\,dx`}).join('')]);var ps=[];for(var i=0;i<tm.length;i++){var q=Ii(tm[i][1],o);if(q===null)return null;ps.push((tm[i][0]<0?'-':'+')+'('+q+')')}return ps.join('').replace(/^\+/,'')}
+ n=tm[0][1];var F_;
+ if(n.type==='SymbolNode'&&n.name==='x'){F_='x^2/2';step('Regra da potência','∫xⁿ dx = xⁿ⁺¹/(n+1), aqui com n = 1.',F_);return F_}
+ if(n.type==='OperatorNode'&&n.op==='*'){var fs=[];flatM(n,fs);var cs=fs.filter(function(q){return!hasX(q)}),rs=fs.filter(hasX);
+  if(cs.length&&rs.length){var cc=prod(cs),r=prod(rs);o.push(['Constante multiplicativa','Uma constante sai da integral.',String.raw`\int ${tx(n)}\,dx=${tx(cc)}\int ${tx(r)}\,dx`]);var q2=Ii(r,o);return q2===null?null:'('+cc.toString()+')*('+q2+')'}
+  return Iprod(n,fs,o)}
+ if(n.type==='OperatorNode'&&n.op==='/'){var nu=n.args[0],de=st(n.args[1]);
+  if(!hasX(de)){o.push(['Constante no denominador','Dividir por uma constante é multiplicar por 1/c.',String.raw`\int ${tx(n)}\,dx=\frac{1}{${tx(de)}}\int ${tx(nu)}\,dx`]);var q3=Ii(nu,o);return q3===null?null:'('+q3+')/('+de.toString()+')'}
+  if(!hasX(nu)){var l=lin(de);if(l){F_='('+nu.toString()+')/'+Nm(l.a)+'*log(abs('+de.toString()+'))';step('Logaritmo','Com u = ax + b: ∫ 1/u du = ln|u|, e divide-se por a.',F_);return F_}
+   if(de.type==='OperatorNode'&&de.op==='^'&&st(de.args[0]).type==='SymbolNode'&&!hasX(de.args[1])){var rw=M.parse('('+nu.toString()+')*x^(-('+de.args[1].toString()+'))');o.push(['Reescrever','1/xᵏ = x⁻ᵏ: vira uma potência.',tx(n)+'='+tx(rw)]);return Ii(rw,o)}}
+  return null}
+ if(n.type==='OperatorNode'&&n.op==='^'){var b0=st(n.args[0]),e0=st(n.args[1]);
+  if(!hasX(e0)){var ev;try{ev=e0.compile().evaluate()}catch(_){return null}var l2=lin(b0);if(!l2||typeof ev!=='number')return null;var bs='('+b0.toString()+')';
+   if(Math.abs(ev+1)<1e-12){F_='log(abs('+bs+'))/'+Nm(l2.a);step('Logaritmo','∫ u⁻¹ du = ln|u|.',F_)}
+   else{F_=bs+'^'+Nm(ev+1)+'/('+Nm(l2.a)+'*'+Nm(ev+1)+')';step(b0.type==='SymbolNode'?'Regra da potência':'Substituição linear + potência',b0.type==='SymbolNode'?'∫xⁿ dx = xⁿ⁺¹/(n+1).':'Com u = ax + b: ∫uⁿ du = uⁿ⁺¹/(n+1), dividido por a.',F_)}return F_}
+  if(!hasX(b0)){var l3=lin(e0);if(!l3)return null;if(b0.type==='SymbolNode'&&b0.name==='e'){F_='exp('+e0.toString()+')/'+Nm(l3.a);step('Exponencial','∫eᵘ du = eᵘ, dividido por a.',F_)}else{F_='('+b0.toString()+')^('+e0.toString()+')/('+Nm(l3.a)+'*log('+b0.toString()+'))';step('Exponencial de base a','∫aᵘ du = aᵘ/ln a, dividido por a.',F_)}return F_}return null}
+ if(n.type==='FunctionNode'){var nm=n.fn.name,ar=n.args[0],l4=lin(ar);if(!l4)return null;var as='('+ar.toString()+')',an=Nm(l4.a);
+  var T={exp:['exp('+as+')/'+an,'∫eᵘ du = eᵘ.'],sin:['-cos('+as+')/'+an,'∫sen u du = −cos u.'],cos:['sin('+as+')/'+an,'∫cos u du = sen u.'],tan:['-log(abs(cos('+as+')))/'+an,'∫tg u du = −ln|cos u|.'],sqrt:['(2/(3*'+an+'))*'+as+'^(3/2)','√u = u^(1/2): ∫u^(1/2) du = (2/3)u^(3/2).']}[nm];
+  if(T){F_=T[0];step(ar.type==='SymbolNode'?'Integral da tabela':'Substituição linear',ar.type==='SymbolNode'?T[1]:'Com u = ax + b, du = a dx. '+T[1],F_);return F_}
+  if(nm==='log'){if(ar.type==='SymbolNode')return lnParts(0,n,o);F_='('+as+'*log'+as+'-'+as+')/'+an;step('Substituição + partes','Com u = ax + b e depois ∫ln u du = u ln u − u.',F_);return F_}}
+ return expandTry(n,o)}
+function verify(Fs,nd){try{var Fe=M.parse(Fs).compile(),fe=nd.compile(),ok=0,tot=0;[.7,1.3,1.9,2.6,-.6,-1.4].forEach(function(x){var h=1e-5,d=(Fe.evaluate({x:x+h})-Fe.evaluate({x:x-h}))/(2*h),vv=fe.evaluate({x:x});if(typeof d==='number'&&typeof vv==='number'&&isFinite(d)&&isFinite(vv)){tot++;if(Math.abs(d-vv)<1e-4*Math.max(1,Math.abs(vv)))ok++}});return tot>0&&ok===tot}catch(_){return false}}
+function updS(){var o=$('out'),sb=$('stepbox'),nd,mode=$('sm').value;
+ try{nd=M.parse(norm($('fx').value));nd.compile().evaluate({x:1})}catch(e){sb.innerHTML='<p>Não entendi a função. Use <b>x</b> como variável, por exemplo <b>x^2*sin(x)</b>.</p>';o.textContent='';return}
+ var steps=[],res,fin,note='';
+ if(mode==='D'){E(nd,steps,true);res=dS(nd);fin=String.raw`f'(x)=${tx(res)}`}
+ else{var Fs=Ii(nd,steps);if(Fs===null){sb.innerHTML='<h3 class="sh">Integrar</h3>'+TX('f(x)='+tx(nd))+'<p class="warn">Ainda não sei explicar esta integral passo a passo. Aqui eu explico: polinômios e potências, 1/(ax+b), exponenciais, seno, cosseno, tangente, √(ax+b), ln x, e produtos do tipo xⁿ·eᵃˣ, xⁿ·sen, xⁿ·cos e xⁿ·ln x.</p>';o.textContent='Integral fora das regras que sei explicar.';return}
+  fin=String.raw`\int ${tx(nd)}\,dx=${Ft(Fs)}+C`;note=verify(Fs,nd)?'✓ Verificação: derivando o resultado, obtemos f(x) de volta.':'Atenção: não consegui confirmar numericamente este resultado.'}
+ sb.innerHTML='<h3 class="sh">'+(mode==='D'?'Derivar':'Integrar')+'</h3>'+TX('f(x)='+tx(nd))+'<ol>'+steps.map(function(s){return'<li><b class="r">'+s[0]+'</b>'+(s[1]?' <span class="hn">'+s[1]+'</span>':'')+TX(s[2])+'</li>'}).join('')+'</ol><div class="fin">Resultado'+TX(fin)+(note?'<p class="vf">'+note+'</p>':'')+'</div>';
+ o.innerHTML=(mode==='D'?'Passos: <b>'+steps.length+'</b><br>Regras usadas: soma, produto, quociente, cadeia, potência e tabela.':'Passos: <b>'+steps.length+'</b><br>'+note)+'<br><span style="opacity:.65">Mude a função ou use os exemplos. O botão acima troca entre derivar e integrar.</span>'}
+var LA={'(x^2-4)/(x-2)':2,'sin(x)/x':0,'(1-cos(x))/x^2':0,'abs(x)/x':0,'1/x':0,'(sqrt(x+1)-1)/x':0};
 function setTab(t){tab=t;var d=D[t];document.querySelectorAll('.tabbtn').forEach(function(b){b.setAttribute('aria-selected',b.dataset.t===t)});document.querySelectorAll('.blk').forEach(function(b){b.classList.toggle('on',b.dataset.for.split(' ').indexOf(t)>-1)});
- $('fx').value=d.f;$('xa').value=d.xa;$('xb').value=d.xb;var two=t==='gra'||t==='edo';$('fxl').textContent=t==='edo'?'y′ =':two?'f(x, y) =':'f(x) =';cv.className=two?'pick':'';if(two){$('ya').value=d.ya;$('yb').value=d.yb;$('p1').value=t==='edo'?0:1;$('p2').value=1}if(t==='der')$('x0').value=2;if(t==='rie'){$('ra').value=0;$('rb').value=3}
- $('pre').innerHTML='';d.p.forEach(function(p){var b=document.createElement('button');b.type='button';b.textContent=p;b.onclick=function(){$('fx').value=p;update()};$('pre').appendChild(b)});update()}
+ $('fx').value=d.f;$('xa').value=d.xa;$('xb').value=d.xb;var two=t==='gra'||t==='edo'||t==='dup';$('cv').hidden=t==='pas';$('stepbox').hidden=t!=='pas';if(t==='lim'){$('la').value=2;$('lz').value=0}if(t==='dup'){$('da').value=0;$('db').value=2;$('dc').value=0;$('dd').value=2;$('dn').value=6}if(t==='pas')$('sm').value='D';$('fxl').textContent=t==='edo'?'y′ =':two?'f(x, y) =':'f(x) =';cv.className=two?'pick':'';if(t==='gra'||t==='edo'){$('ya').value=d.ya;$('yb').value=d.yb;$('p1').value=t==='edo'?0:1;$('p2').value=1}if(t==='der')$('x0').value=2;if(t==='rie'){$('ra').value=0;$('rb').value=3}
+ $('pre').innerHTML='';d.p.forEach(function(p){var b=document.createElement('button');b.type='button';b.textContent=p;b.onclick=function(){$('fx').value=p;if(tab==='lim'&&LA[p]!==undefined)$('la').value=LA[p];update()};$('pre').appendChild(b)});update()}
 document.querySelectorAll('.tabbtn').forEach(function(b){b.onclick=function(){setTab(b.dataset.t)}});
-['fx','xa','xb','x0','ra','rb','rn','rm','tc','td','ya','yb','p1','p2','em','eh'].forEach(function(i){$(i).addEventListener('input',update)});
-var h0=location.hash.slice(1);setTab(D[h0]?h0:'der');if(D[h0])setTimeout(function(){$('lab').scrollIntoView()},300);
+['fx','xa','xb','x0','ra','rb','rn','rm','tc','td','ya','yb','p1','p2','em','eh','la','lz','da','db','dc','dd','dn','dm','sm'].forEach(function(i){$(i).addEventListener('input',update)});
+window.addEventListener('hashchange',function(){var q=location.hash.slice(1);if(D[q]){setTab(q);$('lab').scrollIntoView()}});var h0=location.hash.slice(1);setTab(D[h0]?h0:'der');if(D[h0])setTimeout(function(){$('lab').scrollIntoView()},300);
 }
 if(window.math)boot();else{var sc=document.createElement('script');sc.src='https://unpkg.com/mathjs@12.4.1/lib/browser/math.js';sc.onload=boot;sc.onerror=function(){document.getElementById('out').textContent='Não foi possível carregar a biblioteca matemática. Verifique a conexão e recarregue a página.'};document.head.appendChild(sc)}
 </script>
