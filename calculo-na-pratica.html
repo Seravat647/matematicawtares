@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J1KE3X1FFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-J1KE3X1FFH');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cálculo na Prática — Onde o Cálculo Aparece de Verdade | W. T. Ares</title>
@@ -21,7 +29,26 @@
 <meta name="twitter:description" content="Como engenheiros, economistas, físicos e outros profissionais usam Cálculo no dia a dia — casos reais, com números, ligados ao Curso de Cálculo I, II, III e Equações Diferenciais.">
 <meta name="twitter:image" content="https://seravat647.github.io/matematicawtares/images/capa-calculo-1.jpg">
 <link rel="canonical" href="https://seravat647.github.io/matematicawtares/calculo-na-pratica.html">
- <!-- MailerLite Universal --> <script> (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]) .push(arguments);},l=d.createElement(e),l.async=1,l.src=u, n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);}) (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml'); ml('account', '2556502'); </script> <!-- End MailerLite Universal -->
+ <style>
+.cp-links{margin:14px 0 0;padding-top:12px;border-top:1px dashed rgba(127,127,127,.4);font-size:.88rem;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
+.cp-links span{font-family:var(--mono,'Space Mono',monospace);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;opacity:.7}
+.cp-links a{color:var(--case-color,#2E5C8A);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.cp-links a:hover{opacity:.75}
+.cp-calc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:28px}
+.cp-box{background:#fff;border:1px solid var(--paper-line,#D9D0B8);border-top:4px solid var(--chalk-yellow,#E4BE68);border-radius:10px;padding:20px 20px 18px;color:#2a2a2a;display:flex;flex-direction:column;gap:10px}
+.cp-box h3{margin:0;font-size:1.15rem;color:var(--chalkboard,#1F3B32)}
+.cp-hint{margin:0;font-size:.85rem;color:#5a5a50}
+.cp-box label{display:flex;flex-direction:column;gap:4px;font-size:.82rem;font-weight:600;color:#3a3a32}
+.cp-box input{font:inherit;font-weight:400;padding:8px 10px;border:1px solid var(--paper-line,#D9D0B8);border-radius:6px;background:var(--paper,#FBF7EE);color:#222}
+.cp-box input:focus{outline:2px solid var(--chalkboard,#1F3B32);outline-offset:1px}
+.cp-out{margin-top:6px;padding:12px 14px;border-radius:8px;background:var(--chalkboard,#1F3B32);color:var(--chalk,#F3EEE1);font-family:var(--mono,'Space Mono',monospace);font-size:.82rem;line-height:1.7;min-height:3em}
+.cp-out b{color:var(--chalk-yellow,#E4BE68);font-weight:700}
+.cp-out .cp-err{color:#f1b0a8}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CollectionPage","name":"Cálculo na Prática","description":"Casos reais de Cálculo em engenharia, economia, física, tecnologia e saúde, com números e calculadoras interativas.","url":"https://seravat647.github.io/matematicawtares/calculo-na-pratica.html","inLanguage":"pt-BR","isPartOf":{"@type":"WebSite","name":"W. T. Ares – Matemática","url":"https://seravat647.github.io/matematicawtares/"},"author":{"@type":"Person","name":"W. T. Ares"}}
+</script>
+<!-- MailerLite Universal --> <script> (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]) .push(arguments);},l=d.createElement(e),l.async=1,l.src=u, n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);}) (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml'); ml('account', '2556502'); </script> <!-- End MailerLite Universal -->
 </head>
 <body>
 
@@ -74,6 +101,7 @@
       <p class="lead-text">Se você já se fez essa pergunta resolvendo uma derivada, este material é a resposta. O <a href="formulario.html" style="color:#8a7a3f; text-decoration:underline;">Formulário</a> e os <a href="exercicios.html" style="color:#8a7a3f; text-decoration:underline;">exercícios comentados</a> dão a ferramenta técnica — derivada, integral, séries, equações diferenciais. Aqui, essas mesmas ferramentas entram em ação, dentro de decisões reais que profissionais tomam todos os dias, muitas vezes sem perceber que estão "fazendo Cálculo".</p>
       <p class="lead-text">Cada caso a seguir segue a mesma estrutura: <strong>Cenário</strong> — a situação real; <strong>Conceito</strong> — a ferramenta de Cálculo que resolve o problema; <strong>Desenvolvimento</strong> — a conta, passo a passo; <strong>Por que isso importa</strong> — o impacto prático; e uma <strong>Curiosidade</strong> extra.</p>
       <div class="topic-nav" aria-label="Ir para a área">
+        <a href="#calculadoras" style="border-color:#E4BE6899;">Calculadoras</a>
         <a href="#engenharia" style="border-color:#2E5C8A66;">Engenharia</a>
         <a href="#economia" style="border-color:#1E7F4F66;">Economia &amp; Administração</a>
         <a href="#fisica" style="border-color:#6A3EA166;">Física</a>
@@ -96,10 +124,12 @@
 <li>Área total de aço (fundo + tampa + lateral): A(r) = 2πr² + 2πrh = 2πr² + 2000/r</li>
 <li>Minimizar: A'(r) = 4πr − 2000/r² = 0  ⇒  r³ = 500/π  ⇒  r ≈ 5,42 m</li>
 <li>h = 1000/(πr²) ≈ 10,83 m  (note que h ≈ 2r — resultado clássico do 'problema da lata')</li>
-<li>Área mínima: A(5,42) ≈ 553,7 m²</li>
+<li>Área mínima: A(5,42) ≈ 553,6 m²</li>
 </ul></div>
           <div class="case-box case-impact"><span class="case-box-label">Por que isso importa</span><p>Um projetista sem otimização poderia 'chutar' r = 3 m: a altura sairia um exagero (35,4 m) e a área subiria para 723 m² — 30% a mais de aço. A R$180/m², isso é mais de R$30.000 jogados fora em um único reservatório.</p></div>
           <div class="case-box case-curiosity"><span class="case-box-label">Curiosidade</span><p>É o mesmo cálculo do clássico 'problema da lata de refrigerante' do Cálculo I — só que aqui a lata guarda 1000 m³ e ninguém vai bebê-la.</p></div>
+        
+          <p class="cp-links"><span>Pratique:</span> <a href="ferramentas.html#der">Testar a derivada na ferramenta</a> <a href="exercicios.html#treino">Treino rápido</a></p>
         </article>
         <article class="case-card" style="--case-color:#2E5C8A;">
           <span class="case-tag">Engenharia Elétrica · Taxas de variação</span>
@@ -114,6 +144,23 @@
 </ul></div>
           <div class="case-box case-impact"><span class="case-box-label">Por que isso importa</span><p>A derivada de V(t) revela exatamente o pico de corrente no instante t = 0. Se o componente aguenta no máximo 6,5 A, o engenheiro sabe que R = 50 Ω é seguro — reduzir R aumentaria a corrente de pico e poderia queimar o circuito.</p></div>
           <div class="case-box case-curiosity"><span class="case-box-label">Curiosidade</span><p>A mesma família de fórmula exponencial modela o resfriamento de um café, a descarga de uma bateria e — como você verá mais à frente — o decaimento de um medicamento no sangue.</p></div>
+        
+          <p class="cp-links"><span>Pratique:</span> <a href="ferramentas.html#der">Derivar V(t) na ferramenta</a> <a href="ferramentas.html#edo">Ver a EDO do circuito RC</a></p>
+        </article>
+        <article class="case-card" style="--case-color:#2E5C8A;">
+          <span class="case-tag">Engenharia Civil · Integral dupla</span>
+          <h3>Quantos caminhões de terra para nivelar o terreno?</h3>
+          <div class="case-box case-scenario"><span class="case-box-label">Cenário</span><p>Uma obra precisa escavar um terreno retangular de 20 m × 10 m. O fundo não é plano: a profundidade a escavar varia de ponto a ponto, e a empresa precisa saber o volume de terra para contratar os caminhões.</p></div>
+          <div class="case-box case-dev"><span class="case-box-label">Conceito: Integral dupla como volume (Cálculo III)</span><ul>
+<li>Profundidade (m) no ponto (x, y): h(x, y) = 2 + 0,01·x·y, com 0 ≤ x ≤ 20 e 0 ≤ y ≤ 10</li>
+<li>Volume: V = ∬ h dA = ∫₀²⁰ ∫₀¹⁰ (2 + 0,01xy) dy dx</li>
+<li>Integral interna: ∫₀¹⁰ (2 + 0,01xy) dy = 20 + 0,5x</li>
+<li>Integral externa: ∫₀²⁰ (20 + 0,5x) dx = 400 + 100 = 500 m³</li>
+<li>Com caminhões de 10 m³: 500/10 = 50 viagens (sem contar o empolamento do solo)</li>
+</ul></div>
+          <div class="case-box case-impact"><span class="case-box-label">Por que isso importa</span><p>Supor profundidade constante de 2 m (o valor na borda x = 0) daria apenas 400 m³ — 100 m³ a menos, ou 10 caminhões que faltariam. A integral dupla soma a contribuição de cada pedacinho de área e dá o volume exato.</p></div>
+          <div class="case-box case-curiosity"><span class="case-box-label">Curiosidade</span><p>Na prática, topógrafos medem a altura em uma malha de pontos e somam colunas — exatamente a ideia de soma de Riemann em duas variáveis, que a ferramenta do site mostra com colunas 3D.</p></div>
+          <p class="cp-links"><span>Pratique:</span> <a href="ferramentas.html#dup">Integral dupla na ferramenta</a> <a href="derivadas-parciais.html">Derivadas parciais</a></p>
         </article>
       </div>
     </div>
@@ -135,7 +182,9 @@
 <li>Lucro máximo: L(1000) = R$ 14.200 por dia</li>
 </ul></div>
           <div class="case-box case-impact"><span class="case-box-label">Por que isso importa</span><p>No ponto ótimo, a receita marginal R'(1000) = 25 é exatamente igual ao custo marginal C'(1000) = 25 — a regra de ouro da microeconomia ("produza até que RMg = CMg") nada mais é do que igualar a derivada do lucro a zero.</p></div>
-          <div class="case-box case-curiosity"><span class="case-box-label">Curiosidade</span><p>Produzir 1500 pares ("mais é sempre melhor", certo?) na verdade reduziria o lucro para R$ 8.950/dia — quase 40% a menos. Otimizar não é maximizar o volume, é maximizar a derivada certa.</p></div>
+          <div class="case-box case-curiosity"><span class="case-box-label">Curiosidade</span><p>Produzir 1500 pares ("mais é sempre melhor", certo?) na verdade reduziria o lucro para R$ 10.450/dia — cerca de 26% a menos. Otimizar não é maximizar o volume, é maximizar a derivada certa.</p></div>
+        
+          <p class="cp-links"><span>Pratique:</span> <a href="ferramentas.html#der">Achar o ponto crítico</a> <a href="exercicios.html#treino">Treino rápido</a></p>
         </article>
         <article class="case-card" style="--case-color:#1E7F4F;">
           <span class="case-tag">Administração · Gestão de estoque (EOQ)</span>
@@ -149,7 +198,9 @@
 <li>Custo mínimo: CT(Q*) = √(2DSH) ≈ R$ 2.771/ano</li>
 </ul></div>
           <div class="case-box case-impact"><span class="case-box-label">Por que isso importa</span><p>Comparado a um lote 'redondo' de 1000 unidades (CT ≈ R$ 2.960/ano), a diferença é de R$ 189/ano — pequena numa única loja. Mas redes com centenas de itens e milhares de lojas aplicam essa mesma derivada a cada SKU, e a economia agregada chega facilmente a centenas de milhares de reais por ano.</p></div>
-          <div class="case-box case-curiosity"><span class="case-box-label">Curiosidade</span><p>A fórmula de Wilson (EOQ) foi publicada em 1913 e continua rodando, hoje, dentro de sistemas de gestão como SAP e Oracle.</p></div>
+          <div class="case-box case-curiosity"><span class="case-box-label">Curiosidade</span><p>O modelo do lote econômico foi publicado por Ford W. Harris em 1913 e popularizado por R. H. Wilson nos anos 1930 — por isso o nome "fórmula de Wilson". Versões dele ainda rodam em sistemas de gestão de estoque.</p></div>
+        
+          <p class="cp-links"><span>Pratique:</span> <a href="ferramentas.html#der">Derivar CT(Q)</a> <a href="#calculadoras">Calcular com seus números</a></p>
         </article>
       </div>
     </div>
@@ -170,6 +221,8 @@
 </ul></div>
           <div class="case-box case-impact"><span class="case-box-label">Por que isso importa</span><p>Exatamente o conceito de 'área sob a curva' do Bloco 4 da apostila de exercícios: a distância é a integral da velocidade, calculada em tempo real pela telemetria a cada volta.</p></div>
           <div class="case-box case-curiosity"><span class="case-box-label">Curiosidade</span><p>O caminho inverso também é usado o tempo todo: a derivada da posição dá a velocidade, e a derivada da velocidade dá a aceleração — sentida por você toda vez que o carro (ou o elevador) arranca.</p></div>
+        
+          <p class="cp-links"><span>Pratique:</span> <a href="ferramentas.html#rie">Ver a soma de Riemann</a> <a href="exercicios-calculo1.html">Lista de Cálculo I</a></p>
         </article>
         <article class="case-card" style="--case-color:#6A3EA1;">
           <span class="case-tag">Trabalho e energia · Integral</span>
@@ -182,14 +235,18 @@
 </ul></div>
           <div class="case-box case-impact"><span class="case-box-label">Por que isso importa</span><p>Os engenheiros comparam esses 900 J com a energia cinética da cabine em queda (½mv²). Se a mola absorve mais energia do que a cabine carrega, o sistema é seguro — uma verificação de segurança que nasce direto da integral da força.</p></div>
           <div class="case-box case-curiosity"><span class="case-box-label">Curiosidade</span><p>A mesma ideia — força integrada ao longo de uma distância — está por trás de air-bags, amortecedores de carro e redes de proteção em obras.</p></div>
+        
+          <p class="cp-links"><span>Pratique:</span> <a href="ferramentas.html#rie">Ver a área sob F(x)</a> <a href="exercicios-calculo1.html">Lista de Cálculo I</a></p>
         </article>
         <article class="case-card" style="--case-color:#6A3EA1;">
           <span class="case-tag">Lei do Resfriamento de Newton</span>
           <h3>Por que o café esfria mais rápido no início</h3>
-          <div class="case-box case-scenario"><span class="case-box-label">Cenário</span><p><p>Um café sai da máquina a 90 °C e a sala está a 22 °C. Um sensor mostra que, nos primeiros 5 minutos, a temperatura cai bem mais rápido do que nos 5 minutos seguintes — mesmo a diferença de temperatura para o ambiente sempre diminuindo.</p></p></div>
+          <div class="case-box case-scenario"><span class="case-box-label">Cenário</span><p>Um café sai da máquina a 90 °C e a sala está a 22 °C. Um sensor mostra que, nos primeiros 5 minutos, a temperatura cai bem mais rápido do que nos 5 minutos seguintes — mesmo a diferença de temperatura para o ambiente sempre diminuindo.</p></div>
           <div class="case-box case-dev"><span class="case-box-label">Desenvolvimento</span><ul><li>A Lei do Resfriamento de Newton modela isso com uma EDO linear de 1ª ordem: dT/dt = −k(T − T_amb).</li><li>É uma equação separável: resolvendo, T(t) = T_amb + (T₀ − T_amb)e^(−kt).</li><li>Quanto maior a diferença (T − T_amb), maior a taxa de queda — por isso o café esfria mais depressa logo no início.</li><li>Com duas medições reais, calcula-se k e prevê-se a temperatura em qualquer instante t.</li></ul></div>
-          <div class="case-box case-impact"><span class="case-box-label">Por que isso importa</span><p><p>O mesmo modelo (uma EDO linear simples) descreve o resfriamento de um motor, o equilíbrio térmico de um servidor de dados e até a queda da concentração de um medicamento no sangue — sempre que a taxa de variação é proporcional à distância até um valor de equilíbrio.</p></p></div>
-          <div class="case-box case-curiosity"><span class="case-box-label">Curiosidade</span><p><p>É a mesma estrutura matemática usada por investigadores forenses para estimar a hora da morte a partir da temperatura corporal — e por engenheiros para prever quanto tempo um chip leva para esfriar depois de desligado.</p></p></div>
+          <div class="case-box case-impact"><span class="case-box-label">Por que isso importa</span><p>O mesmo modelo (uma EDO linear simples) descreve o resfriamento de um motor, o equilíbrio térmico de um servidor de dados e até a queda da concentração de um medicamento no sangue — sempre que a taxa de variação é proporcional à distância até um valor de equilíbrio.</p></div>
+          <div class="case-box case-curiosity"><span class="case-box-label">Curiosidade</span><p>É a mesma estrutura matemática usada por investigadores forenses para estimar a hora da morte a partir da temperatura corporal — e por engenheiros para prever quanto tempo um chip leva para esfriar depois de desligado.</p></div>
+        
+          <p class="cp-links"><span>Pratique:</span> <a href="#calculadoras">Calcular com seus números</a> <a href="edo-linear-primeira-ordem.html">EDO linear de 1ª ordem</a> <a href="ferramentas.html#edo">Resolver na ferramenta</a></p>
         </article>
       </div>
     </div>
@@ -212,6 +269,8 @@
 </ul></div>
           <div class="case-box case-impact"><span class="case-box-label">Por que isso importa</span><p>Modelos reais têm milhões (ou bilhões) de parâmetros em vez de um só, mas o mecanismo é idêntico: calcular a derivada do erro em relação a cada parâmetro e dar um passo na direção que a reduz. É esse loop que 'treina' um modelo de linguagem ou de reconhecimento de imagem.</p></div>
           <div class="case-box case-curiosity"><span class="case-box-label">Curiosidade</span><p>A regra da cadeia que você usou no exercício F17 (Bloco 2 da apostila de exercícios) tem, em Machine Learning, um nome próprio: backpropagation — o algoritmo que treina redes neurais.</p></div>
+        
+          <p class="cp-links"><span>Pratique:</span> <a href="ferramentas.html#gra">Gradiente na ferramenta</a> <a href="regra-da-cadeia.html">Regra da cadeia</a></p>
         </article>
       </div>
     </div>
@@ -231,8 +290,10 @@
 <li>k = ln(2)/20 ≈ 0,0347 por minuto</li>
 <li>Em 60 minutos (3 duplicações): P(60) = 1000·e^(0,0347·60) = 1000·8 = 8000 bactérias</li>
 </ul></div>
-          <div class="case-box case-impact"><span class="case-box-label">Por que isso importa</span><p>A mesma EDO de crescimento exponencial resolvida no exercício D3 da apostila de exercícios (dy/dx = xy) pertence à mesma família de modelos usada para prever a curva de crescimento de uma cultura — e, em versões mais completas, a propagação de epidemias (modelo SIR).</p></div>
+          <div class="case-box case-impact"><span class="case-box-label">Por que isso importa</span><p>A técnica é a mesma do exercício D3 da apostila de exercícios (dy/dx = xy): separar as variáveis e integrar. Com ela se prevê a curva de crescimento de uma cultura — e, em versões mais completas, a propagação de epidemias (modelo SIR).</p></div>
           <div class="case-box case-curiosity"><span class="case-box-label">Curiosidade</span><p>Trocando k por um valor negativo, a mesma fórmula descreve decaimento — que é exatamente o próximo caso.</p></div>
+        
+          <p class="cp-links"><span>Pratique:</span> <a href="ferramentas.html#edo">Resolver na ferramenta</a> <a href="exercicios-calculo2.html">Lista de Cálculo II</a></p>
         </article>
         <article class="case-card" style="--case-color:#B0344C;">
           <span class="case-tag">Farmacocinética · Decaimento exponencial (EDO)</span>
@@ -244,9 +305,58 @@
 <li>Dose inicial C₀ = 500 mg/L; nível terapêutico mínimo = 100 mg/L</li>
 <li>Resolver 100 = 500·e^(−kt): t = ln(5)/0,1733 ≈ 9,3 h</li>
 </ul></div>
-          <div class="case-box case-impact"><span class="case-box-label">Por que isso importa</span><p>O cálculo mostra que o paciente deve tomar a próxima dose por volta de 9 horas depois da primeira — nem antes (risco de acúmulo/overdose), nem depois (janela sem proteção). É Cálculo II decidindo, literalmente, a saúde de alguém.</p></div>
+          <div class="case-box case-impact"><span class="case-box-label">Por que isso importa</span><p>No modelo simplificado, o nível cai ao mínimo terapêutico por volta de 9 horas depois da dose — antes disso há risco de acúmulo, depois há uma janela sem proteção. <em>Exemplo didático: posologia real é definida pelo médico, que considera muitos outros fatores.</em></p></div>
           <div class="case-box case-curiosity"><span class="case-box-label">Curiosidade</span><p>Meia-vida é o mesmo conceito usado para datar fósseis por carbono-14 — só muda o valor de k.</p></div>
+        
+          <p class="cp-links"><span>Pratique:</span> <a href="#calculadoras">Calcular com seus números</a> <a href="ferramentas.html#edo">Resolver na ferramenta</a></p>
         </article>
+      </div>
+    </div>
+  </section>
+  <section id="calculadoras" class="paper-bg reveal cp-calc">
+    <div class="container">
+      <p class="eyebrow"><span class="rule"></span> Troque os números</p>
+      <h2 style="margin-bottom:14px;">Refaça os casos com os seus valores</h2>
+      <p class="lead-text">As fórmulas abaixo são as mesmas dos casos acima. Mude os dados e veja o resultado na hora — é um jeito rápido de sentir como a derivada e a EDO decidem o resultado.</p>
+      <div class="cp-calc-grid">
+
+        <form class="cp-box" data-calc="res" onsubmit="return false">
+          <h3>Reservatório de menor área</h3>
+          <p class="cp-hint">Cilindro fechado de volume fixo: r³ = V / (2π) e h = 2r.</p>
+          <label>Volume V (m³)<input type="number" name="V" value="1000" min="1" step="any"></label>
+          <label>Custo da chapa (R$/m²)<input type="number" name="c" value="180" min="0" step="any"></label>
+          <div class="cp-out" aria-live="polite"></div>
+        </form>
+
+        <form class="cp-box" data-calc="eoq" onsubmit="return false">
+          <h3>Lote econômico de compra</h3>
+          <p class="cp-hint">Q* = √(2DS/H) e custo mínimo √(2DSH).</p>
+          <label>Demanda anual D (un/ano)<input type="number" name="D" value="12000" min="1" step="any"></label>
+          <label>Custo por pedido S (R$)<input type="number" name="S" value="80" min="0.01" step="any"></label>
+          <label>Armazenagem H (R$/un·ano)<input type="number" name="H" value="4" min="0.01" step="any"></label>
+          <div class="cp-out" aria-live="polite"></div>
+        </form>
+
+        <form class="cp-box" data-calc="cafe" onsubmit="return false">
+          <h3>Resfriamento de Newton</h3>
+          <p class="cp-hint">T(t) = T<sub>amb</sub> + (T₀ − T<sub>amb</sub>)·e<sup>−kt</sup>. Uma segunda medição fixa o k.</p>
+          <label>Temperatura inicial T₀ (°C)<input type="number" name="T0" value="90" step="any"></label>
+          <label>Temperatura ambiente (°C)<input type="number" name="Ta" value="22" step="any"></label>
+          <label>Medida após t₁ (min): T₁ (°C)<input type="number" name="T1" value="70" step="any"></label>
+          <label>t₁ (min)<input type="number" name="t1" value="5" min="0.1" step="any"></label>
+          <label>Prever em t (min)<input type="number" name="t" value="10" min="0" step="any"></label>
+          <div class="cp-out" aria-live="polite"></div>
+        </form>
+
+        <form class="cp-box" data-calc="med" onsubmit="return false">
+          <h3>Decaimento de um medicamento</h3>
+          <p class="cp-hint">t = t½·log₂(C₀/C<sub>mín</sub>). Exemplo didático, não é orientação médica.</p>
+          <label>Meia-vida t½ (h)<input type="number" name="th" value="4" min="0.01" step="any"></label>
+          <label>Concentração inicial C₀ (mg/L)<input type="number" name="C0" value="500" min="0.01" step="any"></label>
+          <label>Nível mínimo C<sub>mín</sub> (mg/L)<input type="number" name="Cm" value="100" min="0.01" step="any"></label>
+          <div class="cp-out" aria-live="polite"></div>
+        </form>
+
       </div>
     </div>
   </section>
@@ -283,8 +393,13 @@
             <td>Tecnologia / IA</td>
           </tr>
           <tr>
+            <td>Integral dupla</td>
+            <td>Volume de terra a escavar, massa de uma placa, carga total em uma região</td>
+            <td>Engenharia Civil, Física (Cálculo III)</td>
+          </tr>
+          <tr>
             <td>Equações diferenciais (EDO)</td>
-            <td>Crescimento populacional, decaimento de medicamento, radioatividade</td>
+            <td>Crescimento populacional, resfriamento, decaimento de medicamento, radioatividade</td>
             <td>Biologia, Saúde, Farmácia</td>
           </tr>
           </tbody>
@@ -298,6 +413,7 @@
       <h2 style="color:var(--chalk); margin-bottom:18px;">Volte ao Formulário e aos Exercícios sempre que precisar</h2>
       <p class="lead-text" style="color:rgba(243,238,225,0.85); margin:0 auto 34px; text-align:center;">O Cálculo que parece abstrato no quadro-negro é, na prática, a linguagem usada para tomar decisões melhores — em qualquer profissão. E o Curso de Cálculo I, II, III e Equações Diferenciais é onde essa linguagem é ensinada do início ao fim.</p>
       <div class="cta-row" style="justify-content:center;">
+        <a href="ferramentas.html" class="btn btn-ghost">Abrir as ferramentas</a>
         <a href="formulario.html" class="btn btn-ghost">Ver o formulário</a>
         <a href="exercicios.html" class="btn btn-ghost">Ver os exercícios</a>
         <a href="adquirir.html" class="btn btn-primary">Conhecer o livro</a>
@@ -341,6 +457,46 @@
   </div>
 </footer>
 
+<script>
+(function(){
+  function f(n,d){return n.toLocaleString('pt-BR',{minimumFractionDigits:d,maximumFractionDigits:d});}
+  function brl(n){return 'R$ '+f(n,2);}
+  var calc={
+    res:function(v){
+      if(!(v.V>0)) return null;
+      var r=Math.cbrt(v.V/(2*Math.PI)),h=2*r,A=6*Math.PI*r*r;
+      var s='Raio r = <b>'+f(r,2)+' m</b><br>Altura h = <b>'+f(h,2)+' m</b><br>Área mínima = <b>'+f(A,1)+' m²</b>';
+      if(v.c>=0) s+='<br>Custo da chapa = <b>'+brl(A*v.c)+'</b>';
+      return s;},
+    eoq:function(v){
+      if(!(v.D>0&&v.S>0&&v.H>0)) return null;
+      var Q=Math.sqrt(2*v.D*v.S/v.H),CT=Math.sqrt(2*v.D*v.S*v.H);
+      return 'Lote Q* = <b>'+f(Q,0)+' un</b><br>Pedidos por ano = <b>'+f(v.D/Q,1)+'</b><br>Custo mínimo = <b>'+brl(CT)+'/ano</b>';},
+    cafe:function(v){
+      var a=v.T0-v.Ta,b=v.T1-v.Ta;
+      if(!(v.t1>0)||!(a>0)||!(b>0)||!(b<a)) return 'err:Use T₀ &gt; T₁ &gt; temperatura ambiente.';
+      var k=Math.log(a/b)/v.t1,T=v.Ta+a*Math.exp(-k*v.t);
+      return 'Constante k = <b>'+f(k,4)+' /min</b><br>Temperatura em t = '+f(v.t,1)+' min: <b>'+f(T,1)+' °C</b><br>Taxa nesse instante: <b>'+f(-k*(T-v.Ta),2)+' °C/min</b>';},
+    med:function(v){
+      if(!(v.th>0&&v.C0>0&&v.Cm>0)) return null;
+      if(v.Cm>=v.C0) return 'err:O nível mínimo precisa ser menor que a concentração inicial.';
+      var t=v.th*Math.log(v.C0/v.Cm)/Math.LN2;
+      return 'k = <b>'+f(Math.LN2/v.th,4)+' /h</b><br>O nível cai ao mínimo em <b>'+f(t,1)+' h</b>';}
+  };
+  document.querySelectorAll('form[data-calc]').forEach(function(form){
+    var fn=calc[form.getAttribute('data-calc')],out=form.querySelector('.cp-out');
+    function run(){
+      var v={};
+      form.querySelectorAll('input').forEach(function(i){v[i.name]=parseFloat(String(i.value).replace(',','.'));});
+      var r=fn(v);
+      if(r===null||Object.keys(v).some(function(k){return isNaN(v[k]);})) out.innerHTML='<span class="cp-err">Preencha todos os campos com números válidos.</span>';
+      else if(r.indexOf('err:')===0) out.innerHTML='<span class="cp-err">'+r.slice(4)+'</span>';
+      else out.innerHTML=r;
+    }
+    form.addEventListener('input',run);run();
+  });
+})();
+</script>
 <script src="js/main.js"></script>
 </body>
 </html>
