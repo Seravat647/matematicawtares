@@ -29,6 +29,27 @@
 <meta name="twitter:description" content="Curso de Cálculo I, II, III e Equações Diferenciais por W. T. Ares — um guia completo e didático para dominar os fundamentos do cálculo diferencial e integral, incluindo as Equações Diferenciais.">
 <meta name="twitter:image" content="https://seravat647.github.io/matematicawtares/images/capa-calculo-1.jpg">
 <link rel="canonical" href="https://seravat647.github.io/matematicawtares/index.html">
+<style>
+.studygrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:28px}
+@media (max-width:860px){.studygrid{grid-template-columns:1fr;max-width:340px;margin:0 auto}}
+.vol-card.link{display:block;color:inherit;text-decoration:none}
+.vol-card .tag{display:inline-block;margin-top:14px;font:700 .85rem var(--sans);color:var(--chalk-yellow);border-bottom:2px solid var(--chalk-yellow)}
+.etabs{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 22px}
+.etab{font:700 .92rem var(--sans);padding:11px 18px;border-radius:3px;border:1.5px solid var(--chalkboard);background:transparent;color:var(--chalkboard);cursor:pointer;transition:transform .18s,background .18s,color .18s}
+.etab:hover{transform:translateY(-2px)}.etab[aria-selected=true]{background:var(--chalkboard);color:var(--chalk-yellow)}
+.epanel[hidden]{display:none}
+.colecao{display:grid;grid-template-columns:minmax(0,260px) 1fr;gap:40px;align-items:center}
+@media (max-width:760px){.colecao{grid-template-columns:1fr;justify-items:center;text-align:center}}
+.colecao .cover{width:100%;max-width:260px;aspect-ratio:3/4;border-radius:4px;background:var(--chalkboard);box-shadow:0 30px 50px -24px rgba(31,59,50,.75);overflow:hidden;display:flex;align-items:center;justify-content:center;color:var(--chalk-yellow);font:italic 600 2.4rem var(--serif)}
+.colecao .cover img{width:100%;height:100%;object-fit:cover;display:block}
+.vols{list-style:none;margin:18px 0 24px;padding:0;display:grid;gap:10px;text-align:left}
+.vols li{display:grid;grid-template-columns:2.6rem 1fr;gap:12px;align-items:baseline;padding:10px 14px;background:#FFFDF8;border:1px solid var(--paper-line);border-radius:4px}
+.vols b{font:700 1rem var(--mono);color:#8a6a1c}.vols span{color:#3c453f}
+.band{background:var(--chalkboard);color:var(--chalk);padding:64px 0;text-align:center}
+.band h2{color:var(--chalk);margin:0 0 12px}.band p{max-width:56ch;margin:0 auto 24px;opacity:.9}.band .cta-row{justify-content:center}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Book","name":"Curso de Cálculo I, II, III e Equações Diferenciais","author":{"@type":"Person","name":"W. T. Ares"},"inLanguage":"pt-BR","url":"https://seravat647.github.io/matematicawtares/livro.html","image":"https://seravat647.github.io/matematicawtares/images/capa-calculo-1.jpg"}</script>
+
 
 </head>
 <body>
@@ -134,10 +155,30 @@
     </div>
   </section>
 
+  <section class="paper-bg reveal">
+    <div class="container">
+      <p class="eyebrow"><span class="rule"></span> Estude no site, de graça</p>
+      <h2 style="margin-bottom:40px;">Ferramentas para aprender de verdade</h2>
+      <div class="studygrid">
+        <a class="vol-card link" href="trilha.html" style="background:var(--chalkboard);"><div class="vol-body" style="padding:28px 24px;"><p class="vol-eyebrow">Por onde começar</p><h3>Trilha de Estudo</h3><p class="vol-desc">Veja o caminho do Pré-cálculo à Equações Diferenciais e faça um teste de 10 questões para descobrir o seu nível.</p><span class="tag">Fazer o teste →</span></div></a>
+        <a class="vol-card link" href="ferramentas.html" style="background:var(--chalkboard);"><div class="vol-body" style="padding:28px 24px;"><p class="vol-eyebrow">Interativo</p><h3>Ferramentas</h3><p class="vol-desc">Derivada e reta tangente, Riemann, Taylor, gradiente, campo de direções, limites, integral dupla e passo a passo.</p><span class="tag">Abrir o laboratório →</span></div></a>
+        <a class="vol-card link" href="topicos.html" style="background:var(--chalkboard);"><div class="vol-body" style="padding:28px 24px;"><p class="vol-eyebrow">Explicações curtas</p><h3>Tópicos</h3><p class="vol-desc">Regra da cadeia, integração por partes, limites, EDO e derivadas parciais, com exemplos resolvidos.</p><span class="tag">Ver os tópicos →</span></div></a>
+        <a class="vol-card link" href="formulario-funcoes.html" style="background:var(--chalkboard);"><div class="vol-body" style="padding:28px 24px;"><p class="vol-eyebrow">Consulta rápida</p><h3>Formulários</h3><p class="vol-desc">Funções, cônicas e curvas com gráficos, além do formulário de Cálculo.</p><span class="tag">Abrir o formulário →</span></div></a>
+      </div>
+    </div>
+  </section>
+
   <section class="paper-bg reveal exercise-section">
     <div class="container">
       <p class="eyebrow"><span class="rule"></span> Experimente antes de comprar</p>
-      <h2 style="margin-bottom:24px;">Um exercício resolvido, do jeito que está no livro</h2>
+      <h2 style="margin-bottom:24px;">Um exercício resolvido de cada volume</h2>
+      <div class="etabs" role="tablist" aria-label="Escolha o volume">
+        <button class="etab" role="tab" data-p="c1" aria-selected="true">Cálculo I</button>
+        <button class="etab" role="tab" data-p="c2" aria-selected="false">Cálculo II</button>
+        <button class="etab" role="tab" data-p="c3" aria-selected="false">Cálculo III</button>
+        <button class="etab" role="tab" data-p="ed" aria-selected="false">Equações Diferenciais</button>
+      </div>
+      <div class="epanel" id="ep-c1" role="tabpanel">
       <div class="exercise-card">
         <div class="exercise-head">
           <span class="exercise-badge">Curso de Cálculo I</span>
@@ -171,8 +212,145 @@
           </div>
         </div>
         <p class="exercise-result">Resultado: f'(2) = 1</p>
-        <p class="exercise-cta"><a href="livro.html" class="btn btn-ghost" style="padding:10px 18px; font-size:0.85rem;">Ver mais exemplos no livro →</a></p>
+        <p class="exercise-cta"><a href="ferramentas.html#der" class="btn btn-ghost" style="padding:10px 18px; font-size:0.85rem;">Ver na ferramenta de derivada →</a> <a href="livro.html" class="btn btn-ghost" style="padding:10px 18px; font-size:0.85rem;">Ver mais exemplos no livro →</a></p>
       </div>
+      </div>
+      <div class="epanel" id="ep-c2" role="tabpanel" hidden>
+      <div class="exercise-card">
+        <div class="exercise-head">
+          <span class="exercise-badge">Curso de Cálculo II</span>
+          <h3>Integração por partes</h3>
+        </div>
+        <p class="exercise-problem">Calcule a integral ∫ x·eˣ dx.</p>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <span class="exercise-step-num">1</span>
+            <div class="exercise-step-text">
+              <p>Escolhemos <code>u = x</code> e <code>dv = eˣ dx</code>, pela regra LIATE (algébrica antes de exponencial).</p>
+            </div>
+          </div>
+          <div class="exercise-step">
+            <span class="exercise-step-num">2</span>
+            <div class="exercise-step-text">
+              <p>Então <code>du = dx</code> e <code>v = eˣ</code>.</p>
+            </div>
+          </div>
+          <div class="exercise-step">
+            <span class="exercise-step-num">3</span>
+            <div class="exercise-step-text">
+              <p>Aplicamos <code>∫u dv = uv − ∫v du</code>: <code>∫x·eˣ dx = x·eˣ − ∫eˣ dx</code>.</p>
+            </div>
+          </div>
+          <div class="exercise-step">
+            <span class="exercise-step-num">4</span>
+            <div class="exercise-step-text">
+              <p>Resolvendo a última integral: <code>x·eˣ − eˣ + C</code>.</p>
+            </div>
+          </div>
+        </div>
+        <p class="exercise-result">Resultado: (x − 1)·eˣ + C</p>
+        <p class="exercise-cta"><a href="integracao-por-partes.html" class="btn btn-ghost" style="padding:10px 18px; font-size:0.85rem;">Explicação completa →</a> <a href="livro.html" class="btn btn-ghost" style="padding:10px 18px; font-size:0.85rem;">Ver mais exemplos no livro →</a></p>
+      </div>
+      </div>
+      <div class="epanel" id="ep-c3" role="tabpanel" hidden>
+      <div class="exercise-card">
+        <div class="exercise-head">
+          <span class="exercise-badge">Curso de Cálculo III</span>
+          <h3>Derivadas parciais e gradiente</h3>
+        </div>
+        <p class="exercise-problem">Para f(x, y) = x²y + y³, calcule o gradiente no ponto (1, 2).</p>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <span class="exercise-step-num">1</span>
+            <div class="exercise-step-text">
+              <p>Derivando em relação a <code>x</code> (com <code>y</code> constante): <code>∂f/∂x = 2xy</code>.</p>
+            </div>
+          </div>
+          <div class="exercise-step">
+            <span class="exercise-step-num">2</span>
+            <div class="exercise-step-text">
+              <p>Derivando em relação a <code>y</code> (com <code>x</code> constante): <code>∂f/∂y = x² + 3y²</code>.</p>
+            </div>
+          </div>
+          <div class="exercise-step">
+            <span class="exercise-step-num">3</span>
+            <div class="exercise-step-text">
+              <p>Em <code>(1, 2)</code>: <code>∂f/∂x = 2·1·2 = 4</code>.</p>
+            </div>
+          </div>
+          <div class="exercise-step">
+            <span class="exercise-step-num">4</span>
+            <div class="exercise-step-text">
+              <p>Em <code>(1, 2)</code>: <code>∂f/∂y = 1 + 3·4 = 13</code>.</p>
+            </div>
+          </div>
+        </div>
+        <p class="exercise-result">Resultado: ∇f(1, 2) = (4, 13)</p>
+        <p class="exercise-cta"><a href="ferramentas.html#gra" class="btn btn-ghost" style="padding:10px 18px; font-size:0.85rem;">Ver na ferramenta de gradiente →</a> <a href="livro.html" class="btn btn-ghost" style="padding:10px 18px; font-size:0.85rem;">Ver mais exemplos no livro →</a></p>
+      </div>
+      </div>
+      <div class="epanel" id="ep-ed" role="tabpanel" hidden>
+      <div class="exercise-card">
+        <div class="exercise-head">
+          <span class="exercise-badge">Equações Diferenciais</span>
+          <h3>EDO linear de 1ª ordem</h3>
+        </div>
+        <p class="exercise-problem">Resolva y′ + 2y = 6, com y(0) = 1.</p>
+        <div class="exercise-steps">
+          <div class="exercise-step">
+            <span class="exercise-step-num">1</span>
+            <div class="exercise-step-text">
+              <p>O fator integrante é <code>μ = e^(2x)</code>. Multiplicando a equação, o lado esquerdo vira <code>(e^(2x)·y)′</code>.</p>
+            </div>
+          </div>
+          <div class="exercise-step">
+            <span class="exercise-step-num">2</span>
+            <div class="exercise-step-text">
+              <p>Então <code>(e^(2x)·y)′ = 6e^(2x)</code>. Integrando: <code>e^(2x)·y = 3e^(2x) + C</code>.</p>
+            </div>
+          </div>
+          <div class="exercise-step">
+            <span class="exercise-step-num">3</span>
+            <div class="exercise-step-text">
+              <p>Dividindo por <code>e^(2x)</code>: <code>y = 3 + C·e^(−2x)</code>.</p>
+            </div>
+          </div>
+          <div class="exercise-step">
+            <span class="exercise-step-num">4</span>
+            <div class="exercise-step-text">
+              <p>Com <code>y(0) = 1</code>: <code>1 = 3 + C</code>, logo <code>C = −2</code>.</p>
+            </div>
+          </div>
+        </div>
+        <p class="exercise-result">Resultado: y = 3 − 2e^(−2x)</p>
+        <p class="exercise-cta"><a href="ferramentas.html#edo" class="btn btn-ghost" style="padding:10px 18px; font-size:0.85rem;">Ver no campo de direções →</a> <a href="livro.html" class="btn btn-ghost" style="padding:10px 18px; font-size:0.85rem;">Ver mais exemplos no livro →</a></p>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="paper-bg reveal">
+    <div class="container colecao">
+      <div class="cover" aria-hidden="false"><img src="images/capa-calculo-1.jpg" alt="Capa do Curso de Cálculo I, de W. T. Ares" loading="lazy" onerror="this.parentNode.textContent='∫'"></div>
+      <div>
+        <p class="eyebrow"><span class="rule"></span> A coleção</p>
+        <h2>Quatro volumes, uma só linha de raciocínio</h2>
+        <ul class="vols">
+          <li><b>I</b><span>Limites, derivadas e introdução à integral</span></li>
+          <li><b>II</b><span>Técnicas de integração, aplicações, sequências e séries</span></li>
+          <li><b>III</b><span>Várias variáveis, derivadas parciais e integrais múltiplas</span></li>
+          <li><b>EDO</b><span>Equações de 1ª e 2ª ordem, métodos e aplicações</span></li>
+        </ul>
+        <div class="cta-row"><a href="livro.html" class="btn btn-primary">Conhecer a coleção</a><a href="adquirir.html" class="btn btn-ghost" style="color:var(--chalkboard);border-color:var(--chalkboard)">Como adquirir</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="container">
+      <h2>Não sabe por onde começar?</h2>
+      <p>Responda 10 questões rápidas e descubra qual volume é o ideal para você agora.</p>
+      <div class="cta-row"><a href="trilha.html#teste" class="btn btn-primary">Fazer o teste de nível</a><a href="adquirir.html" class="btn btn-ghost">Compre agora</a></div>
     </div>
   </section>
 </main>
@@ -213,5 +391,8 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script>
+(function(){var t=document.querySelectorAll('.etab');t.forEach(function(b){b.addEventListener('click',function(){t.forEach(function(x){var on=x===b;x.setAttribute('aria-selected',on);document.getElementById('ep-'+x.dataset.p).hidden=!on})})})})();
+</script>
 </body>
 </html>
