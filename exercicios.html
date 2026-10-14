@@ -29,6 +29,33 @@
 <meta name="twitter:description" content="Listas de exercícios resolvidos, com níveis fácil, médio e difícil, para os livros Curso de Cálculo I, II, III e Equações Diferenciais.">
 <meta name="twitter:image" content="https://seravat647.github.io/matematicawtares/images/capa-calculo-1.jpg">
 <link rel="canonical" href="https://seravat647.github.io/matematicawtares/exercicios.html">
+<style>
+.tx-wrap{padding:20px 0 80px}
+.tx-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px;margin:0 0 22px}
+.tx-head h2{margin:0}
+.tx-score{font:700 .95rem var(--mono);color:var(--chalkboard);background:#FFFDF8;border:1px solid var(--paper-line);border-radius:99px;padding:9px 16px}
+.tx-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 20px}
+.tx-tab{font:700 .92rem var(--sans);padding:11px 18px;border-radius:3px;border:1.5px solid var(--chalkboard);background:transparent;color:var(--chalkboard);cursor:pointer;transition:transform .18s,background .18s,color .18s}
+.tx-tab:hover{transform:translateY(-2px)}.tx-tab[aria-selected=true]{background:var(--chalkboard);color:var(--chalk-yellow)}
+.tx-q{background:#FFFDF8;border:1px solid var(--paper-line);border-radius:6px;padding:20px 22px;margin:0 0 16px}
+.tx-q.ok{border-color:#2f7a4f}.tx-q.no{border-color:#b4543c}
+.tx-lv{display:inline-block;font:.72rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#8a6a1c;margin:0 0 8px}
+.tx-q p.t{font-weight:600;font-size:1.05rem;margin:0 0 14px;line-height:1.5}
+.tx-opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}
+.tx-opt{font:600 1rem var(--sans);text-align:left;padding:12px 14px;border:1.5px solid var(--paper-line);border-radius:4px;background:#fff;color:var(--ink);cursor:pointer;transition:border-color .15s,background .15s}
+.tx-opt:hover:not([disabled]){border-color:var(--chalkboard);background:var(--chalk)}
+.tx-opt[disabled]{cursor:default}.tx-opt.right{border-color:#2f7a4f;background:#e6f3ea}.tx-opt.wrong{border-color:#b4543c;background:#f8e6e0}
+.tx-ex{margin:14px 0 0;padding:12px 16px;border-left:4px solid var(--chalk-yellow);background:rgba(228,190,104,.14);line-height:1.6;font-size:.97rem}
+.tx-ex b{color:var(--chalkboard)}
+.tx-foot{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:8px}
+.tx-reset{font:600 .9rem var(--sans);background:none;border:none;color:#5b6b62;text-decoration:underline;cursor:pointer;padding:6px}
+.tx-links{margin:14px 0 0;display:flex;flex-wrap:wrap;gap:8px 16px;font-size:.88rem}
+.tx-links a{color:var(--chalk-yellow);border-bottom:1.5px solid rgba(228,190,104,.6);text-decoration:none;font-weight:700}
+.tx-band{background:var(--chalkboard);color:var(--chalk);padding:60px 0;text-align:center}
+.tx-band h2{color:var(--chalk);margin:0 0 10px}.tx-band p{max-width:56ch;margin:0 auto 22px;opacity:.9}.tx-band .cta-row{justify-content:center}
+</style>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Exercícios Resolvidos de Cálculo e Equações Diferenciais", "inLanguage": "pt-BR", "author": {"@type": "Person", "name": "W. T. Ares"}, "url": "https://seravat647.github.io/matematicawtares/exercicios.html"}</script>
 <!-- MailerLite Universal -->
 <script>
     (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
@@ -109,6 +136,7 @@
               <p class="vol-desc">15 exercícios selecionados diretamente dos capítulos do livro, resolvidos passo a passo e organizados por nível de dificuldade — de pré-cálculo a aplicações da derivada.</p>
               <p style="margin-top:14px; font-family:var(--mono); font-size:0.8rem; color:rgba(243,238,225,0.55);">15 exercícios · fácil · médio · difícil</p>
               <p style="margin-top:14px;"><a href="exercicios-calculo1.html" class="btn btn-ghost" style="padding:9px 16px; font-size:0.82rem;">Ver lista →</a></p>
+              <p class="tx-links"><a href="ferramentas.html#der">Ferramenta de derivada</a><a href="como-calcular-limites.html">Limites explicados</a><a href="regra-da-cadeia.html">Regra da cadeia</a></p>
             </div>
           </div>
           <div class="vol-card">
@@ -118,6 +146,7 @@
               <p class="vol-desc">15 exercícios dos capítulos de técnicas de integração, séries infinitas e equações diferenciais introdutórias, resolvidos passo a passo.</p>
               <p style="margin-top:14px; font-family:var(--mono); font-size:0.8rem; color:rgba(243,238,225,0.55);">15 exercícios · fácil · médio · difícil</p>
               <p style="margin-top:14px;"><a href="exercicios-calculo2.html" class="btn btn-ghost" style="padding:9px 16px; font-size:0.82rem;">Ver lista →</a></p>
+              <p class="tx-links"><a href="ferramentas.html#rie">Riemann e Taylor</a><a href="integracao-por-partes.html">Integração por partes</a></p>
             </div>
           </div>
           <div class="vol-card">
@@ -127,6 +156,7 @@
               <p class="vol-desc">15 exercícios de vetores, funções de várias variáveis, integrais múltiplas e cálculo vetorial, resolvidos passo a passo.</p>
               <p style="margin-top:14px; font-family:var(--mono); font-size:0.8rem; color:rgba(243,238,225,0.55);">15 exercícios · fácil · médio · difícil</p>
               <p style="margin-top:14px;"><a href="exercicios-calculo3.html" class="btn btn-ghost" style="padding:9px 16px; font-size:0.82rem;">Ver lista →</a></p>
+              <p class="tx-links"><a href="ferramentas.html#gra">Gradiente</a><a href="ferramentas.html#dup">Integral dupla</a><a href="derivadas-parciais.html">Derivadas parciais</a></p>
             </div>
           </div>
           <div class="vol-card">
@@ -136,10 +166,33 @@
               <p class="vol-desc">15 exercícios do livro Equações Diferenciais — Uma Abordagem Analítica e Geométrica, de EDOs de primeira ordem a sistemas, séries de Fourier e EDPs fundamentais.</p>
               <p style="margin-top:14px; font-family:var(--mono); font-size:0.8rem; color:rgba(243,238,225,0.55);">15 exercícios · fácil · médio · difícil</p>
               <p style="margin-top:14px;"><a href="exercicios-equacoes-diferenciais.html" class="btn btn-ghost" style="padding:9px 16px; font-size:0.82rem;">Ver lista →</a></p>
+              <p class="tx-links"><a href="ferramentas.html#edo">Campo de direções</a><a href="edo-linear-primeira-ordem.html">EDO linear de 1ª ordem</a></p>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="paper-bg tx-wrap" id="treino">
+    <div class="container">
+      <p class="eyebrow"><span class="rule"></span> Treino rápido</p>
+      <div class="tx-head">
+        <h2>Teste-se agora, com correção na hora</h2>
+        <div class="tx-score" id="txScore" aria-live="polite">0 de 12 acertos</div>
+      </div>
+      <p class="lead-text" style="margin-bottom:22px">Três questões de cada volume, uma fácil, uma média e uma difícil. Escolha a resposta e veja a explicação. Seu progresso fica salvo neste navegador.</p>
+      <div class="tx-tabs" role="tablist" aria-label="Escolha o volume"><button class="tx-tab" role="tab" data-v="c1" aria-selected="true">Cálculo I</button><button class="tx-tab" role="tab" data-v="c2" aria-selected="false">Cálculo II</button><button class="tx-tab" role="tab" data-v="c3" aria-selected="false">Cálculo III</button><button class="tx-tab" role="tab" data-v="ed" aria-selected="false">Equações Diferenciais</button></div>
+      <div id="txList"></div>
+      <div class="tx-foot"><button class="tx-reset" id="txReset" type="button">Recomeçar o treino</button></div>
+    </div>
+  </section>
+
+  <section class="tx-band">
+    <div class="container">
+      <h2>Quer praticar muito mais?</h2>
+      <p>As listas completas têm 15 exercícios resolvidos passo a passo por volume, e os livros trazem exercícios comentados em cada capítulo.</p>
+      <div class="cta-row"><a href="livro.html" class="btn btn-primary">Conhecer a coleção</a><a href="adquirir.html" class="btn btn-ghost">Como adquirir</a><a href="trilha.html#teste" class="btn btn-ghost">Teste de nível</a></div>
     </div>
   </section>
 </main>
@@ -180,5 +233,38 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script>
+(function(){
+var Q=[{"id": "c1a", "v": "c1", "l": "fácil", "q": "Quanto vale o limite de (x² − 9)/(x − 3) quando x → 3?", "o": ["0", "3", "6", "9"], "a": 2, "e": "Fatorando, x² − 9 = (x − 3)(x + 3). Cortando (x − 3), sobra x + 3, que tende a 6."}, {"id": "c1b", "v": "c1", "l": "médio", "q": "Qual é a derivada de f(x) = x²·eˣ?", "o": ["2x·eˣ", "x²·eˣ", "(x² + 2x)·eˣ", "(2x + 1)·eˣ"], "a": 2, "e": "Regra do produto: (x²)′·eˣ + x²·(eˣ)′ = 2x·eˣ + x²·eˣ = (x² + 2x)·eˣ."}, {"id": "c1c", "v": "c1", "l": "difícil", "q": "Qual é o valor máximo de f(x) = x³ − 3x no intervalo [0, 2]?", "o": ["0", "−2", "4", "2"], "a": 3, "e": "f′(x) = 3x² − 3 = 0 em x = 1, onde f(1) = −2 (mínimo). Nos extremos: f(0) = 0 e f(2) = 2. O máximo é 2, em x = 2."}, {"id": "c2a", "v": "c2", "l": "fácil", "q": "Calcule a integral de 0 a 1 de 3x² dx.", "o": ["1/3", "1", "3", "0"], "a": 1, "e": "Uma primitiva de 3x² é x³. Então [x³] de 0 a 1 = 1 − 0 = 1."}, {"id": "c2b", "v": "c2", "l": "médio", "q": "Calcule ∫ x·cos x dx.", "o": ["x·sen x − cos x + C", "x·sen x + cos x + C", "−x·sen x + cos x + C", "sen x + x·cos x + C"], "a": 1, "e": "Por partes, com u = x e dv = cos x dx: x·sen x − ∫ sen x dx = x·sen x + cos x + C."}, {"id": "c2c", "v": "c2", "l": "difícil", "q": "Qual é a soma da série de n = 1 até ∞ de 1/(n(n + 1))?", "o": ["1/2", "2", "a série diverge", "1"], "a": 3, "e": "Como 1/(n(n + 1)) = 1/n − 1/(n + 1), a soma é telescópica: sobra 1 − 1/(N + 1), que tende a 1."}, {"id": "c3a", "v": "c3", "l": "fácil", "q": "Se f(x, y) = x²y, quanto vale ∂f/∂y?", "o": ["2xy", "x²", "y", "x² + y"], "a": 1, "e": "Derivando em y, tratamos x como constante: ∂f/∂y = x²."}, {"id": "c3b", "v": "c3", "l": "médio", "q": "Qual é o gradiente de f(x, y) = x·y² no ponto (2, 1)?", "o": ["(4, 1)", "(2, 4)", "(1, 4)", "(1, 2)"], "a": 2, "e": "∂f/∂x = y² = 1 e ∂f/∂y = 2xy = 2·2·1 = 4. Logo ∇f(2, 1) = (1, 4)."}, {"id": "c3c", "v": "c3", "l": "difícil", "q": "Calcule a integral dupla de (x + y) sobre o retângulo 0 ≤ x ≤ 1, 0 ≤ y ≤ 2.", "o": ["2", "4", "5", "3"], "a": 3, "e": "Integrando em y: ∫₀² (x + y) dy = 2x + 2. Depois em x: ∫₀¹ (2x + 2) dx = 1 + 2 = 3."}, {"id": "eda", "v": "ed", "l": "fácil", "q": "Qual é a solução geral de y′ = 3y?", "o": ["y = C·e³ˣ", "y = 3C·eˣ", "y = C·x³", "y = e³ˣ + C"], "a": 0, "e": "Separando as variáveis, dy/y = 3 dx. Integrando, ln|y| = 3x + c, logo y = C·e³ˣ."}, {"id": "edb", "v": "ed", "l": "médio", "q": "Qual é a solução geral de y″ − 3y′ + 2y = 0?", "o": ["C₁·eˣ + C₂·e⁻²ˣ", "C₁·e⁻ˣ + C₂·e⁻²ˣ", "C₁·e³ˣ + C₂·e²ˣ", "C₁·eˣ + C₂·e²ˣ"], "a": 3, "e": "A equação característica r² − 3r + 2 = 0 tem raízes r = 1 e r = 2. Logo y = C₁·eˣ + C₂·e²ˣ."}, {"id": "edc", "v": "ed", "l": "difícil", "q": "Resolva y′ + y = e⁻ˣ, com y(0) = 2.", "o": ["y = 2e⁻ˣ", "y = (x + 2)·e⁻ˣ", "y = (2 − x)·e⁻ˣ", "y = (x + 1)·e⁻ˣ + 1"], "a": 1, "e": "O fator integrante é eˣ: (eˣ·y)′ = 1, então eˣ·y = x + C. Com y(0) = 2, C = 2. Logo y = (x + 2)·e⁻ˣ."}];
+var V=[["c1", "Cálculo I"], ["c2", "Cálculo II"], ["c3", "Cálculo III"], ["ed", "Equações Diferenciais"]];
+var KEY='wtares_treino_v1',st={},cur='c1';
+try{st=JSON.parse(localStorage.getItem(KEY)||'{}')||{}}catch(e){st={}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}}
+var list=document.getElementById('txList'),sc=document.getElementById('txScore');
+function el(t,c,x){var n=document.createElement(t);if(c)n.className=c;if(x!==undefined)n.textContent=x;return n}
+function score(){var ok=0;Q.forEach(function(q){if(st[q.id]===q.a)ok++});sc.textContent=ok+' de '+Q.length+' acertos'}
+function render(){
+ document.querySelectorAll('.tx-tab').forEach(function(b){b.setAttribute('aria-selected',b.dataset.v===cur)});
+ list.innerHTML='';
+ Q.filter(function(q){return q.v===cur}).forEach(function(q){
+  var done=st[q.id]!==undefined,box=el('div','tx-q'+(done?(st[q.id]===q.a?' ok':' no'):''));
+  box.appendChild(el('span','tx-lv','Nível '+q.l));
+  box.appendChild(el('p','t',q.q));
+  var g=el('div','tx-opts');
+  q.o.forEach(function(o,i){
+   var b=el('button','tx-opt',o);b.type='button';
+   if(done){b.disabled=true;if(i===q.a)b.classList.add('right');else if(i===st[q.id])b.classList.add('wrong')}
+   b.onclick=function(){st[q.id]=i;save();render();score()};
+   g.appendChild(b)});
+  box.appendChild(g);
+  if(done){var ex=el('div','tx-ex');var b1=el('b',null,st[q.id]===q.a?'Correto. ':'Não foi desta vez. ');ex.appendChild(b1);ex.appendChild(document.createTextNode(q.e));box.appendChild(ex)}
+  list.appendChild(box)});
+}
+document.querySelectorAll('.tx-tab').forEach(function(b){b.onclick=function(){cur=b.dataset.v;render()}});
+document.getElementById('txReset').onclick=function(){st={};save();render();score()};
+render();score();
+})();
+</script>
+
 </body>
 </html>
