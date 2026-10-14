@@ -29,6 +29,20 @@
 <meta name="twitter:description" content="Conheça o Curso de Cálculo I, II, III e Equações Diferenciais, de W. T. Ares: fundamentos, técnicas de integração e cálculo em várias variáveis.">
 <meta name="twitter:image" content="https://seravat647.github.io/matematicawtares/images/capa-calculo-1.jpg">
 <link rel="canonical" href="https://seravat647.github.io/matematicawtares/livro.html">
+<style>
+.jump{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 34px}
+.jump a{font:700 .9rem var(--sans);padding:10px 16px;border:1.5px solid var(--chalkboard);border-radius:99px;color:var(--chalkboard);text-decoration:none;transition:transform .18s,background .18s,color .18s}
+.jump a:hover{background:var(--chalkboard);color:var(--chalk-yellow);transform:translateY(-2px)}
+.vol-actions{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 0}
+.vol-extra{margin:14px 0 0;font-size:.95rem;color:#3c453f}.vol-extra a{color:var(--chalkboard);font-weight:700;border-bottom:2px solid var(--chalk-yellow);text-decoration:none}
+.compare{margin:56px 0 0}.compare h2{margin:0 0 8px}.compare p.sub{margin:0 0 18px;color:#3c453f}
+.compare .scroll{overflow-x:auto}.compare table{width:100%;border-collapse:collapse;background:#FFFDF8;border:1px solid var(--paper-line);min-width:640px}
+.compare th,.compare td{padding:13px 16px;text-align:left;vertical-align:top;border-top:1px solid var(--paper-line)}
+.compare th{background:var(--chalkboard);color:var(--chalk);border:0;font:.76rem var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.compare td:first-child{font-weight:700;white-space:nowrap}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "Curso de Cálculo I, II, III e Equações Diferenciais", "itemListElement": [{"@type": "ListItem", "position": 1, "item": {"@type": "Book", "name": "Curso de Cálculo I", "author": {"@type": "Person", "name": "W. T. Ares"}, "inLanguage": "pt-BR", "url": "https://seravat647.github.io/matematicawtares/livro.html#calculo-1"}}, {"@type": "ListItem", "position": 2, "item": {"@type": "Book", "name": "Curso de Cálculo II", "author": {"@type": "Person", "name": "W. T. Ares"}, "inLanguage": "pt-BR", "url": "https://seravat647.github.io/matematicawtares/livro.html#calculo-2"}}, {"@type": "ListItem", "position": 3, "item": {"@type": "Book", "name": "Curso de Cálculo III", "author": {"@type": "Person", "name": "W. T. Ares"}, "inLanguage": "pt-BR", "url": "https://seravat647.github.io/matematicawtares/livro.html#calculo-3-texto"}}, {"@type": "ListItem", "position": 4, "item": {"@type": "Book", "name": "Equações Diferenciais — Uma Abordagem Analítica e Geométrica", "author": {"@type": "Person", "name": "W. T. Ares"}, "inLanguage": "pt-BR", "url": "https://seravat647.github.io/matematicawtares/livro.html#equacoes-diferenciais"}}]}</script>
+
  <!-- MailerLite Universal --> <script> (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]) .push(arguments);},l=d.createElement(e),l.async=1,l.src=u, n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);}) (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml'); ml('account', '2556502'); </script> <!-- End MailerLite Universal -->
 </head>
 <body>
@@ -56,7 +70,6 @@
     <a href="livro.html" class="active">O Livro</a>
     <a href="adquirir.html">Como Adquirir</a>
     <a href="exercicios.html">Exercícios</a>
-    <a href="formulario.html">Formulário</a>
     <a href="formulario-funcoes.html">Formulário de Funções</a>
     <a href="formulario.html">Formulário de Cálculo</a>
     <a href="ferramentas.html">Ferramentas</a>
@@ -89,6 +102,9 @@
 
   <section class="paper-bg reveal">
     <div class="container">
+      <nav class="jump" aria-label="Ir para o volume">
+        <a href="#calculo-1">Cálculo I</a><a href="#calculo-2">Cálculo II</a><a href="#calculo-3-texto">Cálculo III</a><a href="#equacoes-diferenciais">Equações Diferenciais</a><a href="#comparar">Qual escolher?</a>
+      </nav>
       <p class="eyebrow"><span class="rule"></span> Sobre o livro</p>
       <div class="vol-detail">
         <div class="vol-detail-cover">
@@ -99,6 +115,8 @@
           <p class="lead-text">Um guia completo e didático para dominar os fundamentos do cálculo diferencial e integral. Com linguagem clara, exemplos práticos e exercícios selecionados, esta obra é ideal para estudantes, professores e apaixonados por matemática.</p>
           <p class="lead-text">Cada capítulo foi construído para acompanhar o raciocínio do leitor passo a passo, conectando teoria e aplicação sem perder o rigor que o cálculo exige.</p>
           <p class="pull-quote">"Mais do que um manual, é um companheiro de estudo que transforma o cálculo em conhecimento acessível e aplicável."</p>
+          <div class="vol-actions"><a href="adquirir.html" class="btn btn-primary">Comprar Cálculo I</a><a href="ferramentas.html#der" class="btn btn-ghost" style="color:var(--chalkboard);border-color:var(--chalkboard)">Teste a derivada na ferramenta</a></div>
+          <p class="vol-extra">Amostra grátis: <a href="regra-da-cadeia.html">regra da cadeia explicada</a>.</p>
         </div>
       </div>
 
@@ -111,13 +129,15 @@
 
       <div class="vol-detail">
         <div class="vol-detail-cover">
-          <img src="images/capa-calculo-2.jpg" alt="Capa do livro Curso de Cálculo II, de W. T. Ares">
+          <img loading="lazy" src="images/capa-calculo-2.jpg" alt="Capa do livro Curso de Cálculo II, de W. T. Ares">
         </div>
         <div>
           <h2 id="calculo-2">Curso de Cálculo II</h2>
           <p class="lead-text">Dando continuidade ao percurso iniciado no primeiro volume, o Curso de Cálculo II aprofunda-se nas técnicas avançadas de integração, no estudo de sequências e séries infinitas e nas primeiras noções de equações diferenciais. Cada tema é apresentado com o mesmo cuidado didático do volume anterior, unindo rigor matemático e clareza na exposição.</p>
           <p class="lead-text">O livro consolida a base necessária para o estudante avançar com segurança ao Cálculo III, reforçando, por meio de exemplos e exercícios comentados, a conexão entre os conceitos e suas aplicações.</p>
           <p class="pull-quote">"Se o primeiro volume ensina a enxergar o limite, o segundo ensina a dominar a soma infinita que vem depois dele."</p>
+          <div class="vol-actions"><a href="adquirir.html" class="btn btn-primary">Comprar Cálculo II</a><a href="ferramentas.html#rie" class="btn btn-ghost" style="color:var(--chalkboard);border-color:var(--chalkboard)">Veja Riemann e Taylor</a></div>
+          <p class="vol-extra">Amostra grátis: <a href="integracao-por-partes.html">integração por partes explicada</a>.</p>
         </div>
       </div>
 
@@ -130,13 +150,15 @@
 
       <div class="vol-detail">
         <div class="vol-detail-cover">
-          <img src="images/capa-calculo-3.jpg" alt="Capa do livro Curso de Cálculo III, de W. T. Ares">
+          <img loading="lazy" src="images/capa-calculo-3.jpg" alt="Capa do livro Curso de Cálculo III, de W. T. Ares">
         </div>
         <div>
           <h2 id="calculo-3-texto">Curso de Cálculo III</h2>
           <p class="lead-text">Fechando a coleção, o Curso de Cálculo III leva o estudante ao cálculo em várias variáveis: derivadas parciais, integrais múltiplas e os fundamentos do cálculo vetorial, sempre com o mesmo cuidado didático que marca os volumes anteriores.</p>
           <p class="lead-text">Com exemplos práticos e exercícios comentados, o volume conecta os conceitos aprendidos em I e II a aplicações em geometria, física e engenharia, preparando o leitor para os desafios do cálculo avançado.</p>
           <p class="pull-quote">"O terceiro volume abre o cálculo para o espaço: de uma variável para muitas, sem perder a clareza que guiou o caminho até aqui."</p>
+          <div class="vol-actions"><a href="adquirir.html" class="btn btn-primary">Comprar Cálculo III</a><a href="ferramentas.html#gra" class="btn btn-ghost" style="color:var(--chalkboard);border-color:var(--chalkboard)">Explore o gradiente</a></div>
+          <p class="vol-extra">Amostra grátis: <a href="derivadas-parciais.html">derivadas parciais explicadas</a>.</p>
         </div>
       </div>
 
@@ -149,14 +171,31 @@
 
       <div class="vol-detail">
         <div class="vol-detail-cover">
-          <img src="images/capa-equacoes-diferenciais.jpg" alt="Capa do livro Equações Diferenciais — Uma Abordagem Analítica e Geométrica, de W. T. Ares">
+          <img loading="lazy" src="images/capa-equacoes-diferenciais.jpg" alt="Capa do livro Equações Diferenciais — Uma Abordagem Analítica e Geométrica, de W. T. Ares">
         </div>
         <div>
           <h2 id="equacoes-diferenciais">Equações Diferenciais</h2>
           <p class="lead-text">O mundo não é estático — ele se move, evolui, se transforma. E a linguagem que descreve essa mudança são as Equações Diferenciais. Este livro convida o leitor a ir além da simples memorização de algoritmos de resolução, unindo o rigor analítico à intuição geométrica.</p>
           <p class="lead-text">A obra percorre desde os fundamentos das Equações Diferenciais Ordinárias — passando pelo Teorema de Picard-Lindelöf, sistemas lineares e a análise qualitativa de estabilidade — até o universo das Equações Diferenciais Parciais, construído sobre as Séries de Fourier e as equações fundamentais da física-matemática.</p>
           <p class="pull-quote">"Um verdadeiro guia teórico e prático para quem deseja não apenas resolver equações, mas compreender a dinâmica do universo por trás delas."</p>
+          <div class="vol-actions"><a href="adquirir.html" class="btn btn-primary">Comprar Equações Diferenciais</a><a href="ferramentas.html#edo" class="btn btn-ghost" style="color:var(--chalkboard);border-color:var(--chalkboard)">Veja o campo de direções</a></div>
+          <p class="vol-extra">Amostra grátis: <a href="edo-linear-primeira-ordem.html">EDO linear de 1ª ordem explicada</a>.</p>
         </div>
+      </div>
+
+      <div class="compare" id="comparar">
+        <p class="eyebrow"><span class="rule"></span> Qual volume escolher?</p>
+        <h2>Encontre o seu ponto de partida</h2>
+        <p class="sub">Não tem certeza? Faça o <a href="trilha.html#teste" style="color:var(--chalkboard);font-weight:700;border-bottom:2px solid var(--chalk-yellow)">teste de nível</a> e descubra por onde começar.</p>
+        <div class="scroll"><table>
+          <thead><tr><th>Volume</th><th>Ideal para quem</th><th>Pré-requisito</th><th>O que você estuda</th></tr></thead>
+          <tbody>
+            <tr><td>Cálculo I</td><td>está começando o cálculo</td><td>Pré-cálculo</td><td>Limites, derivadas e os fundamentos do cálculo diferencial e integral</td></tr>
+            <tr><td>Cálculo II</td><td>já domina derivadas</td><td>Cálculo I</td><td>Técnicas avançadas de integração, sequências, séries e primeiras noções de equações diferenciais</td></tr>
+            <tr><td>Cálculo III</td><td>vai para várias variáveis</td><td>Cálculo II</td><td>Derivadas parciais, integrais múltiplas e fundamentos do cálculo vetorial</td></tr>
+            <tr><td>Equações Diferenciais</td><td>quer modelar fenômenos com teoria sólida</td><td>Cálculo I e II</td><td>EDOs (Picard-Lindelöf, sistemas lineares, estabilidade) e EDPs com séries de Fourier</td></tr>
+          </tbody>
+        </table></div>
       </div>
 
       <div class="collection" id="colecao">
@@ -168,7 +207,7 @@
         <div class="collection-grid">
           <div class="vol-card">
             <div class="vol-thumb">
-              <img src="images/capa-calculo-1.jpg" alt="Capa do livro Curso de Cálculo I, de W. T. Ares">
+              <img loading="lazy" src="images/capa-calculo-1.jpg" alt="Capa do livro Curso de Cálculo I, de W. T. Ares">
               <span class="vol-status">Disponível</span>
             </div>
             <div class="vol-body">
@@ -180,7 +219,7 @@
           </div>
           <div class="vol-card">
             <div class="vol-thumb">
-              <img src="images/capa-calculo-2.jpg" alt="Capa do livro Curso de Cálculo II, de W. T. Ares">
+              <img loading="lazy" src="images/capa-calculo-2.jpg" alt="Capa do livro Curso de Cálculo II, de W. T. Ares">
               <span class="vol-status">Disponível</span>
             </div>
             <div class="vol-body">
@@ -192,7 +231,7 @@
           </div>
           <div class="vol-card" id="calculo-3">
             <div class="vol-thumb">
-              <img src="images/capa-calculo-3.jpg" alt="Capa do livro Curso de Cálculo III, de W. T. Ares">
+              <img loading="lazy" src="images/capa-calculo-3.jpg" alt="Capa do livro Curso de Cálculo III, de W. T. Ares">
               <span class="vol-status">Disponível</span>
             </div>
             <div class="vol-body">
@@ -204,7 +243,7 @@
           </div>
           <div class="vol-card" id="calculo-4">
             <div class="vol-thumb">
-              <img src="images/capa-equacoes-diferenciais.jpg" alt="Capa do livro Equações Diferenciais, de W. T. Ares">
+              <img loading="lazy" src="images/capa-equacoes-diferenciais.jpg" alt="Capa do livro Equações Diferenciais, de W. T. Ares">
               <span class="vol-status">Disponível</span>
             </div>
             <div class="vol-body">
