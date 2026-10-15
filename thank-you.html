@@ -12,7 +12,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mensagem enviada — W. T. Ares | Matemática</title>
+  <meta name="robots" content="noindex, follow">
   <meta name="description" content="Sua mensagem foi enviada com sucesso. Em breve entraremos em contato.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;600;700&family=Space+Mono:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Mensagem enviada — W. T. Ares | Matemática">
@@ -21,6 +25,15 @@
   <meta property="og:url" content="https://seravat647.github.io/matematicawtares/thank-you.html">
   <meta property="og:locale" content="pt_BR">
   <link rel="canonical" href="https://seravat647.github.io/matematicawtares/thank-you.html">
+  <style>
+    .ty-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:28px;text-align:left}
+    .ty-card{display:flex;flex-direction:column;gap:6px;background:#fff;border:1px solid var(--paper-line,#D9D0B8);border-top:4px solid var(--chalk-yellow,#E4BE68);border-radius:10px;padding:16px 18px;color:#2a2a2a;text-decoration:none;transition:transform .15s,box-shadow .15s}
+    .ty-card:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.1)}
+    .ty-card b{color:var(--chalkboard,#1F3B32);font-family:var(--serif,'Fraunces',serif);font-size:1.05rem}
+    .ty-card span{font-size:.9rem;line-height:1.45}
+    .ty-note{margin:26px auto 0;font-size:.92rem;color:#4a4a42}
+    .ty-note a{color:#6f6230;font-weight:600;text-decoration:underline;text-underline-offset:3px}
+  </style>
 </head>
 <body>
 <header class="site-nav">
@@ -36,8 +49,10 @@
       <a href="livro.html">O Livro</a>
       <a href="adquirir.html">Como Adquirir</a>
       <a href="exercicios.html">Exercícios</a>
-      <a href="formulario.html">Formulário</a>
+      <a href="formulario-funcoes.html">Formulário de Funções</a>
+      <a href="formulario.html">Formulário de Cálculo</a>
       <a href="ferramentas.html">Ferramentas</a>
+      <a href="trilha.html">Trilha de Estudo</a>
       <a href="calculo-na-pratica.html">Cálculo na Prática</a>
       <a href="historia-da-matematica.html">História da Matemática</a>
       <a href="contato.html">Contato</a>
@@ -60,12 +75,20 @@
   <section class="paper-bg reveal">
     <div class="container" style="max-width:640px; text-align:center;">
       <p class="eyebrow" style="justify-content:center;"><span class="rule"></span> Enquanto isso</p>
-      <h2 style="margin-bottom:18px;">Aproveite e dê uma olhada nos materiais gratuitos</h2>
-      <p class="lead-text" style="margin:0 auto 34px;">Confira o formulário de cálculo, o banco de exercícios comentados ou os casos reais de aplicação do cálculo — tudo gratuito, sem precisar esperar resposta de ninguém.</p>
-      <div class="cta-row" style="justify-content:center;">
-        <a href="formulario.html" class="btn btn-ghost">Ver formulário</a>
-        <a href="exercicios.html" class="btn btn-ghost">Ver exercícios</a>
+      <h2 style="margin-bottom:18px;">Aproveite para estudar com os materiais gratuitos</h2>
+      <p class="lead-text" style="margin:0 auto;">Tudo isto é gratuito e já está disponível, sem precisar esperar resposta de ninguém.</p>
+      <div class="ty-grid">
+        <a class="ty-card" href="trilha.html"><b>Trilha de estudo</b><span>Descubra por onde começar, com um teste de nível de 10 questões.</span></a>
+        <a class="ty-card" href="ferramentas.html"><b>Ferramentas interativas</b><span>Derivadas, integrais, EDOs e gráficos, com passo a passo.</span></a>
+        <a class="ty-card" href="formulario.html"><b>Formulário de Cálculo</b><span>Fórmulas de Pré-Cálculo às Equações Diferenciais, com busca e favoritas.</span></a>
+        <a class="ty-card" href="exercicios.html#treino"><b>Treino rápido</b><span>12 questões com correção e explicação.</span></a>
+        <a class="ty-card" href="calculo-na-pratica.html"><b>Cálculo na prática</b><span>Casos reais em engenharia, economia, física e saúde.</span></a>
+        <a class="ty-card" href="historia-da-matematica.html"><b>História da Matemática</b><span>Linha do tempo, mitos e verdades e um quiz.</span></a>
+      </div>
+      <p class="ty-note">Prefere conversar? Também dá para chamar o autor pelo <a href="https://wa.me/5521971431679?text=Ol%C3%A1%21%20Acabei%20de%20enviar%20uma%20mensagem%20pelo%20site%20W.%20T.%20Ares%20%E2%80%93%20Matem%C3%A1tica." target="_blank" rel="noopener noreferrer">WhatsApp</a>.</p>
+      <div class="cta-row" style="justify-content:center; margin-top:30px;">
         <a href="index.html" class="btn btn-primary">Voltar ao início</a>
+        <a href="adquirir.html" class="btn btn-ghost">Conhecer os livros</a>
       </div>
     </div>
   </section>
@@ -80,10 +103,22 @@
       <div>
         <h4>Redes sociais</h4>
         <div class="social-list">
-          <a href="https://www.facebook.com/profwtares" target="_blank" rel="noopener noreferrer">Facebook</a>
-          <a href="https://www.instagram.com/tavares9046/" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a href="https://www.linkedin.com/in/wagner-tavares-038772230/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://www.youtube.com/@wtaresmatematica" target="_blank" rel="noopener noreferrer">YouTube</a>
+          <a href="https://www.facebook.com/profwtares" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M13.5 21v-7h2.3l.35-2.7h-2.65v-1.73c0-.78.22-1.32 1.34-1.32h1.43V5.8c-.25-.03-1.1-.11-2.09-.11-2.07 0-3.48 1.26-3.48 3.58v2h-2.3v2.7h2.3v7h2.8z" fill="currentColor" stroke="none"/></svg>
+            Facebook
+          </a>
+          <a href="https://www.instagram.com/tavares9046/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none"/></svg>
+            Instagram
+          </a>
+          <a href="https://www.linkedin.com/in/wagner-tavares-038772230/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="3"/><line x1="8" y1="11" x2="8" y2="17"/><circle cx="8" cy="7.5" r="0.6" fill="currentColor"/><path d="M12 17v-3.5a2.5 2.5 0 0 1 5 0V17"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://www.youtube.com/@wtaresmatematica" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="12" rx="4"/><path d="M11 10l4 2-4 2z" fill="currentColor" stroke="none"/></svg>
+            YouTube
+          </a>
         </div>
       </div>
     </div>
