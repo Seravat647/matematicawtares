@@ -29,6 +29,37 @@
 <meta name="twitter:description" content="15 exercícios do livro Equações Diferenciais — Uma Abordagem Analítica e Geométrica, de EDOs de primeira ordem a sistemas, séries de Fourier e EDPs fundamentais.">
 <meta name="twitter:image" content="https://seravat647.github.io/matematicawtares/images/capa-calculo-1.jpg">
 <link rel="canonical" href="https://seravat647.github.io/matematicawtares/exercicios-equacoes-diferenciais.html">
+<style>
+.ex-show[hidden],.exercise-steps[hidden],.exercise-result[hidden],.ex-links[hidden]{display:none!important}
+.ex-prog{margin-top:22px;max-width:460px;color:var(--chalk,#F3EEE1)}
+.ex-prog-top{display:flex;justify-content:space-between;gap:12px;font-family:var(--mono,'Space Mono',monospace);font-size:.8rem;margin-bottom:6px}
+.ex-prog-bar{height:10px;border-radius:999px;background:rgba(243,238,225,.2);overflow:hidden}
+.ex-prog-bar div{height:100%;width:0;background:var(--chalk-yellow,#E4BE68);border-radius:999px;transition:width .3s}
+.ex-bar{display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center;justify-content:space-between;padding:16px 18px;margin:26px 0 6px;border:1px dashed rgba(243,238,225,.4);border-radius:10px;color:var(--chalk,#F3EEE1)}
+.ex-bar p{margin:0;flex:1 1 340px;font-size:.93rem;line-height:1.55}
+.ex-bar-btns{display:flex;flex-wrap:wrap;gap:8px}
+.ex-bar-btns button{font:inherit;font-size:.84rem;font-weight:600;padding:8px 14px;border-radius:999px;border:1px solid rgba(243,238,225,.55);background:transparent;color:var(--chalk,#F3EEE1);cursor:pointer}
+.ex-bar-btns button:hover{background:rgba(243,238,225,.12)}
+.ex-actions{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin:16px 0 4px}
+.ex-show{font:inherit;font-size:.88rem;font-weight:700;padding:9px 16px;border-radius:999px;border:1.5px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.ex-show:hover{background:rgba(127,127,127,.15)}
+.ex-show:focus-visible,.ex-bar-btns button:focus-visible{outline:2px solid var(--chalk-yellow,#E4BE68);outline-offset:2px}
+.ex-done{display:inline-flex;align-items:center;gap:7px;font-size:.88rem;cursor:pointer}
+.ex-done input{width:18px;height:18px;accent-color:#2f7d4f;cursor:pointer}
+.ex-next{margin-left:auto;font-size:.86rem;font-weight:600;color:inherit;text-decoration:underline;text-underline-offset:3px;opacity:.8}
+.ex-links{margin:14px 0 0;padding-top:12px;border-top:1px dashed rgba(127,127,127,.4);font-size:.88rem;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
+.ex-links span{font-family:var(--mono,'Space Mono',monospace);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;opacity:.7}
+.ex-links a{color:inherit;font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.exercise-card.is-done{box-shadow:inset 4px 0 0 #2f7d4f}
+.ex-next-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.ex-ncard{display:flex;flex-direction:column;gap:6px;background:#fff;border:1px solid var(--paper-line,#D9D0B8);border-top:4px solid var(--chalk-yellow,#E4BE68);border-radius:10px;padding:16px 18px;color:#2a2a2a;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.ex-ncard:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.1)}
+.ex-ncard b{color:var(--chalkboard,#1F3B32);font-family:var(--serif,'Fraunces',serif);font-size:1.05rem}
+.ex-ncard span{font-size:.9rem;line-height:1.45}
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Exercícios Resolvidos — Equações Diferenciais", "description": "15 exercícios resolvidos passo a passo, nos níveis fácil, médio e difícil, de EDOs de primeira ordem a sistemas lineares, séries de Fourier e EDPs fundamentais.", "url": "https://seravat647.github.io/matematicawtares/exercicios-equacoes-diferenciais.html", "inLanguage": "pt-BR", "isPartOf": {"@type": "WebSite", "name": "W. T. Ares – Matemática", "url": "https://seravat647.github.io/matematicawtares/"}, "author": {"@type": "Person", "name": "W. T. Ares"}, "mainEntity": {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Classificação de EDOs", "url": "https://seravat647.github.io/matematicawtares/exercicios-equacoes-diferenciais.html#facil-1"}, {"@type": "ListItem", "position": 2, "name": "EDO separável com condição inicial", "url": "https://seravat647.github.io/matematicawtares/exercicios-equacoes-diferenciais.html#facil-2"}, {"@type": "ListItem", "position": 3, "name": "EDO linear de primeira ordem", "url": "https://seravat647.github.io/matematicawtares/exercicios-equacoes-diferenciais.html#facil-3"}, {"@type": "ListItem", "position": 4, "name": "Wronskiano e independência linear", "url": "https://seravat647.github.io/matematicawtares/exercicios-equacoes-diferenciais.html#facil-4"}, {"@type": "ListItem", "position": 5, "name": "EDO homogênea com raízes complexas", "url": "https://seravat647.github.io/matematicawtares/exercicios-equacoes-diferenciais.html#facil-5"}, {"@type": "ListItem", "position": 6, "name": "EDO homogênea (mudança de variável)", "url": "https://seravat647.github.io/matematicawtares/exercicios-equacoes-diferenciais.html#medio-1"}, {"@type": "ListItem", "position": 7, "name": "Equação diferencial exata", "url": "https://seravat647.github.io/matematicawtares/exercicios-equacoes-diferenciais.html#medio-2"}, {"@type": "ListItem", "position": 8, "name": "EDO de segunda ordem (raízes reais distintas)", "url": "https://seravat647.github.io/matematicawtares/exercicios-equacoes-diferenciais.html#medio-3"}, {"@type": "ListItem", "position": 9, "name": "Autovalores e autovetores de um sistema linear", "url": "https://seravat647.github.io/matematicawtares/exercicios-equacoes-diferenciais.html#medio-4"}, {"@type": "ListItem", "position": 10, "name": "Série de Fourier de uma função ímpar", "url": "https://seravat647.github.io/matematicawtares/exercicios-equacoes-diferenciais.html#medio-5"}, {"@type": "ListItem", "position": 11, "name": "Falha de unicidade — Picard-Lindelöf (MIT)", "url": "https://seravat647.github.io/matematicawtares/exercicios-equacoes-diferenciais.html#dificil-1"}, {"@type": "ListItem", "position": 12, "name": "Fórmula de Abel para o Wronskiano (MIT)", "url": "https://seravat647.github.io/matematicawtares/exercicios-equacoes-diferenciais.html#dificil-2"}, {"@type": "ListItem", "position": 13, "name": "Estabilidade — foco espiral (MIT)", "url": "https://seravat647.github.io/matematicawtares/exercicios-equacoes-diferenciais.html#dificil-3"}, {"@type": "ListItem", "position": 14, "name": "Princípio do máximo na equação do calor (MIT)", "url": "https://seravat647.github.io/matematicawtares/exercicios-equacoes-diferenciais.html#dificil-4"}, {"@type": "ListItem", "position": 15, "name": "Separação de variáveis na equação do calor", "url": "https://seravat647.github.io/matematicawtares/exercicios-equacoes-diferenciais.html#dificil-5"}]}}
+</script>
 <!-- MailerLite Universal -->
 <script>
     (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
@@ -63,6 +94,7 @@
       <a href="formulario-funcoes.html">Formulário de Funções</a>  
       <a href="formulario.html">Formulário de Cálculo</a>
       <a href="ferramentas.html">Ferramentas</a>
+      <a href="trilha.html">Trilha de Estudo</a>
       <a href="calculo-na-pratica.html">Cálculo na Prática</a>
       <a href="historia-da-matematica.html">História da Matemática</a>
       <a href="contato.html">Contato</a>
@@ -83,12 +115,24 @@
       <p style="margin-top:22px; display:flex; gap:10px; flex-wrap:wrap;">
         <a href="#nivel-facil" class="volume-chip">Fácil (5)</a> <a href="#nivel-medio" class="volume-chip">Médio (5)</a> <a href="#nivel-dificil" class="volume-chip">Difícil (5)</a>
       </p>
+      <div class="ex-prog" id="exProg">
+        <div class="ex-prog-top"><span id="exProgTxt">0 de 15 concluídos</span><span id="exProgLv"></span></div>
+        <div class="ex-prog-bar" role="progressbar" aria-label="Progresso na lista" aria-valuemin="0" aria-valuemax="15" aria-valuenow="0" id="exProgBar"><div id="exProgFill"></div></div>
+      </div>
       <p style="margin-top:18px;"><a href="livro.html#equacoes-diferenciais" class="btn btn-ghost" style="padding:9px 16px; font-size:0.82rem;">← Ver o livro</a></p>
     </div>
   </section>
 
   <section class="chalkboard-bg exercise-section" style="padding-bottom:80px;">
     <div class="container">
+      <div class="ex-bar">
+        <p><b>Como usar esta lista:</b> tente resolver no caderno por uns 10 minutos antes de abrir a resolução. Marque “Concluído” para acompanhar seu progresso — ele fica salvo neste navegador.</p>
+        <div class="ex-bar-btns">
+          <button type="button" id="exOpenAll">Mostrar todas as resoluções</button>
+          <button type="button" id="exCloseAll">Ocultar todas</button>
+          <button type="button" id="exReset">Zerar progresso</button>
+        </div>
+      </div>
       <div id="nivel-facil" style="padding-top:26px; margin-bottom:8px;">
         <p class="eyebrow"><span class="rule"></span> Nível Fácil</p>
         <p style="color:rgba(243,238,225,0.6); font-family:var(--mono); font-size:0.85rem; margin-bottom:28px;">Aquecimento — revisão de conceitos e aplicação direta de definições.</p>
@@ -100,6 +144,11 @@
           <h3>Classificação de EDOs</h3>
         </div>
         <div class="exercise-problem"><p>Classifique quanto à ordem e à linearidade: (a) y''+3y'−2y=x; (b) (y')³+y=sen x; (c) y'''−y=0.</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#facil-2">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -115,6 +164,7 @@
           </div>
         </div>
         <div class="exercise-result">Resultado: (a) linear, ordem 2; (b) não-linear, ordem 1; (c) linear, ordem 3.</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="formulario.html#equacoes-diferenciais">Formulário de Equações Diferenciais</a></p>
       </div>
       <div class="exercise-card" id="facil-2">
         <div class="exercise-head">
@@ -122,6 +172,11 @@
           <h3>EDO separável com condição inicial</h3>
         </div>
         <div class="exercise-problem"><p>Resolva a EDO separável y'=x²/y, com y(0)=2.</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#facil-3">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -140,7 +195,8 @@
             <div class="exercise-step-text"><p>Isolamos y: y² = 2x³/3+4.</p></div>
           </div>
         </div>
-        <div class="exercise-result">Resultado: y = √(2x³/3 + 4).</div>
+        <div class="exercise-result">Resultado: y = √(2x³/3 + 4) (raiz positiva, pois y(0) = 2 &gt; 0).</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="ferramentas.html#edo">Resolver EDOs</a> <a href="formulario.html#calculo-ii">EDO separável no formulário</a></p>
       </div>
       <div class="exercise-card" id="facil-3">
         <div class="exercise-head">
@@ -148,6 +204,11 @@
           <h3>EDO linear de primeira ordem</h3>
         </div>
         <div class="exercise-problem"><p>Resolva a EDO linear y'+2y=e^(−x).</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#facil-4">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -163,6 +224,7 @@
           </div>
         </div>
         <div class="exercise-result">Resultado: y = e^(−x) + Ce^(−2x).</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="edo-linear-primeira-ordem.html">EDO linear de 1ª ordem</a> <a href="ferramentas.html#edo">Resolver EDOs</a></p>
       </div>
       <div class="exercise-card" id="facil-4">
         <div class="exercise-head">
@@ -170,6 +232,11 @@
           <h3>Wronskiano e independência linear</h3>
         </div>
         <div class="exercise-problem"><p>Calcule o Wronskiano de {eˣ, xeˣ} e conclua se são linearmente independentes.</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#facil-5">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -181,6 +248,7 @@
           </div>
         </div>
         <div class="exercise-result">Resultado: W = e^(2x) ≠ 0 para todo x, logo {eˣ, xeˣ} são linearmente independentes.</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="formulario.html#equacoes-diferenciais">Segunda ordem no formulário</a></p>
       </div>
       <div class="exercise-card" id="facil-5">
         <div class="exercise-head">
@@ -188,6 +256,11 @@
           <h3>EDO homogênea com raízes complexas</h3>
         </div>
         <div class="exercise-problem"><p>Resolva y''+9y=0.</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#medio-1">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -203,6 +276,7 @@
           </div>
         </div>
         <div class="exercise-result">Resultado: y = C₁cos(3x) + C₂sen(3x).</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="ferramentas.html#edo">Resolver EDOs</a> <a href="formulario.html#equacoes-diferenciais">Raízes complexas no formulário</a></p>
       </div>
       </div>
       <div id="nivel-medio" style="padding-top:26px; margin-bottom:8px;">
@@ -216,6 +290,11 @@
           <h3>EDO homogênea (mudança de variável)</h3>
         </div>
         <div class="exercise-problem"><p>Resolva a EDO homogênea dy/dx = (x+y)/x.</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#medio-2">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -235,6 +314,7 @@
           </div>
         </div>
         <div class="exercise-result">Resultado: y = x(ln|x| + C).</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="ferramentas.html#edo">Resolver EDOs</a> <a href="formulario.html#equacoes-diferenciais">Primeira ordem no formulário</a></p>
       </div>
       <div class="exercise-card" id="medio-2">
         <div class="exercise-head">
@@ -242,6 +322,11 @@
           <h3>Equação diferencial exata</h3>
         </div>
         <div class="exercise-problem"><p>Verifique que (2xy+3)dx+(x²−1)dy=0 é exata e resolva-a.</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#medio-3">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -261,6 +346,7 @@
           </div>
         </div>
         <div class="exercise-result">Resultado: x²y + 3x − y = C.</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="formulario.html#equacoes-diferenciais">Equação exata no formulário</a></p>
       </div>
       <div class="exercise-card" id="medio-3">
         <div class="exercise-head">
@@ -268,6 +354,11 @@
           <h3>EDO de segunda ordem (raízes reais distintas)</h3>
         </div>
         <div class="exercise-problem"><p>Resolva y''−5y'+6y=0.</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#medio-4">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -283,6 +374,7 @@
           </div>
         </div>
         <div class="exercise-result">Resultado: y = C₁e^(2x) + C₂e^(3x).</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="ferramentas.html#edo">Resolver EDOs</a> <a href="formulario.html#equacoes-diferenciais">Casos das raízes</a></p>
       </div>
       <div class="exercise-card" id="medio-4">
         <div class="exercise-head">
@@ -290,6 +382,11 @@
           <h3>Autovalores e autovetores de um sistema linear</h3>
         </div>
         <div class="exercise-problem"><p>Encontre os autovalores e autovetores de A=[[3,1],[1,3]] e escreva a solução geral de x'=Ax.</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#medio-5">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -309,6 +406,7 @@
           </div>
         </div>
         <div class="exercise-result">Resultado: x(t) = C₁e^(4t)⟨1,1⟩ + C₂e^(2t)⟨1,−1⟩.</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="formulario.html#equacoes-diferenciais">Sistemas lineares no formulário</a> <a href="ferramentas.html#edo">Resolver EDOs</a></p>
       </div>
       <div class="exercise-card" id="medio-5">
         <div class="exercise-head">
@@ -316,6 +414,11 @@
           <h3>Série de Fourier de uma função ímpar</h3>
         </div>
         <div class="exercise-problem"><p>Calcule a série de Fourier de f(x)=x no intervalo [−π,π].</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#dificil-1">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -334,7 +437,8 @@
             <div class="exercise-step-text"><p>Como cos(nπ)=(−1)ⁿ: bₙ = (2/π)·(−π(−1)ⁿ/n) = 2(−1)ⁿ⁺¹/n.</p></div>
           </div>
         </div>
-        <div class="exercise-result">Resultado: f(x) = 2[sen x − (sen 2x)/2 + (sen 3x)/3 − ···].</div>
+        <div class="exercise-result">Resultado: f(x) = 2[sen x − (sen 2x)/2 + (sen 3x)/3 − ···], válida para −π &lt; x &lt; π.</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="formulario.html#equacoes-diferenciais">Série de Fourier no formulário</a> <a href="historia-da-matematica.html#linha-do-tempo">Fourier na história</a></p>
       </div>
       </div>
       <div id="nivel-dificil" style="padding-top:26px; margin-bottom:8px;">
@@ -348,6 +452,11 @@
           <h3>Falha de unicidade — Picard-Lindelöf (MIT)</h3>
         </div>
         <div class="exercise-problem"><p>Use Picard-Lindelöf para justificar por que y'=√y, y(0)=0, não tem solução única.</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#dificil-2">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -363,17 +472,23 @@
           </div>
           <div class="exercise-step">
             <div class="exercise-step-num">4</div>
-            <div class="exercise-step-text"><p>De fato, y(x)=0 é solução, mas y(x)=x²/4 também é (verificação direta), confirmando a não-unicidade.</p></div>
+            <div class="exercise-step-text"><p>De fato, y(x)=0 é solução, mas y(x)=x²/4 também é para x ≥ 0 (verificação direta: y'=x/2=√y). Duas soluções distintas pelo mesmo ponto confirmam a não-unicidade.</p></div>
           </div>
         </div>
         <div class="exercise-result">Resultado: A hipótese de Lipschitz de f em y falha em y=0, o que explica a não-unicidade da solução.</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="formulario.html#equacoes-diferenciais">Picard–Lindelöf no formulário</a></p>
       </div>
       <div class="exercise-card" id="dificil-2">
         <div class="exercise-head">
           <span class="exercise-badge">Equações Diferenciais · Difícil · MIT</span>
           <h3>Fórmula de Abel para o Wronskiano (MIT)</h3>
         </div>
-        <div class="exercise-problem"><p>Demonstre que W'(x)=−p(x)W(x) e que W(x₀)=0 implica W≡0.</p></div>
+        <div class="exercise-problem"><p>Sejam y₁ e y₂ soluções de y''+p(x)y'+q(x)y=0, com p e q contínuas, e W o Wronskiano. Demonstre que W'(x)=−p(x)W(x) e que W(x₀)=0 implica W≡0.</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#dificil-3">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -389,10 +504,11 @@
           </div>
           <div class="exercise-step">
             <div class="exercise-step-num">4</div>
-            <div class="exercise-step-text"><p>A EDO linear W'=−p(x)W tem solução W(x)=W(x₀)e^(−∫p dx), que se anula para todo x se W(x₀)=0.</p></div>
+            <div class="exercise-step-text"><p>A EDO linear W'=−p(x)W tem solução W(x)=W(x₀)·e^(−∫ₓ₀ˣ p(s)ds), que se anula para todo x se W(x₀)=0, pois a exponencial nunca é zero.</p></div>
           </div>
         </div>
         <div class="exercise-result">Resultado: W' = −p(x)W, e W(x₀)=0 implica W≡0. ∎</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="formulario.html#equacoes-diferenciais">Segunda ordem no formulário</a></p>
       </div>
       <div class="exercise-card" id="dificil-3">
         <div class="exercise-head">
@@ -400,6 +516,11 @@
           <h3>Estabilidade — foco espiral (MIT)</h3>
         </div>
         <div class="exercise-problem"><p>Mostre que se tr(A)²−4det(A)&lt;0 e tr(A)&lt;0, a origem é um foco espiral assintoticamente estável.</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#dificil-4">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -411,7 +532,7 @@
           </div>
           <div class="exercise-step">
             <div class="exercise-step-num">3</div>
-            <div class="exercise-step-text"><p>Autovalores complexos correspondem a soluções que espiralam em torno da origem.</p></div>
+            <div class="exercise-step-text"><p>Com β ≠ 0, as soluções têm a forma e^(αt)[C₁cos(βt)+C₂sen(βt)] (em vetores): o termo oscilatório faz a trajetória girar em torno da origem.</p></div>
           </div>
           <div class="exercise-step">
             <div class="exercise-step-num">4</div>
@@ -419,32 +540,39 @@
           </div>
         </div>
         <div class="exercise-result">Resultado: As trajetórias espiralam em direção à origem — a origem é um foco espiral assintoticamente estável. ∎</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="formulario.html#equacoes-diferenciais">Estabilidade no formulário</a> <a href="ferramentas.html#edo">Resolver EDOs</a></p>
       </div>
       <div class="exercise-card" id="dificil-4">
         <div class="exercise-head">
           <span class="exercise-badge">Equações Diferenciais · Difícil · MIT</span>
           <h3>Princípio do máximo na equação do calor (MIT)</h3>
         </div>
-        <div class="exercise-problem"><p>Mostre que a solução da equação do calor satisfaz o princípio do máximo.</p></div>
+        <div class="exercise-problem"><p>Seja u contínua em R=[0,L]×[0,T], com u_t=k·u_xx (k&gt;0) para 0&lt;x&lt;L e 0&lt;t≤T, e u(0,t)=u(L,t)=0. Mostre que max|u| em R ocorre em t=0, ou seja, max|u| = max_x|u(x,0)|.</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#dificil-5">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
-            <div class="exercise-step-text"><p>Por separação de variáveis: u(x,t) = Σ bₙ sen(nπx/L) e^(−k(nπ/L)²t).</p></div>
+            <div class="exercise-step-text"><p>Para ε&gt;0, definimos v=u−εt. Então v_t−k·v_xx = −ε &lt; 0.</p></div>
           </div>
           <div class="exercise-step">
             <div class="exercise-step-num">2</div>
-            <div class="exercise-step-text"><p>Cada termo tem fator e^(−k(nπ/L)²t), estritamente decrescente em t.</p></div>
+            <div class="exercise-step-text"><p>Suponha que v atinja seu máximo em R num ponto interior (x₁,t₁), com 0&lt;x₁&lt;L e 0&lt;t₁≤T. Nesse ponto, v_xx ≤ 0 (máximo em x) e v_t ≥ 0 (se t₁&lt;T, v_t=0; se t₁=T, o máximo só pode ser alcançado vindo de t&lt;T, logo v_t≥0).</p></div>
           </div>
           <div class="exercise-step">
             <div class="exercise-step-num">3</div>
-            <div class="exercise-step-text"><p>Como todos os coeficientes decaem, a amplitude de cada modo diminui com o tempo.</p></div>
+            <div class="exercise-step-text"><p>Então v_t−k·v_xx ≥ 0, o que contradiz v_t−k·v_xx=−ε&lt;0. Logo o máximo de v ocorre na fronteira parabólica: t=0, x=0 ou x=L.</p></div>
           </div>
           <div class="exercise-step">
             <div class="exercise-step-num">4</div>
-            <div class="exercise-step-text"><p>Fisicamente, o calor se difunde, nunca se concentra espontaneamente.</p></div>
+            <div class="exercise-step-text"><p>Como u ≤ v+εT, vale max_R u ≤ max_fronteira u + εT. Fazendo ε→0 e usando u=0 em x=0 e x=L, obtemos u ≤ max(0, max_x u(x,0)). Aplicando o mesmo a −u: |u| ≤ max_x|u(x,0)| em todo R.</p></div>
           </div>
         </div>
-        <div class="exercise-result">Resultado: max_x |u(x,t)| é uma função não-crescente de t. ∎</div>
+        <div class="exercise-result">Resultado: max_R |u| = max_x |u(x,0)| — o maior valor (em módulo) está sempre no instante inicial: o calor se difunde e nunca se concentra espontaneamente. ∎</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="formulario.html#equacoes-diferenciais">Equação do calor no formulário</a></p>
       </div>
       <div class="exercise-card" id="dificil-5">
         <div class="exercise-head">
@@ -452,6 +580,11 @@
           <h3>Separação de variáveis na equação do calor</h3>
         </div>
         <div class="exercise-problem"><p>Resolva u_t=2u_xx, 0&lt;x&lt;π, u(0,t)=u(π,t)=0, u(x,0)=3sen(2x).</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -471,8 +604,23 @@
           </div>
         </div>
         <div class="exercise-result">Resultado: u(x,t) = 3 sen(2x) e^(−8t).</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="formulario.html#equacoes-diferenciais">Equação do calor no formulário</a> <a href="historia-da-matematica.html#linha-do-tempo">Fourier na história</a></p>
       </div>
       </div>
+    </div>
+  </section>
+
+  <section class="paper-bg reveal">
+    <div class="container">
+      <p class="eyebrow"><span class="rule"></span> E agora?</p>
+      <h2 style="margin-bottom:22px;">Continue de onde parou</h2>
+      <div class="ex-next-grid">
+        <a class="ex-ncard" href="exercicios-calculo3.html"><b>Lista de Cálculo III</b><span>Vetores, várias variáveis, integrais múltiplas e cálculo vetorial.</span></a>
+        <a class="ex-ncard" href="exercicios.html#treino"><b>Treino rápido</b><span>12 questões de múltipla escolha com correção e explicação.</span></a>
+        <a class="ex-ncard" href="formulario.html#equacoes-diferenciais"><b>Formulário de Equações Diferenciais</b><span>Primeira e segunda ordem, sistemas, Fourier e EDPs.</span></a>
+        <a class="ex-ncard" href="calculo-na-pratica.html"><b>Cálculo na Prática</b><span>Resfriamento, decaimento de remédios e crescimento de bactérias com EDOs.</span></a>
+      </div>
+      <p style="margin-top:28px;"><a href="livro.html#equacoes-diferenciais" class="btn btn-primary">Ver o livro Equações Diferenciais</a></p>
     </div>
   </section>
 </main>
@@ -512,6 +660,41 @@
   </div>
 </footer>
 
+<script>
+(function(){
+  var KEY='wtares_ex_c4_v1',done={};
+  try{done=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){done={};}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(done));}catch(e){}}
+  var cards=[].slice.call(document.querySelectorAll('.exercise-card'));
+  function parts(c){return [c.querySelector('.exercise-steps'),c.querySelector('.exercise-result'),c.querySelector('.ex-links')];}
+  function setOpen(c,open){
+    parts(c).forEach(function(p){if(!p)return;if(open)p.removeAttribute('hidden');else p.setAttribute('hidden','');});
+    var b=c.querySelector('.ex-show');b.setAttribute('aria-expanded',open?'true':'false');b.textContent=open?'Ocultar resolução':'Mostrar resolução';
+  }
+  function progress(){
+    var n=0,lv={facil:0,medio:0,dificil:0};
+    cards.forEach(function(c){if(done[c.id]){n++;lv[c.id.split('-')[0]]++;}});
+    document.getElementById('exProgTxt').textContent=n+' de '+cards.length+' concluídos';
+    document.getElementById('exProgLv').textContent='F '+lv.facil+'/5 · M '+lv.medio+'/5 · D '+lv.dificil+'/5';
+    document.getElementById('exProgFill').style.width=(100*n/cards.length)+'%';
+    document.getElementById('exProgBar').setAttribute('aria-valuenow',n);
+  }
+  cards.forEach(function(c){
+    var cb=c.querySelector('.ex-done input'),b=c.querySelector('.ex-show');
+    cb.checked=!!done[c.id];c.classList.toggle('is-done',cb.checked);
+    setOpen(c,false);
+    b.addEventListener('click',function(){setOpen(c,b.getAttribute('aria-expanded')!=='true');});
+    cb.addEventListener('change',function(){if(cb.checked)done[c.id]=1;else delete done[c.id];c.classList.toggle('is-done',cb.checked);save();progress();});
+  });
+  document.getElementById('exOpenAll').addEventListener('click',function(){cards.forEach(function(c){setOpen(c,true);});});
+  document.getElementById('exCloseAll').addEventListener('click',function(){cards.forEach(function(c){setOpen(c,false);});});
+  document.getElementById('exReset').addEventListener('click',function(){
+    if(window.confirm('Zerar o progresso desta lista neste navegador?')){done={};save();cards.forEach(function(c){c.querySelector('.ex-done input').checked=false;c.classList.remove('is-done');});progress();}
+  });
+  function fromHash(){var id=(location.hash||'').slice(1),c=id&&document.getElementById(id);if(c&&c.classList.contains('exercise-card'))setOpen(c,true);}
+  window.addEventListener('hashchange',fromHash);fromHash();progress();
+})();
+</script>
 <script src="js/main.js"></script>
 </body>
 </html>
