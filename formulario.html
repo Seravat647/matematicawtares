@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J1KE3X1FFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-J1KE3X1FFH');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Formulário de Cálculo — Pré-Cálculo às Equações Diferenciais | W. T. Ares</title>
-<meta name="description" content="Formulário completo e gratuito com 76 fórmulas de Pré-Cálculo, Cálculo I, II, III e Equações Diferenciais, organizado por W. T. Ares.">
+<meta name="description" content="Formulário completo e gratuito com 91 fórmulas de Pré-Cálculo, Cálculo I, II, III e Equações Diferenciais, com busca, favoritas e impressão — organizado por W. T. Ares.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;600;700&family=Space+Mono:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
@@ -12,15 +20,69 @@
 <link rel="stylesheet" href="css/recursos.css">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Formulário de Cálculo — Pré-Cálculo às Equações Diferenciais | W. T. Ares">
-<meta property="og:description" content="Formulário completo e gratuito com 76 fórmulas de Pré-Cálculo, Cálculo I, II, III e Equações Diferenciais, organizado por W. T. Ares.">
+<meta property="og:description" content="Formulário completo e gratuito com 91 fórmulas de Pré-Cálculo, Cálculo I, II, III e Equações Diferenciais, com busca, favoritas e impressão — organizado por W. T. Ares.">
 <meta property="og:image" content="https://seravat647.github.io/matematicawtares/images/capa-calculo-1.jpg">
 <meta property="og:url" content="https://seravat647.github.io/matematicawtares/formulario.html">
 <meta property="og:locale" content="pt_BR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Formulário de Cálculo — Pré-Cálculo às Equações Diferenciais | W. T. Ares">
-<meta name="twitter:description" content="Formulário completo e gratuito com 76 fórmulas de Pré-Cálculo, Cálculo I, II, III e Equações Diferenciais, organizado por W. T. Ares.">
+<meta name="twitter:description" content="Formulário completo e gratuito com 91 fórmulas de Pré-Cálculo, Cálculo I, II, III e Equações Diferenciais, com busca, favoritas e impressão — organizado por W. T. Ares.">
 <meta name="twitter:image" content="https://seravat647.github.io/matematicawtares/images/capa-calculo-1.jpg">
 <link rel="canonical" href="https://seravat647.github.io/matematicawtares/formulario.html">
+<style>
+.formula-card{position:relative}
+.formula-card .fname{display:block;padding-right:62px}
+.formula-card[hidden],.formula-grid[hidden],.formula-topic[hidden],.formula-part[hidden],.fm-links[hidden]{display:none!important}
+.fc-badge{font-style:normal;font-family:var(--mono,'Space Mono',monospace);font-size:.62rem;font-weight:400;letter-spacing:.05em;text-transform:uppercase;padding:2px 7px;border-radius:999px;border:1px solid currentColor;opacity:.7;vertical-align:middle;white-space:nowrap}
+.topic-nav small{opacity:.65;font-size:.78em}
+.fc-btn{position:absolute;top:8px;width:28px;height:28px;display:flex;align-items:center;justify-content:center;border:1px solid transparent;border-radius:6px;background:transparent;color:inherit;opacity:.55;cursor:pointer;font:inherit;font-size:1.05rem;line-height:1;padding:0}
+.fc-btn:hover,.fc-btn:focus-visible{opacity:1;border-color:currentColor}
+.fc-btn:focus-visible{outline:2px solid currentColor;outline-offset:1px}
+.fc-star{right:8px}
+.fc-copy{right:40px}
+.fc-copy svg{width:15px;height:15px}
+.fc-star.on{opacity:1;color:#B8871F}
+.formula-card-dark .fc-star.on{color:var(--chalk-yellow,#E4BE68)}
+.fc-copy.ok{opacity:1;color:#2f7d4f}
+.formula-card-dark .fc-copy.ok{color:#8fd0a5}
+.fm-how{font-size:.95rem;margin-top:22px}
+.fm-how .fc-badge{color:#6f6230}
+.fm-tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:18px}
+.fm-tools input[type=search]{flex:1 1 260px;min-width:0;font:inherit;padding:10px 14px;border:1px solid var(--paper-line,#D9D0B8);border-radius:8px;background:#fff;color:#222}
+.fm-tools input:focus{outline:2px solid var(--chalkboard,#1F3B32);outline-offset:1px}
+.fm-tools button{font:inherit;font-weight:600;font-size:.88rem;padding:9px 14px;border-radius:999px;border:1px solid var(--chalkboard,#1F3B32);background:transparent;color:var(--chalkboard,#1F3B32);cursor:pointer}
+.fm-tools button:hover{background:rgba(31,59,50,.08)}
+.fm-tools button[aria-pressed=true]{background:var(--chalkboard,#1F3B32);color:var(--chalk-yellow,#E4BE68)}
+#fmCount{margin-left:auto;font-family:var(--mono,'Space Mono',monospace);font-size:.78rem;color:#5a5a50}
+.fm-empty{margin:16px 0 0;padding:14px 16px;border-radius:8px;background:#fff;border:1px dashed var(--paper-line,#D9D0B8);color:#444}
+.fm-links{margin:16px 0 34px;font-size:.9rem;display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center}
+.fm-links span{font-family:var(--mono,'Space Mono',monospace);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;opacity:.7}
+.fm-links a{font-weight:600;text-decoration:underline;text-underline-offset:3px;color:#6f6230}
+.chalkboard-bg .fm-links a{color:var(--chalk-yellow,#E4BE68)}
+.chalkboard-bg .fm-links{color:var(--chalk,#F3EEE1)}
+.fm-practice{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.fm-pcard{display:flex;flex-direction:column;gap:6px;background:#fff;border:1px solid var(--paper-line,#D9D0B8);border-top:4px solid var(--chalk-yellow,#E4BE68);border-radius:10px;padding:16px 18px;color:#2a2a2a;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.fm-pcard:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.1)}
+.fm-pcard b{color:var(--chalkboard,#1F3B32);font-family:var(--serif,'Fraunces',serif);font-size:1.05rem}
+.fm-pcard span{font-size:.9rem;line-height:1.45}
+.fm-printhead{display:none}
+@media (max-width:560px){#fmCount{margin-left:0;width:100%}}
+@media print{
+  .site-nav,.page-hero,.fm-noprint,.fm-tools,.fm-links,.fc-btn,footer,.nav-toggle,.nav-search,#fmEmpty,svg[width="0"]{display:none!important}
+  body{background:#fff!important;color:#000!important}
+  .reveal{opacity:1!important;transform:none!important}
+  .formula-part{background:#fff!important;padding:6px 0!important}
+  .formula-part,.formula-part *{color:#000!important;text-shadow:none!important}
+  .formula-card{background:#fff!important;border:1px solid #888!important;box-shadow:none!important;break-inside:avoid}
+  .formula-part .lead-text,.formula-part .eyebrow{display:none!important}
+  .formula-grid{gap:6px!important}
+  .fm-printhead{display:block!important;font-size:11pt;margin:0 0 8px;border-bottom:1px solid #000;padding-bottom:4px}
+  .fc-badge{border-color:#000!important}
+}
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "LearningResource", "name": "Formulário de Cálculo", "description": "Formulário completo e gratuito com 91 fórmulas de Pré-Cálculo, Cálculo I, II, III e Equações Diferenciais, com busca, favoritas e impressão — organizado por W. T. Ares.", "url": "https://seravat647.github.io/matematicawtares/formulario.html", "inLanguage": "pt-BR", "isAccessibleForFree": true, "educationalLevel": "Ensino superior", "learningResourceType": "Formulário", "about": ["Pré-Cálculo", "Cálculo I", "Cálculo II", "Cálculo III", "Equações Diferenciais"], "author": {"@type": "Person", "name": "W. T. Ares"}, "isPartOf": {"@type": "WebSite", "name": "W. T. Ares – Matemática", "url": "https://seravat647.github.io/matematicawtares/"}}
+</script>
  <!-- MailerLite Universal --> <script> (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]) .push(arguments);},l=d.createElement(e),l.async=1,l.src=u, n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);}) (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml'); ml('account', '2556502'); </script> <!-- End MailerLite Universal -->
 </head>
 <body>
@@ -60,25 +122,36 @@
   </div>
 </header>
 <main>
+  <p class="fm-printhead">Formulário de Cálculo — W. T. Ares, Matemática · seravat647.github.io/matematicawtares</p>
   <section class="page-hero chalkboard-bg">
     <div class="container">
       <p class="breadcrumb"><a href="index.html">Início</a> / Formulário</p>
       <h1>Formulário de Cálculo</h1>
-      <p class="sub">Todas as fórmulas, regras e teoremas de Pré-Cálculo às Equações Diferenciais — 76 entradas organizadas na mesma ordem em que aparecem nos quatro volumes do curso, para consulta rápida a qualquer momento.</p>
+      <p class="sub">Todas as fórmulas, regras e teoremas de Pré-Cálculo às Equações Diferenciais — 91 entradas organizadas na ordem temática dos quatro volumes do curso, com busca, favoritas e impressão, para consulta rápida a qualquer momento.</p>
     </div>
   </section>
-  <section class="paper-bg reveal">
+  <section class="paper-bg reveal fm-noprint">
     <div class="container">
       <p class="eyebrow"><span class="rule"></span> Como usar</p>
       <h2 style="margin-bottom:22px;">Sua cola de bolso para o cálculo</h2>
       <p class="lead-text">Este formulário reúne, em um só lugar, tudo o que você precisa ter à mão para resolver exercícios de cálculo — do pré-cálculo às equações diferenciais, passando pelo cálculo vetorial. Ele segue a mesma ordem temática dos quatro volumes do <a href="livro.html" style="color:#8a7a3f; text-decoration:underline;">Curso de Cálculo I, II, III e Equações Diferenciais</a>, então você pode usá-lo como referência enquanto estuda pelo livro ou pelos <a href="exercicios.html" style="color:#8a7a3f; text-decoration:underline;">exercícios comentados</a>.</p>
       <div class="topic-nav" aria-label="Ir para a seção">
-        <a href="#pre-calculo">Pré-Cálculo</a>
-        <a href="#calculo-i">Cálculo I</a>
-        <a href="#calculo-ii">Cálculo II</a>
-        <a href="#calculo-iii">Cálculo III</a>
-        <a href="#equacoes-diferenciais">Equações Diferenciais</a>
+        <a href="#pre-calculo">Pré-Cálculo <small>(8)</small></a>
+        <a href="#calculo-i">Cálculo I <small>(27)</small></a>
+        <a href="#calculo-ii">Cálculo II <small>(22)</small></a>
+        <a href="#calculo-iii">Cálculo III <small>(22)</small></a>
+        <a href="#equacoes-diferenciais">Equações Diferenciais <small>(12)</small></a>
       </div>
+      <p class="lead-text fm-how">Procure uma fórmula pelo nome ou pelo assunto, toque na estrela <span aria-hidden="true">☆</span> para guardá-la e monte a sua própria cola: ela fica salva neste navegador e pode ser impressa ou salva em PDF. Os cartões com a etiqueta <em class="fc-badge">complemento</em> trazem fórmulas de apoio acrescentadas ao formulário.</p>
+      <div class="fm-tools" role="search">
+        <label class="sr-only" for="fmSearch">Buscar fórmula</label>
+        <input id="fmSearch" type="search" placeholder="Buscar: derivada, série, Green, Bernoulli…" autocomplete="off">
+        <button type="button" id="fmFav" aria-pressed="false">★ Só favoritas <span id="fmFavN">0</span></button>
+        <button type="button" id="fmPrint">Imprimir / salvar PDF</button>
+        <button type="button" id="fmClear" hidden>Limpar favoritas</button>
+        <span id="fmCount" aria-live="polite"></span>
+      </div>
+      <p id="fmEmpty" class="fm-empty" hidden></p>
     </div>
   </section>
   <section id="pre-calculo" class="chalkboard-bg reveal formula-part">
@@ -129,6 +202,7 @@
           <span class="fnote">Válidos também em radianos: π/6, π/4, π/3.</span>
         </div>
       </div>
+      <p class="fm-links"><span>Pratique:</span> <a href="formulario-funcoes.html">Formulário de Funções (retas, parábolas, cônicas)</a> <a href="trilha.html#teste">Teste de nível</a></p>
     </div>
   </section>
   <section id="calculo-i" class="paper-bg reveal formula-part">
@@ -164,6 +238,7 @@
           <span class="fnote">O limite bilateral existe apenas se os dois limites laterais existem e são iguais.</span>
         </div>
       </div>
+      <p class="fm-links"><span>Pratique:</span> <a href="como-calcular-limites.html">Como calcular limites</a> <a href="ferramentas.html#lim">Limites na ferramenta</a></p>
       <h3 class="formula-topic">Derivadas</h3>
       <div class="formula-grid">
         <div class="formula-card">
@@ -197,7 +272,18 @@
           <span class="fexpr">y − f(x₀) = f&#x27;(x₀)·(x − x₀)</span>
           <span class="fnote">f&#x27;(x₀) é o coeficiente angular da tangente no ponto x₀.</span>
         </div>
+        <div class="formula-card fc-extra">
+          <span class="fname">Derivadas trigonométricas e inversas <em class="fc-badge">complemento</em></span>
+          <span class="fexpr">(tgx)' = sec²x,  (secx)' = secx·tgx,  (arcsenx)' = 1/√(1−x²),  (arctgx)' = 1/(1+x²)</span>
+          <span class="fnote">Combine com a regra da cadeia quando o argumento não for apenas x.</span>
+        </div>
+        <div class="formula-card fc-extra">
+          <span class="fname">Derivadas de exponencial e logaritmo (base a) <em class="fc-badge">complemento</em></span>
+          <span class="fexpr">(aˣ)' = aˣ·ln a,   (logₐx)' = 1/(x·ln a)</span>
+          <span class="fnote">Válidas para a &gt; 0 e a ≠ 1.</span>
+        </div>
       </div>
+      <p class="fm-links"><span>Pratique:</span> <a href="ferramentas.html#der">Derivar passo a passo</a> <a href="regra-da-cadeia.html">Regra da cadeia</a></p>
       <h3 class="formula-topic">Aplicações da Derivada</h3>
       <div class="formula-grid">
         <div class="formula-card">
@@ -225,6 +311,7 @@
           <span class="fnote">Confirmar máximo/mínimo com o teste da 2ª derivada.</span>
         </div>
       </div>
+      <p class="fm-links"><span>Pratique:</span> <a href="ferramentas.html#der">Pontos críticos na ferramenta</a> <a href="calculo-na-pratica.html#engenharia">Otimização na prática</a></p>
       <h3 class="formula-topic">A Integral</h3>
       <div class="formula-grid">
         <div class="formula-card">
@@ -244,7 +331,27 @@
           <span class="fexpr">∫u dv = u·v − ∫v du</span>
           <span class="fnote">Escolher u de forma que du seja mais simples que u.</span>
         </div>
+        <div class="formula-card fc-extra">
+          <span class="fname">Integrais imediatas <em class="fc-badge">complemento</em></span>
+          <span class="fexpr">∫eˣdx = eˣ + C,  ∫(1/x)dx = ln|x| + C,  ∫senx dx = −cosx + C,  ∫cosx dx = senx + C,  ∫sec²x dx = tgx + C</span>
+        </div>
+        <div class="formula-card fc-extra">
+          <span class="fname">Integração por substituição <em class="fc-badge">complemento</em></span>
+          <span class="fexpr">∫f(g(x))·g'(x)dx = ∫f(u)du,   u = g(x)</span>
+          <span class="fnote">Escolha como u a parte interna cuja derivada aparece multiplicando. Em integrais definidas, troque também os limites.</span>
+        </div>
+        <div class="formula-card fc-extra">
+          <span class="fname">Área entre curvas <em class="fc-badge">complemento</em></span>
+          <span class="fexpr">A = ∫ₐᵇ [f(x) − g(x)] dx,   f(x) ≥ g(x) em [a,b]</span>
+          <span class="fnote">Se as curvas se cruzam, divida o intervalo nos pontos de interseção.</span>
+        </div>
+        <div class="formula-card fc-extra">
+          <span class="fname">Volume por discos e arruelas <em class="fc-badge">complemento</em></span>
+          <span class="fexpr">V = π∫ₐᵇ [f(x)]² dx  (disco)<br>V = π∫ₐᵇ ([R(x)]² − [r(x)]²) dx  (arruela)</span>
+          <span class="fnote">Rotação em torno do eixo x; R é o raio externo e r o raio interno.</span>
+        </div>
       </div>
+      <p class="fm-links"><span>Pratique:</span> <a href="ferramentas.html#rie">Somas de Riemann</a> <a href="ferramentas.html#pas">Integrar passo a passo</a></p>
     </div>
   </section>
   <section id="calculo-ii" class="chalkboard-bg reveal formula-part">
@@ -273,7 +380,13 @@
           <span class="fexpr">∫ f&#x27;(x)/f(x) dx = ln|f(x)| + C</span>
           <span class="fnote">Reconhecer quando o numerador é a derivada do denominador.</span>
         </div>
+        <div class="formula-card formula-card-dark fc-extra">
+          <span class="fname">Substituição trigonométrica <em class="fc-badge">complemento</em></span>
+          <span class="fexpr">√(a² − x²): x = a·senθ<br>√(a² + x²): x = a·tgθ<br>√(x² − a²): x = a·secθ</span>
+          <span class="fnote">Depois de integrar em θ, volte para x usando um triângulo retângulo.</span>
+        </div>
       </div>
+      <p class="fm-links"><span>Pratique:</span> <a href="integracao-por-partes.html">Integração por partes</a> <a href="ferramentas.html#pas">Integrar passo a passo</a></p>
       <h3 class="formula-topic" style="color:var(--chalk);">Sequências e Séries</h3>
       <div class="formula-grid">
         <div class="formula-card formula-card-dark">
@@ -295,20 +408,37 @@
           <span class="fexpr">Σ(−1)ⁿ aₙ converge se aₙ &gt; 0, decrescente e aₙ → 0</span>
           <span class="fnote">Pode haver convergência condicional.</span>
         </div>
+        <div class="formula-card formula-card-dark fc-extra">
+          <span class="fname">Série geométrica <em class="fc-badge">complemento</em></span>
+          <span class="fexpr">Σₙ₌₀^∞ a·rⁿ = a/(1 − r)   se |r| &lt; 1</span>
+          <span class="fnote">Se |r| ≥ 1, a série diverge.</span>
+        </div>
+        <div class="formula-card formula-card-dark fc-extra">
+          <span class="fname">Teste de comparação no limite <em class="fc-badge">complemento</em></span>
+          <span class="fexpr">aₙ, bₙ &gt; 0 e lim aₙ/bₙ = c, com 0 &lt; c &lt; ∞  ⇒  Σaₙ e Σbₙ convergem ou divergem juntas</span>
+          <span class="fnote">Costuma funcionar bem comparando com uma série-p ou geométrica.</span>
+        </div>
       </div>
+      <p class="fm-links"><span>Pratique:</span> <a href="ferramentas.html#tay">Séries de Taylor na ferramenta</a></p>
       <h3 class="formula-topic" style="color:var(--chalk);">Séries de Taylor e Convergência</h3>
       <div class="formula-grid">
         <div class="formula-card formula-card-dark">
           <span class="fname">Série de Taylor/Maclaurin</span>
           <span class="fexpr">f(x) ≈ Σₖ₌₀ⁿ f⁽ᵏ⁾(0)/k! · xᵏ</span>
-          <span class="fnote">Truncar no grau desejado para aproximar f(x).</span>
+          <span class="fnote">Truncar no grau desejado para aproximar f(x). Em torno de x = a (série de Taylor): f⁽ᵏ⁾(a)/k! · (x − a)ᵏ.</span>
         </div>
         <div class="formula-card formula-card-dark">
           <span class="fname">Raio e intervalo de convergência</span>
           <span class="fexpr">R obtido pelo critério da razão; testar os extremos x = c ± R separadamente</span>
           <span class="fnote">Cada extremo pode convergir ou divergir de forma independente.</span>
         </div>
+        <div class="formula-card formula-card-dark fc-extra">
+          <span class="fname">Séries de Maclaurin notáveis <em class="fc-badge">complemento</em></span>
+          <span class="fexpr">eˣ = Σ xⁿ/n!   (todo x)<br>senx = Σ (−1)ⁿ x²ⁿ⁺¹/(2n+1)!   (todo x)<br>cosx = Σ (−1)ⁿ x²ⁿ/(2n)!   (todo x)<br>1/(1−x) = Σ xⁿ   (|x| &lt; 1)<br>ln(1+x) = Σ (−1)ⁿ⁺¹ xⁿ/n   (−1 &lt; x ≤ 1)</span>
+          <span class="fnote">Substituindo x por outras expressões (por exemplo −x²) obtêm-se novas séries.</span>
+        </div>
       </div>
+      <p class="fm-links"><span>Pratique:</span> <a href="ferramentas.html#tay">Aproximar com Taylor</a></p>
       <h3 class="formula-topic" style="color:var(--chalk);">Curvas Paramétricas e Polares</h3>
       <div class="formula-grid">
         <div class="formula-card formula-card-dark">
@@ -324,7 +454,16 @@
           <span class="fname">Comprimento de arco (paramétrico)</span>
           <span class="fexpr">L = ∫ₐᵇ √[(dx/dt)² + (dy/dt)²] dt</span>
         </div>
+        <div class="formula-card formula-card-dark fc-extra">
+          <span class="fname">Área em coordenadas polares <em class="fc-badge">complemento</em></span>
+          <span class="fexpr">A = ½ ∫ r(θ)² dθ,  com θ de α até β</span>
+        </div>
+        <div class="formula-card formula-card-dark fc-extra">
+          <span class="fname">Comprimento de arco (y = f(x)) <em class="fc-badge">complemento</em></span>
+          <span class="fexpr">L = ∫ₐᵇ √[1 + (f'(x))²] dx</span>
+        </div>
       </div>
+      <p class="fm-links"><span>Pratique:</span> <a href="formulario-funcoes.html">Curvas no Formulário de Funções</a></p>
       <h3 class="formula-topic" style="color:var(--chalk);">Equações Diferenciais Ordinárias</h3>
       <div class="formula-grid">
         <div class="formula-card formula-card-dark">
@@ -337,7 +476,13 @@
           <span class="fexpr">y&#x27; + P(x)y = Q(x)  ⇒  fator integrante μ = e^∫P(x)dx</span>
           <span class="fnote">Solução: (μy)&#x27; = μQ(x); integrar e depois isolar y.</span>
         </div>
+        <div class="formula-card formula-card-dark fc-extra">
+          <span class="fname">Crescimento, decaimento e resfriamento <em class="fc-badge">complemento</em></span>
+          <span class="fexpr">dy/dt = ky  ⇒  y = y₀·e^(kt)<br>Newton: dT/dt = −k(T − Tₐ)  ⇒  T = Tₐ + (T₀ − Tₐ)·e^(−kt)</span>
+          <span class="fnote">Com k &gt; 0 e sinal negativo na equação, há decaimento. Veja os casos em Cálculo na Prática.</span>
+        </div>
       </div>
+      <p class="fm-links"><span>Pratique:</span> <a href="edo-linear-primeira-ordem.html">EDO linear de 1ª ordem</a> <a href="ferramentas.html#edo">Resolver EDOs</a> <a href="calculo-na-pratica.html#fisica">Resfriamento na prática</a></p>
     </div>
   </section>
   <section id="calculo-iii" class="paper-bg reveal formula-part">
@@ -367,7 +512,13 @@
           <span class="fexpr">Elipsoide, parabolóide, hiperbolóide de 1 ou 2 folhas, cone</span>
           <span class="fnote">Identificar pelos sinais e expoentes na equação canônica x²/A ± y²/B ± z²/C = 1.</span>
         </div>
+        <div class="formula-card fc-extra">
+          <span class="fname">Reta no espaço <em class="fc-badge">complemento</em></span>
+          <span class="fexpr">r(t) = r₀ + t·v   ⇒   x = x₀ + at,  y = y₀ + bt,  z = z₀ + ct</span>
+          <span class="fnote">v = (a, b, c) é o vetor diretor da reta.</span>
+        </div>
       </div>
+      <p class="fm-links"><span>Pratique:</span> <a href="exercicios.html">Listas de exercícios</a></p>
       <h3 class="formula-topic">Funções de Várias Variáveis</h3>
       <div class="formula-grid">
         <div class="formula-card">
@@ -393,6 +544,7 @@
           <span class="fexpr">z − z₀ = fx(x₀,y₀)(x−x₀) + fy(x₀,y₀)(y−y₀)</span>
         </div>
       </div>
+      <p class="fm-links"><span>Pratique:</span> <a href="derivadas-parciais.html">Derivadas parciais</a> <a href="ferramentas.html#gra">Gradiente na ferramenta</a></p>
       <h3 class="formula-topic">Otimização Multivariável e Integrais Múltiplas</h3>
       <div class="formula-grid">
         <div class="formula-card">
@@ -419,7 +571,13 @@
           <span class="fexpr">∭_E f dV = ∫∫∫ f(x,y,z) dz dy dx</span>
           <span class="fnote">Análogo à dupla, com um nível extra de integração.</span>
         </div>
+        <div class="formula-card fc-extra">
+          <span class="fname">Mudança de coordenadas em integrais <em class="fc-badge">complemento</em></span>
+          <span class="fexpr">Polares: dA = r dr dθ<br>Cilíndricas: dV = r dz dr dθ<br>Esféricas: dV = ρ² senφ dρ dφ dθ</span>
+          <span class="fnote">Em esféricas, ρ é a distância à origem e φ o ângulo com o eixo z.</span>
+        </div>
       </div>
+      <p class="fm-links"><span>Pratique:</span> <a href="ferramentas.html#dup">Integral dupla e volume</a></p>
       <h3 class="formula-topic">Cálculo Vetorial</h3>
       <div class="formula-grid">
         <div class="formula-card">
@@ -453,6 +611,7 @@
           <span class="fnote">Generaliza o Teorema de Green para superfícies no espaço.</span>
         </div>
       </div>
+      <p class="fm-links"><span>Pratique:</span> <a href="exercicios.html">Listas de exercícios</a></p>
     </div>
   </section>
   <section id="equacoes-diferenciais" class="chalkboard-bg reveal formula-part">
@@ -478,6 +637,7 @@
           <span class="fnote">É o teorema que garante que o problema de valor inicial está bem colocado antes de tentar resolvê-lo.</span>
         </div>
       </div>
+      <p class="fm-links"><span>Pratique:</span> <a href="ferramentas.html#edo">Resolver EDOs</a> <a href="exercicios.html">Listas de exercícios</a></p>
       <h3 class="formula-topic" style="color:var(--chalk);">Segunda Ordem e Sistemas Lineares</h3>
       <div class="formula-grid">
         <div class="formula-card formula-card-dark">
@@ -506,6 +666,7 @@
           <span class="fnote">Se há autovalores imaginários puros (Re = 0), o sistema é um centro — a estabilidade exige análise mais fina.</span>
         </div>
       </div>
+      <p class="fm-links"><span>Pratique:</span> <a href="ferramentas.html#edo">Resolver EDOs</a></p>
       <h3 class="formula-topic" style="color:var(--chalk);">Séries de Fourier e EDPs</h3>
       <div class="formula-grid">
         <div class="formula-card formula-card-dark">
@@ -529,11 +690,20 @@
           <span class="fnote">Suas soluções são as funções harmônicas — aparecem em potencial elétrico, temperatura em equilíbrio, escoamento.</span>
         </div>
       </div>
+      <p class="fm-links"><span>Pratique:</span> <a href="exercicios.html">Listas de exercícios</a></p>
     </div>
   </section>
-  <section class="paper-bg reveal">
+  <section class="paper-bg reveal fm-noprint">
     <div class="container">
-      <div class="acquire-card" style="grid-template-columns:1fr auto;">
+      <p class="eyebrow"><span class="rule"></span> Pratique</p>
+      <h2 style="margin-bottom:22px;">Das fórmulas à prática</h2>
+      <div class="fm-practice">
+        <a class="fm-pcard" href="ferramentas.html"><b>Ferramentas interativas</b><span>Derivadas, integrais, EDOs e passo a passo, com verificação numérica.</span></a>
+        <a class="fm-pcard" href="exercicios.html#treino"><b>Treino rápido</b><span>12 questões com correção e explicação para testar o que você consulta aqui.</span></a>
+        <a class="fm-pcard" href="trilha.html"><b>Trilha de estudo</b><span>Do Pré-Cálculo às Equações Diferenciais, com teste de nível.</span></a>
+        <a class="fm-pcard" href="calculo-na-pratica.html"><b>Cálculo na prática</b><span>Onde estas fórmulas aparecem em engenharia, economia, física e saúde.</span></a>
+      </div>
+      <div class="acquire-card" style="margin-top:34px; grid-template-columns:1fr auto;">
         <div>
           <p class="eyebrow"><span class="rule"></span> Vá além do formulário</p>
           <h3>As fórmulas ganham sentido quando você vê de onde elas vêm</h3>
@@ -580,6 +750,72 @@
   </div>
 </footer>
 
+<script>
+(function(){
+  var KEY='wtares_formulario_fav_v1';
+  var favs={};
+  try{favs=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){favs={};}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(favs));}catch(e){}}
+  function norm(s){s=String(s).toLowerCase();try{s=s.normalize('NFD').replace(/[̀-ͯ]/g,'');}catch(e){}return s;}
+  var cards=[].slice.call(document.querySelectorAll('.formula-card'));
+  var q=document.getElementById('fmSearch'),btnFav=document.getElementById('fmFav'),favN=document.getElementById('fmFavN'),
+      btnPrint=document.getElementById('fmPrint'),btnClear=document.getElementById('fmClear'),
+      count=document.getElementById('fmCount'),empty=document.getElementById('fmEmpty');
+  var favOnly=false;
+  var copySvg='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg>';
+  function exprText(card){
+    var e=card.querySelector('.fexpr');if(!e)return '';
+    var c=e.cloneNode(true);[].forEach.call(c.querySelectorAll('br'),function(b){b.parentNode.replaceChild(document.createTextNode('\n'),b);});
+    return c.textContent.trim();
+  }
+  function copy(text,btn){
+    function ok(){btn.classList.add('ok');btn.title='Copiado!';setTimeout(function(){btn.classList.remove('ok');btn.title='Copiar a fórmula';},1400);}
+    function fallback(){try{var t=document.createElement('textarea');t.value=text;t.style.position='fixed';t.style.opacity='0';document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);ok();}catch(e){}}
+    try{if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(ok,fallback);}else fallback();}catch(e){fallback();}
+  }
+  cards.forEach(function(card){
+    var sec=card.closest('.formula-part'),grid=card.parentNode,h=grid.previousElementSibling;
+    while(h&&!(h.classList&&h.classList.contains('formula-topic')))h=h.previousElementSibling;
+    var fname=card.querySelector('.fname'),first=fname.firstChild?fname.firstChild.textContent.trim():fname.textContent.trim();
+    card._key=sec.id+'|'+first;
+    card._text=norm((sec.querySelector('h2')?sec.querySelector('h2').textContent:'')+' '+(h?h.textContent:'')+' '+card.textContent);
+    var s=document.createElement('button');s.type='button';s.className='fc-btn fc-star';s.setAttribute('aria-label','Favoritar: '+first);s.title='Guardar na minha cola';
+    var c=document.createElement('button');c.type='button';c.className='fc-btn fc-copy';c.setAttribute('aria-label','Copiar fórmula: '+first);c.title='Copiar a fórmula';c.innerHTML=copySvg;
+    function paint(){var on=!!favs[card._key];s.classList.toggle('on',on);s.setAttribute('aria-pressed',on?'true':'false');s.textContent=on?'★':'☆';}
+    s.addEventListener('click',function(){if(favs[card._key])delete favs[card._key];else favs[card._key]=1;save();paint();update();});
+    c.addEventListener('click',function(){copy(first+'\n'+exprText(card),c);});
+    card.appendChild(c);card.appendChild(s);paint();
+  });
+  function favCount(){return cards.filter(function(c){return favs[c._key];}).length;}
+  function update(){
+    var words=norm(q.value).split(/\s+/).filter(Boolean),shown=0;
+    cards.forEach(function(card){
+      var ok=words.every(function(w){return card._text.indexOf(w)>-1;})&&(!favOnly||favs[card._key]);
+      if(ok){card.removeAttribute('hidden');shown++;}else card.setAttribute('hidden','');
+    });
+    [].forEach.call(document.querySelectorAll('.formula-grid'),function(g){
+      var any=g.querySelector('.formula-card:not([hidden])');
+      var h=g.previousElementSibling;while(h&&!(h.classList&&h.classList.contains('formula-topic')))h=h.previousElementSibling;
+      var l=g.nextElementSibling;l=(l&&l.classList.contains('fm-links'))?l:null;
+      [g,h,l].forEach(function(el){if(!el)return;if(any)el.removeAttribute('hidden');else el.setAttribute('hidden','');});
+    });
+    [].forEach.call(document.querySelectorAll('.formula-part'),function(s){
+      if(s.querySelector('.formula-card:not([hidden])'))s.removeAttribute('hidden');else s.setAttribute('hidden','');
+    });
+    var nf=favCount();favN.textContent=nf;btnClear.hidden=nf===0;
+    count.textContent='Mostrando '+shown+' de '+cards.length+' fórmulas';
+    if(shown===0){
+      empty.hidden=false;
+      empty.textContent=(favOnly&&!words.length)?'Você ainda não marcou nenhuma favorita. Toque na estrela ☆ de uma fórmula para guardá-la aqui.':'Nenhuma fórmula encontrada. Tente outro termo, como "derivada", "série" ou "plano".';
+    }else empty.hidden=true;
+  }
+  q.addEventListener('input',update);
+  btnFav.addEventListener('click',function(){favOnly=!favOnly;btnFav.setAttribute('aria-pressed',favOnly?'true':'false');update();});
+  btnPrint.addEventListener('click',function(){window.print();});
+  btnClear.addEventListener('click',function(){if(window.confirm('Remover todas as fórmulas favoritas deste navegador?')){favs={};save();cards.forEach(function(c){var s=c.querySelector('.fc-star');s.classList.remove('on');s.setAttribute('aria-pressed','false');s.textContent='☆';});update();}});
+  update();
+})();
+</script>
 <script src="js/main.js"></script>
 </body>
 </html>
