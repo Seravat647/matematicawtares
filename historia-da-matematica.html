@@ -13,22 +13,68 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>História da Matemática — W. T. Ares | Matemática</title>
-<meta name="description" content="Uma jornada pelos grandes matemáticos da história e suas contribuições para o desenvolvimento da matemática, do Egito Antigo aos dias atuais.">
+<meta name="description" content="Linha do tempo com 24 verbetes da matemática, de Egito e Babilônia a Emmy Noether, o fio do Cálculo, mitos e verdades e um quiz — ligados às ferramentas do site.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;600;700&family=Space+Mono:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <meta property="og:type" content="website">
 <meta property="og:title" content="História da Matemática — W. T. Ares | Matemática">
-<meta property="og:description" content="Uma jornada pelos grandes matemáticos da história e suas contribuições para o desenvolvimento da matemática, do Egito Antigo aos dias atuais.">
+<meta property="og:description" content="Linha do tempo com 24 verbetes da matemática, de Egito e Babilônia a Emmy Noether, o fio do Cálculo, mitos e verdades e um quiz — ligados às ferramentas do site.">
 <meta property="og:image" content="https://seravat647.github.io/matematicawtares/images/capa-calculo-3.jpg">
 <meta property="og:url" content="https://seravat647.github.io/matematicawtares/historia-da-matematica.html">
 <meta property="og:locale" content="pt_BR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="História da Matemática — W. T. Ares | Matemática">
-<meta name="twitter:description" content="Uma jornada pelos grandes matemáticos da história e suas contribuições para o desenvolvimento da matemática, do Egito Antigo aos dias atuais.">
+<meta name="twitter:description" content="Linha do tempo com 24 verbetes da matemática, de Egito e Babilônia a Emmy Noether, o fio do Cálculo, mitos e verdades e um quiz — ligados às ferramentas do site.">
 <meta name="twitter:image" content="https://seravat647.github.io/matematicawtares/images/capa-calculo-3.jpg">
 <link rel="canonical" href="https://seravat647.github.io/matematicawtares/historia-da-matematica.html">
+<style>
+.timeline-item[hidden]{display:none!important}
+.hm-links{margin:10px 0 0!important;font-size:.88rem;display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center}
+.hm-links span{font-family:var(--mono,'Space Mono',monospace);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;opacity:.7}
+.hm-links a{color:#6f6230;font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.hm-links a:hover{opacity:.75}
+.hm-note{color:rgba(243,238,225,.75);font-size:.9rem;margin:-14px 0 22px}
+.hm-filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 22px}
+.hm-chip{font:inherit;font-size:.86rem;font-weight:600;padding:7px 14px;border-radius:999px;border:1px solid rgba(243,238,225,.45);background:transparent;color:var(--chalk,#F3EEE1);cursor:pointer;transition:background .15s,color .15s}
+.hm-chip:hover{background:rgba(243,238,225,.12)}
+.hm-chip:focus-visible{outline:2px solid var(--chalk-yellow,#E4BE68);outline-offset:2px}
+.hm-chip.is-on{background:var(--chalk-yellow,#E4BE68);border-color:var(--chalk-yellow,#E4BE68);color:#1F3B32}
+.hm-count{margin-left:auto;font-family:var(--mono,'Space Mono',monospace);font-size:.78rem;color:rgba(243,238,225,.7)}
+.hm-thread{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;counter-reset:hm}
+.hm-step{counter-increment:hm;position:relative;background:#fff;border:1px solid var(--paper-line,#D9D0B8);border-top:4px solid var(--chalk-yellow,#E4BE68);border-radius:10px;padding:18px 18px 16px;color:#2a2a2a;display:flex;flex-direction:column;gap:6px}
+.hm-step::before{content:counter(hm);position:absolute;top:-16px;right:14px;width:30px;height:30px;border-radius:50%;background:var(--chalkboard,#1F3B32);color:var(--chalk-yellow,#E4BE68);font-family:var(--mono,'Space Mono',monospace);font-size:.85rem;display:flex;align-items:center;justify-content:center}
+.hm-when{font-family:var(--mono,'Space Mono',monospace);font-size:.74rem;letter-spacing:.05em;text-transform:uppercase;color:#6f6230}
+.hm-step h3{margin:0;font-size:1.1rem;color:var(--chalkboard,#1F3B32)}
+.hm-step p{margin:0;font-size:.92rem;line-height:1.5}
+.hm-becomes{color:#444}
+.hm-becomes b{color:var(--chalkboard,#1F3B32)}
+.hm-step a{margin-top:auto;padding-top:8px;color:#6f6230;font-weight:700;text-decoration:none}
+.hm-step a:hover{text-decoration:underline}
+.hm-myth{border:1px solid rgba(243,238,225,.3);border-radius:10px;margin:0 0 12px;background:rgba(243,238,225,.05);color:var(--chalk,#F3EEE1)}
+.hm-myth summary{cursor:pointer;padding:14px 18px;font-weight:600;list-style:none;font-family:var(--serif,'Fraunces',serif);font-size:1.05rem}
+.hm-myth summary::-webkit-details-marker{display:none}
+.hm-myth summary::after{content:"+";float:right;color:var(--chalk-yellow,#E4BE68);font-size:1.3rem;line-height:1}
+.hm-myth[open] summary::after{content:"–"}
+.hm-myth p{margin:0;padding:0 18px 16px;line-height:1.6;color:rgba(243,238,225,.88)}
+.hm-q{background:#fff;color:#2a2a2a;border-radius:10px;padding:18px 20px;margin-bottom:14px;border-top:4px solid var(--chalk-yellow,#E4BE68)}
+.hm-q h3{margin:0 0 12px;font-size:1.05rem;color:var(--chalkboard,#1F3B32)}
+.hm-opts{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+.hm-opt{font:inherit;text-align:left;padding:10px 12px;border:1px solid var(--paper-line,#D9D0B8);border-radius:8px;background:var(--paper,#FBF7EE);color:#222;cursor:pointer}
+.hm-opt:hover:not([disabled]){border-color:var(--chalkboard,#1F3B32)}
+.hm-opt:focus-visible{outline:2px solid var(--chalkboard,#1F3B32);outline-offset:1px}
+.hm-opt[disabled]{cursor:default}
+.hm-opt.ok{background:#dff0e4;border-color:#2f7d4f;color:#12361f}
+.hm-opt.no{background:#f7dfdc;border-color:#b0344c;color:#5a1620}
+.hm-why{margin:12px 0 0;font-size:.92rem;line-height:1.5;color:#444}
+.hm-score{background:var(--chalk,#F3EEE1);color:#1F3B32;border-radius:10px;padding:18px 20px;text-align:center;font-weight:600}
+.hm-score button{margin-left:12px;font:inherit;font-weight:600;padding:7px 14px;border-radius:999px;border:1px solid #1F3B32;background:transparent;color:#1F3B32;cursor:pointer}
+@media (max-width:560px){.hm-count{margin-left:0;width:100%}}
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "CollectionPage", "name": "História da Matemática", "description": "Linha do tempo com 24 verbetes da matemática, de Egito e Babilônia a Emmy Noether, o fio do Cálculo, mitos e verdades e um quiz — ligados às ferramentas do site.", "url": "https://seravat647.github.io/matematicawtares/historia-da-matematica.html", "inLanguage": "pt-BR", "isPartOf": {"@type": "WebSite", "name": "W. T. Ares – Matemática", "url": "https://seravat647.github.io/matematicawtares/"}, "author": {"@type": "Person", "name": "W. T. Ares"}, "mainEntity": {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Os escribas do Egito e da Babilônia"}, {"@type": "ListItem", "position": 2, "name": "Tales de Mileto"}, {"@type": "ListItem", "position": 3, "name": "Pitágoras e a escola pitagórica"}, {"@type": "ListItem", "position": 4, "name": "Euclides"}, {"@type": "ListItem", "position": 5, "name": "Arquimedes"}, {"@type": "ListItem", "position": 6, "name": "Hipátia de Alexandria"}, {"@type": "ListItem", "position": 7, "name": "Brahmagupta"}, {"@type": "ListItem", "position": 8, "name": "Al-Khwarizmi"}, {"@type": "ListItem", "position": 9, "name": "Fibonacci (Leonardo de Pisa)"}, {"@type": "ListItem", "position": 10, "name": "Madhava de Sangamagrama"}, {"@type": "ListItem", "position": 11, "name": "René Descartes"}, {"@type": "ListItem", "position": 12, "name": "Pierre de Fermat"}, {"@type": "ListItem", "position": 13, "name": "Isaac Newton e Gottfried Leibniz"}, {"@type": "ListItem", "position": 14, "name": "Jacob e Johann Bernoulli"}, {"@type": "ListItem", "position": 15, "name": "Leonhard Euler"}, {"@type": "ListItem", "position": 16, "name": "Maria Gaetana Agnesi"}, {"@type": "ListItem", "position": 17, "name": "Joseph Fourier"}, {"@type": "ListItem", "position": 18, "name": "Carl Friedrich Gauss"}, {"@type": "ListItem", "position": 19, "name": "Augustin-Louis Cauchy"}, {"@type": "ListItem", "position": 20, "name": "Ada Lovelace"}, {"@type": "ListItem", "position": 21, "name": "Bernhard Riemann"}, {"@type": "ListItem", "position": 22, "name": "Georg Cantor"}, {"@type": "ListItem", "position": 23, "name": "Sofia Kovalevskaya"}, {"@type": "ListItem", "position": 24, "name": "Emmy Noether"}]}}
+</script>
 <!-- MailerLite Universal -->
 <script>
     (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
@@ -91,25 +137,41 @@
       <h2 style="margin-bottom:22px;">Do contar de pedras às equações do cosmo</h2>
       <p class="lead-text">A matemática não nasceu pronta. Ela foi sendo construída, geração após geração, por pessoas que buscavam resolver problemas concretos — dividir terras, prever colheitas, navegar mares, entender o movimento dos astros — e que, ao fazer isso, criaram uma das linguagens mais poderosas já inventadas pela humanidade. Conhecer essa história é entender que cada fórmula estudada hoje carrega séculos de raciocínio acumulado.</p>
       <p class="lead-text">A seguir, uma linha do tempo com alguns dos nomes que mais marcaram essa trajetória — não como uma lista exaustiva, mas como um convite a olhar para o cálculo, a álgebra e a geometria como capítulos de uma grande história ainda em andamento.</p>
+      <div class="topic-nav" aria-label="Ir para a seção">
+        <a href="#linha-do-tempo">Linha do tempo</a>
+        <a href="#fio-do-calculo">O fio do Cálculo</a>
+        <a href="#mitos">Mitos e verdades</a>
+        <a href="#quem-foi">Quem foi?</a>
+      </div>
     </div>
   </section>
 
-  <section class="chalkboard-bg reveal">
+  <section id="linha-do-tempo" class="chalkboard-bg reveal">
     <div class="container">
       <p class="eyebrow" style="color:var(--chalk-yellow);"><span class="rule"></span> Linha do tempo</p>
       <h2 style="color:var(--chalk); margin-bottom:36px;">Os grandes matemáticos e suas contribuições</h2>
+      <p class="hm-note">Datas com "c." (circa) são aproximadas: indicam incerteza histórica. Use os filtros para seguir um fio da história.</p>
 
-      <div class="timeline" style="background:var(--paper); border-radius:8px; padding:8px 32px;">
+      <div class="hm-filters" role="group" aria-label="Filtrar a linha do tempo por tema">
+        <button type="button" class="hm-chip is-on" data-f="all" aria-pressed="true">Todos</button>
+        <button type="button" class="hm-chip" data-f="calc" aria-pressed="false">Cálculo e análise</button>
+        <button type="button" class="hm-chip" data-f="alg" aria-pressed="false">Números e álgebra</button>
+        <button type="button" class="hm-chip" data-f="geo" aria-pressed="false">Geometria</button>
+        <button type="button" class="hm-chip" data-f="mul" aria-pressed="false">Mulheres na matemática</button>
+        <span class="hm-count" id="hmCount" aria-live="polite"></span>
+      </div>
 
-        <div class="timeline-item">
-          <div class="timeline-era">c. 2000 a.C.<br>Egito e Babilônia</div>
+      <div class="timeline" id="hmTimeline" style="background:var(--paper); border-radius:8px; padding:8px 32px;">
+
+        <div class="timeline-item" data-tags="alg geo">
+          <div class="timeline-era">c. 2000–1600 a.C.<br>Egito e Babilônia</div>
           <div>
             <h3>Os escribas do Egito e da Babilônia</h3>
             <p>Muito antes de existir a palavra "matemática", escribas egípcios e babilônios já resolviam problemas práticos de medição de terras, cálculo de impostos e astronomia. O Papiro de Rhind e as tábuas de argila babilônicas registram métodos para operar com frações, resolver equações simples e até aproximar a raiz quadrada de dois — as primeiras sementes da aritmética e da álgebra.</p>
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item" data-tags="geo">
           <div class="timeline-era">c. 624–546 a.C.<br>Grécia Antiga</div>
           <div>
             <h3>Tales de Mileto</h3>
@@ -117,7 +179,7 @@
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item" data-tags="alg geo">
           <div class="timeline-era">c. 570–495 a.C.<br>Grécia Antiga</div>
           <div>
             <h3>Pitágoras e a escola pitagórica</h3>
@@ -125,7 +187,7 @@
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item" data-tags="geo">
           <div class="timeline-era">c. 300 a.C.<br>Alexandria</div>
           <div>
             <h3>Euclides</h3>
@@ -133,15 +195,33 @@
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item" data-tags="geo calc">
           <div class="timeline-era">c. 287–212 a.C.<br>Siracusa</div>
           <div>
             <h3>Arquimedes</h3>
             <p>Físico, engenheiro e matemático, Arquimedes calculou com precisão notável áreas e volumes de figuras curvas — como o círculo, a esfera e o cilindro — usando um método de exaustão que antecipa ideias centrais do cálculo integral, desenvolvido plenamente apenas quase dois mil anos depois.</p>
+            <p class="hm-links"><span>No site:</span> <a href="ferramentas.html#rie">Somas de Riemann: a exaustão em versão moderna</a></p>
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item" data-tags="geo alg mul">
+          <div class="timeline-era">c. 360–415<br>Alexandria</div>
+          <div>
+            <h3>Hipátia de Alexandria</h3>
+            <p>Matemática e filósofa, Hipátia ensinou matemática e astronomia em Alexandria e, segundo fontes antigas, comentou obras de Diofanto (equações) e de Apolônio — o grande estudioso das cônicas: elipse, parábola e hipérbole. Foi assassinada em 415, em meio a conflitos políticos e religiosos da cidade.</p>
+            <p class="hm-links"><span>No site:</span> <a href="formulario-funcoes.html">As cônicas no Formulário de Funções</a></p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-tags="alg">
+          <div class="timeline-era">c. 598–668<br>Índia</div>
+          <div>
+            <h3>Brahmagupta</h3>
+            <p>Astrônomo e matemático indiano, autor do Brahmasphutasiddhanta (628). Foi um dos primeiros a tratar o zero como número, com regras para operar com ele, e a sistematizar o uso de números negativos (interpretados como "dívidas"). Esse passo foi essencial para a álgebra e para o sistema decimal posicional que usamos hoje.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-tags="alg">
           <div class="timeline-era">c. 780–850<br>Bagdá</div>
           <div>
             <h3>Al-Khwarizmi</h3>
@@ -149,39 +229,87 @@
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item" data-tags="alg">
           <div class="timeline-era">1170–1250<br>Pisa</div>
           <div>
             <h3>Fibonacci (Leonardo de Pisa)</h3>
-            <p>Responsável por popularizar os numerais arábicos na Europa, substituindo aos poucos o sistema romano. Ficou conhecido pela sequência que leva seu nome — 1, 1, 2, 3, 5, 8, 13... — descoberta ao estudar a reprodução de coelhos, e que reaparece, de forma surpreendente, em padrões da natureza.</p>
+            <p>Responsável por popularizar os numerais indo-arábicos na Europa, com o "Liber Abaci" (1202), substituindo aos poucos o sistema romano. Ficou conhecido pela sequência que leva seu nome — 1, 1, 2, 3, 5, 8, 13... — que ele apresentou num problema sobre a reprodução de coelhos, e que reaparece, de forma surpreendente, em padrões da natureza.</p>
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item" data-tags="calc">
+          <div class="timeline-era">c. 1340–1425<br>Kerala, Índia</div>
+          <div>
+            <h3>Madhava de Sangamagrama</h3>
+            <p>Fundador da escola de Kerala, no sul da Índia, Madhava desenvolveu séries infinitas para seno, cosseno e arco-tangente — resultados que a Europa só redescobriria cerca de 250 anos depois, associados aos nomes de Gregory, Leibniz e Taylor. É um dos grandes precursores da análise.</p>
+            <p class="hm-links"><span>No site:</span> <a href="ferramentas.html#tay">Séries de Taylor na ferramenta</a></p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-tags="geo alg calc">
           <div class="timeline-era">1596–1650<br>França</div>
           <div>
             <h3>René Descartes</h3>
             <p>Ao criar o sistema de coordenadas cartesianas, Descartes uniu álgebra e geometria de um jeito revolucionário: curvas passaram a ser descritas por equações, e equações passaram a ser visualizadas como curvas. Esse elo é o alicerce sobre o qual todo o cálculo diferencial e integral viria a ser construído.</p>
+            <p class="hm-links"><span>No site:</span> <a href="formulario-funcoes.html">Curvas e suas equações no Formulário de Funções</a></p>
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item" data-tags="calc alg">
+          <div class="timeline-era">1607–1665<br>França</div>
+          <div>
+            <h3>Pierre de Fermat</h3>
+            <p>Jurista de ofício e matemático por paixão, Fermat criou um método para achar máximos, mínimos e retas tangentes a curvas — um precursor direto da derivada, que o próprio Newton reconheceu como inspiração. É também famoso pelo "Último Teorema", enunciado por volta de 1637 e só demonstrado por Andrew Wiles em 1994–95.</p>
+            <p class="hm-links"><span>No site:</span> <a href="ferramentas.html#der">Derivadas e tangentes na ferramenta</a></p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-tags="calc">
           <div class="timeline-era">1642–1727 / 1646–1716<br>Inglaterra e Alemanha</div>
           <div>
             <h3>Isaac Newton e Gottfried Leibniz</h3>
             <p>De forma independente, Newton e Leibniz desenvolveram o cálculo diferencial e integral no fim do século XVII — a ferramenta matemática capaz de descrever taxas de variação e acúmulo, do movimento dos planetas ao crescimento populacional. A disputa histórica sobre quem chegou primeiro rendeu séculos de debate, mas hoje ambos são reconhecidos como cocriadores dessa que talvez seja a invenção matemática mais transformadora da história moderna.</p>
+            <p class="hm-links"><span>No site:</span> <a href="trilha.html">Percorrer a Trilha de Estudo</a> <a href="ferramentas.html#der">Derivadas na ferramenta</a></p>
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item" data-tags="calc">
+          <div class="timeline-era">1655–1705 / 1667–1748<br>Basileia, Suíça</div>
+          <div>
+            <h3>Jacob e Johann Bernoulli</h3>
+            <p>Os irmãos Bernoulli foram os primeiros grandes divulgadores do cálculo de Leibniz no continente. Desenvolveram técnicas para equações diferenciais — a "equação de Bernoulli" leva o nome de Jacob —, estudaram o problema da braquistócrona e abriram caminho para o cálculo das variações. A famosa regra de L'Hôpital para limites foi descoberta por Johann, que a ensinou ao marquês de L'Hôpital; este a publicou em 1696.</p>
+            <p class="hm-links"><span>No site:</span> <a href="como-calcular-limites.html">Como calcular limites</a> <a href="edo-linear-primeira-ordem.html">EDO linear de 1ª ordem</a></p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-tags="calc alg">
           <div class="timeline-era">1707–1783<br>Suíça / Rússia</div>
           <div>
             <h3>Leonhard Euler</h3>
-            <p>Um dos matemáticos mais prolíficos de todos os tempos, Euler contribuiu para praticamente todas as áreas da matemática conhecidas em sua época: introduziu notações que usamos até hoje (como f(x), e e i), avançou o cálculo, a teoria dos grafos e a análise, e conectou números aparentemente distantes na célebre identidade que leva seu nome.</p>
+            <p>Um dos matemáticos mais prolíficos de todos os tempos, Euler contribuiu para praticamente todas as áreas da matemática conhecidas em sua época: introduziu notações que usamos até hoje (como f(x), e e i), avançou o cálculo, a teoria dos grafos e a análise, e conectou números aparentemente distantes na célebre identidade que leva seu nome. O método numérico mais simples para equações diferenciais também é chamado de método de Euler.</p>
+            <p class="hm-links"><span>No site:</span> <a href="ferramentas.html#edo">Método de Euler na ferramenta de EDO</a></p>
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item" data-tags="calc mul">
+          <div class="timeline-era">1718–1799<br>Milão, Itália</div>
+          <div>
+            <h3>Maria Gaetana Agnesi</h3>
+            <p>Matemática italiana que, em 1748, publicou as "Instituzioni analitiche", um dos primeiros manuais abrangentes de cálculo diferencial e integral, escrito pensando nos estudantes. Em suas páginas aparece uma curva que hoje leva seu nome — a "bruxa de Agnesi", fruto de um erro de tradução do termo italiano "versiera".</p>
+            <p class="hm-links"><span>No site:</span> <a href="formulario-funcoes.html">Curvas no Formulário de Funções</a></p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-tags="calc">
+          <div class="timeline-era">1768–1830<br>França</div>
+          <div>
+            <h3>Joseph Fourier</h3>
+            <p>Ao estudar como o calor se propaga, Fourier propôs (a partir de 1807, com a obra publicada em 1822) que funções muito gerais podem ser escritas como somas de senos e cossenos — as séries de Fourier. A ideia foi, a princípio, controversa e acabou impulsionando a análise do século XIX; hoje está por trás do processamento de sinais, da música digital e da compressão de imagens.</p>
+            <p class="hm-links"><span>No site:</span> <a href="livro.html">Séries de Fourier no livro de Equações Diferenciais</a></p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-tags="alg geo">
           <div class="timeline-era">1777–1855<br>Alemanha</div>
           <div>
             <h3>Carl Friedrich Gauss</h3>
@@ -189,15 +317,33 @@
           </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-era">1815–1852<br>Inglaterra</div>
+        <div class="timeline-item" data-tags="calc">
+          <div class="timeline-era">1789–1857<br>França</div>
           <div>
-            <h3>Ada Lovelace</h3>
-            <p>Trabalhando junto a Charles Babbage no projeto da Máquina Analítica, Ada Lovelace escreveu o que hoje é considerado o primeiro algoritmo destinado a ser processado por uma máquina — antecipando, no século XIX, conceitos centrais da programação e da computação moderna.</p>
+            <h3>Augustin-Louis Cauchy</h3>
+            <p>Cauchy deu ao cálculo uma base rigorosa: em seu "Cours d'analyse" (1821), definiu limite, continuidade e convergência de séries com precisão, deixando de lado a intuição vaga de "infinitésimos". Mais tarde, Weierstrass aperfeiçoou a linguagem com o formalismo ε–δ que aparece nos cursos de hoje.</p>
+            <p class="hm-links"><span>No site:</span> <a href="como-calcular-limites.html">Limites na prática</a></p>
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item" data-tags="mul alg">
+          <div class="timeline-era">1815–1852<br>Inglaterra</div>
+          <div>
+            <h3>Ada Lovelace</h3>
+            <p>Trabalhando junto a Charles Babbage no projeto da Máquina Analítica, Ada Lovelace escreveu, em 1843, o que hoje é frequentemente considerado o primeiro algoritmo destinado a ser processado por uma máquina — um método para calcular números de Bernoulli —, antecipando, no século XIX, conceitos centrais da programação e da computação moderna.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-tags="calc geo">
+          <div class="timeline-era">1826–1866<br>Alemanha</div>
+          <div>
+            <h3>Bernhard Riemann</h3>
+            <p>Riemann deu a definição precisa de integral definida como limite de somas de áreas de retângulos — a "integral de Riemann", que aprendemos em Cálculo I —, apresentada em 1854. Também revolucionou a geometria (a geometria riemanniana é a base matemática da relatividade geral) e propôs, em 1859, a hipótese de Riemann, ainda sem solução.</p>
+            <p class="hm-links"><span>No site:</span> <a href="ferramentas.html#rie">Somas de Riemann na ferramenta</a></p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-tags="alg">
           <div class="timeline-era">1845–1918<br>Alemanha</div>
           <div>
             <h3>Georg Cantor</h3>
@@ -205,7 +351,16 @@
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item" data-tags="calc mul">
+          <div class="timeline-era">1850–1891<br>Rússia e Suécia</div>
+          <div>
+            <h3>Sofia Kovalevskaya</h3>
+            <p>Sofia Kovalevskaya obteve o doutorado em Göttingen, em 1874 — entre as primeiras mulheres na Europa a conquistar esse título em matemática — e, mais tarde, ocupou uma cátedra na Universidade de Estocolmo. Deixou o teorema de Cauchy–Kovalevskaya, sobre a existência de soluções de equações diferenciais parciais, e trabalhos sobre a rotação de corpos rígidos.</p>
+            <p class="hm-links"><span>No site:</span> <a href="derivadas-parciais.html">Derivadas parciais</a></p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-tags="alg mul">
           <div class="timeline-era">1882–1935<br>Alemanha</div>
           <div>
             <h3>Emmy Noether</h3>
@@ -217,12 +372,108 @@
     </div>
   </section>
 
+  <section id="fio-do-calculo" class="paper-bg reveal">
+    <div class="container">
+      <p class="eyebrow"><span class="rule"></span> Do problema à teoria</p>
+      <h2 style="margin-bottom:18px;">O fio do Cálculo: de Arquimedes a Riemann</h2>
+      <p class="lead-text">O que você estuda no Curso de Cálculo I, II, III e Equações Diferenciais não surgiu de uma vez. Foi um fio puxado por muitas mãos, em séculos e continentes diferentes. Cada etapa abaixo leva à ferramenta do site que a coloca em prática.</p>
+      <ol class="hm-thread">
+          <li class="hm-step">
+            <span class="hm-when">c. 250 a.C.</span>
+            <h3>Arquimedes</h3>
+            <p>Método de exaustão: áreas e volumes por aproximações cada vez melhores.</p>
+            <p class="hm-becomes">Vira: <b>Ideia da integral</b></p>
+            <a href="ferramentas.html#rie">Somas de Riemann →</a>
+          </li>
+          <li class="hm-step">
+            <span class="hm-when">séc. XIV</span>
+            <h3>Madhava</h3>
+            <p>Séries infinitas para seno, cosseno e arco-tangente.</p>
+            <p class="hm-becomes">Vira: <b>Ideia da série de Taylor</b></p>
+            <a href="ferramentas.html#tay">Séries de Taylor →</a>
+          </li>
+          <li class="hm-step">
+            <span class="hm-when">séc. XVII</span>
+            <h3>Fermat e Descartes</h3>
+            <p>Tangentes e extremos por método algébrico; curvas descritas por equações.</p>
+            <p class="hm-becomes">Vira: <b>Ideia da derivada</b></p>
+            <a href="ferramentas.html#der">Derivadas →</a>
+          </li>
+          <li class="hm-step">
+            <span class="hm-when">fim do séc. XVII</span>
+            <h3>Newton e Leibniz</h3>
+            <p>Taxa de variação e acúmulo ligadas entre si; notações dy/dx e ∫.</p>
+            <p class="hm-becomes">Vira: <b>Teorema Fundamental do Cálculo</b></p>
+            <a href="trilha.html">Trilha de Estudo →</a>
+          </li>
+          <li class="hm-step">
+            <span class="hm-when">séc. XVIII</span>
+            <h3>Bernoulli e Euler</h3>
+            <p>Equações diferenciais, regra de L'Hôpital, funções e notação moderna.</p>
+            <p class="hm-becomes">Vira: <b>EDOs e limites</b></p>
+            <a href="ferramentas.html#edo">Resolver EDOs →</a>
+          </li>
+          <li class="hm-step">
+            <span class="hm-when">1822</span>
+            <h3>Fourier</h3>
+            <p>Funções como somas de senos e cossenos; equação do calor.</p>
+            <p class="hm-becomes">Vira: <b>Séries de Fourier e EDPs</b></p>
+            <a href="livro.html">Livro de EDO →</a>
+          </li>
+          <li class="hm-step">
+            <span class="hm-when">séc. XIX</span>
+            <h3>Cauchy e Riemann</h3>
+            <p>Limite rigoroso, continuidade e integral definida com precisão.</p>
+            <p class="hm-becomes">Vira: <b>Definição de limite e de integral</b></p>
+            <a href="como-calcular-limites.html">Limites →</a>
+          </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="mitos" class="chalkboard-bg reveal">
+    <div class="container" style="max-width:860px;">
+      <p class="eyebrow" style="color:var(--chalk-yellow);"><span class="rule"></span> Mitos e verdades</p>
+      <h2 style="color:var(--chalk); margin-bottom:26px;">Quatro coisas que a história costuma contar errado</h2>
+      <details class="hm-myth">
+        <summary>"Pitágoras descobriu o teorema de Pitágoras."</summary>
+        <p>A relação entre os lados do triângulo retângulo já era usada na Babilônia mais de mil anos antes: a tábua Plimpton 322 (c. 1800 a.C.) é frequentemente interpretada como uma lista de ternos pitagóricos. Também há registros na Índia e na China. A tradição grega associa a primeira demonstração à escola pitagórica, mas as fontes sobre Pitágoras são tardias e incertas.</p>
+      </details>
+      <details class="hm-myth">
+        <summary>"Fibonacci inventou a sequência de Fibonacci."</summary>
+        <p>A sequência aparece na métrica da poesia sânscrita indiana séculos antes, nos estudos de Pingala, Virahanka e Hemachandra. Fibonacci a divulgou na Europa no "Liber Abaci" (1202), com o problema dos coelhos. O nome "sequência de Fibonacci" só se consolidou no século XIX, com Édouard Lucas.</p>
+      </details>
+      <details class="hm-myth">
+        <summary>"Os numerais arábicos são árabes."</summary>
+        <p>Nasceram na Índia. Matemáticos do mundo islâmico, como Al-Khwarizmi, os adotaram e difundiram, e de lá chegaram à Europa. Por isso o nome mais preciso é "indo-arábicos".</p>
+      </details>
+      <details class="hm-myth">
+        <summary>"Newton ou Leibniz: só um deles inventou o cálculo."</summary>
+        <p>Os dois chegaram lá de forma independente. Newton desenvolveu suas ideias primeiro, em meados da década de 1660, mas demorou a publicá-las. Leibniz publicou antes, em 1684, e criou a notação dy/dx e o símbolo ∫ que usamos até hoje.</p>
+      </details>
+    </div>
+  </section>
+
   <section class="paper-bg reveal">
     <div class="container">
       <p class="eyebrow"><span class="rule"></span> Por que isso importa</p>
       <h2 style="margin-bottom:22px;">Estudar a história para entender o presente</h2>
       <p class="lead-text">Cada conceito estudado no Curso de Cálculo — um limite, uma derivada, uma integral — tem uma origem, um problema que o motivou e uma pessoa (ou várias) que lutou para formalizá-lo. Entender esse percurso não é apenas curiosidade histórica: é uma forma de dar sentido às fórmulas, de enxergar a matemática não como um conjunto de regras arbitrárias, mas como a resposta, cuidadosamente construída ao longo dos séculos, a perguntas muito humanas sobre o mundo.</p>
-      <p class="pull-quote">"A matemática é a linguagem com a qual Deus escreveu o universo" — ideia atribuída, em diferentes versões, a Galileu Galilei, e que ainda ecoa em cada novo conceito que aprendemos.</p>
+      <p class="pull-quote">"O universo [...] está escrito em linguagem matemática." — Galileu Galilei, em "O Ensaiador" (1623), em tradução livre. A versão popular, com "Deus" como autor, é uma paráfrase posterior.</p>
+    </div>
+  </section>
+
+  <section id="quem-foi" class="chalkboard-bg reveal">
+    <div class="container" style="max-width:760px;">
+      <p class="eyebrow" style="color:var(--chalk-yellow);"><span class="rule"></span> Teste rápido</p>
+      <h2 style="color:var(--chalk); margin-bottom:12px;">Quem foi? Seis perguntas sobre a linha do tempo</h2>
+      <p class="hm-note" style="margin-bottom:22px;">Responda e leia a explicação de cada resposta. Nada é salvo: você pode refazer quando quiser.</p>
+      <div id="hmQuiz" class="hm-quiz" aria-live="polite"></div>
+      <div class="cta-row" style="justify-content:center; margin-top:32px;">
+        <a href="trilha.html" class="btn btn-ghost">Trilha de Estudo</a>
+        <a href="ferramentas.html" class="btn btn-ghost">Ferramentas interativas</a>
+        <a href="adquirir.html" class="btn btn-primary">Conhecer o livro</a>
+      </div>
     </div>
   </section>
 </main>
@@ -263,6 +514,61 @@
   </div>
 </footer>
 
+<script>
+(function(){
+  var items=[].slice.call(document.querySelectorAll('#hmTimeline .timeline-item')),
+      chips=[].slice.call(document.querySelectorAll('.hm-chip')),
+      cnt=document.getElementById('hmCount');
+  function apply(f){
+    var n=0;
+    items.forEach(function(it){
+      var show=f==='all'||(' '+it.getAttribute('data-tags')+' ').indexOf(' '+f+' ')>-1;
+      if(show){it.removeAttribute('hidden');n++;}else it.setAttribute('hidden','');
+    });
+    chips.forEach(function(c){var on=c.getAttribute('data-f')===f;c.classList.toggle('is-on',on);c.setAttribute('aria-pressed',on?'true':'false');});
+    cnt.textContent='Mostrando '+n+' de '+items.length;
+  }
+  chips.forEach(function(c){c.addEventListener('click',function(){apply(c.getAttribute('data-f'));});});
+  apply('all');
+
+  var Q=[
+   {q:'Quem criou a notação dy/dx e o símbolo ∫ que usamos até hoje?',o:['Newton','Euler','Leibniz','Cauchy'],a:2,e:'Leibniz publicou o cálculo em 1684 e introduziu essas notações. Newton usava uma notação diferente, com pontos sobre as letras.'},
+   {q:'A palavra "álgebra" vem do título de uma obra de qual matemático?',o:['Al-Khwarizmi','Brahmagupta','Fibonacci','Euclides'],a:0,e:'Al-Khwarizmi escreveu sobre al-jabr, a resolução sistemática de equações. Do nome dele vem também "algoritmo".'},
+   {q:'Quem demonstrou que existem diferentes "tamanhos" de infinito?',o:['Gauss','Riemann','Fourier','Cantor'],a:3,e:'Georg Cantor mostrou, com a teoria dos conjuntos, que o infinito dos números reais é maior que o dos naturais.'},
+   {q:'Qual matemática ligou simetrias a leis de conservação na física?',o:['Emmy Noether','Ada Lovelace','Hipátia','Sofia Kovalevskaya'],a:0,e:'O teorema de Noether associa cada simetria contínua de um sistema a uma grandeza conservada, como a energia.'},
+   {q:'Quem é frequentemente apontada como autora do primeiro algoritmo feito para uma máquina?',o:['Maria Agnesi','Ada Lovelace','Emmy Noether','Hipátia'],a:1,e:'Em 1843, Ada Lovelace descreveu um método para calcular números de Bernoulli na Máquina Analítica de Babbage.'},
+   {q:'Quem deu, no "Cours d\'analyse" (1821), uma base rigorosa a limites e continuidade?',o:['Fermat','Fibonacci','Cauchy','Arquimedes'],a:2,e:'Cauchy definiu limite e continuidade com precisão. O formalismo ε–δ foi aperfeiçoado depois, por Weierstrass.'}
+  ];
+  var box=document.getElementById('hmQuiz'),score,done;
+  function build(){
+    score=0;done=0;box.innerHTML='';
+    Q.forEach(function(q,i){
+      var d=document.createElement('div');d.className='hm-q';
+      var h=document.createElement('h3');h.textContent=(i+1)+'. '+q.q;d.appendChild(h);
+      var g=document.createElement('div');g.className='hm-opts';
+      var why=document.createElement('p');why.className='hm-why';why.hidden=true;why.textContent=q.e;
+      q.o.forEach(function(t,j){
+        var b=document.createElement('button');b.type='button';b.className='hm-opt';b.textContent=t;
+        b.addEventListener('click',function(){
+          [].forEach.call(g.children,function(x,k){x.disabled=true;if(k===q.a)x.classList.add('ok');});
+          if(j===q.a)score++;else b.classList.add('no');
+          why.hidden=false;done++;
+          if(done===Q.length)final();
+        });
+        g.appendChild(b);
+      });
+      d.appendChild(g);d.appendChild(why);box.appendChild(d);
+    });
+  }
+  function final(){
+    var s=document.createElement('div');s.className='hm-score';
+    s.appendChild(document.createTextNode('Você acertou '+score+' de '+Q.length+'.'));
+    var r=document.createElement('button');r.type='button';r.textContent='Refazer';r.addEventListener('click',build);
+    s.appendChild(r);box.appendChild(s);
+  }
+  build();
+})();
+</script>
 <script src="js/main.js"></script>
 </body>
 </html>
