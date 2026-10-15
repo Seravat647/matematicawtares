@@ -29,6 +29,37 @@
 <meta name="twitter:description" content="15 exercícios selecionados diretamente dos capítulos do livro, resolvidos passo a passo e organizados por nível de dificuldade — de pré-cálculo a aplicações da derivada.">
 <meta name="twitter:image" content="https://seravat647.github.io/matematicawtares/images/capa-calculo-1.jpg">
 <link rel="canonical" href="https://seravat647.github.io/matematicawtares/exercicios-calculo1.html">
+<style>
+.ex-show[hidden],.exercise-steps[hidden],.exercise-result[hidden],.ex-links[hidden]{display:none!important}
+.ex-prog{margin-top:22px;max-width:460px;color:var(--chalk,#F3EEE1)}
+.ex-prog-top{display:flex;justify-content:space-between;gap:12px;font-family:var(--mono,'Space Mono',monospace);font-size:.8rem;margin-bottom:6px}
+.ex-prog-bar{height:10px;border-radius:999px;background:rgba(243,238,225,.2);overflow:hidden}
+.ex-prog-bar div{height:100%;width:0;background:var(--chalk-yellow,#E4BE68);border-radius:999px;transition:width .3s}
+.ex-bar{display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center;justify-content:space-between;padding:16px 18px;margin:26px 0 6px;border:1px dashed rgba(243,238,225,.4);border-radius:10px;color:var(--chalk,#F3EEE1)}
+.ex-bar p{margin:0;flex:1 1 340px;font-size:.93rem;line-height:1.55}
+.ex-bar-btns{display:flex;flex-wrap:wrap;gap:8px}
+.ex-bar-btns button{font:inherit;font-size:.84rem;font-weight:600;padding:8px 14px;border-radius:999px;border:1px solid rgba(243,238,225,.55);background:transparent;color:var(--chalk,#F3EEE1);cursor:pointer}
+.ex-bar-btns button:hover{background:rgba(243,238,225,.12)}
+.ex-actions{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin:16px 0 4px}
+.ex-show{font:inherit;font-size:.88rem;font-weight:700;padding:9px 16px;border-radius:999px;border:1.5px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.ex-show:hover{background:rgba(127,127,127,.15)}
+.ex-show:focus-visible,.ex-bar-btns button:focus-visible{outline:2px solid var(--chalk-yellow,#E4BE68);outline-offset:2px}
+.ex-done{display:inline-flex;align-items:center;gap:7px;font-size:.88rem;cursor:pointer}
+.ex-done input{width:18px;height:18px;accent-color:#2f7d4f;cursor:pointer}
+.ex-next{margin-left:auto;font-size:.86rem;font-weight:600;color:inherit;text-decoration:underline;text-underline-offset:3px;opacity:.8}
+.ex-links{margin:14px 0 0;padding-top:12px;border-top:1px dashed rgba(127,127,127,.4);font-size:.88rem;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
+.ex-links span{font-family:var(--mono,'Space Mono',monospace);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;opacity:.7}
+.ex-links a{color:inherit;font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.exercise-card.is-done{box-shadow:inset 4px 0 0 #2f7d4f}
+.ex-next-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.ex-ncard{display:flex;flex-direction:column;gap:6px;background:#fff;border:1px solid var(--paper-line,#D9D0B8);border-top:4px solid var(--chalk-yellow,#E4BE68);border-radius:10px;padding:16px 18px;color:#2a2a2a;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.ex-ncard:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.1)}
+.ex-ncard b{color:var(--chalkboard,#1F3B32);font-family:var(--serif,'Fraunces',serif);font-size:1.05rem}
+.ex-ncard span{font-size:.9rem;line-height:1.45}
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Exercícios Resolvidos — Curso de Cálculo I", "description": "15 exercícios resolvidos passo a passo, nos níveis fácil, médio e difícil, do Pré-Cálculo às aplicações da derivada.", "url": "https://seravat647.github.io/matematicawtares/exercicios-calculo1.html", "inLanguage": "pt-BR", "isPartOf": {"@type": "WebSite", "name": "W. T. Ares – Matemática", "url": "https://seravat647.github.io/matematicawtares/"}, "author": {"@type": "Person", "name": "W. T. Ares"}, "mainEntity": {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Classificação de números reais", "url": "https://seravat647.github.io/matematicawtares/exercicios-calculo1.html#facil-1"}, {"@type": "ListItem", "position": 2, "name": "Inequação do 2º grau", "url": "https://seravat647.github.io/matematicawtares/exercicios-calculo1.html#facil-2"}, {"@type": "ListItem", "position": 3, "name": "Domínio de função com raiz", "url": "https://seravat647.github.io/matematicawtares/exercicios-calculo1.html#facil-3"}, {"@type": "ListItem", "position": 4, "name": "Vértice e raízes de função quadrática", "url": "https://seravat647.github.io/matematicawtares/exercicios-calculo1.html#facil-4"}, {"@type": "ListItem", "position": 5, "name": "Limite por fatoração", "url": "https://seravat647.github.io/matematicawtares/exercicios-calculo1.html#facil-5"}, {"@type": "ListItem", "position": 6, "name": "Inequação irracional", "url": "https://seravat647.github.io/matematicawtares/exercicios-calculo1.html#medio-1"}, {"@type": "ListItem", "position": 7, "name": "Reta tangente por derivação implícita", "url": "https://seravat647.github.io/matematicawtares/exercicios-calculo1.html#medio-2"}, {"@type": "ListItem", "position": 8, "name": "Limite trigonométrico fundamental", "url": "https://seravat647.github.io/matematicawtares/exercicios-calculo1.html#medio-3"}, {"@type": "ListItem", "position": 9, "name": "Aproximação por linearização", "url": "https://seravat647.github.io/matematicawtares/exercicios-calculo1.html#medio-4"}, {"@type": "ListItem", "position": 10, "name": "Extremos absolutos em intervalo fechado", "url": "https://seravat647.github.io/matematicawtares/exercicios-calculo1.html#medio-5"}, {"@type": "ListItem", "position": 11, "name": "Prova de irracionalidade", "url": "https://seravat647.github.io/matematicawtares/exercicios-calculo1.html#dificil-1"}, {"@type": "ListItem", "position": 12, "name": "Desigualdade de Bernoulli por indução", "url": "https://seravat647.github.io/matematicawtares/exercicios-calculo1.html#dificil-2"}, {"@type": "ListItem", "position": 13, "name": "Prova rigorosa de limite (ε-δ)", "url": "https://seravat647.github.io/matematicawtares/exercicios-calculo1.html#dificil-3"}, {"@type": "ListItem", "position": 14, "name": "Limite trigonométrico via conjugado", "url": "https://seravat647.github.io/matematicawtares/exercicios-calculo1.html#dificil-4"}, {"@type": "ListItem", "position": 15, "name": "Cone de volume máximo inscrito em uma esfera", "url": "https://seravat647.github.io/matematicawtares/exercicios-calculo1.html#dificil-5"}]}}
+</script>
 <!-- MailerLite Universal -->
 <script>
     (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
@@ -63,6 +94,7 @@
       <a href="formulario-funcoes.html">Formulário de Funções</a>
       <a href="formulario.html">Formulário de Cálculo</a>
       <a href="ferramentas.html">Ferramentas</a>
+      <a href="trilha.html">Trilha de Estudo</a>
       <a href="calculo-na-pratica.html">Cálculo na Prática</a>
       <a href="historia-da-matematica.html">História da Matemática</a>
       <a href="contato.html">Contato</a>
@@ -83,12 +115,24 @@
       <p style="margin-top:22px; display:flex; gap:10px; flex-wrap:wrap;">
         <a href="#nivel-facil" class="volume-chip">Fácil (5)</a> <a href="#nivel-medio" class="volume-chip">Médio (5)</a> <a href="#nivel-dificil" class="volume-chip">Difícil (5)</a>
       </p>
+      <div class="ex-prog" id="exProg">
+        <div class="ex-prog-top"><span id="exProgTxt">0 de 15 concluídos</span><span id="exProgLv"></span></div>
+        <div class="ex-prog-bar" role="progressbar" aria-label="Progresso na lista" aria-valuemin="0" aria-valuemax="15" aria-valuenow="0" id="exProgBar"><div id="exProgFill"></div></div>
+      </div>
       <p style="margin-top:18px;"><a href="livro.html#calculo-1" class="btn btn-ghost" style="padding:9px 16px; font-size:0.82rem;">← Ver o livro</a></p>
     </div>
   </section>
 
   <section class="chalkboard-bg exercise-section" style="padding-bottom:80px;">
     <div class="container">
+      <div class="ex-bar">
+        <p><b>Como usar esta lista:</b> tente resolver no caderno por uns 10 minutos antes de abrir a resolução. Marque “Concluído” para acompanhar seu progresso — ele fica salvo neste navegador.</p>
+        <div class="ex-bar-btns">
+          <button type="button" id="exOpenAll">Mostrar todas as resoluções</button>
+          <button type="button" id="exCloseAll">Ocultar todas</button>
+          <button type="button" id="exReset">Zerar progresso</button>
+        </div>
+      </div>
       <div id="nivel-facil" style="padding-top:26px; margin-bottom:8px;">
         <p class="eyebrow"><span class="rule"></span> Nível Fácil</p>
         <p style="color:rgba(243,238,225,0.6); font-family:var(--mono); font-size:0.85rem; margin-bottom:28px;">Aquecimento — revisão de conceitos e aplicação direta de definições.</p>
@@ -100,6 +144,11 @@
           <h3>Classificação de números reais</h3>
         </div>
         <div class="exercise-problem"><p>Classifique cada número como N, Z, Q ou I: 0; −7; √9; √5; π; 0,333...; ³√8.</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#facil-2">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -126,7 +175,8 @@
             <div class="exercise-step-text"><p>³√8 = 2, que é inteiro: Z, Q.</p></div>
           </div>
         </div>
-        <div class="exercise-result">Resultado: 0, √9 = 3 e ³√8 = 2 são inteiros (Z); 0,333... = 1/3 é racional (Q); √5 e π são irracionais (I).</div>
+        <div class="exercise-result">Resultado: 0 ∈ N (e Z, Q); −7, √9 = 3 e ³√8 = 2 ∈ Z (e Q); 0,333... = 1/3 ∈ Q; √5 e π ∈ I.</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="formulario.html#pre-calculo">Formulário de Pré-Cálculo</a></p>
       </div>
       <div class="exercise-card" id="facil-2">
         <div class="exercise-head">
@@ -134,6 +184,11 @@
           <h3>Inequação do 2º grau</h3>
         </div>
         <div class="exercise-problem"><p>Resolva 2x² − 7x + 3 &gt; 0 e expresse a solução em notação intervalar.</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#facil-3">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -149,6 +204,7 @@
           </div>
         </div>
         <div class="exercise-result">Resultado: S = (−∞, 1/2) ∪ (3, +∞).</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="formulario.html#pre-calculo">Formulário de Pré-Cálculo</a> <a href="formulario-funcoes.html">Formulário de Funções</a></p>
       </div>
       <div class="exercise-card" id="facil-3">
         <div class="exercise-head">
@@ -156,6 +212,11 @@
           <h3>Domínio de função com raiz</h3>
         </div>
         <div class="exercise-problem"><p>Determine o domínio de f(x) = √(4 − x²).</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#facil-4">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -167,6 +228,7 @@
           </div>
         </div>
         <div class="exercise-result">Resultado: Dom(f) = [−2, 2].</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="formulario.html#pre-calculo">Domínio de funções no formulário</a></p>
       </div>
       <div class="exercise-card" id="facil-4">
         <div class="exercise-head">
@@ -174,6 +236,11 @@
           <h3>Vértice e raízes de função quadrática</h3>
         </div>
         <div class="exercise-problem"><p>Para f(x) = −x² + 4x + 5, determine vértice, raízes e imagem.</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#facil-5">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -189,6 +256,7 @@
           </div>
         </div>
         <div class="exercise-result">Resultado: Raízes x = −1 e x = 5; vértice (2, 9); imagem Im(f) = (−∞, 9].</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="formulario-funcoes.html">Função do 2º grau no Formulário de Funções</a> <a href="ferramentas.html#gra">Ver o gráfico</a></p>
       </div>
       <div class="exercise-card" id="facil-5">
         <div class="exercise-head">
@@ -196,6 +264,11 @@
           <h3>Limite por fatoração</h3>
         </div>
         <div class="exercise-problem"><p>Calcule lim (x² − 9)/(x − 3) quando x → 3.</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#medio-1">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -215,6 +288,7 @@
           </div>
         </div>
         <div class="exercise-result">Resultado: lim = 6.</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="como-calcular-limites.html">Como calcular limites</a> <a href="ferramentas.html#lim">Limites na ferramenta</a></p>
       </div>
       </div>
       <div id="nivel-medio" style="padding-top:26px; margin-bottom:8px;">
@@ -228,6 +302,11 @@
           <h3>Inequação irracional</h3>
         </div>
         <div class="exercise-problem"><p>Resolva √(2x − 1) ≤ x − 2.</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#medio-2">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -251,6 +330,7 @@
           </div>
         </div>
         <div class="exercise-result">Resultado: S = [5, +∞).</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="formulario.html#pre-calculo">Formulário de Pré-Cálculo</a></p>
       </div>
       <div class="exercise-card" id="medio-2">
         <div class="exercise-head">
@@ -258,6 +338,11 @@
           <h3>Reta tangente por derivação implícita</h3>
         </div>
         <div class="exercise-problem"><p>Encontre a reta tangente à curva x² − xy + y² = 3 no ponto (1, 2).</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#medio-3">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -277,6 +362,7 @@
           </div>
         </div>
         <div class="exercise-result">Resultado: Reta tangente: y = 2.</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="regra-da-cadeia.html">Regra da cadeia</a> <a href="ferramentas.html#der">Derivar na ferramenta</a></p>
       </div>
       <div class="exercise-card" id="medio-3">
         <div class="exercise-head">
@@ -284,6 +370,11 @@
           <h3>Limite trigonométrico fundamental</h3>
         </div>
         <div class="exercise-problem"><p>Calcule lim (sen 3x)/x quando x → 0.</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#medio-4">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -299,6 +390,7 @@
           </div>
         </div>
         <div class="exercise-result">Resultado: lim = 3 · 1 = 3.</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="como-calcular-limites.html">Como calcular limites</a> <a href="ferramentas.html#lim">Limites na ferramenta</a></p>
       </div>
       <div class="exercise-card" id="medio-4">
         <div class="exercise-head">
@@ -306,6 +398,11 @@
           <h3>Aproximação por linearização</h3>
         </div>
         <div class="exercise-problem"><p>Use a linearização para aproximar √4,02.</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#medio-5">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -325,6 +422,7 @@
           </div>
         </div>
         <div class="exercise-result">Resultado: √4,02 ≈ 2,005.</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="ferramentas.html#der">Derivadas na ferramenta</a> <a href="formulario.html#calculo-i">Formulário de Cálculo I</a></p>
       </div>
       <div class="exercise-card" id="medio-5">
         <div class="exercise-head">
@@ -332,6 +430,11 @@
           <h3>Extremos absolutos em intervalo fechado</h3>
         </div>
         <div class="exercise-problem"><p>Determine os extremos absolutos de f(x) = 3x⁴ − 4x³ em [0, 3].</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#dificil-1">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -351,6 +454,7 @@
           </div>
         </div>
         <div class="exercise-result">Resultado: Mínimo absoluto f(1) = −1; máximo absoluto f(3) = 135.</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="ferramentas.html#der">Pontos críticos na ferramenta</a> <a href="formulario.html#calculo-i">Aplicações da derivada</a></p>
       </div>
       </div>
       <div id="nivel-dificil" style="padding-top:26px; margin-bottom:8px;">
@@ -364,6 +468,11 @@
           <h3>Prova de irracionalidade</h3>
         </div>
         <div class="exercise-problem"><p>Prove que √2 + √3 é irracional.</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#dificil-2">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -383,6 +492,7 @@
           </div>
         </div>
         <div class="exercise-result">Resultado: Logo, √2 + √3 é irracional. ∎</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="historia-da-matematica.html">História: os números irracionais e a prova por absurdo</a></p>
       </div>
       <div class="exercise-card" id="dificil-2">
         <div class="exercise-head">
@@ -390,6 +500,11 @@
           <h3>Desigualdade de Bernoulli por indução</h3>
         </div>
         <div class="exercise-problem"><p>Prove que (1+x)ⁿ ≥ 1 + nx para todo x &gt; −1 e n ∈ N.</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#dificil-3">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -409,6 +524,7 @@
           </div>
         </div>
         <div class="exercise-result">Resultado: Por indução, (1+x)ⁿ ≥ 1 + nx para todo n ∈ N. ∎</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="trilha.html">Trilha de Estudo</a></p>
       </div>
       <div class="exercise-card" id="dificil-3">
         <div class="exercise-head">
@@ -416,6 +532,11 @@
           <h3>Prova rigorosa de limite (ε-δ)</h3>
         </div>
         <div class="exercise-problem"><p>Use a definição ε-δ para provar que lim (3x − 1) = 14 quando x → 5.</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#dificil-4">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -435,6 +556,7 @@
           </div>
         </div>
         <div class="exercise-result">Resultado: Para todo ε &gt; 0, δ = ε/3 satisfaz a definição, logo lim (3x−1) = 14 quando x→5. ∎</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="como-calcular-limites.html">Como calcular limites</a> <a href="historia-da-matematica.html#linha-do-tempo">Cauchy e o rigor do limite</a></p>
       </div>
       <div class="exercise-card" id="dificil-4">
         <div class="exercise-head">
@@ -442,6 +564,11 @@
           <h3>Limite trigonométrico via conjugado</h3>
         </div>
         <div class="exercise-problem"><p>Prove que lim (1 − cos x)/x² = 1/2 quando x → 0.</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#dificil-5">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -461,6 +588,7 @@
           </div>
         </div>
         <div class="exercise-result">Resultado: lim (1 − cos x)/x² = 1 · 1/2 = 1/2. ∎</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="como-calcular-limites.html">Como calcular limites</a> <a href="ferramentas.html#tay">Conferir com Taylor</a></p>
       </div>
       <div class="exercise-card" id="dificil-5">
         <div class="exercise-head">
@@ -468,6 +596,11 @@
           <h3>Cone de volume máximo inscrito em uma esfera</h3>
         </div>
         <div class="exercise-problem"><p>Um cone é inscrito numa esfera de raio R. Determine as dimensões do cone de volume máximo.</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -483,12 +616,27 @@
           </div>
           <div class="exercise-step">
             <div class="exercise-step-num">4</div>
-            <div class="exercise-step-text"><p>Verificamos que é máximo e calculamos r² = 2R(4R/3) − (4R/3)² = 8R²/9.</p></div>
+            <div class="exercise-step-text"><p>Verificamos que é máximo: V''(h) = (π/3)(4R − 6h), e V''(4R/3) = −4πR/3 &lt; 0. Como 0 &lt; 4R/3 &lt; 2R, o valor é admissível. Então r² = 2R(4R/3) − (4R/3)² = 8R²/9.</p></div>
           </div>
         </div>
         <div class="exercise-result">Resultado: h = 4R/3 e r = (2√2/3)R, com volume máximo V = (32/81)πR³.</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="calculo-na-pratica.html#engenharia">Otimização na prática (reservatório)</a> <a href="ferramentas.html#der">Derivadas na ferramenta</a></p>
       </div>
       </div>
+    </div>
+  </section>
+
+  <section class="paper-bg reveal">
+    <div class="container">
+      <p class="eyebrow"><span class="rule"></span> E agora?</p>
+      <h2 style="margin-bottom:22px;">Continue de onde parou</h2>
+      <div class="ex-next-grid">
+        <a class="ex-ncard" href="exercicios-calculo2.html"><b>Lista de Cálculo II</b><span>Técnicas de integração, séries e equações diferenciais introdutórias.</span></a>
+        <a class="ex-ncard" href="exercicios.html#treino"><b>Treino rápido</b><span>12 questões de múltipla escolha com correção e explicação.</span></a>
+        <a class="ex-ncard" href="formulario.html#calculo-i"><b>Formulário de Cálculo I</b><span>Limites, derivadas, aplicações e integrais para consulta.</span></a>
+        <a class="ex-ncard" href="ferramentas.html"><b>Ferramentas interativas</b><span>Derive, integre e confira seus resultados passo a passo.</span></a>
+      </div>
+      <p style="margin-top:28px;"><a href="livro.html#calculo-1" class="btn btn-primary">Ver o livro Curso de Cálculo I</a></p>
     </div>
   </section>
 </main>
@@ -528,6 +676,41 @@
   </div>
 </footer>
 
+<script>
+(function(){
+  var KEY='wtares_ex_c1_v1',done={};
+  try{done=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){done={};}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(done));}catch(e){}}
+  var cards=[].slice.call(document.querySelectorAll('.exercise-card'));
+  function parts(c){return [c.querySelector('.exercise-steps'),c.querySelector('.exercise-result'),c.querySelector('.ex-links')];}
+  function setOpen(c,open){
+    parts(c).forEach(function(p){if(!p)return;if(open)p.removeAttribute('hidden');else p.setAttribute('hidden','');});
+    var b=c.querySelector('.ex-show');b.setAttribute('aria-expanded',open?'true':'false');b.textContent=open?'Ocultar resolução':'Mostrar resolução';
+  }
+  function progress(){
+    var n=0,lv={facil:0,medio:0,dificil:0};
+    cards.forEach(function(c){if(done[c.id]){n++;lv[c.id.split('-')[0]]++;}});
+    document.getElementById('exProgTxt').textContent=n+' de '+cards.length+' concluídos';
+    document.getElementById('exProgLv').textContent='F '+lv.facil+'/5 · M '+lv.medio+'/5 · D '+lv.dificil+'/5';
+    document.getElementById('exProgFill').style.width=(100*n/cards.length)+'%';
+    document.getElementById('exProgBar').setAttribute('aria-valuenow',n);
+  }
+  cards.forEach(function(c){
+    var cb=c.querySelector('.ex-done input'),b=c.querySelector('.ex-show');
+    cb.checked=!!done[c.id];c.classList.toggle('is-done',cb.checked);
+    setOpen(c,false);
+    b.addEventListener('click',function(){setOpen(c,b.getAttribute('aria-expanded')!=='true');});
+    cb.addEventListener('change',function(){if(cb.checked)done[c.id]=1;else delete done[c.id];c.classList.toggle('is-done',cb.checked);save();progress();});
+  });
+  document.getElementById('exOpenAll').addEventListener('click',function(){cards.forEach(function(c){setOpen(c,true);});});
+  document.getElementById('exCloseAll').addEventListener('click',function(){cards.forEach(function(c){setOpen(c,false);});});
+  document.getElementById('exReset').addEventListener('click',function(){
+    if(window.confirm('Zerar o progresso desta lista neste navegador?')){done={};save();cards.forEach(function(c){c.querySelector('.ex-done input').checked=false;c.classList.remove('is-done');});progress();}
+  });
+  function fromHash(){var id=(location.hash||'').slice(1),c=id&&document.getElementById(id);if(c&&c.classList.contains('exercise-card'))setOpen(c,true);}
+  window.addEventListener('hashchange',fromHash);fromHash();progress();
+})();
+</script>
 <script src="js/main.js"></script>
 </body>
 </html>
