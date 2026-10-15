@@ -15,15 +15,33 @@ const WHATSAPP_MESSAGE = "Olá! Vi o site do Curso de Cálculo e gostaria de mai
    Sempre que publicar um novo livro ou página, adicione uma
    entrada aqui — a busca já passa a encontrá-la. */
 const SITE_INDEX = [
-  { title: "Início", url: "index.html", snippet: "Página inicial — Curso de Cálculo I, II e III, de W. T. Ares." },
-  { title: "Sobre o Autor", url: "autor.html", snippet: "Bacharel em Matemática, professor de cursos regulares e preparatórios." },
-  { title: "O Livro — Curso de Cálculo I", url: "livro.html#calculo-1", snippet: "Limites, derivadas e os fundamentos do cálculo diferencial." },
-  { title: "O Livro — Curso de Cálculo II", url: "livro.html#calculo-2", snippet: "Técnicas de integração, sequências, séries e equações diferenciais." },
-  { title: "O Livro — Curso de Cálculo III", url: "livro.html#calculo-3", snippet: "Cálculo em várias variáveis, derivadas parciais e integrais múltiplas." },
-  { title: "A Coleção Completa", url: "livro.html#colecao", snippet: "Os três volumes do Curso de Cálculo, lado a lado." },
-  { title: "Como Adquirir", url: "adquirir.html", snippet: "Compre na Amazon (Kindle) ou na Loja UICLAP." },
-  { title: "História da Matemática", url: "historia-da-matematica.html", snippet: "Os grandes matemáticos da história e suas contribuições para o desenvolvimento da matemática." },
-  { title: "Contato", url: "contato.html", snippet: "tavareswagner21@gmail.com — Instagram, LinkedIn, YouTube, Facebook." }
+ { title: "Início", url: "index.html", snippet: "Página inicial — Curso de Cálculo I, II, III e Equações Diferenciais de W. T. Ares." },
+ { title: "Sobre o Autor", url: "autor.html", snippet: "Bacharel em Matemática, professor de cursos regulares e preparatórios." },
+ { title: "O Livro — Curso de Cálculo I", url: "livro.html#calculo-1", snippet: "Limites, derivadas e os fundamentos do cálculo diferencial." },
+ { title: "O Livro — Curso de Cálculo II", url: "livro.html#calculo-2", snippet: "Técnicas de integração, sequências, séries e equações diferenciais." },
+ { title: "O Livro — Curso de Cálculo III", url: "livro.html#calculo-3", snippet: "Cálculo em várias variáveis, derivadas parciais e integrais múltiplas." },
+ { title: "O Livro — Volume IV", url: "livro.html#calculo-4", snippet: "Quarto volume da coleção." },
+ { title: "A Coleção Completa", url: "livro.html#colecao", snippet: "Os volumes do Curso de Cálculo, lado a lado." },
+ { title: "Equações Diferenciais (livro)", url: "livro.html#equacoes-diferenciais", snippet: "Didático para dominar os fundamentos das equações diferenciais, aplicando cálculo diferencial e integral." },
+ { title: "Como Adquirir", url: "adquirir.html", snippet: "Compre na Amazon (Kindle) ou na Loja UICLAP." },
+ { title: "Trilha de Estudo e Teste de Nível", url: "trilha.html", snippet: "Descubra seu nível e siga a ordem ideal de estudo, do pré-cálculo às equações diferenciais." },
+ { title: "Exercícios Resolvidos", url: "exercicios.html", snippet: "Listas de exercícios com resolução passo a passo, por nível de dificuldade." },
+ { title: "Exercícios — Cálculo I", url: "exercicios-calculo1.html", snippet: "Exercícios resolvidos de limites, derivadas e aplicações." },
+ { title: "Exercícios — Cálculo II", url: "exercicios-calculo2.html", snippet: "Exercícios resolvidos de integrais, técnicas de integração, sequências e séries." },
+ { title: "Exercícios — Cálculo III", url: "exercicios-calculo3.html", snippet: "Exercícios resolvidos de várias variáveis, derivadas parciais e integrais múltiplas." },
+ { title: "Exercícios — Equações Diferenciais", url: "exercicios-equacoes-diferenciais.html", snippet: "Exercícios resolvidos de EDOs de 1ª e 2ª ordem." },
+ { title: "Formulário de Cálculo", url: "formulario.html", snippet: "Fórmulas do pré-cálculo às equações diferenciais: limites, derivadas, integrais, séries." },
+ { title: "Formulário de Funções e Curvas", url: "formulario-funcoes.html", snippet: "Funções, gráficos e curvas: propriedades e fórmulas." },
+ { title: "Ferramentas Interativas", url: "ferramentas.html", snippet: "Calculadoras de derivada, série de Taylor, gráficos, EDO, limites, integral dupla e passo a passo." },
+ { title: "Tópicos de Cálculo", url: "topicos.html", snippet: "Explicações passo a passo dos principais tópicos." },
+ { title: "Regra da cadeia", url: "regra-da-cadeia.html", snippet: "Como derivar funções compostas, com exemplos." },
+ { title: "Integração por partes", url: "integracao-por-partes.html", snippet: "Fórmula, passo a passo e exemplos." },
+ { title: "Como calcular limites", url: "como-calcular-limites.html", snippet: "Indeterminações, fatoração e limites fundamentais." },
+ { title: "EDO linear de 1ª ordem", url: "edo-linear-primeira-ordem.html", snippet: "Fator integrante passo a passo." },
+ { title: "Derivadas parciais e gradiente", url: "derivadas-parciais.html", snippet: "Como calcular com exemplos." },
+ { title: "Cálculo na Prática", url: "calculo-na-pratica.html", snippet: "Onde o cálculo aparece de verdade: engenharia, física, saúde e calculadoras." },
+ { title: "História da Matemática", url: "historia-da-matematica.html", snippet: "Os grandes matemáticos da história, linha do tempo e suas contribuições." },
+ { title: "Contato", url: "contato.html", snippet: "tavareswagner21@gmail.com — Instagram, LinkedIn, YouTube, Facebook." }
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -154,7 +172,8 @@ document.addEventListener("DOMContentLoaded", () => {
       normalize(item.title).includes(q) || normalize(item.snippet).includes(q)
     );
     if (matches.length === 0) {
-      searchResults.innerHTML = '<div class="sr-empty">Nenhum resultado para "' + query + '".</div>';
+      const safe = query.replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+      searchResults.innerHTML = '<div class="sr-empty">Nenhum resultado para "' + safe + '".</div>';
     } else {
       searchResults.innerHTML = matches.map(item =>
         `<a href="${item.url}">
@@ -180,51 +199,22 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* -------- Formulário de newsletter --------
-     Envia o e-mail de fato via Web3Forms (gratuito), que
-     repassa cada inscrição para tavareswagner21@gmail.com.
-     Console.log de depuração incluído propositalmente — abra
-     o DevTools (F12) > Console para acompanhar o envio. */
+     Conectado ao MailerLite via script no <head> de cada
+     página. Este trecho apenas dá feedback visual ao
+     visitante após o envio. */
   document.querySelectorAll(".newsletter-form").forEach(form => {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       const emailInput = form.querySelector('input[type="email"]');
       const status = form.querySelector(".newsletter-status");
-      const submitBtn = form.querySelector('button[type="submit"]');
       const email = emailInput.value.trim();
 
       if (!email) return;
 
-      console.log("[newsletter] enviando inscrição para Web3Forms:", email);
-
-      submitBtn.disabled = true;
-      status.classList.remove("ok", "err", "show");
-
-      const formData = new FormData(form);
-
-      fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: { "Accept": "application/json" },
-        body: formData
-      })
-        .then(res => res.json())
-        .then(data => {
-          console.log("[newsletter] resposta do Web3Forms:", data);
-          if (data.success) {
-            status.textContent = "Obrigado! Em breve você receberá nossas novidades.";
-            status.classList.add("ok", "show");
-            emailInput.value = "";
-          } else {
-            throw new Error(data.message || "Erro no envio");
-          }
-        })
-        .catch((err) => {
-          console.error("[newsletter] erro no envio:", err);
-          status.textContent = "Ops, algo deu errado. Tente novamente em instantes.";
-          status.classList.add("err", "show");
-        })
-        .finally(() => {
-          submitBtn.disabled = false;
-        });
+      status.textContent = "Obrigado! Em breve você receberá nossas novidades.";
+      status.classList.remove("err");
+      status.classList.add("ok", "show");
+      emailInput.value = "";
     });
   });
 
