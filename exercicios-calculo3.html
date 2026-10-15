@@ -29,6 +29,37 @@
 <meta name="twitter:description" content="15 exercícios de vetores, funções de várias variáveis, integrais múltiplas e cálculo vetorial, resolvidos passo a passo.">
 <meta name="twitter:image" content="https://seravat647.github.io/matematicawtares/images/capa-calculo-1.jpg">
 <link rel="canonical" href="https://seravat647.github.io/matematicawtares/exercicios-calculo3.html">
+<style>
+.ex-show[hidden],.exercise-steps[hidden],.exercise-result[hidden],.ex-links[hidden]{display:none!important}
+.ex-prog{margin-top:22px;max-width:460px;color:var(--chalk,#F3EEE1)}
+.ex-prog-top{display:flex;justify-content:space-between;gap:12px;font-family:var(--mono,'Space Mono',monospace);font-size:.8rem;margin-bottom:6px}
+.ex-prog-bar{height:10px;border-radius:999px;background:rgba(243,238,225,.2);overflow:hidden}
+.ex-prog-bar div{height:100%;width:0;background:var(--chalk-yellow,#E4BE68);border-radius:999px;transition:width .3s}
+.ex-bar{display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center;justify-content:space-between;padding:16px 18px;margin:26px 0 6px;border:1px dashed rgba(243,238,225,.4);border-radius:10px;color:var(--chalk,#F3EEE1)}
+.ex-bar p{margin:0;flex:1 1 340px;font-size:.93rem;line-height:1.55}
+.ex-bar-btns{display:flex;flex-wrap:wrap;gap:8px}
+.ex-bar-btns button{font:inherit;font-size:.84rem;font-weight:600;padding:8px 14px;border-radius:999px;border:1px solid rgba(243,238,225,.55);background:transparent;color:var(--chalk,#F3EEE1);cursor:pointer}
+.ex-bar-btns button:hover{background:rgba(243,238,225,.12)}
+.ex-actions{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin:16px 0 4px}
+.ex-show{font:inherit;font-size:.88rem;font-weight:700;padding:9px 16px;border-radius:999px;border:1.5px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.ex-show:hover{background:rgba(127,127,127,.15)}
+.ex-show:focus-visible,.ex-bar-btns button:focus-visible{outline:2px solid var(--chalk-yellow,#E4BE68);outline-offset:2px}
+.ex-done{display:inline-flex;align-items:center;gap:7px;font-size:.88rem;cursor:pointer}
+.ex-done input{width:18px;height:18px;accent-color:#2f7d4f;cursor:pointer}
+.ex-next{margin-left:auto;font-size:.86rem;font-weight:600;color:inherit;text-decoration:underline;text-underline-offset:3px;opacity:.8}
+.ex-links{margin:14px 0 0;padding-top:12px;border-top:1px dashed rgba(127,127,127,.4);font-size:.88rem;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
+.ex-links span{font-family:var(--mono,'Space Mono',monospace);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;opacity:.7}
+.ex-links a{color:inherit;font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.exercise-card.is-done{box-shadow:inset 4px 0 0 #2f7d4f}
+.ex-next-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.ex-ncard{display:flex;flex-direction:column;gap:6px;background:#fff;border:1px solid var(--paper-line,#D9D0B8);border-top:4px solid var(--chalk-yellow,#E4BE68);border-radius:10px;padding:16px 18px;color:#2a2a2a;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.ex-ncard:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.1)}
+.ex-ncard b{color:var(--chalkboard,#1F3B32);font-family:var(--serif,'Fraunces',serif);font-size:1.05rem}
+.ex-ncard span{font-size:.9rem;line-height:1.45}
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Exercícios Resolvidos — Curso de Cálculo III", "description": "15 exercícios resolvidos passo a passo, nos níveis fácil, médio e difícil, de vetores, funções de várias variáveis, integrais múltiplas e cálculo vetorial.", "url": "https://seravat647.github.io/matematicawtares/exercicios-calculo3.html", "inLanguage": "pt-BR", "isPartOf": {"@type": "WebSite", "name": "W. T. Ares – Matemática", "url": "https://seravat647.github.io/matematicawtares/"}, "author": {"@type": "Person", "name": "W. T. Ares"}, "mainEntity": {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Operações com vetores", "url": "https://seravat647.github.io/matematicawtares/exercicios-calculo3.html#facil-1"}, {"@type": "ListItem", "position": 2, "name": "Produto escalar e ângulo entre vetores", "url": "https://seravat647.github.io/matematicawtares/exercicios-calculo3.html#facil-2"}, {"@type": "ListItem", "position": 3, "name": "Domínio de função de duas variáveis", "url": "https://seravat647.github.io/matematicawtares/exercicios-calculo3.html#facil-3"}, {"@type": "ListItem", "position": 4, "name": "Derivadas parciais básicas", "url": "https://seravat647.github.io/matematicawtares/exercicios-calculo3.html#facil-4"}, {"@type": "ListItem", "position": 5, "name": "Integral dupla sobre retângulo", "url": "https://seravat647.github.io/matematicawtares/exercicios-calculo3.html#facil-5"}, {"@type": "ListItem", "position": 6, "name": "Área de paralelogramo via produto vetorial", "url": "https://seravat647.github.io/matematicawtares/exercicios-calculo3.html#medio-1"}, {"@type": "ListItem", "position": 7, "name": "Conversão para coordenadas cilíndricas", "url": "https://seravat647.github.io/matematicawtares/exercicios-calculo3.html#medio-2"}, {"@type": "ListItem", "position": 8, "name": "Pontos críticos de função de duas variáveis", "url": "https://seravat647.github.io/matematicawtares/exercicios-calculo3.html#medio-3"}, {"@type": "ListItem", "position": 9, "name": "Multiplicadores de Lagrange", "url": "https://seravat647.github.io/matematicawtares/exercicios-calculo3.html#medio-4"}, {"@type": "ListItem", "position": 10, "name": "Trabalho de um campo vetorial numa curva fechada", "url": "https://seravat647.github.io/matematicawtares/exercicios-calculo3.html#medio-5"}, {"@type": "ListItem", "position": 11, "name": "Ponto mais próximo de um plano (Lagrange, MIT)", "url": "https://seravat647.github.io/matematicawtares/exercicios-calculo3.html#dificil-1"}, {"@type": "ListItem", "position": 12, "name": "Desigualdade AM-GM via Lagrange (MIT)", "url": "https://seravat647.github.io/matematicawtares/exercicios-calculo3.html#dificil-2"}, {"@type": "ListItem", "position": 13, "name": "Versão vetorial do Teorema de Green (MIT)", "url": "https://seravat647.github.io/matematicawtares/exercicios-calculo3.html#dificil-3"}, {"@type": "ListItem", "position": 14, "name": "Campos conservativos via rotacional nulo (Stokes, MIT)", "url": "https://seravat647.github.io/matematicawtares/exercicios-calculo3.html#dificil-4"}, {"@type": "ListItem", "position": 15, "name": "Momento de inércia de uma bola sólida (MIT)", "url": "https://seravat647.github.io/matematicawtares/exercicios-calculo3.html#dificil-5"}]}}
+</script>
 <!-- MailerLite Universal -->
 <script>
     (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
@@ -63,6 +94,7 @@
       <a href="formulario-funcoes.html">Formulário de Funções</a>  
       <a href="formulario.html">Formulário de Cálculo</a>
       <a href="ferramentas.html">Ferramentas</a>
+      <a href="trilha.html">Trilha de Estudo</a>
       <a href="calculo-na-pratica.html">Cálculo na Prática</a>
       <a href="historia-da-matematica.html">História da Matemática</a>
       <a href="contato.html">Contato</a>
@@ -83,12 +115,24 @@
       <p style="margin-top:22px; display:flex; gap:10px; flex-wrap:wrap;">
         <a href="#nivel-facil" class="volume-chip">Fácil (5)</a> <a href="#nivel-medio" class="volume-chip">Médio (5)</a> <a href="#nivel-dificil" class="volume-chip">Difícil (5)</a>
       </p>
+      <div class="ex-prog" id="exProg">
+        <div class="ex-prog-top"><span id="exProgTxt">0 de 15 concluídos</span><span id="exProgLv"></span></div>
+        <div class="ex-prog-bar" role="progressbar" aria-label="Progresso na lista" aria-valuemin="0" aria-valuemax="15" aria-valuenow="0" id="exProgBar"><div id="exProgFill"></div></div>
+      </div>
       <p style="margin-top:18px;"><a href="livro.html#calculo-3" class="btn btn-ghost" style="padding:9px 16px; font-size:0.82rem;">← Ver o livro</a></p>
     </div>
   </section>
 
   <section class="chalkboard-bg exercise-section" style="padding-bottom:80px;">
     <div class="container">
+      <div class="ex-bar">
+        <p><b>Como usar esta lista:</b> tente resolver no caderno por uns 10 minutos antes de abrir a resolução. Marque “Concluído” para acompanhar seu progresso — ele fica salvo neste navegador.</p>
+        <div class="ex-bar-btns">
+          <button type="button" id="exOpenAll">Mostrar todas as resoluções</button>
+          <button type="button" id="exCloseAll">Ocultar todas</button>
+          <button type="button" id="exReset">Zerar progresso</button>
+        </div>
+      </div>
       <div id="nivel-facil" style="padding-top:26px; margin-bottom:8px;">
         <p class="eyebrow"><span class="rule"></span> Nível Fácil</p>
         <p style="color:rgba(243,238,225,0.6); font-family:var(--mono); font-size:0.85rem; margin-bottom:28px;">Aquecimento — revisão de conceitos e aplicação direta de definições.</p>
@@ -100,6 +144,11 @@
           <h3>Operações com vetores</h3>
         </div>
         <div class="exercise-problem"><p>Dados u = ⟨2,−3,1⟩ e v = ⟨−1,2,4⟩, calcule u+v, 3u−2v e ‖u‖.</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#facil-2">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -115,6 +164,7 @@
           </div>
         </div>
         <div class="exercise-result">Resultado: u+v = ⟨1,−1,5⟩; 3u−2v = ⟨8,−13,−5⟩; ‖u‖ = √14.</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="formulario.html#calculo-iii">Vetores no formulário</a></p>
       </div>
       <div class="exercise-card" id="facil-2">
         <div class="exercise-head">
@@ -122,6 +172,11 @@
           <h3>Produto escalar e ângulo entre vetores</h3>
         </div>
         <div class="exercise-problem"><p>Calcule u·v e o ângulo entre u = ⟨2,1,−1⟩ e v = ⟨1,−1,2⟩.</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#facil-3">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -137,6 +192,7 @@
           </div>
         </div>
         <div class="exercise-result">Resultado: θ = arccos(−1/6) ≈ 99,6°.</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="formulario.html#calculo-iii">Produto escalar no formulário</a></p>
       </div>
       <div class="exercise-card" id="facil-3">
         <div class="exercise-head">
@@ -144,6 +200,11 @@
           <h3>Domínio de função de duas variáveis</h3>
         </div>
         <div class="exercise-problem"><p>Determine o domínio de f(x,y) = √(x+y)/(x−y).</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#facil-4">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -155,6 +216,7 @@
           </div>
         </div>
         <div class="exercise-result">Resultado: Dom(f) = {(x,y) ∈ R² : x+y ≥ 0 e x ≠ y}.</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="derivadas-parciais.html">Derivadas parciais</a> <a href="formulario.html#calculo-iii">Funções de várias variáveis</a></p>
       </div>
       <div class="exercise-card" id="facil-4">
         <div class="exercise-head">
@@ -162,6 +224,11 @@
           <h3>Derivadas parciais básicas</h3>
         </div>
         <div class="exercise-problem"><p>Calcule fₓ e f_y para f(x,y) = x²sen(xy).</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#facil-5">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -173,6 +240,7 @@
           </div>
         </div>
         <div class="exercise-result">Resultado: fₓ = 2x sen(xy) + x²y cos(xy); f_y = x³cos(xy).</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="derivadas-parciais.html">Derivadas parciais</a> <a href="ferramentas.html#gra">Gradiente na ferramenta</a></p>
       </div>
       <div class="exercise-card" id="facil-5">
         <div class="exercise-head">
@@ -180,6 +248,11 @@
           <h3>Integral dupla sobre retângulo</h3>
         </div>
         <div class="exercise-problem"><p>Calcule ∬(4x³−9x²y²)dA sobre R = [1,2]×[0,1].</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#medio-1">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -195,6 +268,7 @@
           </div>
         </div>
         <div class="exercise-result">Resultado: ∬(4x³−9x²y²)dA = 15 − 7 = 8.</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="ferramentas.html#dup">Integral dupla e volume</a> <a href="calculo-na-pratica.html#engenharia">Integral dupla na prática</a></p>
       </div>
       </div>
       <div id="nivel-medio" style="padding-top:26px; margin-bottom:8px;">
@@ -208,6 +282,11 @@
           <h3>Área de paralelogramo via produto vetorial</h3>
         </div>
         <div class="exercise-problem"><p>Calcule a área do paralelogramo com lados u = ⟨3,0,0⟩ e v = ⟨0,2,1⟩.</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#medio-2">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -223,6 +302,7 @@
           </div>
         </div>
         <div class="exercise-result">Resultado: Área = √45 = 3√5.</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="formulario.html#calculo-iii">Produto vetorial no formulário</a></p>
       </div>
       <div class="exercise-card" id="medio-2">
         <div class="exercise-head">
@@ -230,6 +310,11 @@
           <h3>Conversão para coordenadas cilíndricas</h3>
         </div>
         <div class="exercise-problem"><p>Converta o ponto (0,3,4) e a superfície x²+y²+z²=9 para coordenadas cilíndricas.</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#medio-3">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -245,6 +330,7 @@
           </div>
         </div>
         <div class="exercise-result">Resultado: Ponto → (r,θ,z) = (3, π/2, 4); superfície → r²+z² = 9.</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="formulario.html#calculo-iii">Mudança de coordenadas</a></p>
       </div>
       <div class="exercise-card" id="medio-3">
         <div class="exercise-head">
@@ -252,6 +338,11 @@
           <h3>Pontos críticos de função de duas variáveis</h3>
         </div>
         <div class="exercise-problem"><p>Encontre e classifique os pontos críticos de f(x,y) = x³−3xy+y³.</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#medio-4">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -275,13 +366,19 @@
           </div>
         </div>
         <div class="exercise-result">Resultado: (0,0) é ponto de sela; (1,1) é mínimo local, com f(1,1) = −1.</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="ferramentas.html#gra">Gradiente na ferramenta</a> <a href="derivadas-parciais.html">Derivadas parciais</a></p>
       </div>
       <div class="exercise-card" id="medio-4">
         <div class="exercise-head">
           <span class="exercise-badge">Curso de Cálculo III · Médio</span>
           <h3>Multiplicadores de Lagrange</h3>
         </div>
-        <div class="exercise-problem"><p>Maximize f(x,y)=x²y sujeito a x+2y=6.</p></div>
+        <div class="exercise-problem"><p>Maximize f(x,y)=x²y sujeito a x+2y=6, com x ≥ 0 e y ≥ 0.</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#medio-5">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -293,14 +390,15 @@
           </div>
           <div class="exercise-step">
             <div class="exercise-step-num">3</div>
-            <div class="exercise-step-text"><p>Caso x=0: pela restrição, y=3, mas f(0,3)=0 (não é máximo).</p></div>
+            <div class="exercise-step-text"><p>Caso x=0: pela restrição, y=3, e f(0,3)=0 — é um mínimo na fronteira, não o máximo.</p></div>
           </div>
           <div class="exercise-step">
             <div class="exercise-step-num">4</div>
             <div class="exercise-step-text"><p>Caso x=4y: substituindo em x+2y=6: 4y+2y=6 → y=1, logo x=4.</p></div>
           </div>
         </div>
-        <div class="exercise-result">Resultado: Máximo em (x,y)=(4,1), com f(4,1)=16.</div>
+        <div class="exercise-result">Resultado: Máximo em (x,y)=(4,1), com f(4,1)=16. Como x,y ≥ 0, a restrição é o segmento de (0,3) a (6,0), onde f = 0 nas pontas; logo 16 é o máximo absoluto. (Sem a condição x ≥ 0, f(x) = x²(6−x)/2 seria ilimitada quando x → −∞.)</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="formulario.html#calculo-iii">Multiplicadores de Lagrange</a> <a href="ferramentas.html#gra">Gradiente na ferramenta</a></p>
       </div>
       <div class="exercise-card" id="medio-5">
         <div class="exercise-head">
@@ -308,6 +406,11 @@
           <h3>Trabalho de um campo vetorial numa curva fechada</h3>
         </div>
         <div class="exercise-problem"><p>Calcule o trabalho de F=⟨−y,x⟩ ao longo do círculo x²+y²=1, sentido anti-horário.</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#dificil-1">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -327,6 +430,7 @@
           </div>
         </div>
         <div class="exercise-result">Resultado: Trabalho = 2π.</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="formulario.html#calculo-iii">Integral de linha no formulário</a></p>
       </div>
       </div>
       <div id="nivel-dificil" style="padding-top:26px; margin-bottom:8px;">
@@ -340,6 +444,11 @@
           <h3>Ponto mais próximo de um plano (Lagrange, MIT)</h3>
         </div>
         <div class="exercise-problem"><p>Encontre o ponto do plano 2x+y+z=1 mais próximo da origem.</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#dificil-2">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -359,6 +468,7 @@
           </div>
         </div>
         <div class="exercise-result">Resultado: Ponto mais próximo: (1/3, 1/6, 1/6), com distância mínima d = √6/6.</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="formulario.html#calculo-iii">Multiplicadores de Lagrange</a> <a href="ferramentas.html#gra">Gradiente na ferramenta</a></p>
       </div>
       <div class="exercise-card" id="dificil-2">
         <div class="exercise-head">
@@ -366,6 +476,11 @@
           <h3>Desigualdade AM-GM via Lagrange (MIT)</h3>
         </div>
         <div class="exercise-problem"><p>Use Lagrange para maximizar f=xyz sujeito a x+y+z=1 (x,y,z&gt;0) e prove a AM-GM para 3 variáveis.</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#dificil-3">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -377,14 +492,15 @@
           </div>
           <div class="exercise-step">
             <div class="exercise-step-num">3</div>
-            <div class="exercise-step-text"><p>Pela restrição, x=y=z=1/3, e o máximo de f é (1/3)³=1/27.</p></div>
+            <div class="exercise-step-text"><p>Pela restrição, x=y=z=1/3, e o máximo de f é (1/3)³=1/27. O máximo existe, pois o domínio x,y,z ≥ 0 é compacto e f = 0 na fronteira.</p></div>
           </div>
           <div class="exercise-step">
             <div class="exercise-step-num">4</div>
-            <div class="exercise-step-text"><p>Logo, para x+y+z=s fixo, xyz ≤ (s/3)³, ou seja, ³√(xyz) ≤ s/3.</p></div>
+            <div class="exercise-step-text"><p>Para x+y+z=s qualquer, aplicamos o resultado a (x/s, y/s, z/s), cuja soma é 1: xyz/s³ ≤ 1/27, ou seja, xyz ≤ (s/3)³ e ³√(xyz) ≤ s/3.</p></div>
           </div>
         </div>
         <div class="exercise-result">Resultado: (x+y+z)/3 ≥ ³√(xyz), a desigualdade AM-GM para três variáveis. ∎</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="formulario.html#calculo-iii">Multiplicadores de Lagrange</a></p>
       </div>
       <div class="exercise-card" id="dificil-3">
         <div class="exercise-head">
@@ -392,6 +508,11 @@
           <h3>Versão vetorial do Teorema de Green (MIT)</h3>
         </div>
         <div class="exercise-problem"><p>Prove que ∮_C F·dr = ∬_D (∇×F)·k dA, para F=⟨P,Q,0⟩.</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#dificil-4">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -411,6 +532,7 @@
           </div>
         </div>
         <div class="exercise-result">Resultado: ∮_C F·dr = ∬_D (∇×F)·k dA — as duas formulações coincidem. ∎</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="formulario.html#calculo-iii">Teorema de Green</a></p>
       </div>
       <div class="exercise-card" id="dificil-4">
         <div class="exercise-head">
@@ -418,6 +540,11 @@
           <h3>Campos conservativos via rotacional nulo (Stokes, MIT)</h3>
         </div>
         <div class="exercise-problem"><p>Use Stokes para provar que, se ∇×F=0 numa região R³ simplesmente conexa, F é conservativo.</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          <a class="ex-next" href="#dificil-5">Próximo →</a>
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -425,7 +552,7 @@
           </div>
           <div class="exercise-step">
             <div class="exercise-step-num">2</div>
-            <div class="exercise-step-text"><p>Pelo Teorema de Stokes: ∮_C F·dr = ∬_S (∇×F)·n dA.</p></div>
+            <div class="exercise-step-text"><p>Pelo Teorema de Stokes (com F de classe C¹): ∮_C F·dr = ∬_S (∇×F)·n dA.</p></div>
           </div>
           <div class="exercise-step">
             <div class="exercise-step-num">3</div>
@@ -437,6 +564,7 @@
           </div>
         </div>
         <div class="exercise-result">Resultado: Um campo com trabalho zero em qualquer curva fechada é conservativo. ∎</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="formulario.html#calculo-iii">Teorema de Stokes</a></p>
       </div>
       <div class="exercise-card" id="dificil-5">
         <div class="exercise-head">
@@ -444,6 +572,11 @@
           <h3>Momento de inércia de uma bola sólida (MIT)</h3>
         </div>
         <div class="exercise-problem"><p>Calcule o momento de inércia de uma bola sólida de raio a e densidade ρ₀ em torno de um diâmetro.</p></div>
+        <div class="ex-actions">
+          <button type="button" class="ex-show" aria-expanded="false">Mostrar resolução</button>
+          <label class="ex-done"><input type="checkbox"> Concluído</label>
+          
+        </div>
         <div class="exercise-steps">
           <div class="exercise-step">
             <div class="exercise-step-num">1</div>
@@ -467,8 +600,23 @@
           </div>
         </div>
         <div class="exercise-result">Resultado: I = (8π/15)ρ₀a⁵ = (2/5)Ma² — a fórmula clássica do momento de inércia de uma esfera sólida.</div>
+        <p class="ex-links"><span>Veja também:</span> <a href="ferramentas.html#dup">Integrais múltiplas na ferramenta</a> <a href="formulario.html#calculo-iii">Coordenadas esféricas</a></p>
       </div>
       </div>
+    </div>
+  </section>
+
+  <section class="paper-bg reveal">
+    <div class="container">
+      <p class="eyebrow"><span class="rule"></span> E agora?</p>
+      <h2 style="margin-bottom:22px;">Continue de onde parou</h2>
+      <div class="ex-next-grid">
+        <a class="ex-ncard" href="exercicios-equacoes-diferenciais.html"><b>Lista de Equações Diferenciais</b><span>De EDOs de primeira ordem a sistemas, Fourier e EDPs.</span></a>
+        <a class="ex-ncard" href="exercicios.html#treino"><b>Treino rápido</b><span>12 questões de múltipla escolha com correção e explicação.</span></a>
+        <a class="ex-ncard" href="formulario.html#calculo-iii"><b>Formulário de Cálculo III</b><span>Vetores, várias variáveis, integrais múltiplas e cálculo vetorial.</span></a>
+        <a class="ex-ncard" href="exercicios-calculo2.html"><b>Lista de Cálculo II</b><span>Revise técnicas de integração, séries e EDOs introdutórias.</span></a>
+      </div>
+      <p style="margin-top:28px;"><a href="livro.html#calculo-3" class="btn btn-primary">Ver o livro Curso de Cálculo III</a></p>
     </div>
   </section>
 </main>
@@ -508,6 +656,41 @@
   </div>
 </footer>
 
+<script>
+(function(){
+  var KEY='wtares_ex_c3_v1',done={};
+  try{done=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){done={};}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(done));}catch(e){}}
+  var cards=[].slice.call(document.querySelectorAll('.exercise-card'));
+  function parts(c){return [c.querySelector('.exercise-steps'),c.querySelector('.exercise-result'),c.querySelector('.ex-links')];}
+  function setOpen(c,open){
+    parts(c).forEach(function(p){if(!p)return;if(open)p.removeAttribute('hidden');else p.setAttribute('hidden','');});
+    var b=c.querySelector('.ex-show');b.setAttribute('aria-expanded',open?'true':'false');b.textContent=open?'Ocultar resolução':'Mostrar resolução';
+  }
+  function progress(){
+    var n=0,lv={facil:0,medio:0,dificil:0};
+    cards.forEach(function(c){if(done[c.id]){n++;lv[c.id.split('-')[0]]++;}});
+    document.getElementById('exProgTxt').textContent=n+' de '+cards.length+' concluídos';
+    document.getElementById('exProgLv').textContent='F '+lv.facil+'/5 · M '+lv.medio+'/5 · D '+lv.dificil+'/5';
+    document.getElementById('exProgFill').style.width=(100*n/cards.length)+'%';
+    document.getElementById('exProgBar').setAttribute('aria-valuenow',n);
+  }
+  cards.forEach(function(c){
+    var cb=c.querySelector('.ex-done input'),b=c.querySelector('.ex-show');
+    cb.checked=!!done[c.id];c.classList.toggle('is-done',cb.checked);
+    setOpen(c,false);
+    b.addEventListener('click',function(){setOpen(c,b.getAttribute('aria-expanded')!=='true');});
+    cb.addEventListener('change',function(){if(cb.checked)done[c.id]=1;else delete done[c.id];c.classList.toggle('is-done',cb.checked);save();progress();});
+  });
+  document.getElementById('exOpenAll').addEventListener('click',function(){cards.forEach(function(c){setOpen(c,true);});});
+  document.getElementById('exCloseAll').addEventListener('click',function(){cards.forEach(function(c){setOpen(c,false);});});
+  document.getElementById('exReset').addEventListener('click',function(){
+    if(window.confirm('Zerar o progresso desta lista neste navegador?')){done={};save();cards.forEach(function(c){c.querySelector('.ex-done input').checked=false;c.classList.remove('is-done');});progress();}
+  });
+  function fromHash(){var id=(location.hash||'').slice(1),c=id&&document.getElementById(id);if(c&&c.classList.contains('exercise-card'))setOpen(c,true);}
+  window.addEventListener('hashchange',fromHash);fromHash();progress();
+})();
+</script>
 <script src="js/main.js"></script>
 </body>
 </html>
