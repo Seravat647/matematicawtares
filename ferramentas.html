@@ -1,10 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J1KE3X1FFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-J1KE3X1FFH');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ferramentas Interativas | W. T. Ares – Matemática</title>
-<meta name="description" content="Ferramentas interativas de Cálculo: derivada e reta tangente, somas de Riemann e série de Taylor, ligadas ao Curso de Cálculo I, II, III e Equações Diferenciais de W. T. Ares.">
+<title>Ferramentas Interativas de Cálculo | W. T. Ares – Matemática</title>
+<meta name="description" content="Laboratório de Cálculo online e gratuito: derivada e reta tangente, somas de Riemann, série de Taylor, gradiente, campo de direções, limites, integral dupla e passo a passo de derivadas e integrais.">
+<link rel="canonical" href="https://seravat647.github.io/matematicawtares/ferramentas.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231F3B32'/%3E%3Ctext x='32' y='45' font-size='38' font-family='Georgia,serif' font-style='italic' text-anchor='middle' fill='%23E4BE68'%3Ef%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ferramentas Interativas de Cálculo | W. T. Ares – Matemática">
+<meta property="og:description" content="Laboratório de Cálculo online e gratuito: derivada, Riemann, Taylor, gradiente, EDO, limites, integral dupla e passo a passo.">
+<meta property="og:image" content="https://seravat647.github.io/matematicawtares/images/capa-calculo-1.jpg">
+<meta property="og:url" content="https://seravat647.github.io/matematicawtares/ferramentas.html">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ferramentas Interativas de Cálculo | W. T. Ares – Matemática">
+<meta name="twitter:description" content="Laboratório de Cálculo online e gratuito: derivada, Riemann, Taylor, gradiente, EDO, limites, integral dupla e passo a passo.">
+<meta name="twitter:image" content="https://seravat647.github.io/matematicawtares/images/capa-calculo-1.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Ferramentas Interativas de Cálculo","url":"https://seravat647.github.io/matematicawtares/ferramentas.html","inLanguage":"pt-BR","applicationCategory":"EducationalApplication","operatingSystem":"Qualquer navegador","isAccessibleForFree":true,"author":{"@type":"Person","name":"W. T. Ares"},"description":"Laboratório de Cálculo com derivada e reta tangente, somas de Riemann, série de Taylor, gradiente, campo de direções, limites, integral dupla e passo a passo."}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;600;700&family=Space+Mono:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
@@ -16,7 +37,7 @@
 .tabbtn:hover{transform:translateY(-2px)}.tabbtn[aria-selected=true]{background:var(--chalkboard);color:var(--chalk)}
 .tool{display:grid;grid-template-columns:1.6fr 1fr;gap:26px;background:var(--chalkboard);color:var(--chalk);border-radius:6px;padding:24px;box-shadow:0 24px 50px -22px rgba(31,59,50,.7)}
 .tool canvas{width:100%;height:auto;background:var(--chalkboard-2);border-radius:4px;display:block;border:1px solid rgba(243,238,225,.15)}
-.tool label{display:flex;justify-content:space-between;align-items:baseline;font:.72rem var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--chalk-yellow);margin:14px 0 6px}
+.tool label{display:flex;justify-content:space-between;align-items:baseline;font:.82rem var(--mono);letter-spacing:.03em;text-transform:none;color:var(--chalk-yellow);margin:14px 0 6px}
 .tool label:first-child{margin-top:0}
 .tool input[type=text],.tool input[type=number],.tool select{width:100%;font:1rem var(--mono);color:var(--chalk);background:var(--chalkboard-2);border:1px solid rgba(243,238,225,.3);border-radius:3px;padding:9px 11px}
 .tool input[type=range]{width:100%;accent-color:#E4BE68}
@@ -30,11 +51,27 @@
 .soon{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:16px;margin-top:26px}
 .soon div{border:1px dashed #8a7a3f;border-radius:4px;padding:16px 18px;background:rgba(251,247,238,.9);font-size:.95rem}.soon b{display:block;font-family:var(--serif);font-size:1.05rem}
 .hero.short{padding-bottom:70px}
-.soon a{display:block;border:1px solid #8a7a3f;border-radius:4px;padding:16px 18px;background:#FFFDF8;font-size:.95rem;color:#1F3B32;transition:transform .18s,box-shadow .18s}.soon a:hover{transform:translateY(-3px);box-shadow:0 14px 26px -16px rgba(31,59,50,.6)}.soon a b{display:block;font-family:var(--serif);font-size:1.05rem}
+.soon a{display:block;text-decoration:none;border:1px solid #8a7a3f;border-radius:4px;padding:16px 18px;background:#FFFDF8;font-size:.95rem;color:#1F3B32;transition:transform .18s,box-shadow .18s}.soon a:hover{transform:translateY(-3px);box-shadow:0 14px 26px -16px rgba(31,59,50,.6)}.soon a b{display:block;font-family:var(--serif);font-size:1.05rem}
 .stepbox{background:var(--chalkboard-2);border:1px solid rgba(243,238,225,.15);border-radius:4px;padding:18px 22px;max-height:640px;overflow:auto}.stepbox ol{margin:12px 0 0 20px;padding:0}.stepbox li{margin:0 0 14px}.stepbox .r{color:var(--chalk-yellow)}.stepbox .hn{font-size:.9rem;opacity:.8}.stepbox .sh{font:.75rem var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--chalk-yellow);margin:0 0 6px}.stepbox .fin{margin-top:14px;padding:12px 16px;border-left:4px solid var(--chalk-yellow);background:rgba(228,190,104,.1)}.stepbox .vf{font:.85rem var(--mono);margin:6px 0 0}.stepbox .warn{color:#f0b9a8}.stepbox .katex{font-size:1.1em}.stepbox .katex-display{overflow-x:auto;overflow-y:hidden;margin:.5em 0}
 .hint{font:.8rem var(--mono);opacity:.7;margin:8px 0 0}
 #cv.pick{cursor:crosshair;touch-action:pan-y}
-@media(max-width:860px){.tool{grid-template-columns:1fr}}
+[hidden]{display:none!important}
+.tabbtn:focus-visible,.pre button:focus-visible,.acts button:focus-visible{outline:3px solid var(--chalk-yellow);outline-offset:3px}
+.tool input:focus-visible,.tool select:focus-visible{outline:2px solid var(--chalk-yellow);outline-offset:1px;border-color:var(--chalk-yellow)}
+.tool input[aria-invalid=true]{border-color:#f0b9a8}
+.tool .acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.tool .acts button{font:700 .78rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--chalk);background:transparent;border:1px solid rgba(243,238,225,.4);border-radius:3px;padding:9px 13px;cursor:pointer;transition:border-color .18s,color .18s}
+.tool .acts button:hover{border-color:var(--chalk-yellow);color:var(--chalk-yellow)}
+.tool .acts [data-done]{border-color:var(--chalk-yellow);color:var(--chalk-yellow)}
+.syntax{max-width:62ch;color:#3c453f;margin:0 0 22px;font-size:.95rem}
+.syntax summary{cursor:pointer;font-weight:700;color:var(--chalkboard)}
+.syntax summary:focus-visible{outline:3px solid var(--chalk-yellow);outline-offset:3px}
+.syntax p{margin:10px 0 0}
+.eyebrow-sm{font:.72rem var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#6b5f2c;margin:38px 0 0}
+.tool-title{font:600 1.15rem var(--serif);margin:0 0 4px;color:var(--chalk)}
+.tool-desc{margin:0 0 18px;font-size:.92rem;opacity:.8;max-width:60ch}
+@media(max-width:860px){.tool{grid-template-columns:1fr;padding:18px}.tabs{flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x proximity;padding-bottom:8px;margin-right:-28px;padding-right:28px;-webkit-overflow-scrolling:touch}.tabbtn{flex:0 0 auto;scroll-snap-align:start;min-height:44px}.tool input[type=range]{height:32px}.pre button{padding:8px 13px}}
+@media(prefers-reduced-motion:reduce){.tabbtn,.soon a{transition:none}.tabbtn:hover,.soon a:hover{transform:none}}
 </style>
 </head>
 <body>
@@ -68,26 +105,30 @@
 <section class="hero chalkboard-bg short"><div class="container">
  <p class="eyebrow"><span class="rule"></span> Ferramentas interativas</p>
  <h1>Veja o cálculo <em>acontecer</em>.</h1>
- <p class="lede" style="margin-bottom:0">Digite uma função e explore: a reta tangente que mostra a derivada, os retângulos que formam a integral e o polinômio de Taylor que se aproxima da curva, o gradiente sobre as curvas de nível e o campo de direções das equações diferenciais. Cada ferramenta acompanha um capítulo do Curso de Cálculo.</p>
+ <p class="lede" style="margin-bottom:0">Digite uma função e explore: a reta tangente que mostra a derivada, os retângulos que formam a integral, o polinômio de Taylor que se aproxima da curva, o gradiente sobre as curvas de nível, o campo de direções das equações diferenciais, o limite que aparece ao dar zoom, o volume da integral dupla e a resolução passo a passo. São oito ferramentas gratuitas, e cada uma acompanha um capítulo do Curso de Cálculo.</p>
 </div></section>
 <section class="paper-bg" style="padding:70px 0 90px"><div class="container">
  <p class="eyebrow"><span class="rule"></span> Laboratório</p>
  <h2>Escolha uma ferramenta</h2>
- <p class="note">Use <code>x</code> como variável (e <code>y</code> nas ferramentas de duas variáveis) e operadores comuns: <code>x^2</code>, <code>sin(x)</code> (ou <code>sen(x)</code>), <code>cos(x)</code>, <code>exp(x)</code>, <code>ln(x)</code>, <code>sqrt(x)</code>, <code>abs(x)</code>, <code>pi</code>. Multiplicação sempre com <code>*</code>.</p>
- <div class="tabs" role="tablist" id="lab">
-  <button class="tabbtn" role="tab" data-t="der" aria-selected="true">Derivada e reta tangente</button>
-  <button class="tabbtn" role="tab" data-t="rie" aria-selected="false">Somas de Riemann</button>
-  <button class="tabbtn" role="tab" data-t="tay" aria-selected="false">Série de Taylor</button>
-  <button class="tabbtn" role="tab" data-t="gra" aria-selected="false">Gradiente (Cálculo III)</button>
-  <button class="tabbtn" role="tab" data-t="edo" aria-selected="false">Campo de direções (EDO)</button>
-  <button class="tabbtn" role="tab" data-t="lim" aria-selected="false">Limites e continuidade</button>
-  <button class="tabbtn" role="tab" data-t="dup" aria-selected="false">Integral dupla e volume</button>
-  <button class="tabbtn" role="tab" data-t="pas" aria-selected="false">Passo a passo</button>
+ <p class="note">Escolha uma aba, digite sua função ou clique num dos exemplos e mexa nos controles: o gráfico e os números mudam na hora.</p>
+ <details class="syntax"><summary>Como escrever a função</summary>
+  <p>Use <code>x</code> como variável (e <code>y</code> nas ferramentas de duas variáveis) e operadores comuns: <code>x^2</code>, <code>sin(x)</code> (ou <code>sen(x)</code>), <code>cos(x)</code>, <code>exp(x)</code>, <code>ln(x)</code> (ou <code>log(x)</code>, também logaritmo natural), <code>sqrt(x)</code>, <code>abs(x)</code>, <code>pi</code>. Multiplicação pode ser <code>2*x</code> ou <code>2x</code>. Decimais aceitam vírgula ou ponto: <code>0,5</code> ou <code>0.5</code>.</p>
+ </details>
+ <div class="tabs" role="tablist" id="lab" aria-label="Ferramentas do laboratório">
+  <button class="tabbtn" role="tab" id="tab-der" aria-controls="panel" data-t="der" aria-selected="true">Derivada e reta tangente</button>
+  <button class="tabbtn" role="tab" id="tab-rie" aria-controls="panel" data-t="rie" aria-selected="false" tabindex="-1">Somas de Riemann</button>
+  <button class="tabbtn" role="tab" id="tab-tay" aria-controls="panel" data-t="tay" aria-selected="false" tabindex="-1">Série de Taylor</button>
+  <button class="tabbtn" role="tab" id="tab-gra" aria-controls="panel" data-t="gra" aria-selected="false" tabindex="-1">Gradiente (Cálculo III)</button>
+  <button class="tabbtn" role="tab" id="tab-edo" aria-controls="panel" data-t="edo" aria-selected="false" tabindex="-1">Campo de direções (EDO)</button>
+  <button class="tabbtn" role="tab" id="tab-lim" aria-controls="panel" data-t="lim" aria-selected="false" tabindex="-1">Limites e continuidade</button>
+  <button class="tabbtn" role="tab" id="tab-dup" aria-controls="panel" data-t="dup" aria-selected="false" tabindex="-1">Integral dupla e volume</button>
+  <button class="tabbtn" role="tab" id="tab-pas" aria-controls="panel" data-t="pas" aria-selected="false" tabindex="-1">Passo a passo</button>
  </div>
- <div class="tool">
+ <div class="tool" id="panel" role="tabpanel" aria-labelledby="tab-der">
   <div><canvas id="cv" width="1000" height="620" role="img" aria-label="Gráfico da função"></canvas><div id="stepbox" class="stepbox" hidden></div></div>
   <div>
-   <label for="fx" id="fxl">f(x) =</label><input type="text" id="fx" value="x^3 - 4*x^2 + 5*x - 2" autocomplete="off" spellcheck="false">
+   <h3 class="tool-title" id="tt"></h3><p class="tool-desc" id="tdsc"></p>
+   <label for="fx" id="fxl">f(x) =</label><input type="text" id="fx" value="x^3 - 4*x^2 + 5*x - 2" autocomplete="off" spellcheck="false" aria-describedby="out">
    <div class="pre" id="pre"></div>
    <div class="blk on" data-for="der rie tay gra edo"><div class="row2"><div><label for="xa">x de</label><input type="number" id="xa" value="-1" step="any"></div><div><label for="xb">até</label><input type="number" id="xb" value="5" step="any"></div></div></div>
    <div class="blk" data-for="gra edo"><div class="row2"><div><label for="ya">y de</label><input type="number" id="ya" value="-3" step="any"></div><div><label for="yb">até</label><input type="number" id="yb" value="3" step="any"></div></div><label for="p1">x₀ <span id="p1v"></span></label><input type="range" id="p1" min="-3" max="3" step="0.05" value="1"><label for="p2">y₀ <span id="p2v"></span></label><input type="range" id="p2" min="-3" max="3" step="0.05" value="1"><p class="hint">Clique ou arraste no gráfico para escolher o ponto.</p></div>
@@ -106,8 +147,10 @@
    <div class="blk" data-for="dup"><div class="row2"><div><label for="da">x de</label><input type="number" id="da" value="0" step="any"></div><div><label for="db">até</label><input type="number" id="db" value="2" step="any"></div></div><div class="row2"><div><label for="dc">y de</label><input type="number" id="dc" value="0" step="any"></div><div><label for="dd">até</label><input type="number" id="dd" value="2" step="any"></div></div><label for="dn">Divisões n <span id="dnv"></span></label><input type="range" id="dn" min="1" max="30" value="6"><label for="dm">Altura de cada coluna</label><select id="dm"><option value="L">Canto inferior esquerdo</option><option value="U">Canto superior direito</option><option value="M" selected>Ponto médio</option></select></div>
    <div class="blk" data-for="pas"><label for="sm">O que fazer</label><select id="sm"><option value="D">Derivar</option><option value="I">Integrar</option></select></div>
    <div class="out" id="out" aria-live="polite"></div>
+   <div class="acts"><button type="button" id="shareBtn">Copiar link desta função</button><button type="button" id="pngBtn">Baixar gráfico (PNG)</button></div>
   </div>
  </div>
+ <p class="eyebrow-sm">Também no laboratório</p>
  <div class="soon">
   <a href="#lim"><b>Limites e continuidade</b>Dê zoom no ponto e veja o limite aparecer.</a>
   <a href="#dup"><b>Integral dupla e volume</b>Some colunas sobre retângulos e veja o volume.</a>
@@ -140,12 +183,12 @@
 <script>
 /* WHATSAPP: coloque o número com país e DDD, só dígitos. Exemplo: '5521999999999' */
 var WA_NUMERO='5521971431679';
-if(WA_NUMERO){var u='https://wa.me/'+WA_NUMERO+'?text='+encodeURIComponent('Olá! Vim pela página de Funções do site W. T. Ares – Matemática.');['wa2'].forEach(function(i){document.getElementById(i).href=u})}
+if(WA_NUMERO){var u='https://wa.me/'+WA_NUMERO+'?text='+encodeURIComponent('Olá! Vim pela página de Ferramentas do site W. T. Ares – Matemática.');['wa2'].forEach(function(i){document.getElementById(i).href=u})}
 function boot(){
 var $=function(i){return document.getElementById(i)},M=math,cv=$('cv'),c=cv.getContext('2d'),W=1000,H=620,tab='der',node,f,ders,key='';
 var D={der:{f:'x^3 - 4*x^2 + 5*x - 2',xa:-1,xb:5,p:['x^3 - 4*x^2 + 5*x - 2','sin(x)','x^2','exp(x)','1/x','sqrt(x)']},rie:{f:'x^2',xa:-1,xb:4,p:['x^2','sin(x)+2','exp(x)','sqrt(x)','1/x']},tay:{f:'sin(x)',xa:-7,xb:7,p:['sin(x)','cos(x)','exp(x)','ln(1+x)','1/(1-x)']},gra:{f:'x^2 + y^2',xa:-3,xb:3,ya:-3,yb:3,p:['x^2 + y^2','x^2 - y^2','x*y','sin(x)*cos(y)','exp(-(x^2+y^2))','x^2*y']},lim:{f:'(x^2-4)/(x-2)',p:['(x^2-4)/(x-2)','sin(x)/x','(1-cos(x))/x^2','abs(x)/x','1/x','(sqrt(x+1)-1)/x']},dup:{f:'x*y',p:['x*y','x^2 + y^2','4 - x - y','sin(x)*cos(y)','exp(-(x^2+y^2))','x + y^2']},pas:{f:'x^2*sin(x)',p:['x^2*sin(x)','x*exp(x)','(3*x^2+1)^5','sin(x)/x','x^3 - 4*x^2 + 5*x - 2','x*log(x)','1/(2*x+1)','exp(2*x)*cos(x)']},edo:{f:'x - y',xa:-4,xb:4,ya:-4,yb:4,p:['x - y','y','-2*y','x*y','sin(x) - y','y*(1 - y)']}};
 function F(v){return isFinite(v)?String(+v.toPrecision(5)).replace('.',',').replace('-','−'):'indefinido'}
-function norm(s){return s.replace(/\bsen\b/g,'sin').replace(/\btg\b/g,'tan').replace(/\bln\b/g,'log').replace(/π/g,'pi').replace(/√/g,'sqrt')}
+function norm(s){return s.replace(/(\d),(\d)/g,'$1.$2').replace(/\bsen\b/g,'sin').replace(/\btg\b/g,'tan').replace(/\bln\b/g,'log').replace(/π/g,'pi').replace(/√/g,'sqrt')}
 function mk(n){var e=n.compile();return function(x){try{var v=e.evaluate({x:x});return typeof v==='number'&&isFinite(v)?v:NaN}catch(_){return NaN}}}
 function load(){var k=$('fx').value;if(k===key&&node)return true;try{node=M.parse(norm(k));f=mk(node);f(1);ders=[node];key=k;return true}catch(e){return false}}
 function dnode(n){while(ders.length<=n)ders.push(M.simplify(M.derivative(ders[ders.length-1],'x')));return ders[n]}
@@ -155,7 +198,8 @@ var lo=1e9,hi=-1e9,i,y;for(i=0;i<=400;i++){y=f(xa+(xb-xa)*i/400);if(isFinite(y)&
 if(lo>hi){lo=-5;hi=5}if(tab==='rie'){lo=Math.min(lo,0);hi=Math.max(hi,0)}if(hi-lo<1e-6){lo-=1;hi+=1}var p=(hi-lo)*.12;return{xa:xa,xb:xb,ya:lo-p,yb:hi+p}}
 var V;function X(x){return(x-V.xa)/(V.xb-V.xa)*W}function Y(y){return H-(y-V.ya)/(V.yb-V.ya)*H}
 function path(fn,col,w,dash){c.beginPath();c.strokeStyle=col;c.lineWidth=w;c.setLineDash(dash||[]);var pr=null,i,x,y,py;for(i=0;i<=W;i+=2){x=V.xa+(V.xb-V.xa)*i/W;y=fn(x);if(!isFinite(y)){pr=null;continue}py=Y(y);if(pr===null||Math.abs(py-pr)>H)c.moveTo(i,py);else c.lineTo(i,py);pr=py}c.stroke();c.setLineDash([])}
-function grid(){c.clearRect(0,0,W,H);c.font='13px "Space Mono",monospace';var sx=nice(V.xb-V.xa),sy=nice(V.yb-V.ya),t;c.lineWidth=1;
+function fs(){return Math.min(2.6,Math.max(1,W/(cv.clientWidth||W)))}
+function grid(){c.clearRect(0,0,W,H);c.font=Math.round(12*fs())+'px "Space Mono",monospace';var sx=nice(V.xb-V.xa),sy=nice(V.yb-V.ya),t;c.lineWidth=1;
 for(t=Math.ceil(V.xa/sx)*sx;t<=V.xb;t+=sx){c.strokeStyle='rgba(243,238,225,.08)';c.beginPath();c.moveTo(X(t),0);c.lineTo(X(t),H);c.stroke();c.fillStyle='rgba(243,238,225,.55)';c.fillText(F(+t.toFixed(6)),X(t)+3,Math.min(H-6,Math.max(14,Y(0)+14)))}
 for(t=Math.ceil(V.ya/sy)*sy;t<=V.yb;t+=sy){c.strokeStyle='rgba(243,238,225,.08)';c.beginPath();c.moveTo(0,Y(t));c.lineTo(W,Y(t));c.stroke();c.fillStyle='rgba(243,238,225,.55)';c.fillText(F(+t.toFixed(6)),Math.min(W-50,Math.max(4,X(0)+5)),Y(t)-4)}
 c.strokeStyle='rgba(243,238,225,.6)';c.lineWidth=1.5;c.beginPath();c.moveTo(X(0),0);c.lineTo(X(0),H);c.moveTo(0,Y(0));c.lineTo(W,Y(0));c.stroke()}
@@ -170,10 +214,11 @@ if(tab==='der'){var s=$('x0');s.min=V.xa;s.max=V.xb;var x0=Math.min(V.xb,Math.ma
 else if(tab==='rie'){var a=+$('ra').value,b=+$('rb').value,n=+$('rn').value,md=$('rm').value;if(!(b>a)){o.innerHTML='Escolha <b>b</b> maior que <b>a</b>.';path(f,CH,3);return}
  var dx=(b-a)/n,S=0,i,xs,h;for(i=0;i<n;i++){xs=a+i*dx+(md==='R'?dx:md==='M'?dx/2:0);h=f(xs);if(!isFinite(h))continue;S+=h*dx;c.fillStyle='rgba(228,190,104,.33)';c.strokeStyle='rgba(228,190,104,.95)';c.lineWidth=1.2;c.beginPath();c.rect(X(a+i*dx),Math.min(Y(0),Y(h)),X(a+(i+1)*dx)-X(a+i*dx),Math.abs(Y(h)-Y(0)));c.fill();c.stroke()}
  path(f,CH,3);var N=2000,k=(b-a)/N,T=f(a)+f(b);for(i=1;i<N;i++)T+=(i%2?4:2)*f(a+i*k);T*=k/3;
+ if(!isFinite(T)){o.innerHTML='Não dá para integrar neste intervalo: a função não está definida em algum ponto entre <b>a</b> e <b>b</b> (por exemplo, 1/x em x = 0). Escolha um intervalo que não contenha esse ponto.';return}
  o.innerHTML="Soma de Riemann (n = "+n+"): <b>"+F(S)+"</b><br>Valor da integral ≈ <b>"+F(T)+"</b><br>Erro: <b>"+F(Math.abs(S-T))+"</b><br><span style='opacity:.65'>Aumente n e veja o erro diminuir.</span>"}
 else{var a2=+$('tc').value,N2=+$('td').value,cs=[],fa=1,j;try{for(j=0;j<=N2;j++){if(j>0)fa*=j;var dv=dnode(j).compile().evaluate({x:a2});cs.push(dv/fa)}}catch(e){o.innerHTML='Não consegui derivar essa função neste ponto. Tente outro centro.';path(f,CH,3);return}
  var P=function(x){var r=0,p=1,q;for(q=0;q<cs.length;q++){r+=cs[q]*p;p*=x-a2}return r};path(f,CH,3);path(P,YE,2.4);dot(a2,f(a2),BL);
- var tm=[],q;for(q=0;q<cs.length&&tm.length<5;q++)if(Math.abs(cs[q])>1e-12)tm.push(F(cs[q])+(q?'·'+(a2?'(x'+(a2<0?' + ':' − ')+F(Math.abs(a2))+')':'x')+(q>1?'^'+q:''):''));
+ var tm=[],q;for(q=0;q<cs.length&&tm.length<5;q++)if(Math.abs(cs[q])>1e-12){var bs=q?(a2?'(x'+(a2<0?' + ':' − ')+F(Math.abs(a2))+')':'x')+(q>1?'^'+q:''):'',un=q>0&&Math.abs(Math.abs(cs[q])-1)<1e-12;tm.push(un?(cs[q]<0?'−':'')+bs:F(cs[q])+(q?'·'+bs:''))}
  var xe=a2+1;o.innerHTML="P<sub>"+N2+"</sub>(x) = <b>"+tm.join(' + ').replace(/\+ −/g,'− ')+(cs.length>5?' + …':'')+"</b><br>Erro em x = "+F(xe)+": <b>"+F(Math.abs(f(xe)-P(xe)))+"</b><br><span style='opacity:.65'>Aumente o grau n: o polinômio (amarelo) abraça a curva.</span>"}}
 var node2,f2,key2='';
 function load2(){var k=$('fx').value;if(k===key2&&node2)return true;try{node2=M.parse(norm(k));var e=node2.compile();f2=function(x,y){try{var v=e.evaluate({x:x,y:y});return typeof v==='number'&&isFinite(v)?v:NaN}catch(_){return NaN}};f2(1,1);key2=k;return true}catch(err){return false}}
@@ -239,7 +284,7 @@ for(k=0;k<=2*n-2;k++)for(i=0;i<n;i++){j=k-i;if(j<0||j>=n)continue;z=v[i][j];if(!
  poly([P(u1,w0,lo0),P(u1,w1,lo0),P(u1,w1,hi0),P(u1,w0,hi0)],'rgb('+Math.round(col[0]*.72)+','+Math.round(col[1]*.72)+','+Math.round(col[2]*.72)+')');
  poly([P(u0,w1,lo0),P(u1,w1,lo0),P(u1,w1,hi0),P(u0,w1,hi0)],'rgb('+Math.round(col[0]*.55)+','+Math.round(col[1]*.55)+','+Math.round(col[2]*.55)+')');
  poly([P(u0,w0,hi0),P(u1,w0,hi0),P(u1,w1,hi0),P(u0,w1,hi0)],'rgb('+col[0]+','+col[1]+','+col[2]+')')}
-c.fillStyle='#F3EEE1';c.font='15px "Space Mono",monospace';var q1=P(.5,1,0),q2=P(1,.5,0);c.fillText('x: '+F(a)+' → '+F(b),q1[0]-150,q1[1]+34);c.fillText('y: '+F(c0)+' → '+F(d0),q2[0]+20,q2[1]+22);
+c.fillStyle='#F3EEE1';c.font=Math.round(15*fs())+'px "Space Mono",monospace';var q1=P(.5,1,0),q2=P(1,.5,0);c.fillText('x: '+F(a)+' → '+F(b),q1[0]-150,q1[1]+34);c.fillText('y: '+F(c0)+' → '+F(d0),q2[0]+20,q2[1]+22);
 o.innerHTML='Soma dupla Σ f·ΔxΔy = <b>'+F(S)+'</b><br>Retângulos: '+n*n+' (Δx = '+F(dx)+', Δy = '+F(dy)+')<br>Valor da integral ≈ <b>'+F(T)+'</b><br>Erro: <b>'+F(Math.abs(S-T))+'</b><br>'+(neg?'Colunas coral: f &lt; 0 (volume com sinal negativo).':'Como f ≥ 0, a integral é o <b>volume</b> sob a superfície: '+F(T)+'.')+'<br><span style="opacity:.65">Cada coluna é um retângulo da base com altura f. Aumente n e a soma se aproxima da integral.</span>'}
 /* ---------- PASSO A PASSO ---------- */
 function Nm(v){if(Math.abs(v-Math.round(v))<1e-12)return String(Math.round(v));try{var q=M.fraction(v);if(q.d<=1000)return'('+(q.s*q.n)+'/'+q.d+')'}catch(_){}return String(+v.toPrecision(10))}
@@ -324,12 +369,29 @@ function updS(){var o=$('out'),sb=$('stepbox'),nd,mode=$('sm').value;
  sb.innerHTML='<h3 class="sh">'+(mode==='D'?'Derivar':'Integrar')+'</h3>'+TX('f(x)='+tx(nd))+'<ol>'+steps.map(function(s){return'<li><b class="r">'+s[0]+'</b>'+(s[1]?' <span class="hn">'+s[1]+'</span>':'')+TX(s[2])+'</li>'}).join('')+'</ol><div class="fin">Resultado'+TX(fin)+(note?'<p class="vf">'+note+'</p>':'')+'</div>';
  o.innerHTML=(mode==='D'?'Passos: <b>'+steps.length+'</b><br>Regras usadas: soma, produto, quociente, cadeia, potência e tabela.':'Passos: <b>'+steps.length+'</b><br>'+note)+'<br><span style="opacity:.65">Mude a função ou use os exemplos. O botão acima troca entre derivar e integrar.</span>'}
 var LA={'(x^2-4)/(x-2)':2,'sin(x)/x':0,'(1-cos(x))/x^2':0,'abs(x)/x':0,'1/x':0,'(sqrt(x+1)-1)/x':0};
-function setTab(t){tab=t;var d=D[t];document.querySelectorAll('.tabbtn').forEach(function(b){b.setAttribute('aria-selected',b.dataset.t===t)});document.querySelectorAll('.blk').forEach(function(b){b.classList.toggle('on',b.dataset.for.split(' ').indexOf(t)>-1)});
+var TT={der:['Derivada e reta tangente','A derivada é a inclinação da reta tangente. Arraste x₀ e veja a reta acompanhar a curva.'],rie:['Somas de Riemann','Aproxime a área sob a curva com retângulos e veja o erro cair quando n cresce.'],tay:['Série de Taylor','Aproxime a função por um polinômio de grau n centrado em a.'],gra:['Gradiente (Cálculo III)','O gradiente aponta a direção de maior crescimento de f(x, y).'],edo:['Campo de direções (EDO)','Cada tracinho mostra a inclinação y′ = f(x, y). Clique no gráfico para escolher a condição inicial.'],lim:['Limites e continuidade','Dê zoom num ponto e veja o valor do limite aparecer dos dois lados.'],dup:['Integral dupla e volume','Some o volume de colunas sobre retângulos da base e compare com a integral.'],pas:['Passo a passo','Derivadas e integrais explicadas regra por regra, com verificação.']};
+var NMS={der:'Gráfico de f, de f′ (tracejado) e da reta tangente em x₀.',rie:'Gráfico de f com os retângulos da soma de Riemann.',tay:'Gráfico de f e do polinômio de Taylor.',gra:'Mapa de cores de f(x, y) com o vetor gradiente no ponto escolhido.',edo:'Campo de direções com a curva solução.',lim:'Gráfico de f ampliado perto do ponto a.',dup:'Colunas em 3D sob a superfície f(x, y).',pas:''};
+function setTab(t){tab=t;var d=D[t];document.querySelectorAll('.tabbtn').forEach(function(b){var on=b.dataset.t===t;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1});$('panel').setAttribute('aria-labelledby','tab-'+t);$('tt').textContent=TT[t][0];$('tdsc').textContent=TT[t][1];cv.setAttribute('aria-label',NMS[t]||'Gráfico da função');document.querySelectorAll('.blk').forEach(function(b){b.classList.toggle('on',b.dataset.for.split(' ').indexOf(t)>-1)});
  $('fx').value=d.f;$('xa').value=d.xa;$('xb').value=d.xb;var two=t==='gra'||t==='edo'||t==='dup';$('cv').hidden=t==='pas';$('stepbox').hidden=t!=='pas';if(t==='lim'){$('la').value=2;$('lz').value=0}if(t==='dup'){$('da').value=0;$('db').value=2;$('dc').value=0;$('dd').value=2;$('dn').value=6}if(t==='pas')$('sm').value='D';$('fxl').textContent=t==='edo'?'y′ =':two?'f(x, y) =':'f(x) =';cv.className=two?'pick':'';if(t==='gra'||t==='edo'){$('ya').value=d.ya;$('yb').value=d.yb;$('p1').value=t==='edo'?0:1;$('p2').value=1}if(t==='der')$('x0').value=2;if(t==='rie'){$('ra').value=0;$('rb').value=3}
  $('pre').innerHTML='';d.p.forEach(function(p){var b=document.createElement('button');b.type='button';b.textContent=p;b.onclick=function(){$('fx').value=p;if(tab==='lim'&&LA[p]!==undefined)$('la').value=LA[p];update()};$('pre').appendChild(b)});update()}
 document.querySelectorAll('.tabbtn').forEach(function(b){b.onclick=function(){setTab(b.dataset.t)}});
 ['fx','xa','xb','x0','ra','rb','rn','rm','tc','td','ya','yb','p1','p2','em','eh','la','lz','da','db','dc','dd','dn','dm','sm'].forEach(function(i){$(i).addEventListener('input',update)});
-window.addEventListener('hashchange',function(){var q=location.hash.slice(1);if(D[q]){setTab(q);$('lab').scrollIntoView()}});var h0=location.hash.slice(1);setTab(D[h0]?h0:'der');if(D[h0])setTimeout(function(){$('lab').scrollIntoView()},300);
+/* teclado nas abas: setas, Home e End */
+$('lab').addEventListener('keydown',function(e){var bs=[].slice.call(document.querySelectorAll('.tabbtn')),i=bs.indexOf(document.activeElement),n=-1;if(i<0)return;
+ if(e.key==='ArrowRight'||e.key==='ArrowDown')n=(i+1)%bs.length;else if(e.key==='ArrowLeft'||e.key==='ArrowUp')n=(i+bs.length-1)%bs.length;else if(e.key==='Home')n=0;else if(e.key==='End')n=bs.length-1;
+ if(n>-1){e.preventDefault();bs[n].focus();setTab(bs[n].dataset.t);syncPng()}});
+/* campo com erro: marca como inválido quando a função não é entendida */
+new MutationObserver(function(){$('fx').setAttribute('aria-invalid',/^Não entendi/.test($('out').textContent)?'true':'false')}).observe($('out'),{childList:true,subtree:true,characterData:true});
+/* copiar link e baixar PNG */
+function flash(b,t){var o=b.dataset.o||b.textContent;b.dataset.o=o;b.textContent=t;b.setAttribute('data-done','');clearTimeout(b._t);b._t=setTimeout(function(){b.textContent=o;b.removeAttribute('data-done')},1800)}
+$('shareBtn').onclick=function(){var u=location.origin+location.pathname+'?f='+encodeURIComponent($('fx').value)+'#'+tab,b=this;
+ if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(u).then(function(){flash(b,'Link copiado!')},function(){window.prompt('Copie o link:',u)})}else window.prompt('Copie o link:',u)};
+function syncPng(){$('pngBtn').disabled=tab==='pas';$('pngBtn').style.opacity=tab==='pas'?.4:1}
+$('pngBtn').onclick=function(){if(tab==='pas')return;var t=document.createElement('canvas');t.width=W;t.height=H;var x=t.getContext('2d');x.fillStyle='#16302A';x.fillRect(0,0,W,H);x.drawImage(cv,0,0);var b=this;
+ t.toBlob(function(bl){if(!bl)return;var a=document.createElement('a');a.href=URL.createObjectURL(bl);a.download='grafico-'+tab+'.png';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(a.href)},2000);flash(b,'Baixado!')},'image/png')};
+document.querySelectorAll('.tabbtn').forEach(function(b){b.addEventListener('click',syncPng)});
+function fromUrl(){var f=null;try{f=new URLSearchParams(location.search).get('f')}catch(_){}if(f&&f.length<300){$('fx').value=f;if(tab==='lim'){var k=LA[f];if(k!==undefined)$('la').value=k}update()}}
+window.addEventListener('hashchange',function(){var q=location.hash.slice(1);if(D[q]){setTab(q);syncPng();$('lab').scrollIntoView()}});var h0=location.hash.slice(1);setTab(D[h0]?h0:'der');syncPng();fromUrl();if(D[h0])setTimeout(function(){$('lab').scrollIntoView()},300);
 }
 if(window.math)boot();else{var sc=document.createElement('script');sc.src='https://unpkg.com/mathjs@12.4.1/lib/browser/math.js';sc.onload=boot;sc.onerror=function(){document.getElementById('out').textContent='Não foi possível carregar a biblioteca matemática. Verifique a conexão e recarregue a página.'};document.head.appendChild(sc)}
 </script>
