@@ -16,15 +16,40 @@ const WHATSAPP_MESSAGE = "Olá! Vi o site do Curso de Cálculo e gostaria de mai
    entrada aqui — a busca já passa a encontrá-la. */
 const SITE_INDEX = [
  { title: "Início", url: "index.html", snippet: "Página inicial — Curso de Cálculo I, II, III e Equações Diferenciais de W. T. Ares." },
-{ title: "Sobre o Autor", url: "autor.html", snippet: "Bacharel em Matemática, professor de cursos regulares e preparatórios." },
-{ title: "O Livro — Curso de Cálculo I", url: "livro.html#calculo-1", snippet: "Limites, derivadas e os fundamentos do cálculo diferencial." },
-{ title: "O Livro — Curso de Cálculo II", url: "livro.html#calculo-2", snippet: "Técnicas de integração, sequências, séries e equações diferenciais." },
-{ title: "O Livro — Curso de Cálculo III", url: "livro.html#calculo-3", snippet: "Cálculo em várias variáveis, derivadas parciais e integrais múltiplas." },
-{ title: "A Coleção Completa", url: "livro.html#colecao", snippet: "Os três volumes do Curso de Cálculo, lado a lado." },
-{ title: "Equações Diferenciais", url: "equacoes-diferenciais.html", snippet: "Didático para dominar os fundamentos das equações diferenciais, aplicando cálculo diferencial e integral." },
-{ title: "Como Adquirir", url: "adquirir.html", snippet: "Compre na Amazon (Kindle) ou na Loja UICLAP." },
-{ title: "História da Matemática", url: "historia-da-matematica.html", snippet: "Os grandes matemáticos da história e suas contribuições para o desenvolvimento da matemática." },
-{ title: "Contato", url: "contato.html", snippet: "tavareswagner21@gmail.com — Instagram, LinkedIn, YouTube, Facebook." }
+ { title: "Sobre o Autor", url: "autor.html", snippet: "Bacharel em Matemática, professor de cursos regulares e preparatórios." },
+ { title: "O Livro — Curso de Cálculo I", url: "livro.html#calculo-1", snippet: "Limites, derivadas e os fundamentos do cálculo diferencial." },
+ { title: "O Livro — Curso de Cálculo II", url: "livro.html#calculo-2", snippet: "Técnicas de integração, sequências, séries e equações diferenciais." },
+ { title: "O Livro — Curso de Cálculo III", url: "livro.html#calculo-3", snippet: "Cálculo em várias variáveis, derivadas parciais e integrais múltiplas." },
+ { title: "O Livro — Volume IV: Equações Diferenciais", url: "livro.html#calculo-4", snippet: "Quarto volume da coleção, dedicado às equações diferenciais." },
+ { title: "A Coleção Completa", url: "livro.html#colecao", snippet: "Os volumes do Curso de Cálculo, lado a lado." },
+ { title: "Equações Diferenciais (livro)", url: "livro.html#equacoes-diferenciais", snippet: "Didático para dominar os fundamentos das equações diferenciais, aplicando cálculo diferencial e integral." },
+ { title: "Como Adquirir", url: "adquirir.html", snippet: "Compre na Amazon (Kindle) ou na Loja UICLAP." },
+ { title: "Trilha de Estudo e Teste de Nível", url: "trilha.html", snippet: "Descubra seu nível e siga a ordem ideal de estudo, do pré-cálculo às equações diferenciais." },
+ { title: "Exercícios Resolvidos", url: "exercicios.html", snippet: "Listas de exercícios com resolução passo a passo, por nível de dificuldade." },
+ { title: "Exercícios — Cálculo I", url: "exercicios-calculo1.html", snippet: "Exercícios resolvidos de limites, derivadas e aplicações." },
+ { title: "Exercícios — Cálculo II", url: "exercicios-calculo2.html", snippet: "Exercícios resolvidos de integrais, técnicas de integração, sequências e séries." },
+ { title: "Exercícios — Cálculo III", url: "exercicios-calculo3.html", snippet: "Exercícios resolvidos de várias variáveis, derivadas parciais e integrais múltiplas." },
+ { title: "Exercícios — Equações Diferenciais", url: "exercicios-equacoes-diferenciais.html", snippet: "Exercícios resolvidos de EDOs de 1ª e 2ª ordem." },
+ { title: "Formulário de Cálculo", url: "formulario.html", snippet: "Fórmulas do pré-cálculo às equações diferenciais: limites, derivadas, integrais, séries." },
+ { title: "Formulário de Funções e Curvas", url: "formulario-funcoes.html", snippet: "Funções, gráficos e curvas: propriedades e fórmulas." },
+ { title: "Ferramentas Interativas", url: "ferramentas.html", snippet: "Laboratório de Cálculo com derivada, Riemann, Taylor, gradiente, EDO, limites, integral dupla e passo a passo." },
+ { title: "Ferramenta — Derivada e reta tangente", url: "ferramentas.html#der", snippet: "Arraste o ponto e veja a reta tangente acompanhar a curva." },
+ { title: "Ferramenta — Somas de Riemann", url: "ferramentas.html#rie", snippet: "Aproxime a área sob a curva com retângulos e veja o erro cair." },
+ { title: "Ferramenta — Série de Taylor", url: "ferramentas.html#tay", snippet: "Aproxime uma função por um polinômio de grau n." },
+ { title: "Ferramenta — Gradiente", url: "ferramentas.html#gra", snippet: "Cálculo III: o gradiente sobre as curvas de nível." },
+ { title: "Ferramenta — Campo de direções (EDO)", url: "ferramentas.html#edo", snippet: "Campo de direções e solução numérica de equações diferenciais." },
+ { title: "Ferramenta — Limites e continuidade", url: "ferramentas.html#lim", snippet: "Dê zoom no ponto e veja o limite aparecer." },
+ { title: "Ferramenta — Integral dupla e volume", url: "ferramentas.html#dup", snippet: "Some colunas sobre retângulos e veja o volume." },
+ { title: "Ferramenta — Passo a passo", url: "ferramentas.html#pas", snippet: "Derivadas e integrais explicadas regra por regra." },
+ { title: "Tópicos de Cálculo", url: "topicos.html", snippet: "Explicações passo a passo dos principais tópicos." },
+ { title: "Regra da cadeia", url: "regra-da-cadeia.html", snippet: "Como derivar funções compostas, com exemplos." },
+ { title: "Integração por partes", url: "integracao-por-partes.html", snippet: "Fórmula, passo a passo e exemplos." },
+ { title: "Como calcular limites", url: "como-calcular-limites.html", snippet: "Indeterminações, fatoração e limites fundamentais." },
+ { title: "EDO linear de 1ª ordem", url: "edo-linear-primeira-ordem.html", snippet: "Fator integrante passo a passo." },
+ { title: "Derivadas parciais e gradiente", url: "derivadas-parciais.html", snippet: "Como calcular com exemplos." },
+ { title: "Cálculo na Prática", url: "calculo-na-pratica.html", snippet: "Onde o cálculo aparece de verdade: engenharia, física, saúde e calculadoras." },
+ { title: "História da Matemática", url: "historia-da-matematica.html", snippet: "Os grandes matemáticos da história, linha do tempo e suas contribuições." },
+ { title: "Contato", url: "contato.html", snippet: "tavareswagner21@gmail.com — Instagram, LinkedIn, YouTube, Facebook." }
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -111,13 +136,50 @@ document.addEventListener("DOMContentLoaded", () => {
     }));
   }
 
-  /* -------- Marca o link ativo do menu -------- */
+  /* -------- Submenus (Livro, Estudar) --------
+     Abrem por clique ou Enter/Espaço; no computador também por
+     passagem do mouse (CSS). Esc ou clicar fora fecham. */
+  const navGroups = document.querySelectorAll(".nav-group");
+  function setGroup(g, open) {
+    g.classList.toggle("open", open);
+    const b = g.querySelector(".nav-drop");
+    if (b) b.setAttribute("aria-expanded", open ? "true" : "false");
+  }
+  navGroups.forEach(g => {
+    const b = g.querySelector(".nav-drop");
+    b.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const willOpen = !g.classList.contains("open");
+      navGroups.forEach(o => setGroup(o, false));
+      setGroup(g, willOpen);
+    });
+    g.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") { setGroup(g, false); b.focus(); }
+      if (e.key === "Tab") {
+        setTimeout(() => { if (!g.contains(document.activeElement)) setGroup(g, false); }, 0);
+      }
+    });
+  });
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".nav-group")) navGroups.forEach(o => setGroup(o, false));
+  });
+
+  /* -------- Marca o link ativo do menu --------
+     Além da página exata, aceita data-prefix (ex.: exercicios-*)
+     e data-also (páginas filhas, como os tópicos). O botão do grupo
+     também fica destacado quando um link dentro dele está ativo. */
   const current = (location.pathname.split("/").pop() || "index.html");
   document.querySelectorAll("nav.main-links a").forEach(a => {
     const href = a.getAttribute("href").split("#")[0] || "index.html";
-    if (href === current || (current === "" && href === "index.html")) {
+    const also = (a.dataset.also || "").split(" ").filter(Boolean);
+    const prefix = a.dataset.prefix;
+    if (href === current || also.includes(current) || (prefix && current.startsWith(prefix))) {
       a.classList.add("active");
+      a.setAttribute("aria-current", "page");
     }
+  });
+  navGroups.forEach(g => {
+    if (g.querySelector("a.active")) g.querySelector(".nav-drop").classList.add("active");
   });
 
   /* -------- Revelação suave ao rolar -------- */
@@ -155,7 +217,8 @@ document.addEventListener("DOMContentLoaded", () => {
       normalize(item.title).includes(q) || normalize(item.snippet).includes(q)
     );
     if (matches.length === 0) {
-      searchResults.innerHTML = '<div class="sr-empty">Nenhum resultado para "' + query + '".</div>';
+      const safe = query.replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+      searchResults.innerHTML = '<div class="sr-empty">Nenhum resultado para "' + safe + '".</div>';
     } else {
       searchResults.innerHTML = matches.map(item =>
         `<a href="${item.url}">

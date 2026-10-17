@@ -12,6 +12,7 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <title>W. T. Ares – Matemática | Curso de Cálculo I, II, III e Equações Diferenciais</title>
 <meta name="description" content="Curso de Cálculo I, II, III e Equações Diferenciais por W. T. Ares — um guia completo e didático para dominar os fundamentos do cálculo diferencial e integral, incluindo as Equações Diferenciais.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -70,18 +71,29 @@
   <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" id="navToggle">
     <span class="sr-only">Menu</span>
   </button>
-  <nav class="main-links" id="mainLinks">
-    <a href="index.html" class="active">Início</a>
-    <a href="autor.html">Sobre o Autor</a>
-    <a href="livro.html">O Livro</a>
-    <a href="adquirir.html">Como Adquirir</a>
-    <a href="exercicios.html">Exercícios</a>
-    <a href="formulario-funcoes.html">Formulário de Funções</a>
-    <a href="formulario.html">Formulário de Cálculo</a>
+  <nav class="main-links" id="mainLinks" aria-label="Menu principal">
+    <a href="index.html">Início</a>
+    <div class="nav-group">
+      <button type="button" class="nav-drop" aria-expanded="false" aria-haspopup="true">Livro</button>
+      <div class="nav-menu">
+        <a href="livro.html">O Livro</a>
+        <a href="adquirir.html">Como Adquirir</a>
+        <a href="autor.html">Sobre o Autor</a>
+      </div>
+    </div>
+    <div class="nav-group">
+      <button type="button" class="nav-drop" aria-expanded="false" aria-haspopup="true">Estudar</button>
+      <div class="nav-menu">
+        <a href="trilha.html">Trilha de Estudo</a>
+        <a href="topicos.html" data-also="regra-da-cadeia.html integracao-por-partes.html como-calcular-limites.html edo-linear-primeira-ordem.html derivadas-parciais.html">Tópicos de Cálculo</a>
+        <a href="exercicios.html" data-prefix="exercicios">Exercícios</a>
+        <a href="formulario.html">Formulário de Cálculo</a>
+        <a href="formulario-funcoes.html">Formulário de Funções</a>
+        <a href="calculo-na-pratica.html">Cálculo na Prática</a>
+        <a href="historia-da-matematica.html">História da Matemática</a>
+      </div>
+    </div>
     <a href="ferramentas.html">Ferramentas</a>
-    <a href="trilha.html">Trilha de Estudo</a>
-    <a href="calculo-na-pratica.html">Cálculo na Prática</a>
-    <a href="historia-da-matematica.html">História da Matemática</a>
     <a href="contato.html">Contato</a>
   </nav>
 
