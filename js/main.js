@@ -47,6 +47,7 @@ const SITE_INDEX = [
  { title: "Série de Taylor e de Maclaurin", url: "series-de-taylor.html", snippet: "Fórmula, séries de eˣ, sen x e ln(1+x), erro e convergência." },
  { title: "Regra de L'Hôpital", url: "regra-de-lhopital.html", snippet: "Indeterminações 0/0 e ∞/∞, passo a passo e quando falha." },
  { title: "Integrais impróprias", url: "integrais-improprias.html", snippet: "Intervalo infinito, função ilimitada, teste p e comparação." },
+ { title: "Convergência de séries", url: "convergencia-de-series.html", snippet: "Testes da razão, comparação, série p e alternada." },
  { title: "Como calcular limites", url: "como-calcular-limites.html", snippet: "Indeterminações, fatoração e limites fundamentais." },
  { title: "EDO linear de 1ª ordem", url: "edo-linear-primeira-ordem.html", snippet: "Fator integrante passo a passo." },
  { title: "Derivadas parciais e gradiente", url: "derivadas-parciais.html", snippet: "Como calcular com exemplos." },
