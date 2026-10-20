@@ -44,6 +44,7 @@ const SITE_INDEX = [
  { title: "Tópicos de Cálculo", url: "topicos.html", snippet: "Explicações passo a passo dos principais tópicos." },
  { title: "Regra da cadeia", url: "regra-da-cadeia.html", snippet: "Como derivar funções compostas, com exemplos." },
  { title: "Integração por partes", url: "integracao-por-partes.html", snippet: "Fórmula, passo a passo e exemplos." },
+ { title: "Série de Taylor e de Maclaurin", url: "series-de-taylor.html", snippet: "Fórmula, séries de eˣ, sen x e ln(1+x), erro e convergência." },
  { title: "Como calcular limites", url: "como-calcular-limites.html", snippet: "Indeterminações, fatoração e limites fundamentais." },
  { title: "EDO linear de 1ª ordem", url: "edo-linear-primeira-ordem.html", snippet: "Fator integrante passo a passo." },
  { title: "Derivadas parciais e gradiente", url: "derivadas-parciais.html", snippet: "Como calcular com exemplos." },
