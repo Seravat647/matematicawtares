@@ -49,6 +49,7 @@ const SITE_INDEX = [
  { title: "Integrais impróprias", url: "integrais-improprias.html", snippet: "Intervalo infinito, função ilimitada, teste p e comparação." },
  { title: "Convergência de séries", url: "convergencia-de-series.html", snippet: "Testes da razão, comparação, série p e alternada." },
  { title: "Como calcular limites", url: "como-calcular-limites.html", snippet: "Indeterminações, fatoração e limites fundamentais." },
+ { title: "EDO separável", url: "edo-separavel.html", snippet: "Separação de variáveis, condição inicial e exemplos." },
  { title: "EDO linear de 1ª ordem", url: "edo-linear-primeira-ordem.html", snippet: "Fator integrante passo a passo." },
  { title: "Derivadas parciais e gradiente", url: "derivadas-parciais.html", snippet: "Como calcular com exemplos." },
  { title: "Cálculo na Prática", url: "calculo-na-pratica.html", snippet: "Onde o cálculo aparece de verdade: engenharia, física, saúde e calculadoras." },
