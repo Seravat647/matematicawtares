@@ -889,3 +889,13 @@ nav.main-links a.active::after{width:100%;}
 .form-button:hover {
   background-color: #555;  /* Fundo mais claro no hover */
 }
+
+/* Aviso de cookies */
+.cookie-bar{position:fixed;left:16px;right:16px;bottom:16px;z-index:250;max-width:760px;margin:0 auto;display:flex;gap:16px;align-items:center;flex-wrap:wrap;justify-content:space-between;background:var(--chalkboard,#1F3B32);color:#F4EFE1;padding:14px 18px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.35);font-size:.92rem;line-height:1.45}
+.cookie-bar p{margin:0;flex:1 1 320px}
+.cookie-bar a{color:#E4BE68;text-decoration:underline}
+.cookie-bar div{display:flex;gap:8px}
+.cookie-bar .btn{padding:8px 16px;font-size:.88rem}
+.cookie-bar .btn{border-radius:8px;cursor:pointer;font-weight:700}
+.cookie-bar .btn-ghost{background:transparent;color:#F4EFE1;border:1px solid rgba(244,239,225,.6)}
+.cookie-bar .btn-ghost:hover{background:rgba(244,239,225,.12)}

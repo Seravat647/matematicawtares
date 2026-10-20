@@ -264,3 +264,21 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
+/* Aviso de cookies (LGPD): o Google Analytics só mede após o aceite. */
+(function(){
+  if(typeof window.gtag!=="function") return;
+  var KEY="wt-consent", saved=null;
+  try{ saved=localStorage.getItem(KEY); }catch(e){}
+  if(saved) return;
+  var bar=document.createElement("div");
+  bar.className="cookie-bar"; bar.setAttribute("role","dialog"); bar.setAttribute("aria-label","Aviso de cookies");
+  bar.innerHTML='<p>Usamos cookies de estatística (Google Analytics) para entender quais conteúdos ajudam mais. Só medimos se você aceitar. <a href="politica-de-privacidade.html">Política de Privacidade</a></p><div><button type="button" class="btn btn-primary" data-c="granted">Aceitar</button><button type="button" class="btn btn-ghost" data-c="denied">Recusar</button></div>';
+  bar.addEventListener("click",function(e){
+    var v=e.target.getAttribute&&e.target.getAttribute("data-c"); if(!v) return;
+    try{ localStorage.setItem(KEY,v); }catch(err){}
+    if(v==="granted") window.gtag("consent","update",{analytics_storage:"granted"});
+    bar.remove();
+  });
+  document.body.appendChild(bar);
+})();
